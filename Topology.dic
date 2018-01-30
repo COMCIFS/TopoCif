@@ -1,0 +1,1021 @@
+#\#CIF_2.0
+##########################################################################
+#
+#   Topology CIF Dictionary
+#
+# 
+#
+##########################################################################
+
+data_TOPOLOGY_CIF
+
+_dictionary.title                       TOPOLOGY_CIF
+_dictionary.class                       Instance
+_dictionary.version                     0.1
+_dictionary.ddl_conformance             3.11.09
+_description.text                       'Converted from plain text file Topology_dictionary.txt'
+
+save_TOPOLOGY
+
+_definition.id                          TOPOLOGY
+_definition.scope                       Category
+_definition.class                       Head
+_description.text 
+                                        'This category is the parent of all categories in the dictionary'
+
+save_
+
+
+save_topol
+
+_definition.id                          topol
+_name.category_id                       TOPOLOGY
+_name.object_id                         topol
+_definition.update                      2018-01-30
+_definition.scope                       Category
+_definition.class                       Set
+
+save_
+
+
+save__topol.special_details
+
+_definition.id                          '_topol.special_details'
+_name.category_id                       topol
+_name.object_id                         special_details
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The description of topological information not covered by the
+     existing data names in the topology categories.
+;
+_type.contents                          Text
+
+save_
+
+
+save_topol_bond
+
+_definition.id                          topol_bond
+_name.category_id                       TOPOLOGY
+_name.object_id                         topol_bond
+_definition.update                      2018-01-30
+_definition.scope                       Category
+_definition.class                       Set
+
+save_
+
+
+save__topol_bond.atom_site_label_1
+
+_definition.id                          '_topol_bond.atom_site_label_1'
+_name.category_id                       topol_bond
+_name.object_id                         atom_site_label_1
+_definition.update                      2018-01-30
+_type.contents                          Integer
+_description.text                       
+;
+     The labels of two atom sites that form a bond. These must match
+     labels specified as _atom_site_label in the atom list.
+;
+
+save_
+
+
+save__topol_bond.atom_site_label_2
+
+_definition.id                          '_topol_bond.atom_site_label_2'
+_name.category_id                       topol_bond
+_name.object_id                         atom_site_label_2
+_definition.update                      2018-01-30
+_type.contents                          Integer
+_description.text                       
+;
+     The labels of two atom sites that form a bond. These must match
+     labels specified as _atom_site_label in the atom list.
+;
+
+save_
+
+
+save__topol_bond.distance
+
+_definition.id                          '_topol_bond.distance'
+_name.category_id                       topol_bond
+_name.object_id                         distance
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The bond distance in angstroms.
+;
+_type.contents                          Real
+
+save_
+
+
+save__topol_bond.id
+
+_definition.id                          '_topol_bond.id'
+_name.category_id                       topol_bond
+_name.object_id                         id
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The identifier of the bond.
+;
+_type.contents                          Integer
+
+save_
+
+
+save__topol_bond.multiplicity
+
+_definition.id                          '_topol_bond.multiplicity'
+_name.category_id                       topol_bond
+_name.object_id                         multiplicity
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The number of the bonds in the unit cell.
+;
+_type.contents                          Integer
+
+save_
+
+
+save__topol_bond.site_symmetry_1
+
+_definition.id                          '_topol_bond.site_symmetry_1'
+_name.category_id                       topol_bond
+_name.object_id                         site_symmetry_1
+_definition.update                      2018-01-30
+_type.contents                          Text
+_description.text                       
+;
+     The symmetry code of each atom site as the symmetry-equivalent
+     position number n and the cell translation number xyz. These
+     numbers are combined to form the code n_x_y_z. The character
+     string n_x_y_z is composed as follows: n refers to the symmetry
+     operation that is applied to the coordinates stored in
+     _atom_site_fract_x, _atom_site_fract_y and _atom_site_fract_z. It
+     must match a number given in _space_group_symop_id. x, y and z
+     are the translations that are subsequently applied to the
+     symmetry-transformed coordinates to generate the atom used in
+     calculating the bond. x, y and z can be any integer values.
+;
+loop_
+  _description_example.case
+         
+;
+21_1_1_0
+; 
+
+save_
+
+
+save__topol_bond.site_symmetry_2
+
+_definition.id                          '_topol_bond.site_symmetry_2'
+_name.category_id                       topol_bond
+_name.object_id                         site_symmetry_2
+_definition.update                      2018-01-30
+_type.contents                          Text
+_description.text                       
+;
+     The symmetry code of each atom site as the symmetry-equivalent
+     position number n and the cell translation number xyz. These
+     numbers are combined to form the code n_x_y_z. The character
+     string n_x_y_z is composed as follows: n refers to the symmetry
+     operation that is applied to the coordinates stored in
+     _atom_site_fract_x, _atom_site_fract_y and _atom_site_fract_z. It
+     must match a number given in _space_group_symop_id. x, y and z
+     are the translations that are subsequently applied to the
+     symmetry-transformed coordinates to generate the atom used in
+     calculating the bond. x, y and z can be any integer values.
+;
+loop_
+  _description_example.case
+         
+;
+21_1_1_0
+; 
+
+save_
+
+
+save__topol_bond.type
+
+_definition.id                          '_topol_bond.type'
+_name.category_id                       topol_bond
+_name.object_id                         type
+_definition.update                      2018-01-30
+_type.container                         Single
+_type.purpose                           State
+_description.text                       
+;
+     The chemical bond type associated with the connection between the
+     two sites. The data value must be one of the following:
+;
+_type.contents                          Code
+loop_
+  _enumeration_set.state
+  _enumeration_set.detail
+         sing      'single bond'       
+         doub      'double bond'       
+         trip      'triple bond'       
+         quad      'quadruple bond'    
+         arom      'aromatic bond'     
+         delo      'delocalized double bond'     
+         val       'valence bond'      
+         pi        'pi bond'           
+         hbnd      'hydrogen bond'     
+         spec      'specific bond'     
+         halg      'halogen bond'      
+         vdw       'van der Waals contact'       
+         nobd      'no bond'           
+         any       'any kind of bond (unspecified)' 
+
+save_
+
+
+save__topol_bond.voronoi_solidangle
+
+_definition.id                          '_topol_bond.voronoi_solidangle'
+_name.category_id                       topol_bond
+_name.object_id                         voronoi_solidangle
+_definition.update                      2018-01-30
+_enumeration.range                      1:50
+_description.text                       
+;
+     The solid angle of the A-X bond.
+;
+_type.contents                          Real
+
+save_
+
+
+save_topol_repres
+
+_definition.id                          topol_repres
+_name.category_id                       TOPOLOGY
+_name.object_id                         topol_repres
+_definition.update                      2018-01-30
+_definition.scope                       Category
+_definition.class                       Set
+
+save_
+
+
+save__topol_repres.genus
+
+_definition.id                          '_topol_repres.genus'
+_name.category_id                       topol_repres
+_name.object_id                         genus
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The genus of the underlying net.
+;
+_type.contents                          Integer
+
+save_
+
+
+save__topol_repres.overall_topology
+
+_definition.id                          '_topol_repres.overall_topology'
+_name.category_id                       topol_repres
+_name.object_id                         overall_topology
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The overall topology symbol in an arbitrary form.
+;
+_type.contents                          Text
+loop_
+  _description_example.case
+         
+;
+face-centered cubic topology'
+; 
+
+save_
+
+
+save__topol_repres.overall_topology_EPINET
+
+_definition.id                          '_topol_repres.overall_topology_EPINET'
+_name.category_id                       topol_repres
+_name.object_id                         overall_topology_EPINET
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The overall topology symbol according to the EPINET nomenclature.
+;
+_type.contents                          Text
+loop_
+  _description_example.case
+         
+;
+sqc6
+; 
+
+save_
+
+
+save__topol_repres.overall_topology_RCSR
+
+_definition.id                          '_topol_repres.overall_topology_RCSR'
+_name.category_id                       topol_repres
+_name.object_id                         overall_topology_RCSR
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The overall topology symbol according to the RCSR nomenclature.
+;
+_type.contents                          Text
+loop_
+  _description_example.case
+         
+;
+dia
+; 
+
+save_
+
+
+save__topol_repres.overall_topology_SP
+
+_definition.id                          '_topol_repres.overall_topology_SP'
+_name.category_id                       topol_repres
+_name.object_id                         overall_topology_SP
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The overall topology symbol according to the nomenclature of
+     sphere packings.
+;
+_type.contents                          Text
+loop_
+  _description_example.case
+         
+;
+4/6/c1
+; 
+
+save_
+
+
+save__topol_repres.overall_topology_TOPOS
+
+_definition.id                          '_topol_repres.overall_topology_TOPOS'
+_name.category_id                       topol_repres
+_name.object_id                         overall_topology_TOPOS
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The overall topology symbol according to the TOPOS nomenclature.
+;
+_type.contents                          Text
+loop_
+  _description_example.case
+         
+;
+3,4T45
+; 
+
+save_
+
+
+save__topol_repres.period
+
+_definition.id                          '_topol_repres.period'
+_name.category_id                       topol_repres
+_name.object_id                         period
+_definition.update                      2018-01-30
+_type.container                         Single
+_type.purpose                           State
+_description.text                       
+;
+     Periodicity of the underlying net. The data value must be one of
+     the following:
+;
+_type.contents                          Code
+loop_
+  _enumeration_set.state
+  _enumeration_set.detail
+         0         '0-periodic (finite)'         
+         1         '1-periodic (chain)'          
+         2         '2-periodic (layer)'          
+         3         '3-periodic (framework)' 
+
+save_
+
+
+save__topol_repres.td10
+
+_definition.id                          '_topol_repres.td10'
+_name.category_id                       topol_repres
+_name.object_id                         td10
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The topological density TD10 of the underlying net.
+;
+_type.contents                          Integer
+
+save_
+
+
+save__topol_repres.total_point_symbol
+
+_definition.id                          '_topol_repres.total_point_symbol'
+_name.category_id                       topol_repres
+_name.object_id                         total_point_symbol
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The total point symbol of the underlying net.
+;
+_type.contents                          Text
+loop_
+  _description_example.case
+         
+;
+6^6}
+; 
+
+save_
+
+
+save_topol_repres_edge
+
+_definition.id                          topol_repres_edge
+_name.category_id                       TOPOLOGY
+_name.object_id                         topol_repres_edge
+_definition.update                      2018-01-30
+_definition.scope                       Category
+_definition.class                       Set
+
+save_
+
+
+save__topol_repres_edge.chemical_formula_iupac
+
+_definition.id                          '_topol_repres_edge.chemical_formula_iupac'
+_name.category_id                       topol_repres_edge
+_name.object_id                         chemical_formula_iupac
+_definition.update                      2018-01-30
+_description.text                       
+;
+     Formula of the residue or ion, which corresponds to the node
+     expressed in conformance with IUPAC rules.
+;
+_type.contents                          Text
+
+save_
+
+
+save__topol_repres_edge.chemical_formula_moiety
+
+_definition.id                          '_topol_repres_edge.chemical_formula_moiety'
+_name.category_id                       topol_repres_edge
+_name.object_id                         chemical_formula_moiety
+_definition.update                      2018-01-30
+_description.text                       
+;
+     Formula of the residue or ion, which corresponds to the node.
+     The formula is written in accordance with the rules of  the
+     _chemical_formula_moiety tag.
+;
+_type.contents                          Text
+
+save_
+
+
+save__topol_repres_edge.chemical_formula_sum
+
+_definition.id                          '_topol_repres_edge.chemical_formula_sum'
+_name.category_id                       topol_repres_edge
+_name.object_id                         chemical_formula_sum
+_definition.update                      2018-01-30
+_description.text                       
+;
+     Formula of the residue or ion, which corresponds to the node.
+     The formula is written in accordance with the rules of  the
+     _chemical_formula_sum tag.
+;
+_type.contents                          Text
+
+save_
+
+
+save__topol_repres_edge.id
+
+_definition.id                          '_topol_repres_edge.id'
+_name.category_id                       topol_repres_edge
+_name.object_id                         id
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The label of the edge, which corresponds to a particular  node of
+     the crystal structure representation. These must  match labels
+     specified as _topol_bond.id in the bond list.
+;
+_type.contents                          Integer
+
+save_
+
+
+save_topol_repres_entangl
+
+_definition.id                          topol_repres_entangl
+_name.category_id                       TOPOLOGY
+_name.object_id                         topol_repres_entangl
+_definition.update                      2018-01-30
+_definition.scope                       Category
+_definition.class                       Set
+
+save_
+
+
+save__topol_repres_entangl.interp_class
+
+_definition.id                          '_topol_repres_entangl.interp_class'
+_name.category_id                       topol_repres_entangl
+_name.object_id                         interp_class
+_definition.update                      2018-01-30
+_type.container                         Single
+_type.purpose                           State
+_description.text                       
+;
+     The class of the interpenetration. The data value must be  one of
+     the following: IIIIII
+;
+_type.contents                          Code
+loop_
+  _enumeration_set.state
+  _enumeration_set.detail
+         Ia        'Class Ia'          
+         Ib        'Class Ib'          
+         IIa       'Class IIa'         
+         IIb       'Class IIb'         
+         IIIa      'Class IIIa'        
+         IIIb      'Class IIIb'        
+         IIIc      'Class IIIc'        
+         IIId      'Class IIId' 
+
+save_
+
+
+save__topol_repres_entangl.interp_deg
+
+_definition.id                          '_topol_repres_entangl.interp_deg'
+_name.category_id                       topol_repres_entangl
+_name.object_id                         interp_deg
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The finite number of interpenetrating nets.
+;
+_type.contents                          Integer
+
+save_
+
+
+save__topol_repres_entangl.period
+
+_definition.id                          '_topol_repres_entangl.period'
+_name.category_id                       topol_repres_entangl
+_name.object_id                         period
+_definition.update                      2018-01-30
+_type.container                         Single
+_type.purpose                           State
+_description.text                       
+;
+     Periodicity of the entangled array. The data value must be  one
+     of the following:
+;
+_type.contents                          Code
+loop_
+  _enumeration_set.state
+  _enumeration_set.detail
+         0         '0-periodic (finite)'         
+         1         '1-periodic (chain)'          
+         2         '2-periodic (layer)'          
+         3         '3-periodic (framework)' 
+
+save_
+
+
+save__topol_repres_entangl.topology_ERN
+
+_definition.id                          '_topol_repres_entangl.topology_ERN'
+_name.category_id                       topol_repres_entangl
+_name.object_id                         topology_ERN
+_definition.update                      2018-01-30
+_description.text                       
+;
+     Topology of the entanglement described as an extended ring  net.
+     The name of the extended ring net is specified in one  of the
+     nomenclatures of the periodic nets.
+;
+_type.contents                          Text
+
+save_
+
+
+save__topol_repres_entangl.topology_HRN
+
+_definition.id                          '_topol_repres_entangl.topology_HRN'
+_name.category_id                       topol_repres_entangl
+_name.object_id                         topology_HRN
+_definition.update                      2018-01-30
+_description.text                       
+;
+     Topology of the entanglement described as a Hopf ring net.  The
+     name of the Hopf ring net is specified in one of  the
+     nomenclatures of the periodic nets.
+;
+_type.contents                          Text
+
+save_
+
+
+save__topol_repres_entangl.type
+
+_definition.id                          '_topol_repres_entangl.type'
+_name.category_id                       topol_repres_entangl
+_name.object_id                         type
+_definition.update                      2018-01-30
+_type.container                         Single
+_type.purpose                           State
+_description.text                       
+;
+     The type of the entanglement. The data value must be one of  the
+     following:
+;
+_type.contents                          Code
+loop_
+  _enumeration_set.state
+  _enumeration_set.detail
+         borr      Borromean           
+         brun      Brunnian  
+         caten     catenation          
+         interp    interpenetration    
+         polycat_inc         'inclined polycatenation'     
+         polycat_par         'parallel polycatenation'     
+         polythread          polythreading       
+         selfcat   self-catenation     
+         undef     'no special type is assigned' 
+
+save_
+
+
+save_topol_repres_node
+
+_definition.id                          topol_repres_node
+_name.category_id                       TOPOLOGY
+_name.object_id                         topol_repres_node
+_definition.update                      2018-01-30
+_definition.scope                       Category
+_definition.class                       Set
+
+save_
+
+
+save__topol_repres_node.chemical_formula_iupac
+
+_definition.id                          '_topol_repres_node.chemical_formula_iupac'
+_name.category_id                       topol_repres_node
+_name.object_id                         chemical_formula_iupac
+_definition.update                      2018-01-30
+_description.text                       
+;
+     Formula of the residue or ion, which corresponds to the node
+     expressed in conformance with IUPAC rules.
+;
+_type.contents                          Text
+
+save_
+
+
+save__topol_repres_node.chemical_formula_moiety
+
+_definition.id                          '_topol_repres_node.chemical_formula_moiety'
+_name.category_id                       topol_repres_node
+_name.object_id                         chemical_formula_moiety
+_definition.update                      2018-01-30
+_description.text                       
+;
+     Formula of the residue or ion, which corresponds to the node.
+     The formula is written in accordance with the rules of  the
+     _chemical_formula_moiety tag.
+;
+_type.contents                          Text
+
+save_
+
+
+save__topol_repres_node.chemical_formula_sum
+
+_definition.id                          '_topol_repres_node.chemical_formula_sum'
+_name.category_id                       topol_repres_node
+_name.object_id                         chemical_formula_sum
+_definition.update                      2018-01-30
+_description.text                       
+;
+     Formula of the residue or ion, which corresponds to the node.
+     The formula is written in accordance with the rules of  the
+     _chemical_formula_sum tag.
+;
+_type.contents                          Text
+
+save_
+
+
+save__topol_repres_node.CS
+
+_definition.id                          '_topol_repres_node.CS'
+_name.category_id                       topol_repres_node
+_name.object_id                         CS
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The coordination sequence of the node written as an array of
+     integers.
+;
+_type.contents                          Integer
+loop_
+  _description_example.case
+         
+;
+4 12 24 42 64 92 124 162 204 252]
+; 
+
+save_
+
+
+save__topol_repres_node.ES
+
+_definition.id                          '_topol_repres_node.ES'
+_name.category_id                       topol_repres_node
+_name.object_id                         ES
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The extended point symbol of the node.
+;
+_type.contents                          Text
+loop_
+  _description_example.case
+         
+;
+6(2).6(2).6(2).6(2).6(2).6(2)
+; 
+
+save_
+
+
+save__topol_repres_node.label
+
+_definition.id                          '_topol_repres_node.label'
+_name.category_id                       topol_repres_node
+_name.object_id                         label
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The label of the node site, which corresponds to a particular
+     node of the crystal structure representation. These must match
+     labels specified as _atom_site_label in the atom list.
+;
+_type.contents                          Text
+
+save_
+
+
+save__topol_repres_node.point_symbol
+
+_definition.id                          '_topol_repres_node.point_symbol'
+_name.category_id                       topol_repres_node
+_name.object_id                         point_symbol
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The (short) point symbol of the node.
+;
+_type.contents                          Text
+loop_
+  _description_example.case
+         
+;
+6^6
+; 
+
+save_
+
+
+save__topol_repres_node.VS
+
+_definition.id                          '_topol_repres_node.VS'
+_name.category_id                       topol_repres_node
+_name.object_id                         VS
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The vertex symbol of the node.
+;
+_type.contents                          Text
+loop_
+  _description_example.case
+         
+;
+6(2).6(2).6(2).6(2).6(2).6(2)
+; 
+
+save_
+
+
+save_topol_repres_occurrence
+
+_definition.id                          topol_repres_occurrence
+_name.category_id                       TOPOLOGY
+_name.object_id                         topol_repres_occurrence
+_definition.update                      2018-01-30
+_definition.scope                       Category
+_definition.class                       Set
+
+save_
+
+
+save__topol_repres_occurrence.refcode
+
+_definition.id                          '_topol_repres_occurrence.refcode'
+_name.category_id                       topol_repres_occurrence
+_name.object_id                         refcode
+_definition.update                      2018-01-30
+_description.text                       
+;
+     Reference code in a crystallographic database  to the
+     crystallographic data of the crystal  structure with the
+     underlying net topology.
+;
+_type.contents                          Text
+
+save_
+
+
+save__topol_repres_occurrence.reference
+
+_definition.id                          '_topol_repres_occurrence.reference'
+_name.category_id                       topol_repres_occurrence
+_name.object_id                         reference
+_definition.update                      2018-01-30
+_description.text                       
+;
+     Reference to a publication, where a crystal  structure with the
+     underlying net topology  was characterized.
+;
+_type.contents                          Text
+
+save_
+
+
+save__topol_repres_occurrence.total
+
+_definition.id                          '_topol_repres_occurrence.total'
+_name.category_id                       topol_repres_occurrence
+_name.object_id                         total
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The total number of occurrences of the underlying  net topology.
+;
+_type.contents                          Integer
+
+save_
+
+
+save_topol_repres_tiling
+
+_definition.id                          topol_repres_tiling
+_name.category_id                       TOPOLOGY
+_name.object_id                         topol_repres_tiling
+_definition.update                      2018-01-30
+_definition.scope                       Category
+_definition.class                       Set
+
+save_
+
+
+save__topol_repres_tiling.Dsize
+
+_definition.id                          '_topol_repres_tiling.Dsize'
+_name.category_id                       topol_repres_tiling
+_name.object_id                         Dsize
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The number of distinct (not symmetry-related) chambers  in the
+     tiling.
+;
+_type.contents                          Integer
+
+save_
+
+
+save__topol_repres_tiling.dual
+
+_definition.id                          '_topol_repres_tiling.dual'
+_name.category_id                       topol_repres_tiling
+_name.object_id                         dual
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The overall topology symbol of the dual net, which  corresponds
+     to the net of the dual of the natural tiling.
+;
+_type.contents                          Text
+
+save_
+
+
+save__topol_repres_tiling.edges
+
+_definition.id                          '_topol_repres_tiling.edges'
+_name.category_id                       topol_repres_tiling
+_name.object_id                         edges
+_definition.update                      2018-01-30
+_description.text                       
+;
+     Number of independent tile edges in the natural tiling.
+;
+_type.contents                          Integer
+
+save_
+
+
+save__topol_repres_tiling.faces
+
+_definition.id                          '_topol_repres_tiling.faces'
+_name.category_id                       topol_repres_tiling
+_name.object_id                         faces
+_definition.update                      2018-01-30
+_description.text                       
+;
+     Number of independent tile faces in the natural tiling.
+;
+_type.contents                          Integer
+
+save_
+
+
+save__topol_repres_tiling.signature
+
+_definition.id                          '_topol_repres_tiling.signature'
+_name.category_id                       topol_repres_tiling
+_name.object_id                         signature
+_definition.update                      2018-01-30
+_description.text                       
+;
+     The tiling signature.
+;
+_type.contents                          Text
+loop_
+  _description_example.case
+         
+;
+6^4]'
+; 
+
+save_
+
+
+save__topol_repres_tiling.tiles
+
+_definition.id                          '_topol_repres_tiling.tiles'
+_name.category_id                       topol_repres_tiling
+_name.object_id                         tiles
+_definition.update                      2018-01-30
+_description.text                       
+;
+     Number of independent tiles in the natural tiling.
+;
+_type.contents                          Integer
+
+save_
+
+
+save__topol_repres_tiling.vertices
+
+_definition.id                          '_topol_repres_tiling.vertices'
+_name.category_id                       topol_repres_tiling
+_name.object_id                         vertices
+_definition.update                      2018-01-30
+_description.text                       
+;
+     Number of independent tile vertices in the natural tiling.
+;
+_type.contents                          Integer
+
+save_
