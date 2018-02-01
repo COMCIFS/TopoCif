@@ -12,8 +12,12 @@ data_TOPOLOGY_CIF
 _dictionary.title                       TOPOLOGY_CIF
 _dictionary.class                       Instance
 _dictionary.version                     0.1
-_dictionary.ddl_conformance             3.11.09
-_description.text                       'Converted from plain text file Topology_dictionary.txt'
+_dictionary.ddl_conformance             3.13.1
+_description.text
+;
+  The Topology CIF dictionary provides datanames for describing crystal structure
+  topology.
+;
 
 save_TOPOLOGY
 
@@ -21,7 +25,9 @@ _definition.id                          TOPOLOGY
 _definition.scope                       Category
 _definition.class                       Head
 _description.text 
-                                        'This category is the parent of all categories in the dictionary'
+                 'This category is the parent of all categories in the dictionary'
+_name.object_id                         TOPOLOGY
+_name.category_id                       TOPOLOGY_CIF
 
 save_
 
@@ -34,6 +40,13 @@ _name.object_id                         topol
 _definition.update                      2018-01-30
 _definition.scope                       Category
 _definition.class                       Set
+_description.text
+;
+              The TOPOL category covers data on connectivity
+              between atoms and structural groups and the
+              related structural properties as calculated from
+              the ATOM, CELL and SYMMETRY data.
+;
 
 save_
 
@@ -62,6 +75,16 @@ _name.object_id                         topol_bond
 _definition.update                      2018-01-30
 _definition.scope                       Category
 _definition.class                       Set
+_description.text
+;
+           The TOPOL_BOND category describes the crystal structure
+           connectivity and encode the weighted colored labeled quotient
+           graph, from which the whole periodic net describing the
+           overall topology of the crystal structure can be restored.
+           Compared to the geometrical information of the GEOM_BOND
+           and GEOM_CONTACT categories, the TOPOL_BOND tags are intended
+           to be read by software that works with periodic nets.
+;
 
 save_
 
@@ -108,6 +131,7 @@ _description.text
 ;
      The bond distance in angstroms.
 ;
+_enumeration.range                      0.:
 _type.contents                          Real
 
 save_
@@ -123,7 +147,7 @@ _description.text
 ;
      The identifier of the bond.
 ;
-_type.contents                          Integer
+_type.contents                          Code
 
 save_
 
@@ -138,6 +162,7 @@ _description.text
 ;
      The number of the bonds in the unit cell.
 ;
+_enumeration.range                      1:
 _type.contents                          Integer
 
 save_
@@ -164,11 +189,7 @@ _description.text
      calculating the bond. x, y and z can be any integer values.
 ;
 loop_
-  _description_example.case
-         
-;
-21_1_1_0
-; 
+  _description_example.case       21_1_1_0 
 
 save_
 
@@ -194,11 +215,8 @@ _description.text
      calculating the bond. x, y and z can be any integer values.
 ;
 loop_
-  _description_example.case
-         
-;
-21_1_1_0
-; 
+  _description_example.case    21_1_1_0
+
 
 save_
 
@@ -247,7 +265,10 @@ _definition.update                      2018-01-30
 _enumeration.range                      1:50
 _description.text                       
 ;
-     The solid angle of the A-X bond.
+     The solid angle of the interatomic contact, which is the part of the
+     sphere of unit radius cut by the pyramid with the basal face of the
+     Voronoi polyhedron.  The face used is that corresponding to the
+     interatomic contact.
 ;
 _type.contents                          Real
 
@@ -262,7 +283,17 @@ _name.object_id                         topol_repres
 _definition.update                      2018-01-30
 _definition.scope                       Category
 _definition.class                       Set
+_description.text
+;
 
+     The TOPOL_REPRES category describes a particular crystal
+     structure representation, which corresponds to the periodic
+     (underlying) net topology specified in the TOPOL_BOND
+     category. The underlying net is the net of centroids of
+     structural units. The edges of this net represent the links
+     between the units.
+
+;
 save_
 
 
@@ -274,8 +305,14 @@ _name.object_id                         genus
 _definition.update                      2018-01-30
 _description.text                       
 ;
-     The genus of the underlying net.
+     The genus of the underlying net, defined as the cyclomatic number of its
+     own quotient graph: g = 1 + e - v, where e and v are the number of
+     edges and vertices in the quotient graph.  The quotient graph is a finite
+     graph that contains all of the information of the periodic net: the vertices
+     of the graph are the vertices of a translational repeat unit and the edges
+     are all the edges of the repeat unit.
 ;
+_enumeration.range                      1:
 _type.contents                          Integer
 
 save_
@@ -293,11 +330,7 @@ _description.text
 ;
 _type.contents                          Text
 loop_
-  _description_example.case
-         
-;
-face-centered cubic topology'
-; 
+  _description_example.case            'face-centered cubic topology'
 
 save_
 
@@ -310,15 +343,12 @@ _name.object_id                         overall_topology_EPINET
 _definition.update                      2018-01-30
 _description.text                       
 ;
-     The overall topology symbol according to the EPINET nomenclature.
+     The identifier for the overall topology as listed
+     in the EPINET database at http://epinet.anu.edu.au
 ;
 _type.contents                          Text
 loop_
-  _description_example.case
-         
-;
-sqc6
-; 
+  _description_example.case             sqc6
 
 save_
 
@@ -331,15 +361,13 @@ _name.object_id                         overall_topology_RCSR
 _definition.update                      2018-01-30
 _description.text                       
 ;
-     The overall topology symbol according to the RCSR nomenclature.
+     The overall topology symbol according to the RCSR nomenclature described
+     by O'Keeffe, M., Peskov, M.A., Ramsden S. J., Yaghi O.M. (2008) Acc. Chem.
+     Res. 41, 1782-1789.
 ;
 _type.contents                          Text
 loop_
-  _description_example.case
-         
-;
-dia
-; 
+  _description_example.case             dia
 
 save_
 
@@ -353,16 +381,12 @@ _definition.update                      2018-01-30
 _description.text                       
 ;
      The overall topology symbol according to the nomenclature of
-     sphere packings.
+     Fischer for sphere packings described in Koch, E., Fischer, W.
+     and Sowa, H. (2006) Acta Cryst. A62, 152-167.
 ;
 _type.contents                          Text
 loop_
-  _description_example.case
-         
-;
-4/6/c1
-; 
-
+  _description_example.case             4/6/c1
 save_
 
 
@@ -374,15 +398,22 @@ _name.object_id                         overall_topology_TOPOS
 _definition.update                      2018-01-30
 _description.text                       
 ;
-     The overall topology symbol according to the TOPOS nomenclature.
+     The overall topology symbol according to the TOPOS nomenclature. TOPOS
+     symbols NDn are interpreted as follows: N is a sequence of degrees
+     (coordination numbers) of all independent nodes; D is one of the letters
+     C (chain), L (layer) or T (three-periodic) designating the dimensionality
+     of the net; and n enumerates non-isomorphic nets with a given ND sequence.
+     For finite (molecular) graphs the symbols NMK-n are used, where k is the
+     number of vertices (atoms) in the graph.
 ;
 _type.contents                          Text
 loop_
-  _description_example.case
-         
+  _description_example.case             3,3,4T3
+  _description_example.detail
 ;
-3,4T45
-; 
+    The third three-periodic trinodal net with two 3-coordinated and one
+    4-coordinated independent nodes
+;
 
 save_
 
@@ -397,18 +428,16 @@ _type.container                         Single
 _type.purpose                           State
 _description.text                       
 ;
-     Periodicity of the underlying net. The data value must be one of
-     the following:
-;
-_type.contents                          Code
-loop_
-  _enumeration_set.state
-  _enumeration_set.detail
-         0         '0-periodic (finite)'         
-         1         '1-periodic (chain)'          
-         2         '2-periodic (layer)'          
-         3         '3-periodic (framework)' 
+     Periodicity of the underlying net.  The allowed data values
+     have the following meaning:
+         0         0-periodic (finite)         
+         1         1-periodic (chain)         
+         2         2-periodic (layer)          
+         3         3-periodic (framework) 
 
+;
+_type.contents                          Integer
+_enumeration.range                      0:3        
 save_
 
 
@@ -420,8 +449,12 @@ _name.object_id                         td10
 _definition.update                      2018-01-30
 _description.text                       
 ;
-     The topological density TD10 of the underlying net.
+     The topological density TD10 of the underlying net. This is the cumulative
+     sum of the first ten shells of topological neighbours including the central
+     atom. For structures with more than one kind of vertex in the asymmetric
+     unit the value given is a weighted average over the vertices.
 ;
+_enumeration.range                      1:
 _type.contents                          Integer
 
 save_
@@ -435,16 +468,16 @@ _name.object_id                         total_point_symbol
 _definition.update                      2018-01-30
 _description.text                       
 ;
-     The total point symbol of the underlying net.
+     The total point symbol of the underlying net.  This value summarizes all the
+     point symbols for the non-equivalent nodes with their stoichiometric
+     coefficients.
 ;
 _type.contents                          Text
 loop_
   _description_example.case
-         
-;
-6^6}
-; 
-
+  _description_example.detail
+  '{6^6}'                               'Point symbol for diamond'
+  '{4.6^2}_2{4^2.6^10.8^3}'             '3,6-coordinated underlying net of TiO2'
 save_
 
 
@@ -455,8 +488,13 @@ _name.category_id                       TOPOLOGY
 _name.object_id                         topol_repres_edge
 _definition.update                      2018-01-30
 _definition.scope                       Category
-_definition.class                       Set
-
+_definition.class                       Loop
+_description.text
+;
+    The TOPOL_REPRES_EDGE category describes the chemical composition of
+    the edges of the underlying net.
+;
+_category_key.name                      '_topol_repres_edge.id'
 save_
 
 
@@ -522,7 +560,9 @@ _description.text
      the crystal structure representation. These must  match labels
      specified as _topol_bond.id in the bond list.
 ;
-_type.contents                          Integer
+_name.linked_item_id                    '_topol_bond.id'
+_type.contents                          Text
+_type.purpose                           Link
 
 save_
 
@@ -535,7 +575,12 @@ _name.object_id                         topol_repres_entangl
 _definition.update                      2018-01-30
 _definition.scope                       Category
 _definition.class                       Set
-
+_description.text
+;
+     The TOPOL_REPRES_ENTANGL category describes entanglements in the
+     underlying net.  An entangled net can be separated into two or
+     more motifs. See [].
+;
 save_
 
 
@@ -549,21 +594,30 @@ _type.container                         Single
 _type.purpose                           State
 _description.text                       
 ;
-     The class of the interpenetration. The data value must be  one of
-     the following: IIIIII
+
+     The class of the interpenetration as defined in Baburin I. A.,
+     Blatov V. A., Carlucci L., Ciani G., Proserpio D. M. J. (2005)
+     Solid State Chem., 178, 2452-2474.  The classes are determined
+     based on the way in which the overall net is generated from
+     individual identical motifs using combinations of translations
+     and symmetry elements.
+
 ;
 _type.contents                          Code
 loop_
   _enumeration_set.state
   _enumeration_set.detail
-         Ia        'Class Ia'          
-         Ib        'Class Ib'          
-         IIa       'Class IIa'         
-         IIb       'Class IIb'         
-         IIIa      'Class IIIa'        
-         IIIb      'Class IIIb'        
-         IIIc      'Class IIIc'        
-         IIId      'Class IIId' 
+         Ia        'all nets generated by a single translation'          
+         Ib        'at least two vectors required to generate all nets'          
+         IIa       'all nets related by a single symmetry element'         
+         IIb       'at least two symmetry elements required to generate all nets'         
+         IIIa
+            'all nets generated by a combination of a single translation and single non-translating symmetry element'
+         IIIb
+            'all nets generated by a combination of at least two translations and a single non-translating symmetry element'
+         IIIc
+            'all nets generated by a combination of a single translation and at least two non-translating symmetry elements'        
+         IIId      'a combination of at least two translations and at least two non-translating symmetry elements required to generate all nets' 
 
 save_
 
@@ -578,6 +632,7 @@ _description.text
 ;
      The finite number of interpenetrating nets.
 ;
+_enumeration.range                      1:
 _type.contents                          Integer
 
 save_
@@ -590,20 +645,18 @@ _name.category_id                       topol_repres_entangl
 _name.object_id                         period
 _definition.update                      2018-01-30
 _type.container                         Single
-_type.purpose                           State
 _description.text                       
 ;
-     Periodicity of the entangled array. The data value must be  one
-     of the following:
-;
-_type.contents                          Code
-loop_
-  _enumeration_set.state
-  _enumeration_set.detail
+     Periodicity of the entangled array. Integers are interpreted as
+     follows:
          0         '0-periodic (finite)'         
          1         '1-periodic (chain)'          
          2         '2-periodic (layer)'          
          3         '3-periodic (framework)' 
+
+;
+_enumeration.range                      0:3
+_type.contents                          Integer
 
 save_
 
@@ -652,9 +705,12 @@ _type.container                         Single
 _type.purpose                           State
 _description.text                       
 ;
-     The type of the entanglement. The data value must be one of  the
-     following:
+     The type of the entanglement as described in Properpio, D. M.
+     (2010) Nat. Chem. 2, 435-436 and Carlucci L., Ciani G.,
+     Proserpio D. M., Mitina T. G., Blatov V. A. (2014) Chem.
+     Rev. 114, 7557-7580
 ;
+
 _type.contents                          Code
 loop_
   _enumeration_set.state
@@ -680,6 +736,13 @@ _name.object_id                         topol_repres_node
 _definition.update                      2018-01-30
 _definition.scope                       Category
 _definition.class                       Set
+_description.text
+;
+
+     The TOPOL_REPRES_NODE cateogry describes the chemical composition, structure
+     and topological properties of the nodes of the underlying net.
+
+;
 
 save_
 
@@ -742,16 +805,21 @@ _name.object_id                         CS
 _definition.update                      2018-01-30
 _description.text                       
 ;
-     The coordination sequence of the node written as an array of
-     integers.
+
+     The coordination sequence is a sequence of numbers counting the
+     atoms in the 1st, 2nd, 3rd etc. coordination shells of any given
+     atom in the net. In other words, the kth entry in the list is the
+     number of vertices linked to the node by a path of exactly k
+     steps.
+
 ;
+
 _type.contents                          Integer
+_type.container                         List
 loop_
   _description_example.case
-         
-;
-4 12 24 42 64 92 124 162 204 252]
-; 
+  _description_example.detail
+  [4 12 24 42 64 92 124 162 204 252]    'The diamond coordination sequence'
 
 save_
 
@@ -764,15 +832,15 @@ _name.object_id                         ES
 _definition.update                      2018-01-30
 _description.text                       
 ;
-     The extended point symbol of the node.
+     The extended point symbol of the node lists all shortest circuits for each
+     angle for each non-equivalent atom.
 ;
 _type.contents                          Text
 loop_
   _description_example.case
-         
-;
-6(2).6(2).6(2).6(2).6(2).6(2)
-; 
+  _description_example.detail
+'6(2).6(2).6(2).6(2).6(2).6(2)'         'A vertex in the diamond structure'
+
 
 save_
 
@@ -802,15 +870,15 @@ _name.object_id                         point_symbol
 _definition.update                      2018-01-30
 _description.text                       
 ;
-     The (short) point symbol of the node.
+     The (short) point symbol of the node. This lists the number and size of
+     the shortest closed chains of connected nodes (circuits) starting from
+     any non-equivalent node in the net.
 ;
 _type.contents                          Text
 loop_
   _description_example.case
-         
-;
-6^6
-; 
+  _description_example.detail
+  '6^6'                                 'Point symbol for a diamond vertex'
 
 save_
 
@@ -823,16 +891,17 @@ _name.object_id                         VS
 _definition.update                      2018-01-30
 _description.text                       
 ;
-     The vertex symbol of the node.
+
+     The vertex symbol of the node. A vertex symbol provides similar information
+     to the extended point symbol, but only for rings, which are circuits that
+     contain no shortcuts, that is, may not be built from smaller circuits.
+
 ;
 _type.contents                          Text
 loop_
   _description_example.case
-         
-;
-6(2).6(2).6(2).6(2).6(2).6(2)
-; 
-
+  _description_example.detail
+'6(2).6(2).6(2).6(2).6(2).6(2)'         'Vertex symbol for diamond'
 save_
 
 
@@ -844,6 +913,13 @@ _name.object_id                         topol_repres_occurrence
 _definition.update                      2018-01-30
 _definition.scope                       Category
 _definition.class                       Set
+_description.text
+;
+
+     The TOPOL_REPRES_OCCURRENCE category describes the occurrence of the
+     underlying net topology in crystal structures.
+
+;
 
 save_
 
@@ -856,9 +932,11 @@ _name.object_id                         refcode
 _definition.update                      2018-01-30
 _description.text                       
 ;
+
      Reference code in a crystallographic database  to the
      crystallographic data of the crystal  structure with the
      underlying net topology.
+
 ;
 _type.contents                          Text
 
@@ -904,7 +982,22 @@ _name.object_id                         topol_repres_tiling
 _definition.update                      2018-01-30
 _definition.scope                       Category
 _definition.class                       Set
+_description.text
+;
 
+     The TOPOL_REPRES_TILING category describes the natural tiling
+     corresponding to the underlying net.  A tiling is a
+     partition of crystal space using generalised polyhedra, and a
+     natural tiling is one for which tiles are the smallest possible
+     that conserve the full symmetry of the net and for which the
+     faces are all locally strong rings. This means that there is no
+     single largest face (face with the largest number of vertices)
+     as such a face will be the some of the other smaller faces.
+
+     The tile signature contains the sizes of the tile faces and
+     the number of faces of a given size in the tile.
+
+;
 save_
 
 
@@ -920,7 +1013,7 @@ _description.text
      tiling.
 ;
 _type.contents                          Integer
-
+_enumeration.range                      1:
 save_
 
 
@@ -966,6 +1059,7 @@ _description.text
      Number of independent tile faces in the natural tiling.
 ;
 _type.contents                          Integer
+_enumeration.range                      1:
 
 save_
 
@@ -978,15 +1072,14 @@ _name.object_id                         signature
 _definition.update                      2018-01-30
 _description.text                       
 ;
-     The tiling signature.
+     The tiling signature, written in the form \a[A^a.B^b..]+\b[C^c.D^d...]+...,
+     where square brackets envelop tile symbols, \a,\b,... are stoichiometric
+     coefficients, A, B, C, D, ... are sizes of tile faces, a,b,c,d, ... are
+     numbers of the faces of a given size in the tile.
 ;
 _type.contents                          Text
 loop_
-  _description_example.case
-         
-;
-6^4]'
-; 
+  _description_example.case         '[6^4]'
 
 save_
 
@@ -1017,5 +1110,5 @@ _description.text
      Number of independent tile vertices in the natural tiling.
 ;
 _type.contents                          Integer
-
+_enumeration.range                      1:
 save_
