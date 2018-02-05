@@ -13,10 +13,12 @@ _dictionary.title                       TOPOLOGY_CIF
 _dictionary.class                       Instance
 _dictionary.version                     0.1
 _dictionary.ddl_conformance             3.13.1
+_dictionary.date                        2018-02-06
 _description.text
 ;
   The Topology CIF dictionary provides datanames for describing crystal structure
-  topology.
+  topology.  This is a DRAFT version and datanames in this dictionary should not
+  be used until approval by COMCIFS.
 ;
 
 save_TOPOLOGY
@@ -579,7 +581,7 @@ _description.text
 ;
      The TOPOL_REPRES_ENTANGL category describes entanglements in the
      underlying net.  An entangled net can be separated into two or
-     more motifs. See [].
+     more motifs.
 ;
 save_
 
@@ -1072,7 +1074,7 @@ _name.object_id                         signature
 _definition.update                      2018-01-30
 _description.text                       
 ;
-     The tiling signature, written in the form \a[A^a.B^b..]+\b[C^c.D^d...]+...,
+     The tiling signature, written in the form \a[A^a^ . B^b^ ...]+\b[C^c^ . D^d^ ...]+...,
      where square brackets envelop tile symbols, \a,\b,... are stoichiometric
      coefficients, A, B, C, D, ... are sizes of tile faces, a,b,c,d, ... are
      numbers of the faces of a given size in the tile.
