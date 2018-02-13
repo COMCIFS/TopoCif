@@ -678,41 +678,6 @@ _type.contents                          Integer
 
 save_
 
-
-save__topol_repres_entangl.topology_ERN
-
-_definition.id                          '_topol_repres_entangl.topology_ERN'
-_name.category_id                       topol_repres_entangl
-_name.object_id                         topology_ERN
-_definition.update                      2018-02-06
-_description.text                       
-;
-     Topology of the entanglement described as an extended ring  net (ERN).
-     The name of the extended ring net is specified in one  of the
-     nomenclatures of the periodic nets.
-;
-_type.contents                          Text
-
-save_
-
-
-save__topol_repres_entangl.topology_HRN
-
-_definition.id                          '_topol_repres_entangl.topology_HRN'
-_name.category_id                       topol_repres_entangl
-_name.object_id                         topology_HRN
-_definition.update                      2018-02-06
-_description.text                       
-;
-     Topology of the entanglement described as a Hopf ring net (HRN).
-     The name of the Hopf ring net is specified in one of  the
-     nomenclatures of the periodic nets.
-;
-_type.contents                          Text
-
-save_
-
-
 save__topol_repres_entangl.type
 
 _definition.id                          '_topol_repres_entangl.type'
@@ -745,6 +710,106 @@ loop_
 
 save_
 
+save_topol_repres_entangl_ERN
+_definition.id                          topol_repres_entangl_ERN
+_name.category_id                       TOPOLOGY
+_name.object_id                         topol_repres_entangl_ERN
+_definition.update                      2018-02-13
+_definition.scope                       Category
+_definition.class                       Loop
+_description.text                       
+;
+     Topology of the entanglement described as an extended ring  net (ERN).
+     The name of the extended ring net is specified in one or more of the
+     standard nomenclatures.
+;
+_category_key.name                     '_topol_repres_entangl_ERN.nomenclature'
+save_
+
+save_topol_repres_entangl_ERN.nomenclature
+_definition.id                          '_topol_repres_entangl_ERN.nomenclature'
+_name.category_id                       topol_repres_entangl_ERN
+_name.object_id                         nomenclature
+_definition.update                      2018-02-13
+_description.text                       
+;
+     The nomenclature used to describe the extended ring net.  See the TOPOL_REPRES
+     category for detailed information on the source for the nomenclatures.
+;
+_type.contents                          Code
+loop_
+    _enumeration_set.state
+    _enumeration_set.detail
+    TOPOS                               'The TOPOS nomenclature'
+    SP                                  'Sphere packing'
+    RCSR                                'RCSR nomenclature'
+    Epinet                              'Epinet database identifier'
+    Arbitrary                           'Non-standard identifier'
+save_
+
+save_topol_repres_entangl_ERN.name
+
+_definition.id                          '_topol_repres_entangl_ERN.name'
+_name.category_id                       topol_repres_entangl_ERN
+_name.object_id                         name
+_definition.update                      2018-02-13
+_description.text                       
+;
+     The symbol or name of the extended ring net in the specified nomenclature.
+;
+_type.contents                          Text
+save_
+
+save_topol_repres_entangl_HRN
+_definition.id                          topol_repres_entangl_HRN
+_name.category_id                       TOPOLOGY
+_name.object_id                         topol_repres_entangl_HRN
+_definition.update                      2018-02-13
+_definition.scope                       Category
+_definition.class                       Loop
+_description.text                       
+;
+     Topology of the entanglement described as a Hopf ring  net (HRN).
+     The name of the extended ring net is specified in one or more of the
+     standard nomenclatures.
+;
+_category_key.name                     '_topol_repres_entangl_HRN.nomenclature'
+save_
+
+save_topol_repres_entangl_HRN.nomenclature
+_definition.id                          '_topol_repres_entangl_HRN.nomenclature'
+_name.category_id                       topol_repres_entangl_HRN
+_name.object_id                         nomenclature
+_definition.update                      2018-02-13
+_description.text                       
+;
+     The nomenclature used to describe the Hopf ring net.  See the TOPOL_REPRES
+     category for detailed information on the source for the nomenclatures.
+;
+_type.contents                          Code
+loop_
+    _enumeration_set.state
+    _enumeration_set.detail
+    TOPOS                               'The TOPOS nomenclature'
+    SP                                  'Sphere packing'
+    RCSR                                'RCSR nomenclature'
+    Epinet                              'Epinet database identifier'
+    Arbitrary                           'Non-standard identifier'
+save_
+
+save_topol_repres_entangl_HRN.name
+
+_definition.id                          '_topol_repres_entangl_HRN.name'
+_name.category_id                       topol_repres_entangl_HRN
+_name.object_id                         name
+_definition.update                      2018-02-13
+_description.text                       
+;
+     The symbol or name of the Hopf ring net in the specified nomenclature.
+;
+_type.contents                          Text
+
+save_
 
 save_topol_repres_node
 
@@ -1231,8 +1296,8 @@ _enumeration.range                      3:
 save_
 
 save_topol_repres_tiling_faces.count
-_definition.id                          '_topol_repres_tiling_face.count'
-_name.category_id                       topol_repres_tiling_face
+_definition.id                          '_topol_repres_tiling_faces.count'
+_name.category_id                       topol_repres_tiling_faces
 _name.object_id                         count
 _definition.update                      2018-02-13
 _description.text                       
