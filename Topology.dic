@@ -11,9 +11,9 @@ data_TOPOLOGY_CIF
 
 _dictionary.title                       TOPOLOGY_CIF
 _dictionary.class                       Instance
-_dictionary.version                     0.1
+_dictionary.version                     0.2
 _dictionary.ddl_conformance             3.13.1
-_dictionary.date                        2018-02-06
+_dictionary.date                        2018-02-12
 _description.text
 ;
   The Topology CIF dictionary provides datanames for describing crystal structure
@@ -266,12 +266,12 @@ _definition.update                      2018-02-06
 _enumeration.range                      1:50
 _description.text                       
 ;
-     The solid angle fraction of the interatomic contact A-X, which is 
-     the part of the sphere of unit radius cut by the pyramid with the 
+     The solid angle percentage of the interatomic contact A-X, which is 
+     the percentage of the sphere of unit radius cut by the pyramid with the 
      basal face of the Voronoi polyhedron of A or X, the two atoms defining
      the contact. The total solid angle (the whole sphere) is equal to 100.
      The face used is that corresponding to the A-X interatomic contact. 
- ;
+;
 _type.contents                          Real
 
 save_
@@ -314,7 +314,7 @@ _description.text
      of the graph are the vertices of a translational repeat unit and the edges
      are all the edges of the repeat unit. See O. Delgado_Friedrichs, M. O'Keeffe
      J. Sol. State Chem. 178 (2005) 2480-2485 
- ;
+;
 _enumeration.range                      1:
 _type.contents                          Integer
 
@@ -1039,7 +1039,7 @@ _description.text
      coefficients, A, B, C, D, ... are sizes of tile faces, a,b,c,d, ... are
      numbers of the faces of a given size in the tile.
      The signature is written in a  lexicographic order, smallest numbers first:  
-     5[6^4]+[6^3] = 56463 better than [6^3]+5[6^4] = 63564  
+     5[6^4^]+[6^3^] = 56463 better than [6^3^]+5[6^4^] = 63564  
 ;
 _type.contents                          Text
 loop_
