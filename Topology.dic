@@ -68,6 +68,20 @@ _type.contents                          Text
 
 save_
 
+save__topol.repres_occurrence_total
+
+_definition.id                          '_topol.repres_occurrence_total'
+_name.category_id                       topol
+_name.object_id                         repres_occurrence_total
+_definition.update                      2018-02-13
+_description.text                       
+;
+     The total number of occurrences in literature and databases of the
+     underlying net topology at the time the data file was prepared.
+;
+_type.contents                          Integer
+
+save_
 
 save_topol_bond
 
@@ -266,7 +280,7 @@ _definition.update                      2018-02-06
 _enumeration.range                      1:50
 _description.text                       
 ;
-     The solid angle percentage of the interatomic contact A-X, which is 
+     The solid angle fraction of the interatomic contact A-X, which is 
      the percentage of the sphere of unit radius cut by the pyramid with the 
      basal face of the Voronoi polyhedron of A or X, the two atoms defining
      the contact. The total solid angle (the whole sphere) is equal to 100.
@@ -935,7 +949,7 @@ _name.category_id                       TOPOLOGY
 _name.object_id                         topol_repres_occurrence
 _definition.update                      2018-01-30
 _definition.scope                       Category
-_definition.class                       Set
+_definition.class                       Loop
 _description.text
 ;
 
@@ -943,9 +957,22 @@ _description.text
      underlying net topology in crystal structures.
 
 ;
-
+_category_key.name                      '_topol_repres_occurrence.id'
 save_
 
+save_topol_repres_occurrence.id
+
+_definition.id                          '_topol_repres_occurrence.id'
+_name.category_id                       topol_repres_occurrence
+_name.object_id                         id
+_definition.update                      2018-02-13
+_description.text
+;
+     A unique identifier for the literature or database reference
+;
+_type.contents                          Code
+
+save_
 
 save__topol_repres_occurrence.refcode
 
@@ -980,22 +1007,6 @@ _description.text
 _type.contents                          Text
 
 save_
-
-
-save__topol_repres_occurrence.total
-
-_definition.id                          '_topol_repres_occurrence.total'
-_name.category_id                       topol_repres_occurrence
-_name.object_id                         total
-_definition.update                      2018-01-30
-_description.text                       
-;
-     The total number of occurrences of the underlying  net topology.
-;
-_type.contents                          Integer
-
-save_
-
 
 save_topol_repres_tiling
 
