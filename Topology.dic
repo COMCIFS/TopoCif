@@ -1153,5 +1153,141 @@ _type.contents                          Text
 
 save_
 
+save_topol_repres_tiling_faces
+_definition.id                          topol_repres_tiling_faces
+_name.category_id                       TOPOLOGY
+_name.object_id                         topol_repres_tiling_faces
+_definition.update                      2018-02-13
+_definition.scope                       Category
+_definition.class                       Loop
+_description.text
+;
 
+     The TOPOL_REPRES_TILING_FACES category tabulates the faces
+     belonging to each tile in the tiling.  Together with the
+     TOPOL_REPRES_TILING_TILES category it tabulates the information
+     contained in _topol_repres_tiling.signature. See the
+     TOPOL_REPRES_TILING category for further information.
 
+;
+loop_
+    _category_key.name
+    '_topol_repres_tiling_faces.tile_id'
+    '_topol_repres_tiling_faces.size'
+
+loop_
+  _description_example.detail
+  _description_example.case
+  'Expanded description of 3[4^6]+[4^6.6^8]+[4^12.6^8.8^6] tiling'
+;
+    loop_
+      _topol_repres_tiling_tile.id
+      _topol_repres_tiling_tile.count
+      a     3
+      b     1
+      c     1
+
+    loop_
+      _topol_repres_tiling_faces.tile_id
+      _topol_repres_tiling_faces.size
+      _topol_repres_tiling_faces.count
+      a    4   6
+      b    4   6
+      b    6   8
+      c    4   12
+      c    6   8
+      c    8   6
+;
+save_
+
+save_topol_repres_tiling_faces.tile_id
+_definition.id                          '_topol_repres_tiling_faces.tile_id'
+_name.category_id                       topol_repres_tiling_faces
+_name.object_id                         tile_id
+_definition.update                      2018-02-13
+_description.text                       
+;
+     The tile to which this face belongs. It must be one of the values provided
+     in _topol_repres_tiling_tile.id
+;
+_type.contents                          Code
+_name.linked_item_id                    '_topol_repres_tiling_tile.id'
+_type.purpose                           Link
+
+save_
+
+save_topol_repres_tiling_faces.size
+_definition.id                          '_topol_repres_tiling_faces.size'
+_name.category_id                       topol_repres_tiling_faces
+_name.object_id                         size
+_definition.update                      2018-02-13
+_description.text                       
+;
+     The size of the tile face.
+;
+_type.contents                          Integer
+_enumeration.range                      3:
+
+save_
+
+save_topol_repres_tiling_faces.count
+_definition.id                          '_topol_repres_tiling_face.count'
+_name.category_id                       topol_repres_tiling_face
+_name.object_id                         count
+_definition.update                      2018-02-13
+_description.text                       
+;
+     The number of faces of this size in the tile
+;
+_type.contents                          Integer
+_enumeration.range                      1:
+
+save_
+
+save_topol_repres_tiling_tile
+_definition.id                          topol_repres_tiling_tile
+_name.category_id                       TOPOLOGY
+_name.object_id                         topol_repres_tiling_tile
+_definition.update                      2018-02-13
+_definition.scope                       Category
+_definition.class                       Loop
+_description.text
+;
+
+     The TOPOL_REPRES_TILING_TILE category provides information on
+     each of the tiles in the tiling. Together with the
+     TOPOL_REPRES_TILING_FACES category it tabulates the information
+     contained in _topol_repres_tiling.signature. See the
+     TOPOL_REPRES_TILING category for further information.
+
+;
+_category_key.name               '_topol_repres_tiling_tile.id'
+save_
+
+save_topol_repres_tiling_tile.count
+_definition.id                          '_topol_repres_tiling_tile.count'
+_name.category_id                       topol_repres_tiling_tile
+_name.object_id                         count
+_definition.update                      2018-02-13
+_description.text                       
+;
+     The number of this kind of tile in the tiling.
+;
+_type.contents                          Integer
+_enumeration.range                      1:
+
+save_
+
+save_topol_repres_tiling_tile.id
+_definition.id                          '_topol_repres_tiling_tile.id'
+_name.category_id                       topol_repres_tiling_tile
+_name.object_id                         id
+_definition.update                      2018-02-13
+_description.text                       
+;
+     An arbitrary, unique identifier for this tile type.
+;
+_type.contents                          Code
+_type.purpose                           Key
+
+save_
