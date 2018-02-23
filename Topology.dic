@@ -1,5 +1,9 @@
 #\#CIF_2.0
-#DDLm dictionary edited in DDLm-authortools
+#################################################################################
+#                                                                               #
+#          Topology CIF dictionary                                              #
+#                                                                               #
+#################################################################################
 data_TOPOLOGY_CIF
 
 _dictionary.title                       TOPOLOGY_CIF
@@ -13,15 +17,6 @@ _description.text
   topology.  This is a DRAFT version and datanames in this dictionary should not
   be used until approval by COMCIFS.
 ;
-loop_
-  _dictionary_audit.version
-  _dictionary_audit.date
-  _dictionary_audit.revision
-         0.3       2018-02-23          
-;Changed topol_bond to topol_link using node labels instead of atom labels. Added coordinates, multiplicity and 
-Wyckoff symbol to topol_repres_node. (J Hester.)()
-; 
-
 save_TOPOLOGY
 
 _definition.id                          TOPOLOGY
@@ -44,7 +39,7 @@ _definition.update                      2018-01-30
 _definition.scope                       Category
 _definition.class                       Set
 _description.text                       
-;
+;             
               The TOPOL category covers data on connectivity
               between atoms and structural groups and the
               related structural properties as calculated from
@@ -65,7 +60,10 @@ _description.text
      The total number of occurrences in literature and databases of the
      underlying net topology at the time the data file was prepared.
 ;
-_type.contents                          Integer
+_type.contents                          Count
+_type.purpose                           Number
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -77,11 +75,14 @@ _name.category_id                       topol
 _name.object_id                         special_details
 _definition.update                      2018-01-30
 _description.text                       
-;
+;    
      The description of topological information not covered by the
      existing data names in the topology categories.
 ;
 _type.contents                          Text
+_type.purpose                           Describe
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -95,7 +96,8 @@ _definition.update                      2018-01-30
 _definition.scope                       Category
 _definition.class                       Loop
 _description.text                       
-;The TOPOL_LINK category describes the crystal structure
+;          
+           The TOPOL_LINK category describes the crystal structure
            connectivity and encodes the weighted colored labeled quotient
            graph, from which the whole periodic net describing the
            overall topology of the crystal structure can be restored.
@@ -118,7 +120,8 @@ _name.object_id                         node_label_1
 _definition.update                      2018-01-30
 _type.contents                          Code
 _description.text                       
-;The labels of two nodes that form a link. These must match
+;    
+     The labels of two nodes that form a link. These must match
      nodes specified in topol_repres_node
 ;
 _type.purpose                           Link
@@ -137,7 +140,8 @@ _name.object_id                         node_label_2
 _definition.update                      2018-01-30
 _type.contents                          Code
 _description.text                       
-;The labels of two nodes that form a link. These must match
+;    
+     The labels of two nodes that form a link. These must match
      nodes specified in topol_repres_node
 ;
 _type.purpose                           Link
@@ -204,7 +208,8 @@ _name.object_id                         site_symmetry_1
 _definition.update                      2018-01-30
 _type.contents                          Symop
 _description.text                       
-;The symmetry code of each node as the symmetry-equivalent
+;    
+     The symmetry code of each node as the symmetry-equivalent
      position number n and the cell translation number xyz. These
      numbers are combined to form the code n_x_y_z. The character
      string n_x_y_z is composed as follows: n refers to the symmetry
@@ -232,7 +237,8 @@ _name.object_id                         site_symmetry_2
 _definition.update                      2018-01-30
 _type.contents                          Symop
 _description.text                       
-;The symmetry code of each node as the symmetry-equivalent
+;
+     The symmetry code of each node as the symmetry-equivalent
      position number n and the cell translation number xyz. These
      numbers are combined to form the code n_x_y_z. The character
      string n_x_y_z is composed as follows: n refers to the symmetry
@@ -261,7 +267,8 @@ _definition.update                      2018-02-06
 _type.container                         Single
 _type.purpose                           State
 _description.text                       
-;The chemical bond type associated with the connection between the
+;
+     The chemical bond type associated with the connection between the
      two sites.
 ;
 _type.contents                          Code
@@ -321,14 +328,12 @@ _definition.scope                       Category
 _definition.class                       Set
 _description.text                       
 ;
-
      The TOPOL_REPRES category describes a particular crystal
      structure representation, which corresponds to the periodic
      (underlying) net topology specified in the TOPOL_BOND
      category. The underlying net is the net of centroids of
      structural units. The edges of this net represent the links
      between the units.
-
 ;
 
 save_
@@ -341,17 +346,19 @@ _name.category_id                       topol_repres
 _name.object_id                         genus
 _definition.update                      2018-02-06
 _description.text                       
-;
+;    
      The genus of the underlying net, defined as the cyclomatic number of its
      own quotient graph: g = 1 + e - v, where e and v are the number of
      edges and vertices in the quotient graph.  The quotient graph is a finite
      graph that contains all of the information of the periodic net: the vertices
      of the graph are the vertices of a translational repeat unit and the edges
      are all the edges of the repeat unit. See O. Delgado_Friedrichs, M. O'Keeffe
-     J. Sol. State Chem. 178 (2005) 2480-2485 
+     J. Sol. State Chem. 178 (2005) 2480-2485
 ;
-_enumeration.range                      1:
-_type.contents                          Integer
+_type.contents                          Index
+_type.purpose                           Number
+_type.source                            Derived
+_type.container                         Single
 
 save_
 
@@ -370,6 +377,9 @@ _type.contents                          Text
 loop_
   _description_example.case
          'face-centered cubic topology' 
+_type.purpose                           Describe
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -389,6 +399,9 @@ _type.contents                          Text
 loop_
   _description_example.case
          sqc6 
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -409,6 +422,9 @@ _type.contents                          Text
 loop_
   _description_example.case
          dia 
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -429,6 +445,9 @@ _type.contents                          Text
 loop_
   _description_example.case
          4/6/c1 
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -459,6 +478,9 @@ _description_example.detail
     The third three-periodic trinodal net with two 3-coordinated and one
     4-coordinated independent nodes
 ;
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -481,8 +503,9 @@ _description.text
          3         3-periodic (framework) 
 
 ;
-_type.contents                          Integer
+_type.contents                          Count
 _enumeration.range                      0:3
+_type.source                            Derived
 
 save_
 
@@ -500,8 +523,10 @@ _description.text
      atom. For structures with more than one kind of vertex in the asymmetric
      unit the value given is a weighted average over the vertices.
 ;
-_enumeration.range                      1:
-_type.contents                          Integer
+_type.contents                          Index
+_type.purpose                           Number
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -524,6 +549,9 @@ loop_
   _description_example.detail
          '{6^6}'   'Point symbol for diamond'    
          '{4.6^2}_2{4^2.6^10.8^3}'     '3,6-coordinated underlying net of TiO2'
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -553,11 +581,13 @@ _name.category_id                       topol_repres_edge
 _name.object_id                         chemical_formula_iupac
 _definition.update                      2018-01-30
 _description.text                       
-;
-     Formula of the residue or ion, which corresponds to the node
+;Formula of the residue or ion, which corresponds to the node
      expressed in conformance with IUPAC rules.
 ;
 _type.contents                          Text
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -569,12 +599,14 @@ _name.category_id                       topol_repres_edge
 _name.object_id                         chemical_formula_moiety
 _definition.update                      2018-01-30
 _description.text                       
-;
-     Formula of the residue or ion, which corresponds to the node.
+;Formula of the residue or ion, which corresponds to the node.
      The formula is written in accordance with the rules of  the
      _chemical_formula_moiety tag.
 ;
 _type.contents                          Text
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -586,12 +618,14 @@ _name.category_id                       topol_repres_edge
 _name.object_id                         chemical_formula_sum
 _definition.update                      2018-01-30
 _description.text                       
-;
-     Formula of the residue or ion, which corresponds to the node.
+;Formula of the residue or ion, which corresponds to the node.
      The formula is written in accordance with the rules of  the
      _chemical_formula_sum tag.
 ;
 _type.contents                          Text
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -603,14 +637,14 @@ _name.category_id                       topol_repres_edge
 _name.object_id                         id
 _definition.update                      2018-01-30
 _description.text                       
+;The label of the edge. These must  match labels
+     specified as _topol_link.id in the topol_link list.
 ;
-     The label of the edge, which corresponds to a particular  node of
-     the crystal structure representation. These must  match labels
-     specified as _topol_bond.id in the bond list.
-;
-_name.linked_item_id                    '_topol_bond.id'
-_type.contents                          Text
+_name.linked_item_id                    '_topol_link.id'
+_type.contents                          Code
 _type.purpose                           Link
+_type.source                            Related
+_type.container                         Single
 
 save_
 
@@ -624,8 +658,7 @@ _definition.update                      2018-01-30
 _definition.scope                       Category
 _definition.class                       Set
 _description.text                       
-;
-     The TOPOL_REPRES_ENTANGL category describes entanglements in the
+;The TOPOL_REPRES_ENTANGL category describes entanglements in the
      underlying net.  An entangled net can be separated into two or
      more motifs.
 ;
@@ -652,7 +685,7 @@ _description.text
      and symmetry elements.
 
 ;
-_type.contents                          Code
+_type.contents                          Text
 loop_
   _enumeration_set.state
   _enumeration_set.detail
@@ -664,6 +697,7 @@ loop_
          IIIb      'all nets generated by a combination of at least two translations and a single non-translating symmetry element'       
          IIIc      'all nets generated by a combination of a single translation and at least two non-translating symmetry elements'       
          IIId      'a combination of at least two translations and at least two non-translating symmetry elements required to generate all nets'
+_type.source                            Assigned
 
 save_
 
@@ -674,12 +708,11 @@ _definition.id                          '_topol_repres_entangl.interp_deg'
 _name.category_id                       topol_repres_entangl
 _name.object_id                         interp_deg
 _definition.update                      2018-01-30
-_description.text                       
-;
-     The finite number of interpenetrating nets.
-;
-_enumeration.range                      1:
-_type.contents                          Integer
+_description.text                       'The finite number of interpenetrating nets.'
+_type.contents                          Index
+_type.purpose                           Number
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -702,7 +735,9 @@ _description.text
 
 ;
 _enumeration.range                      0:3
-_type.contents                          Integer
+_type.contents                          Count
+_type.purpose                           Number
+_type.source                            Assigned
 
 save_
 
@@ -716,8 +751,7 @@ _definition.update                      2018-01-30
 _type.container                         Single
 _type.purpose                           State
 _description.text                       
-;
-     The type of the entanglement as described in Properpio, D. M.
+;The type of the entanglement as described in Proserpio, D. M.
      (2010) Nat. Chem. 2, 435-436 and Carlucci L., Ciani G.,
      Proserpio D. M., Mitina T. G., Blatov V. A. (2014) Chem.
      Rev. 114, 7557-7580
@@ -735,6 +769,7 @@ loop_
          polythread          polythreading       
          selfcat   self-catenation     
          undef     'no special type is assigned' 
+_type.source                            Assigned
 
 save_
 
@@ -769,6 +804,9 @@ _description.text
      The symbol or name of the extended ring net in the specified nomenclature.
 ;
 _type.contents                          Text
+_type.purpose                           Describe
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -793,6 +831,9 @@ loop_
          RCSR      'RCSR nomenclature'           
          Epinet    'Epinet database identifier'  
          Arbitrary           'Non-standard identifier' 
+_type.purpose                           Key
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -806,8 +847,7 @@ _definition.update                      2018-02-13
 _definition.scope                       Category
 _definition.class                       Loop
 _description.text                       
-;
-     Topology of the entanglement described as a Hopf ring  net (HRN).
+;Topology of the entanglement described as a Hopf ring  net (HRN).
      The name of the extended ring net is specified in one or more of the
      standard nomenclatures.
 ;
@@ -822,11 +862,12 @@ _definition.id                          '_topol_repres_entangl_HRN.name'
 _name.category_id                       topol_repres_entangl_HRN
 _name.object_id                         name
 _definition.update                      2018-02-13
-_description.text                       
-;
-     The symbol or name of the Hopf ring net in the specified nomenclature.
-;
+_description.text 
+                                        'The symbol or name of the Hopf ring net in the specified nomenclature.'
 _type.contents                          Text
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -838,8 +879,7 @@ _name.category_id                       topol_repres_entangl_HRN
 _name.object_id                         nomenclature
 _definition.update                      2018-02-13
 _description.text                       
-;
-     The nomenclature used to describe the Hopf ring net.  See the TOPOL_REPRES
+;The nomenclature used to describe the Hopf ring net.  See the TOPOL_REPRES
      category for detailed information on the source for the nomenclatures.
 ;
 _type.contents                          Code
@@ -851,6 +891,9 @@ loop_
          RCSR      'RCSR nomenclature'           
          Epinet    'Epinet database identifier'  
          Arbitrary           'Non-standard identifier' 
+_type.purpose                           Key
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -1167,11 +1210,8 @@ _definition.update                      2018-01-30
 _definition.scope                       Category
 _definition.class                       Loop
 _description.text                       
-;
-
-     The TOPOL_REPRES_OCCURRENCE category describes the occurrence of the
+;The TOPOL_REPRES_OCCURRENCE category describes the occurrence of the
      underlying net topology in crystal structures.
-
 ;
 _category_key.name                      '_topol_repres_occurrence.id'
 
@@ -1185,14 +1225,14 @@ _name.category_id                       topol_repres_occurrence
 _name.object_id                         refcode
 _definition.update                      2018-01-30
 _description.text                       
-;
-
-     Reference code in a crystallographic database  to the
+;Reference code in a crystallographic database  to the
      crystallographic data of the crystal  structure with the
      underlying net topology.
-
 ;
 _type.contents                          Text
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -1204,11 +1244,13 @@ _name.category_id                       topol_repres_occurrence
 _name.object_id                         reference
 _definition.update                      2018-01-30
 _description.text                       
-;
-     Reference to a publication, where a crystal  structure with the
+;Reference to a publication, where a crystal  structure with the
      underlying net topology  was characterized.
 ;
 _type.contents                          Text
+_type.purpose                           Describe
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -1219,11 +1261,11 @@ _definition.id                          '_topol_repres_occurrence.id'
 _name.category_id                       topol_repres_occurrence
 _name.object_id                         id
 _definition.update                      2018-02-13
-_description.text                       
-;
-     A unique identifier for the literature or database reference
-;
-_type.contents                          Code
+_description.text                       'A unique identifier for the literature or database reference'
+_type.contents                          Text
+_type.purpose                           Key
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -1270,8 +1312,10 @@ _description.text
      The number of distinct (not symmetry-related) chambers  in the
      tiling.
 ;
-_type.contents                          Integer
-_enumeration.range                      1:
+_type.contents                          Index
+_type.purpose                           Number
+_type.source                            Derived
+_type.container                         Single
 
 save_
 
@@ -1288,6 +1332,9 @@ _description.text
      to the net of the dual of the natural tiling.
 ;
 _type.contents                          Text
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -1302,7 +1349,10 @@ _description.text
 ;
      Number of independent tile edges in the natural tiling.
 ;
-_type.contents                          Integer
+_type.contents                          Index
+_type.purpose                           Number
+_type.source                            Recorded
+_type.container                         Single
 
 save_
 
@@ -1317,8 +1367,10 @@ _description.text
 ;
      Number of independent tile faces in the natural tiling.
 ;
-_type.contents                          Integer
-_enumeration.range                      1:
+_type.contents                          Index
+_type.purpose                           Number
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -1344,6 +1396,9 @@ loop_
   _description_example.detail
          '[6^4]'   'Natural tiling for diamond'  
          '3[4^6]+[4^6.6^8]+[4^12.6^8.8^6]'       'Natural tiling for zeolite LTA'
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -1358,7 +1413,10 @@ _description.text
 ;
      Number of independent tiles in the natural tiling.
 ;
-_type.contents                          Integer
+_type.contents                          Index
+_type.purpose                           Number
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -1373,8 +1431,10 @@ _description.text
 ;
      Number of independent tile vertices in the natural tiling.
 ;
-_type.contents                          Integer
-_enumeration.range                      1:
+_type.contents                          Index
+_type.purpose                           Number
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -1438,8 +1498,10 @@ _description.text
 ;
      The number of faces of this size in the tile
 ;
-_type.contents                          Integer
-_enumeration.range                      1:
+_type.contents                          Index
+_type.purpose                           Number
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -1454,8 +1516,11 @@ _description.text
 ;
      The size of the tile face.
 ;
-_type.contents                          Integer
+_type.contents                          Count
 _enumeration.range                      3:
+_type.purpose                           Number
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -1474,6 +1539,8 @@ _description.text
 _type.contents                          Code
 _name.linked_item_id                    '_topol_repres_tiling_tile.id'
 _type.purpose                           Link
+_type.source                            Related
+_type.container                         Single
 
 save_
 
@@ -1511,8 +1578,10 @@ _description.text
 ;
      The number of this kind of tile in the tiling.
 ;
-_type.contents                          Integer
-_enumeration.range                      1:
+_type.contents                          Index
+_type.purpose                           Number
+_type.source                            Assigned
+_type.container                         Single
 
 save_
 
@@ -1529,5 +1598,18 @@ _description.text
 ;
 _type.contents                          Code
 _type.purpose                           Key
+_type.source                            Assigned
+_type.container                         Single
 
 save_
+
+loop_
+  _dictionary_audit.version
+  _dictionary_audit.date
+  _dictionary_audit.revision
+         0.3       2018-02-23          
+;
+Changed topol_bond to topol_link using node labels instead of atom labels. Added coordinates, multiplicity and 
+Wyckoff symbol to topol_repres_node. Added in type and linking information. (J Hester.)
+; 
+
