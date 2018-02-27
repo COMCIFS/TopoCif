@@ -8,9 +8,9 @@ data_TOPOLOGY_CIF
 
 _dictionary.title                       TOPOLOGY_CIF
 _dictionary.class                       Instance
-_dictionary.version                     0.3
+_dictionary.version                     0.4
 _dictionary.ddl_conformance             3.13.1
-_dictionary.date                        2018-02-23
+_dictionary.date                        2018-02-27
 _description.text                       
 ;
   The Topology CIF dictionary provides datanames for describing crystal structure
@@ -365,7 +365,7 @@ _definition.id                          '_topol_link.site_symmetry_1'
 _name.category_id                       topol_link
 _name.object_id                         site_symmetry_1
 _definition.update                      2018-01-30
-_type.contents                          Symop
+_type.contents                          Code
 _description.text                       
 ;    
      The symmetry code of each node as the symmetry-equivalent
@@ -377,6 +377,8 @@ _description.text
      are the translations that are subsequently applied to the
      symmetry-transformed coordinates to generate the node used in
      calculating the link. x, y and z can be any integer values.
+     Note that this is a different convention to that used in the
+     core dictionary.
 ;
 loop_
   _description_example.case
@@ -394,7 +396,7 @@ _definition.id                          '_topol_link.site_symmetry_2'
 _name.category_id                       topol_link
 _name.object_id                         site_symmetry_2
 _definition.update                      2018-01-30
-_type.contents                          Symop
+_type.contents                          Code
 _description.text                       
 ;
      The symmetry code of each node as the symmetry-equivalent
@@ -406,6 +408,8 @@ _description.text
      are the translations that are subsequently applied to the
      symmetry-transformed coordinates to generate the node used in
      calculating the link. x, y and z can be any integer values.
+     Note that this is a different convention to that used in the
+     core dictionary.
 ;
 loop_
   _description_example.case
@@ -1768,7 +1772,11 @@ loop_
   _dictionary_audit.revision
          0.3       2018-02-23          
 ;
-Changed topol_bond to topol_link using node labels instead of atom labels. Added coordinates, multiplicity and 
-Wyckoff symbol to topol_repres_node. Added in type and linking information. (J Hester.)
+    Changed topol_bond to topol_link using node labels instead of atom labels.
+    Added coordinates, multiplicity and Wyckoff symbol to topol_repres_node. Added
+    in type and linking information. (J Hester.)
 ; 
-
+         0.4       2018-02-27
+;
+    Added long-form examples provided by V Blatov. Version for review.
+;
