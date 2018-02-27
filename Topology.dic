@@ -629,8 +629,9 @@ _description.text
      C (chain), L (layer) or T (three-periodic) designating the dimensionality
      of the net; and n enumerates non-isomorphic nets with a given ND sequence.
      For finite (molecular) graphs the symbols NMK-n are used, where k is the
-     number of vertices (atoms) in the graph. See Alexandrov, E.V., Blatov, V.A.,
-     Kochetkov, A.V. & Proserpio, D.M. (2011) CrystEngComm, 13, 3947-3958.
+     number of vertices (atoms) in the graph. See Aman, F., Asiri, A. M.,
+     Siddiqui, W. A., Arshad, M. N., Ashraf, A., Zakharov, N. S., Blatov, V. A.
+     (2014) CrystEngComm, 16, 1963-1970.
 ;
 _type.contents                          Text
 loop_
