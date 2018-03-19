@@ -1401,6 +1401,28 @@ _type.container                         Single
 save_
 
 
+save__topol_repres_occurrence.database_entry_url
+
+_definition.id                          '_topol_repres_occurrence.database_entry_url'
+_name.category_id                       topol_repres_occurrence
+_name.object_id                         database_entry_url
+_definition.update                      2018-03-19
+_description.text
+;A stable URL of the crystallographic data of the crystal structure
+     with the underlying net topology.
+;
+_type.contents                          Text
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
+loop_
+  _description_example.case
+  _description_example.detail
+         'http://www.pdb.org/pdb/files/1H2O.pdb'
+         'A stable URL for entry 1H20 in the Protein Data Bank'
+save_
+
+
 save__topol_repres_occurrence.reference
 
 _definition.id                          '_topol_repres_occurrence.reference'
