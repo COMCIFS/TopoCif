@@ -1157,11 +1157,11 @@ _type.container                         Single
 save_
 
 
-save__topol_repres_node.CS
+save__topol_repres_node.coordination_sequence
 
-_definition.id                          '_topol_repres_node.CS'
+_definition.id                          '_topol_repres_node.coordination_sequence'
 _name.category_id                       topol_repres_node
-_name.object_id                         CS
+_name.object_id                         coordination_sequence
 _definition.update                      2018-02-06
 _description.text                       
 ;The coordination sequence is a sequence of numbers counting the
@@ -1182,11 +1182,11 @@ _type.source                            Derived
 save_
 
 
-save__topol_repres_node.ES
+save__topol_repres_node.extended_point_symbol
 
-_definition.id                          '_topol_repres_node.ES'
+_definition.id                          '_topol_repres_node.extended_point_symbol'
 _name.category_id                       topol_repres_node
-_name.object_id                         ES
+_name.object_id                         extended_point_symbol
 _definition.update                      2018-02-06
 _description.text                       
 ;The extended point symbol of the node lists all shortest circuits 
@@ -1313,11 +1313,11 @@ _definition.update                      2018-02-23
 save_
 
 
-save__topol_repres_node.VS
+save__topol_repres_node.vertex_symbol
 
-_definition.id                          '_topol_repres_node.VS'
+_definition.id                          '_topol_repres_node.vertex_symbol'
 _name.category_id                       topol_repres_node
-_name.object_id                         VS
+_name.object_id                         vertex_symbol
 _definition.update                      2018-02-06
 _description.text                       
 ;The vertex symbol of a node provides similar information to the 
