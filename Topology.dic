@@ -197,7 +197,7 @@ _topol_link.multiplicity
 loop_
 _topol_repres_edge.id
 _topol_repres_edge.chemical_formula_sum
-1 Cu1
+1 Cu
 
 _topol_repres.overall_topology_RCSR dia
 _topol_repres_entangl.type interp
@@ -745,7 +745,7 @@ _name.category_id                       topol_repres_edge
 _name.object_id                         chemical_formula_iupac
 _definition.update                      2018-01-30
 _description.text                       
-;Formula of the residue or ion, which corresponds to the node
+;Formula of the residue or ion, which corresponds to the edge
      expressed in conformance with IUPAC rules.
 ;
 _type.contents                          Text
@@ -763,7 +763,7 @@ _name.category_id                       topol_repres_edge
 _name.object_id                         chemical_formula_moiety
 _definition.update                      2018-01-30
 _description.text                       
-;Formula of the residue or ion, which corresponds to the node.
+;Formula of the residue or ion, which corresponds to the edge.
      The formula is written in accordance with the rules of  the
      _chemical_formula_moiety tag.
 ;
@@ -782,7 +782,7 @@ _name.category_id                       topol_repres_edge
 _name.object_id                         chemical_formula_sum
 _definition.update                      2018-01-30
 _description.text                       
-;Formula of the residue or ion, which corresponds to the node.
+;Formula of the residue or ion, which corresponds to the edge.
      The formula is written in accordance with the rules of  the
      _chemical_formula_sum tag.
 ;
