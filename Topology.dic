@@ -1069,7 +1069,7 @@ _name.category_id                       TOPOLOGY
 _name.object_id                         topol_repres_node
 _definition.update                      2018-02-06
 _definition.scope                       Category
-_definition.class                       Set
+_definition.class                       Loop
 _description.text                       
 ;The TOPOL_REPRES_NODE category describes the chemical composition, structure
      and topological properties of the nodes of the underlying net.
