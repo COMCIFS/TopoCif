@@ -8,9 +8,9 @@ data_TOPOLOGY_CIF
 
 _dictionary.title                       TOPOLOGY_CIF
 _dictionary.class                       Instance
-_dictionary.version                     0.4
+_dictionary.version                     0.5
 _dictionary.ddl_conformance             3.13.1
-_dictionary.date                        2018-02-27
+_dictionary.date                        2018-04-05
 _description.text                       
 ;
   The Topology CIF dictionary provides datanames for describing crystal structure
@@ -543,7 +543,8 @@ _type.purpose                           State
 _description.text                       
 ;
      The chemical bond type associated with the connection between the
-     two sites.
+     two sites.  If no bond exists, use an undelimited period character.
+     If the bond type is unknown, use ? or leave out the data name. 
 ;
 _type.contents                          Code
 loop_
@@ -561,8 +562,7 @@ loop_
          s         'specific bond'     
          hg        'halogen bond'      
          vw        'van der Waals contact'       
-         no        'no bond'           
-         ab        'any kind of bond (unspecified)' 
+         .         'no bond'           
 _type.source                            Assigned
 
 save_
@@ -1219,7 +1219,8 @@ _name.category_id                       topol_repres_node
 _name.object_id                         chemical_formula_iupac
 _definition.update                      2018-01-30
 _description.text                       
-;Formula of the residue or ion, which corresponds to the node
+;
+     Formula of the residue or ion, which corresponds to the node
      expressed in conformance with IUPAC rules.
 ;
 _type.contents                          Text
@@ -1267,6 +1268,50 @@ _type.container                         Single
 
 save_
 
+save__topol_repres_node.structural_formula_InChi
+
+_definition.id                          '_topol_repres_node.structural_formula_InChi'
+_name.category_id                       topol_repres_node
+_name.object_id                         structural_formula_inchi
+_definition.update                      2018-04-05
+_description.text                       
+;
+
+     Formula of the residue or ion, which corresponds to the node.
+     The formula is written in accordance with the rules for IUPAC
+     international chemical identifiers (InChi) as described
+     by Heller et al. Journal of Cheminformatics (2015) 7:23 ,
+     DOI:10.1186/s13321-015-0068-4.
+     
+;
+_type.contents                          Text
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
+
+save_
+
+save__topol_repres_node.structural_formula_SMILES
+
+_definition.id                          '_topol_repres_node.structural_formula_SMILES'
+_name.category_id                       topol_repres_node
+_name.object_id                         structural_formula_smiles
+_definition.update                      2018-04-05
+_description.text                       
+;
+
+     Formula of the residue or ion, which corresponds to the node.
+     The formula is written in SMILES notation for describing
+     chemical structure as formalised by the OpenSMILES group
+     (https:www.opensmiles.org).
+     
+;
+_type.contents                          Text
+_type.purpose                           Encode
+_type.source                            Assigned
+_type.container                         Single
+
+save_
 
 save__topol_repres_node.coordination_sequence
 
@@ -1891,4 +1936,9 @@ loop_
          0.4       2018-02-27
 ;
     Added long-form examples provided by V Blatov. Version for review.
+;
+         0.5       2018-04-05
+;
+    Added InChi, SMILES structural formulas and replaced symops with explicit
+    symmetry operator ids and vector translations. Clarified bond types.
 ;
