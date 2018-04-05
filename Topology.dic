@@ -747,8 +747,8 @@ _description.text
 _type.contents                          Text
 loop_
   _description_example.case
-         '3,3,4T3' 
-_description_example.detail             
+  _description_example.detail
+         '3,3,4T3'
 ;
     The third three-periodic trinodal net with two 3-coordinated and one
     4-coordinated independent nodes
