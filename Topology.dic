@@ -365,66 +365,6 @@ _type.container                         Single
 save_
 
 
-save_topol_link.site_symmetry_1
-
-_definition.id                          '_topol_link.site_symmetry_1'
-_name.category_id                       topol_link
-_name.object_id                         site_symmetry_1
-_definition.update                      2018-01-30
-_type.contents                          Code
-_description.text                       
-;    
-     The symmetry code of each node as the symmetry-equivalent
-     position number n and the cell translation number xyz. These
-     numbers are combined to form the code n_x_y_z. The character
-     string n_x_y_z is composed as follows: n refers to the symmetry
-     operation that is applied to the coordinates of the node. It
-     must match a number given in _space_group.symop_id. x, y and z
-     are the translations that are subsequently applied to the
-     symmetry-transformed coordinates to generate the node used in
-     calculating the link. x, y and z can be any integer values.
-     Note that this is a different convention to that used in the
-     core dictionary.
-;
-loop_
-  _description_example.case
-         21_1_1_0 
-_type.purpose                           Encode
-_type.source                            Derived
-_type.container                         Single
-
-save_
-
-
-save_topol_link.site_symmetry_2
-
-_definition.id                          '_topol_link.site_symmetry_2'
-_name.category_id                       topol_link
-_name.object_id                         site_symmetry_2
-_definition.update                      2018-01-30
-_type.contents                          Code
-_description.text                       
-;
-     The symmetry code of each node as the symmetry-equivalent
-     position number n and the cell translation number xyz. These
-     numbers are combined to form the code n_x_y_z. The character
-     string n_x_y_z is composed as follows: n refers to the symmetry
-     operation that is applied to the coordinates of the node. It
-     must match a number given in _space_group_symop_id. x, y and z
-     are the translations that are subsequently applied to the
-     symmetry-transformed coordinates to generate the node used in
-     calculating the link. x, y and z can be any integer values.
-     Note that this is a different convention to that used in the
-     core dictionary.
-;
-loop_
-  _description_example.case
-         21_1_1_0 
-_type.purpose                           Encode
-_type.source                            Derived
-_type.container                         Single
-
-save_
 
 save_topol_link.site_symmetry_symop_1
 
