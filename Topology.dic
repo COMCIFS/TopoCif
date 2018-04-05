@@ -86,13 +86,15 @@ C1 C1
 loop_
 _topol_link.node_label_1
 _topol_link.node_label_2
-_topol_link.site_symmetry_1
-_topol_link.site_symmetry_2
+_topol_link.site_symmetry_symop_1
+_topol_link.site_symmetry_translation_1
+_topol_link.site_symmetry_symop_2
+_topol_link.site_symmetry_translation_2
 _topol_link.distance
 _topol_link.voronoi_solidangle
 _topol_link.type
 _topol_link.multiplicity
-C1 C1 1_0_0_0 13_0_0_0 1.5446 22.04 v 16
+C1 C1 1 [0 0 0] 13 [0 0 0] 1.5446 22.04 v 16
 
 _topol_repres.overall_topology_RCSR dia
 ; 
@@ -140,12 +142,14 @@ ZB1 CO3 0.00000 0.00000 0.00000
 loop_
 _topol_link.node_label_1
 _topol_link.node_label_2
-_topol_link.site_symmetry_1
-_topol_link.site_symmetry_2
+_topol_link.site_symmetry_symop_1
+_topol_link.site_symmetry_translation_1
+_topol_link.site_symmetry_symop_2
+_topol_link.site_symmetry_translation_2
 _topol_link.distance
 _topol_link.type
 _topol_link.multiplicity
-ZA1 ZB1 1_0_0_0 20_-1_-1_0 3.2122 v 36
+ZA1 ZB1 1 [0 0 0] 20 [-1 -1 0] 3.2122 v 36
 
 _topol_repres.overall_topology_RCSR pcu-b
 ; 
@@ -188,11 +192,13 @@ loop_
 _topol_link.id
 _topol_link.node_label_1
 _topol_link.node_label_2
-_topol_link.site_symmetry_1
-_topol_link.site_symmetry_2
+_topol_link.site_symmetry_symop_1
+_topol_link.site_symmetry_translation_1
+_topol_link.site_symmetry_symop_2
+_topol_link.site_symmetry_translation_2
 _topol_link.type
 _topol_link.multiplicity
-1 Node1 Node1 1_0_0_0 13_0_0_0 v 4
+1 Node1 Node1 1 [0 0 0] 13 [0 0 0] v 4
 
 loop_
 _topol_repres_edge.id
@@ -420,6 +426,111 @@ _type.container                         Single
 
 save_
 
+save_topol_link.site_symmetry_symop_1
+
+    _definition.id                          '_topol_link.site_symmetry_symop_1'
+    _name.category_id                       topol_link
+    _name.object_id                         site_symmetry_symop_1
+    _definition.update                      2018-04-05
+    _type.contents                          Code
+    _description.text                       
+;
+    
+         The symmetry operation that is applied to the coordinates of
+         the node given by _topol_link.node_label_1 before addition of
+         the translations in
+         _topol_link.site_symmetry_translation_1. The value must match
+         a value of _space_group_symop.id. No normalisation of the
+         resulting coordinates into the interval [0,1) is carried
+         out. For example, (x+1/2, y+1/2,z) is not the same as (x-1/2,
+         y+1/2,z) for these purposes.
+         
+;
+    _type.purpose                           Link
+    _type.source                            Derived
+    _name.linked_item_id                    '_space_group_symop.id'
+
+save_
+
+save_topol_link.site_symmetry_symop_2
+
+    _definition.id                          '_topol_link.site_symmetry_symop_2'
+    _name.category_id                       topol_link
+    _name.object_id                         site_symmetry_symop_2
+    _definition.update                      2018-04-05
+    _type.contents                          Code
+    _description.text                       
+;
+    
+         The symmetry operation that is applied to the coordinates of
+         the node given by _topol_link.node_label_2 before addition of
+         the translations in
+         _topol_link.site_symmetry_translation_2. The value must match
+         a value of _space_group_symop.id. No normalisation of the
+         resulting coordinates into the interval [0,1) is carried
+         out. For example, (x+1/2, y+1/2,z) is not the same as (x-1/2,
+         y+1/2,z) for these purposes.
+         
+;
+    _type.purpose                           Link
+    _type.source                            Derived
+    _name.linked_item_id                    '_space_group_symop.id'
+
+save_
+
+save_topol_link.site_symmetry_translation_1
+
+    _definition.id                          '_topol_link.site_symmetry_translation_1'
+    _name.category_id                       topol_link
+    _name.object_id                         site_symmetry_translation_1
+    _definition.update                      2018-04-05
+    _type.contents                          Integer
+    _description.text                       
+;
+    
+     A vector of lattice translations that are added to the
+     coordinates after application of the symmetry operation given by
+     _topol_link.site_symmetry_symop_1 to generate the node used in
+     calculating the link.  For example, if the symmetry operation
+     referred to by _topol_link.site_symmetry_symop_id is
+     (x-1/2,y+1/2,z), the translation vector is [0, 1, 0] and the
+     original position is (0.2,0.7,1.0) in fractional coordinates,
+     then the resultant position is (-0.3,1.2,1.0).
+         
+;
+    _type.purpose                           Number
+    _type.dimension                         '[3]'
+    _type.source                            Derived
+    _type.container                         Matrix
+
+save_
+
+save_topol_link.site_symmetry_translation_2
+
+    _definition.id                          '_topol_link.site_symmetry_translation_2'
+    _name.category_id                       topol_link
+    _name.object_id                         site_symmetry_translation_2
+    _definition.update                      2018-04-05
+    _type.contents                          Integer
+    _description.text                       
+;
+    
+     A vector of lattice translations that are added to the
+     coordinates after application of the symmetry operation given by
+     _topol_link.site_symmetry_symop_2 to generate the node used in
+     calculating the link.  For example, if the symmetry operation
+     referred to by _topol_link.site_symmetry_symop_2 is
+     (x-1/2,y+1/2,z), the translation vector is [0, 1, 0] and the
+     original position is (0.2,0.7,1.0) in fractional coordinates,
+     then the resultant position is (-0.3,1.2,1.0).
+         
+;
+    _type.purpose                           Number
+    _type.dimension                         '[3]'
+    _type.source                            Derived
+    _type.container                         Matrix
+
+save_
 
 save_topol_link.type
 
