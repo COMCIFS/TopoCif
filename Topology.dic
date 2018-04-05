@@ -433,9 +433,9 @@ save_topol_link.site_symmetry_translation_1
      _topol_link.site_symmetry_symop_1 to generate the node used in
      calculating the link.  For example, if the symmetry operation
      referred to by _topol_link.site_symmetry_symop_id is
-     (x-1/2,y+1/2,z), the translation vector is [0, 1, 0] and the
+     (x-1/2,y+1/2,z), the translation vector is [0, -1, 0] and the
      original position is (0.2,0.7,1.0) in fractional coordinates,
-     then the resultant position is (-0.3,1.2,1.0).
+     then the resultant position is (-0.3,0.2,1.0).
          
 ;
     _type.purpose                           Number
@@ -460,9 +460,9 @@ save_topol_link.site_symmetry_translation_2
      _topol_link.site_symmetry_symop_2 to generate the node used in
      calculating the link.  For example, if the symmetry operation
      referred to by _topol_link.site_symmetry_symop_2 is
-     (x-1/2,y+1/2,z), the translation vector is [0, 1, 0] and the
+     (x-1/2,y+1/2,z), the translation vector is [0, -1, 0] and the
      original position is (0.2,0.7,1.0) in fractional coordinates,
-     then the resultant position is (-0.3,1.2,1.0).
+     then the resultant position is (-0.3,0.2,1.0).
          
 ;
     _type.purpose                           Number
@@ -999,9 +999,13 @@ _definition.scope                       Category
 _definition.class                       Loop
 _description.text                       
 ;
-     Topology of the entanglement described as an extended ring  net (ERN).
-     The name of the extended ring net is specified in one or more of the
-     standard nomenclatures.
+
+     Topology of the entanglement described as an extended ring net
+     (ERN).  The name of the extended ring net is specified in one or
+     more of the standard nomenclatures.For more information on ERN
+     see Alexandrov E.V., Blatov V.A., Proserpio D.M. CrystEngComm,
+     2017, 19, 1993-2006.
+
 ;
 _category_key.name                      '_topol_repres_entangl_ERN.nomenclature'
 
@@ -1062,9 +1066,14 @@ _definition.update                      2018-02-13
 _definition.scope                       Category
 _definition.class                       Loop
 _description.text                       
-;Topology of the entanglement described as a Hopf ring  net (HRN).
-     The name of the extended ring net is specified in one or more of the
-     standard nomenclatures.
+;
+
+     Topology of the entanglement described as a Hopf ring net (HRN).
+     The name of the extended ring net is specified in one or more of
+     the standard nomenclatures.For more information on HRN see
+     Alexandrov E.V., Blatov V.A., Proserpio D.M. Acta Cryst. 2012,
+     A68, 484-493.
+
 ;
 _category_key.name                      '_topol_repres_entangl_HRN.nomenclature'
 
@@ -1243,7 +1252,7 @@ _description.text
      Formula of the residue or ion, which corresponds to the node.
      The formula is written in SMILES notation for describing
      chemical structure as formalised by the OpenSMILES group
-     (https:www.opensmiles.org).
+     (https://www.opensmiles.org).
      
 ;
 _type.contents                          Text
