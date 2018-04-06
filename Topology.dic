@@ -1217,9 +1217,9 @@ _type.container                         Single
 
 save_
 
-save__topol_repres_node.structural_formula_InChi
+save__topol_repres_node.structural_formula_InChI
 
-_definition.id                          '_topol_repres_node.structural_formula_InChi'
+_definition.id                          '_topol_repres_node.structural_formula_InChI'
 _name.category_id                       topol_repres_node
 _name.object_id                         structural_formula_inchi
 _definition.update                      2018-04-05
@@ -1228,7 +1228,7 @@ _description.text
 
      Formula of the residue or ion, which corresponds to the node.
      The formula is written in accordance with the rules for IUPAC
-     international chemical identifiers (InChi) as described
+     international chemical identifiers (InChI) as described
      by Heller et al. Journal of Cheminformatics (2015) 7:23 ,
      DOI:10.1186/s13321-015-0068-4.
      
@@ -1888,6 +1888,6 @@ loop_
 ;
          0.5       2018-04-05
 ;
-    Added InChi, SMILES structural formulas and replaced symops with explicit
+    Added InChI, SMILES structural formulas and replaced symops with explicit
     symmetry operator ids and vector translations. Clarified bond types.
 ;
