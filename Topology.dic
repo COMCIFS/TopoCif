@@ -59,8 +59,8 @@ loop_
 
 ;
 loop_
-_symmetry_equiv_pos_site_id
-_symmetry_equiv_pos_as_xyz
+_space_group_symop.id
+_space_group_symop.operation_xyz
 1 x,y,z
 2 1/4-x,1/4-y,z
 # Other symmetry elements skipped
@@ -69,13 +69,13 @@ _symmetry_equiv_pos_as_xyz
 192 3/4-z,1/2+y,1/4-x
 
 loop_
-_atom_site_label
-_atom_site_type_symbol
-_atom_site_symmetry_multiplicity
-_atom_site_fract_x
-_atom_site_fract_y
-_atom_site_fract_z
-_atom_site_occupancy
+_atom_site.label
+_atom_site.type_symbol
+_atom_site.symmetry_multiplicity
+_atom_site.fract_x
+_atom_site.fract_y
+_atom_site.fract_z
+_atom_site.occupancy
 C1 C 8 0.12500 0.12500 0.12500 1.0000
 
 loop_
@@ -109,8 +109,8 @@ _topol_repres.overall_topology_RCSR dia
 
 ;
 loop_
-_symmetry_equiv_pos_site_id
-_symmetry_equiv_pos_as_xyz
+_space_group_symop.id
+_space_group_symop.operation_xyz
 1 x,y,z
 2 -y,x-y,z
 # Other symmetry elements elided
@@ -119,13 +119,13 @@ _symmetry_equiv_pos_as_xyz
 36 1/3-y,2/3-x,1/6+z
 
 loop_
-_atom_site_label
-_atom_site_type_symbol
-_atom_site_symmetry_multiplicity
-_atom_site_fract_x
-_atom_site_fract_y
-_atom_site_fract_z
-_atom_site_occupancy
+_atom_site.label
+_atom_site.type_symbol
+_atom_site.site_symmetry_multiplicity
+_atom_site.fract_x
+_atom_site.fract_y
+_atom_site.fract_z
+_atom_site.occupancy
 C1 C 6 0.00000 0.00000 0.25000 1.0000
 O1 O 18 0.25930 0.00000 0.25000 1.0000
 Ca1 Ca 6 0.00000 0.00000 0.00000 1.0000
@@ -163,8 +163,8 @@ _topol_repres.overall_topology_RCSR pcu-b
 
 ;
 loop_
-_symmetry_equiv_pos_site_id
-_symmetry_equiv_pos_as_xyz
+_space_group_symop.id
+_space_group_symop.operation_xyz
 1 x,y,z
 2 1/2-x,1/2-y,z
 # Symmetry elements elided
@@ -173,13 +173,13 @@ _symmetry_equiv_pos_as_xyz
 48 1/2-z,y,1/2-x
 
 loop_
-_atom_site_label
-_atom_site_type_symbol
-_atom_site_symmetry_multiplicity
-_atom_site_fract_x
-_atom_site_fract_y
-_atom_site_fract_z
-_atom_site_occupancy
+_atom_site.label
+_atom_site.type_symbol
+_atom_site.site_symmetry_multiplicity
+_atom_site.fract_x
+_atom_site.fract_y
+_atom_site.fract_z
+_atom_site.occupancy
 O1 O 2 0.25000 0.25000 0.25000 1.0000
 Cu1 Cu 4 0.00000 0.00000 0.00000 1.0000
 
@@ -816,7 +816,7 @@ _definition.update                      2018-01-30
 _description.text                       
 ;Formula of the residue or ion, which corresponds to the edge.
      The formula is written in accordance with the rules of  the
-     _chemical_formula_moiety tag.
+     _chemical_formula.moiety tag.
 ;
 _type.contents                          Text
 _type.purpose                           Encode
@@ -835,7 +835,7 @@ _definition.update                      2018-01-30
 _description.text                       
 ;Formula of the residue or ion, which corresponds to the edge.
      The formula is written in accordance with the rules of  the
-     _chemical_formula_sum tag.
+     _chemical_formula.sum tag.
 ;
 _type.contents                          Text
 _type.purpose                           Encode
@@ -1189,7 +1189,7 @@ _definition.update                      2018-01-30
 _description.text                       
 ;Formula of the residue or ion, which corresponds to the node.
      The formula is written in accordance with the rules of  the
-     _chemical_formula_moiety tag.
+     _chemical_formula.moiety tag.
 ;
 _type.contents                          Text
 _type.purpose                           Encode
@@ -1208,7 +1208,7 @@ _definition.update                      2018-01-30
 _description.text                       
 ;Formula of the residue or ion, which corresponds to the node.
      The formula is written in accordance with the rules of  the
-     _chemical_formula_sum tag.
+     _chemical_formula.sum tag.
 ;
 _type.contents                          Text
 _type.purpose                           Encode
