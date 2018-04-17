@@ -1479,7 +1479,8 @@ _definition.update                      2018-01-30
 _definition.scope                       Category
 _definition.class                       Loop
 _description.text                       
-;The TOPOL_REPRES_OCCURRENCE category describes the occurrence of the
+;
+     The TOPOL_REPRES_OCCURRENCE category lists the appearances of the
      underlying net topology in crystal structures.
 ;
 _category_key.name                      '_topol_repres_occurrence.id'
@@ -1487,39 +1488,25 @@ _category_key.name                      '_topol_repres_occurrence.id'
 save_
 
 
-save__topol_repres_occurrence.refcode
+save__topol_repres_occurrence.citation_id
 
-_definition.id                          '_topol_repres_occurrence.refcode'
+_definition.id                          '_topol_repres_occurrence.citation_id'
 _name.category_id                       topol_repres_occurrence
-_name.object_id                         refcode
-_definition.update                      2018-01-30
+_name.object_id                         citation_id
+_definition.update                      2018-04-17
 _description.text                       
-;Reference code in a crystallographic database  to the
-     crystallographic data of the crystal  structure with the
-     underlying net topology.
 ;
-_type.contents                          Text
-_type.purpose                           Encode
-_type.source                            Assigned
-_type.container                         Single
-
-save_
-
-
-save__topol_repres_occurrence.reference
-
-_definition.id                          '_topol_repres_occurrence.reference'
-_name.category_id                       topol_repres_occurrence
-_name.object_id                         reference
-_definition.update                      2018-01-30
-_description.text                       
-;Reference to a publication, where a crystal  structure with the
-     underlying net topology  was characterized.
+     Reference to a publication, where a crystal  structure with the
+     underlying net topology  was characterized.  This item is a pointer
+     to an item described in the core CITATION category. If a publication
+     and database entry are not directly related, they should be listed
+     in separate rows.
 ;
-_type.contents                          Text
-_type.purpose                           Describe
-_type.source                            Assigned
+_type.contents                          Code
+_type.purpose                           Link
+_type.source                            Related
 _type.container                         Single
+_name.linked_item_id                    '_citation.id'
 
 save_
 
