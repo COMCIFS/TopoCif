@@ -368,7 +368,22 @@ _type.container                         Single
 
 save_
 
+save_topol_link.order
 
+_definition.id                          '_topol_link.order'
+_name.category_id                       topol_link
+_name.object_id                         order
+_definition.update                      2018-05-16
+_description.text
+;
+      The number of electron pairs participating in the bond described by
+      _topol_link.type.
+;
+_type.purpose                           Number
+_type.source                            Assigned
+_type.container                         Single
+_type.contents                          Real
+save_
 
 save_topol_link.site_symmetry_symop_1
 
@@ -488,23 +503,18 @@ _description.text
 ;
      The chemical bond type associated with the connection between the
      two sites.  If no bond exists, use an undelimited period character.
-     If the bond type is unknown, use ? or leave out the data name. 
+     If the bond type is unknown, use ? or leave out the data name. The
+     number of electron pairs participating in the bond can be indicated
+     using _topol_link.order.
 ;
 _type.contents                          Code
 loop_
   _enumeration_set.state
   _enumeration_set.detail
-         sg        'single bond'       
-         db        'double bond'       
-         tr        'triple bond'       
-         qd        'quadruple bond'    
-         ar        'aromatic bond'     
-         dl        'delocalized double bond'     
+         ar        'aromatic bond'      
          v         'valence bond'      
          pi        'pi bond'           
          hb        'hydrogen bond'     
-         s         'specific bond'     
-         hg        'halogen bond'      
          vw        'van der Waals contact'       
          .         'no bond'           
 _type.source                            Assigned
