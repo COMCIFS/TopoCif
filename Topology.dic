@@ -91,7 +91,7 @@ _topol_link.site_symmetry_translation_1
 _topol_link.site_symmetry_symop_2
 _topol_link.site_symmetry_translation_2
 _topol_link.distance
-_topol_link.voronoi_solidangle
+_topol_link.Voronoi_solidangle
 _topol_link.type
 _topol_link.multiplicity
 C1 C1 1 [0 0 0] 13 [0 0 0] 1.5446 22.04 v 16
@@ -512,9 +512,9 @@ _type.source                            Assigned
 save_
 
 
-save_topol_link.voronoi_solidangle
+save_topol_link.Voronoi_solidangle
 
-_definition.id                          '_topol_link.voronoi_solidangle'
+_definition.id                          '_topol_link.Voronoi_solidangle'
 _name.category_id                       topol_link
 _name.object_id                         voronoi_solidangle
 _definition.update                      2018-02-06
