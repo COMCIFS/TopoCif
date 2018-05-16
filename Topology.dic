@@ -266,7 +266,13 @@ _description.text
            overall topology of the crystal structure can be restored.
            The connections described in TOPOL_LINK may correspond to
            any vectors in the structure, not just bonds or contacts. The
-           nodes that are linked are listed in TOPOL_REPRES_NODE.
+           nodes that are linked are listed in TOPOL_REPRES_NODE. In
+           order to properly describe the connectivity, _topol_link.node_label_1
+           _topol_link.node_label_2,_topol_link.site_symmetry_symop_1,
+           _topol_link.site_symmetry_translation_1,_topol_link.site_symmetry_symop_2,
+           and_topol_link.site_symmetry_translation_2 must be given for each
+           link, which is identified by _topol_link.id. Other items in this
+           category are optional.
 ;
 loop_
   _category_key.name
@@ -860,7 +866,6 @@ _type.source                            Related
 _type.container                         Single
 
 save_
-
 
 save_topol_repres_entangl
 
