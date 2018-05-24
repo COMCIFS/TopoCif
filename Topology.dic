@@ -491,6 +491,24 @@ save_topol_link.site_symmetry_translation_2
 
 save_
 
+save_topol_link.special_details
+_definition.id                          '_topol_link.special_details'
+_name.category_id                       topol_link
+_name.object_id                         special_details
+_definition.update                      2018-05-24
+_description.text                       
+;    
+     Information about the link that is not expressed using other
+     data names, for example, bond subtypes and explanations
+     of links with _topol_link.type of 'sb'.
+;
+_type.contents                          Text
+_type.purpose                           Describe
+_type.source                            Assigned
+_type.container                         Single
+
+save_
+
 save_topol_link.type
 
 _definition.id                          '_topol_link.type'
@@ -515,7 +533,8 @@ loop_
          v         'valence bond'      
          pi        'pi bond'           
          hb        'hydrogen bond'     
-         vw        'van der Waals contact'       
+         vw        'van der Waals contact'
+         sb        'special bond type described in _topol_link.special_details'
          .         'no bond'           
 _type.source                            Assigned
 
