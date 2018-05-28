@@ -8,9 +8,9 @@ data_TOPOLOGY_CIF
 
 _dictionary.title                       TOPOLOGY_CIF
 _dictionary.class                       Instance
-_dictionary.version                     0.5
+_dictionary.version                     0.9
 _dictionary.ddl_conformance             3.13.1
-_dictionary.date                        2018-04-05
+_dictionary.date                        2018-05-28
 _description.text                       
 ;
   The Topology CIF dictionary provides datanames for describing crystal structure
@@ -26,7 +26,7 @@ _description.text
                               'This category is the parent of all categories in the dictionary'
 _name.object_id                         TOPOLOGY
 _name.category_id                       TOPOLOGY_CIF
-
+_import.get                   [{"file":"cif_core.dic" "save":"CIF_CORE" "mode":"Full"}]
 save_
 
 
@@ -267,12 +267,12 @@ _description.text
            periodic net describing the overall topology of the crystal
            structure can be restored. The definition of
            symmetry-labeled quotient graph was given by Klein,
-           H.-J. Systematic generation of models for crystal
-           structures. Math. Modelling Scientific Computing 6 (1996)
-           325–330 and examples of weights and colors for the
-           graph edges and vertices are provided by Blatov, V.A. A
+           H.-J. "Systematic generation of models for crystal
+           structures" Math. Modelling Scientific Computing 6 (1996)
+           325-330 and examples of weights and colors for the
+           graph edges and vertices are provided by Blatov, V.A. "A
            method for hierarchical comparative analysis of crystal
-           structures. (2006) Acta Cryst. A62, 356–364.  The
+           structures." (2006) Acta Cryst. A62, 356-364.  The
            connections described in TOPOL_LINK may correspond to any
            vectors in the structure, not just bonds or contacts. The
            nodes that are linked are listed in TOPOL_REPRES_NODE. In
@@ -282,7 +282,10 @@ _description.text
            _topol_link.site_symmetry_translation_1,_topol_link.site_symmetry_symop_2,
            and_topol_link.site_symmetry_translation_2 must be given
            for each link, which is identified by _topol_link.id. Other
-           items in this category are optional.  ; loop_
+           items in this category are optional.
+
+;
+loop_
            _category_key.name '_topol_link.id'
 
 save_
@@ -1676,4 +1679,9 @@ loop_
 ;
     Added InChI, SMILES structural formulas and replaced symops with explicit
     symmetry operator ids and vector translations. Clarified bond types.
+;
+         0.9       2018-05-28
+;
+    Version for final approval after review. Removed most datanames from TOPOL_ENTANGL
+    and subcategories.
 ;
