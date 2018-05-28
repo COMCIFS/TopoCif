@@ -259,24 +259,31 @@ _definition.update                      2018-01-30
 _definition.scope                       Category
 _definition.class                       Loop
 _description.text                       
-;          
+;
+
            The TOPOL_LINK category describes the crystal structure
-           connectivity and encodes the weighted colored labeled quotient
-           graph, from which the whole periodic net describing the
-           overall topology of the crystal structure can be restored.
-           The connections described in TOPOL_LINK may correspond to
-           any vectors in the structure, not just bonds or contacts. The
+           connectivity and encodes the weighted colored
+           symmetry-labeled quotient graph, from which the whole
+           periodic net describing the overall topology of the crystal
+           structure can be restored. The definition of
+           symmetry-labeled quotient graph was given by Klein,
+           H.-J. Systematic generation of models for crystal
+           structures. Math. Modelling Scientific Computing 6 (1996)
+           325–330 and examples of weights and colors for the
+           graph edges and vertices are provided by Blatov, V.A. A
+           method for hierarchical comparative analysis of crystal
+           structures. (2006) Acta Cryst. A62, 356–364.  The
+           connections described in TOPOL_LINK may correspond to any
+           vectors in the structure, not just bonds or contacts. The
            nodes that are linked are listed in TOPOL_REPRES_NODE. In
-           order to properly describe the connectivity, _topol_link.node_label_1
+           order to properly describe the connectivity,
+           _topol_link.node_label_1
            _topol_link.node_label_2,_topol_link.site_symmetry_symop_1,
            _topol_link.site_symmetry_translation_1,_topol_link.site_symmetry_symop_2,
-           and_topol_link.site_symmetry_translation_2 must be given for each
-           link, which is identified by _topol_link.id. Other items in this
-           category are optional.
-;
-loop_
-  _category_key.name
-         '_topol_link.id' 
+           and_topol_link.site_symmetry_translation_2 must be given
+           for each link, which is identified by _topol_link.id. Other
+           items in this category are optional.  ; loop_
+           _category_key.name '_topol_link.id'
 
 save_
 
