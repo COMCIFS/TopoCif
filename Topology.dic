@@ -587,7 +587,7 @@ _description.text
 ;
      The TOPOL_REPRES category describes a particular crystal
      structure representation, which corresponds to the periodic
-     (underlying) net topology specified in the TOPOL_BOND
+     (underlying) net topology specified in the TOPOL_LINK
      category. The underlying net is the net of centroids of
      structural units. The edges of this net represent the links
      between the units.
