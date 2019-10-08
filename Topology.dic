@@ -8,9 +8,9 @@ data_TOPOLOGY_CIF
 
 _dictionary.title                       TOPOLOGY_CIF
 _dictionary.class                       Instance
-_dictionary.version                     0.9
+_dictionary.version                     0.9.1
 _dictionary.ddl_conformance             3.13.1
-_dictionary.date                        2018-05-28
+_dictionary.date                        2019-10-09
 _description.text                       
 ;
   The Topology CIF dictionary provides datanames for describing crystal structure
@@ -1820,4 +1820,8 @@ loop_
 ;
     Version for final approval after review. Removed most datanames from TOPOL_ENTANGL
     and subcategories.
+;
+         0.9.1     2019-10-09
+;
+   Added individual components of the site_symmetry_translation data names (J Hester)
 ;
