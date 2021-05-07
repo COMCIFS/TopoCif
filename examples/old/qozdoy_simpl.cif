@@ -1,0 +1,75 @@
+data_24-TOPOS_QOZDOY_(C16H12N2O4ZN1)N,N(C4H8)/Z=4dia4-fold
+_database_code_ICSD                 QOZDOY
+_audit_creation_date                2020-11-17
+_audit_creation_method              ToposPro
+_chemical_formula_structural        '(C16 H12 N2 O4 ZN1)N, N(C4 H8) /Z=4  dia 4-fold'
+_chemical_name_systematic
+;
+CATENA-(BIS(MU-2--3-(4-PYRIDYL)PROPENOATO-O)-ZINC(II) TRANS-2-BUTENE 
+SOLVATE)
+;
+_chemical_formula_sum               Zn1
+_citation_journal_abbrev            CHEM.COMMUN.
+_citation_year                      2001
+_citation_page_first                1806
+_citation_special_details
+;
+ "CCDC: CCDC 156501  
+;
+loop_
+_publ_author_name
+'Jing ZHANG'
+'Wenbin LIN'
+'Zhen-Feng CHEN'
+'Ren-Gen XIONG'
+'Abrahams B.F.'
+'Hoong-Kun FUN'
+_cell_length_a                      12.471
+_cell_length_b                      13.804
+_cell_length_c                      12.005
+_cell_angle_alpha                   90
+_cell_angle_beta                    90
+_cell_angle_gamma                   90
+_cell_volume                        2066.657
+_cell_formula_units_Z               4
+_symmetry_space_group_name_H-M      'P n n a'
+_symmetry_Int_Tables_number         52
+_refine_ls_R_factor_all             0.0447
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 1/2-x,-y,z
+3 x,1/2-y,1/2-z
+4 1/2-x,1/2+y,1/2-z
+5 -x,-y,-z
+6 1/2+x,y,-z
+7 -x,1/2+y,1/2+z
+8 1/2+x,1/2-y,1/2+z
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+Zn1 Zn 4 0.75000 0.00000 0.19654 1.0000
+loop_
+_topol_link.node_label_1
+_topol_link.node_label_2
+_topol_link.distance
+_topol_link.site_symmetry_symop_1
+_topol_link.site_symmetry_translation_1_x
+_topol_link.site_symmetry_translation_1_y
+_topol_link.site_symmetry_translation_1_z
+_topol_link.site_symmetry_symop_2
+_topol_link.site_symmetry_translation_2_x
+_topol_link.site_symmetry_translation_2_y
+_topol_link.site_symmetry_translation_2_z
+_topol_link.type
+_topol_link.multiplicity
+_topol_link.voronoi_solidangle
+Zn1 Zn1 11.0702 1 0 0 0 7 2 0 0 v 8 19.78
+#End of data_24-TOPOS_QOZDOY_(C16H12N2O4ZN1)N,N(C4H8)/Z=4dia4-fold
+

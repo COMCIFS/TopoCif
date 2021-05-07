@@ -1,0 +1,117 @@
+data_22-TOPOS_HYQUIN05_C6H6O2&pcu-h
+_database_code_TOPOS                HYQUIN05
+_audit_creation_date                2020-11-12
+_audit_creation_method              ToposPro
+_chemical_formula_structural        'C6 H6 O2&pcu-h'
+_chemical_name_systematic
+;
+Hydroquinone. 
+;
+_chemical_formula_sum               'C3 H3 O1 ZC1'
+_citation_journal_abbrev            CRYST.STRUCT.COMMUN.
+_citation_year                      1981
+_citation_journal_volume            10
+_citation_page_first                1173
+_citation_special_details
+;
+Details: trigonal beta polymorph. Details: The study was carried out 
+at room temperature,in the range 283-303K. 
+;
+loop_
+_publ_author_name
+'Lindeman S.V.'
+'Shklover V.E.'
+'Struchkov YU.T.'
+_cell_length_a                      16.613
+_cell_length_b                      16.613
+_cell_length_c                      5.4746
+_cell_angle_alpha                   90
+_cell_angle_beta                    90
+_cell_angle_gamma                   120
+_cell_volume                        1308.516
+_cell_formula_units_Z               18
+_symmetry_space_group_name_H-M      'R -3'
+_symmetry_Int_Tables_number         148
+_refine_ls_R_factor_all             0.068
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 -y,x-y,z
+3 -x+y,-x,z
+4 -x,-y,-z
+5 y,-x+y,-z
+6 x-y,x,-z
+7 2/3+x,1/3+y,1/3+z
+8 1/3+x,2/3+y,2/3+z
+9 2/3-y,1/3+x-y,1/3+z
+10 1/3-y,2/3+x-y,2/3+z
+11 2/3-x+y,1/3-x,1/3+z
+12 1/3-x+y,2/3-x,2/3+z
+13 2/3-x,1/3-y,1/3-z
+14 1/3-x,2/3-y,2/3-z
+15 2/3+y,1/3-x+y,1/3-z
+16 1/3+y,2/3-x+y,2/3-z
+17 2/3+x-y,1/3+x,1/3-z
+18 1/3+x-y,2/3+x,2/3-z
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+H1 H 18 0.32400 0.07100 0.99900 1.0000
+H2 H 18 0.21700 0.20400 0.60000 1.0000
+H3 H 18 0.15500 0.11900 0.97500 1.0000
+C1 C 18 0.25900 0.13270 0.82640 1.0000
+C2 C 18 0.32860 0.11160 0.86080 1.0000
+C3 C 18 0.26360 0.18820 0.63200 1.0000
+O1 O 18 0.18590 0.09590 0.98880 1.0000
+ZC1 ZC 18 0.18590 0.09590 0.98880 1.0000
+loop_
+_topol_link.node_label_1
+_topol_link.node_label_2
+_topol_link.distance
+_topol_link.site_symmetry_symop_1
+_topol_link.site_symmetry_translation_1_x
+_topol_link.site_symmetry_translation_1_y
+_topol_link.site_symmetry_translation_1_z
+_topol_link.site_symmetry_symop_2
+_topol_link.site_symmetry_translation_2_x
+_topol_link.site_symmetry_translation_2_y
+_topol_link.site_symmetry_translation_2_z
+_topol_link.type
+_topol_link.multiplicity
+_topol_link.voronoi_solidangle
+H1 C2 0.9908 1 0 0 0 1 0 0 0 v 18 33.06
+H1 H2 2.8212 1 0 0 0 5 0 0 2 vw 18 8.76
+H1 H1 2.8504 1 0 0 0 10 0 -1 -1 vw 18 8.49
+H1 H3 2.9538 1 0 0 0 5 0 0 2 vw 18 4.51
+H1 C2 3.0017 1 0 0 0 11 0 0 0 vw 18 3.37
+H1 C3 3.2828 1 0 0 0 18 0 -1 1 vw 18 1.66
+H1 O1 3.2871 1 0 0 0 13 0 0 2 vw 18 3.77
+H1 H2 3.3339 1 0 0 0 18 0 -1 1 vw 18 2.51
+H1 C1 3.3629 1 0 0 0 13 0 0 2 vw 18 3.31
+H1 C2 3.5300 1 0 0 0 13 0 0 2 vw 18 1.54
+H2 C3 0.9498 1 0 0 0 1 0 0 0 v 18 34.06
+H2 H3 2.4115 1 0 0 0 1 0 0 0 vw 18 11.18
+H2 O1 2.9959 1 0 0 0 6 0 0 2 vw 18 5.50
+H2 C1 3.1514 1 0 0 0 6 0 0 1 vw 18 5.46
+H2 C3 3.2337 1 0 0 0 6 0 0 1 vw 18 4.57
+H2 C2 3.2633 1 0 0 0 6 0 0 1 vw 18 2.40
+H2 C2 3.4117 1 0 0 0 12 0 0 -1 vw 18 2.59
+H2 C3 3.4456 1 0 0 0 12 0 0 -1 vw 18 1.96
+H2 C1 3.5183 1 0 0 0 12 0 0 -1 vw 18 1.78
+H2 H3 3.6480 1 0 0 0 1 0 0 -1 vw 18 3.84
+H3 O1 0.7833 1 0 0 0 1 0 0 0 v 18 36.77
+H3 O1 1.9081 1 0 0 0 6 0 0 2 hb 18 20.05
+C1 O1 1.3772 1 0 0 0 1 0 0 0 v 18 25.16
+C1 C2 1.3786 1 0 0 0 1 0 0 0 v 18 27.66
+C1 C3 1.3850 1 0 0 0 1 0 0 0 v 18 27.84
+C2 C3 1.3834 1 0 0 0 13 0 0 1 v 18 27.13
+ZC1 ZC1 2.6779 1 0 0 0 6 0 0 2 v 18 44.85
+ZC1 ZC1 5.5179 1 0 0 0 13 0 0 1 v 9 30.69
+#End of data_22-TOPOS_HYQUIN05_C6H6O2&pcu-h
+
