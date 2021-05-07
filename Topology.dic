@@ -8,9 +8,9 @@ data_TOPOLOGY_CIF
 
 _dictionary.title                       TOPOLOGY_CIF
 _dictionary.class                       Instance
-_dictionary.version                     0.9
+_dictionary.version                     0.9.1
 _dictionary.ddl_conformance             3.13.1
-_dictionary.date                        2018-05-28
+_dictionary.date                        2019-10-09
 _description.text                       
 ;
   The Topology CIF dictionary provides datanames for describing crystal structure
@@ -471,6 +471,73 @@ save_topol_link.site_symmetry_translation_1
     _type.dimension                         '[3]'
     _type.source                            Derived
     _type.container                         Matrix
+    loop_
+     _method.purpose
+     _method.expression
+     Evaluation
+;
+     with t as topol_link
+     _topol_link.site_symmetry_translation_1 = [t.site_symmetry_translation_1_x,
+                                                t.site_symmetry_translation_1_y,
+                                                t.site_symmetry_translation_1_z]
+;
+
+save_
+
+save_topol_link.site_symmetry_translation_1_x
+
+    _definition.id                          '_topol_link.site_symmetry_translation_1_x'
+    _name.category_id                       topol_link
+    _name.object_id                         site_symmetry_translation_1_x
+    _definition.update                      2019-10-09
+    _type.contents                          Integer
+    _description.text                       
+;
+    
+     The x component of _topol_link.site_symmetry_translation_1.
+         
+;
+    _type.purpose                           Number
+    _type.source                            Derived
+    _type.container                         Single
+
+save_
+
+save_topol_link.site_symmetry_translation_1_y
+
+    _definition.id                          '_topol_link.site_symmetry_translation_1_y'
+    _name.category_id                       topol_link
+    _name.object_id                         site_symmetry_translation_1_y
+    _definition.update                      2019-10-09
+    _type.contents                          Integer
+    _description.text                       
+;
+    
+     The y component of _topol_link.site_symmetry_translation_1.
+         
+;
+    _type.purpose                           Number
+    _type.source                            Derived
+    _type.container                         Single
+
+save_
+
+save_topol_link.site_symmetry_translation_1_z
+
+    _definition.id                          '_topol_link.site_symmetry_translation_1_z'
+    _name.category_id                       topol_link
+    _name.object_id                         site_symmetry_translation_1_z
+    _definition.update                      2019-10-09
+    _type.contents                          Integer
+    _description.text                       
+;
+    
+     The z component of _topol_link.site_symmetry_translation_1.
+         
+;
+    _type.purpose                           Number
+    _type.source                            Derived
+    _type.container                         Single
 
 save_
 
@@ -498,6 +565,75 @@ save_topol_link.site_symmetry_translation_2
     _type.dimension                         '[3]'
     _type.source                            Derived
     _type.container                         Matrix
+
+loop_
+     _method.purpose
+     _method.expression
+     Evaluation
+;
+     with t as topol_link
+     _topol_link.site_symmetry_translation_2 = [t.site_symmetry_translation_2_x,
+                                                t.site_symmetry_translation_2_y,
+                                                t.site_symmetry_translation_2_z]
+;
+
+
+save_
+
+save_topol_link.site_symmetry_translation_2_x
+
+    _definition.id                          '_topol_link.site_symmetry_translation_2_x'
+    _name.category_id                       topol_link
+    _name.object_id                         site_symmetry_translation_2_x
+    _definition.update                      2019-10-09
+    _type.contents                          Integer
+    _description.text                       
+;
+    
+     The x component of _topol_link.site_symmetry_translation_2.
+         
+;
+    _type.purpose                           Number
+    _type.source                            Derived
+    _type.container                         Single
+
+save_
+
+save_topol_link.site_symmetry_translation_2_y
+
+    _definition.id                          '_topol_link.site_symmetry_translation_2_y'
+    _name.category_id                       topol_link
+    _name.object_id                         site_symmetry_translation_2_y
+    _definition.update                      2019-10-09
+    _type.contents                          Integer
+    _description.text                       
+;
+    
+     The y component of _topol_link.site_symmetry_translation_2.
+         
+;
+    _type.purpose                           Number
+    _type.source                            Derived
+    _type.container                         Single
+
+save_
+
+save_topol_link.site_symmetry_translation_2_z
+
+    _definition.id                          '_topol_link.site_symmetry_translation_2_z'
+    _name.category_id                       topol_link
+    _name.object_id                         site_symmetry_translation_2_z
+    _definition.update                      2019-10-09
+    _type.contents                          Integer
+    _description.text                       
+;
+    
+     The z component of _topol_link.site_symmetry_translation_2.
+         
+;
+    _type.purpose                           Number
+    _type.source                            Derived
+    _type.container                         Single
 
 save_
 
@@ -587,7 +723,7 @@ _description.text
 ;
      The TOPOL_REPRES category describes a particular crystal
      structure representation, which corresponds to the periodic
-     (underlying) net topology specified in the TOPOL_BOND
+     (underlying) net topology specified in the TOPOL_LINK
      category. The underlying net is the net of centroids of
      structural units. The edges of this net represent the links
      between the units.
@@ -1684,4 +1820,8 @@ loop_
 ;
     Version for final approval after review. Removed most datanames from TOPOL_ENTANGL
     and subcategories.
+;
+         0.9.1     2019-10-09
+;
+   Added individual components of the site_symmetry_translation data names (J Hester)
 ;
