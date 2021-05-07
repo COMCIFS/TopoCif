@@ -1,5 +1,5 @@
 #\#CIF_2.0
-# topoCIF example 4 2021.05.05
+# topoCIF example 4 2021.05.07 (corrected BH)
 
 data_1-TOPOS_FUBYUW_C4CO1O4-,LI1+/Z=2
 _database_code_ICSD                 FUBYUW
@@ -78,23 +78,6 @@ Co1 Co 1 0.50000 0.50000 0.50000 1.0000
 
 loop_
 _topol_node.label
-_topol_node.chemical_formula_sum
-_topol_node.fract_x
-_topol_node.fract_y
-_topol_node.fract_z
-ZA1 Li 1 0.00000 0.00000 0.00000
-ZB1 CO 4 0.25036 0.25036 0.25036
-ZC1 Co 1 0.50000 0.50000 0.50000
-
-loop_
-_topol_net_id
-_topol_net.special_details
-_topol_net.overall_topology_TOPOS
-Net_1 'Atomic net' 'Unknown'
-Net_2 'Underlying net with carbonyl ligands as nodes' '2,4T3'
-
-loop_
-_topol_node.label
 _topol_node.net_id
 _topol_node.chemical_formula_sum
 _topol_node.atom_label
@@ -124,6 +107,14 @@ C1 O1 1.1452 1 [0 0 0] 1 [0 0 0] v 4
 C1 Co1 1.7422 1 [0 0 0] 1 [0 0 0] v 4
 ZA1 ZB1 2.4032 1 [0 0 0] 3 [0 0 0] v 4
 ZB1 ZC1 2.3963 1 [0 0 0] 1 [0 0 0] v 4
+
+loop_
+_topol_net_id
+_topol_net.special_details
+_topol_net.overall_topology_TOPOS
+Net_1 'Atomic net' 'Unknown'
+Net_2 'Underlying net with carbonyl ligands as nodes' '2,4T3'
+
 
 #End of data_1-TOPOS_FUBYUW_C4CO1O4-,LI1+/Z=2
 
