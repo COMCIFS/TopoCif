@@ -8,9 +8,12 @@ data_TOPOLOGY_CIF
 
 _dictionary.title                       TOPOLOGY_CIF
 _dictionary.class                       Instance
-_dictionary.version                     0.9.1
+_dictionary.version                     0.9.2
 _dictionary.ddl_conformance             3.13.1
-_dictionary.date                        2019-10-09
+_dictionary.date                        2021-06-30
+_dictionary.namespace                   Topo
+_dictionary.uri
+    https://github.com/COMCIFS/TopoCif/Topology.dic
 _description.text                       
 ;
   The Topology CIF dictionary provides datanames for describing crystal structure
@@ -417,6 +420,7 @@ save_topol_link.site_symmetry_symop_1
 ;
     _type.purpose                           Link
     _type.source                            Derived
+    _type.container                         Single
     _name.linked_item_id                    '_space_group_symop.id'
 
 save_
@@ -443,6 +447,7 @@ save_topol_link.site_symmetry_symop_2
 ;
     _type.purpose                           Link
     _type.source                            Derived
+    _type.container                         Single
     _name.linked_item_id                    '_space_group_symop.id'
 
 save_
@@ -1085,6 +1090,7 @@ save_
 save__topol_repres_node.atom_label
 
 _definition.id                          '_topol_repres_node.atom_label'
+_definition.update                      2018-02-06
 _name.object_id                         atom_label
 _name.category_id                       topol_repres_node
 _definition.class                       Datum
