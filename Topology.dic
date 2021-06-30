@@ -886,7 +886,7 @@ _name.category_id                       topol_repres
 _name.object_id                         period
 _definition.update                      2018-01-30
 _type.container                         Single
-_type.purpose                           State
+_type.purpose                           Number
 _description.text                       
 ;
      Periodicity of the underlying net.  The allowed data values
