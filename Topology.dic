@@ -8,9 +8,12 @@ data_TOPOLOGY_CIF
 
 _dictionary.title                       TOPOLOGY_CIF
 _dictionary.class                       Instance
-_dictionary.version                     0.9.1
+_dictionary.version                     0.9.2
 _dictionary.ddl_conformance             3.13.1
-_dictionary.date                        2019-10-09
+_dictionary.date                        2021-06-30
+_dictionary.namespace                   Topo
+_dictionary.uri
+    https://github.com/COMCIFS/TopoCif/Topology.dic
 _description.text                       
 ;
   The Topology CIF dictionary provides datanames for describing crystal structure
@@ -223,7 +226,7 @@ _description.text
      The total number of occurrences in literature and databases of the
      underlying net topology at the time the data file was prepared.
 ;
-_type.contents                          Count
+_type.contents                          Integer
 _type.purpose                           Number
 _type.source                            Assigned
 _type.container                         Single
@@ -417,6 +420,7 @@ save_topol_link.site_symmetry_symop_1
 ;
     _type.purpose                           Link
     _type.source                            Derived
+    _type.container                         Single
     _name.linked_item_id                    '_space_group_symop.id'
 
 save_
@@ -443,6 +447,7 @@ save_topol_link.site_symmetry_symop_2
 ;
     _type.purpose                           Link
     _type.source                            Derived
+    _type.container                         Single
     _name.linked_item_id                    '_space_group_symop.id'
 
 save_
@@ -748,7 +753,7 @@ _description.text
      are all the edges of the repeat unit. See O. Delgado_Friedrichs, M. O'Keeffe
      J. Sol. State Chem. 178 (2005) 2480-2485
 ;
-_type.contents                          Index
+_type.contents                          Integer
 _type.purpose                           Number
 _type.source                            Derived
 _type.container                         Single
@@ -886,7 +891,7 @@ _name.category_id                       topol_repres
 _name.object_id                         period
 _definition.update                      2018-01-30
 _type.container                         Single
-_type.purpose                           State
+_type.purpose                           Number
 _description.text                       
 ;
      Periodicity of the underlying net.  The allowed data values
@@ -897,7 +902,7 @@ _description.text
          3         3-periodic (framework) 
 
 ;
-_type.contents                          Count
+_type.contents                          Integer
 _enumeration.range                      0:3
 _type.source                            Derived
 
@@ -917,7 +922,7 @@ _description.text
      atom. For structures with more than one kind of vertex in the asymmetric
      unit the value given is a weighted average over the vertices.
 ;
-_type.contents                          Index
+_type.contents                          Integer
 _type.purpose                           Number
 _type.source                            Assigned
 _type.container                         Single
@@ -1085,6 +1090,7 @@ save_
 save__topol_repres_node.atom_label
 
 _definition.id                          '_topol_repres_node.atom_label'
+_definition.update                      2018-02-06
 _name.object_id                         atom_label
 _name.category_id                       topol_repres_node
 _definition.class                       Datum
@@ -1349,7 +1355,7 @@ _description.text
 _type.purpose                           Number
 _type.source                            Derived
 _type.container                         Single
-_type.contents                          Index
+_type.contents                          Integer
 _enumeration.range                      1:192
 _definition.update                      2018-02-23
 
@@ -1506,7 +1512,7 @@ _description.text
      The number of distinct (not symmetry-related) chambers  in the
      tiling.
 ;
-_type.contents                          Index
+_type.contents                          Integer
 _type.purpose                           Number
 _type.source                            Derived
 _type.container                         Single
@@ -1543,7 +1549,7 @@ _description.text
 ;
      Number of independent tile edges in the natural tiling.
 ;
-_type.contents                          Index
+_type.contents                          Integer
 _type.purpose                           Number
 _type.source                            Recorded
 _type.container                         Single
@@ -1561,7 +1567,7 @@ _description.text
 ;
      Number of independent tile faces in the natural tiling.
 ;
-_type.contents                          Index
+_type.contents                          Integer
 _type.purpose                           Number
 _type.source                            Assigned
 _type.container                         Single
@@ -1607,7 +1613,7 @@ _description.text
 ;
      Number of independent tiles in the natural tiling.
 ;
-_type.contents                          Index
+_type.contents                          Integer
 _type.purpose                           Number
 _type.source                            Assigned
 _type.container                         Single
@@ -1625,7 +1631,7 @@ _description.text
 ;
      Number of independent tile vertices in the natural tiling.
 ;
-_type.contents                          Index
+_type.contents                          Integer
 _type.purpose                           Number
 _type.source                            Assigned
 _type.container                         Single
@@ -1692,7 +1698,7 @@ _description.text
 ;
      The number of faces of this size in the tile
 ;
-_type.contents                          Index
+_type.contents                          Integer
 _type.purpose                           Number
 _type.source                            Assigned
 _type.container                         Single
@@ -1710,7 +1716,7 @@ _description.text
 ;
      The size of the tile face.
 ;
-_type.contents                          Count
+_type.contents                          Integer
 _enumeration.range                      3:
 _type.purpose                           Number
 _type.source                            Assigned
@@ -1772,7 +1778,7 @@ _description.text
 ;
      The number of this kind of tile in the tiling.
 ;
-_type.contents                          Index
+_type.contents                          Integer
 _type.purpose                           Number
 _type.source                            Assigned
 _type.container                         Single
