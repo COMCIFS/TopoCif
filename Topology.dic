@@ -985,7 +985,7 @@ save_topol_net.period
 ;
     _name.category_id             topol_net
     _name.object_id               period
-    _type.purpose                 State
+    _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
