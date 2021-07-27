@@ -1,0 +1,156 @@
+2021.07.27
+
+A description of topological information not covered by the existing data names in the topology categories.
+
+A unique identifier for the literature or database reference.
+
+A vector of lattice translations that are added to the coordinates after application of the symmetry operation given by _topol_link.site_symmetry_symop_1 to generate the node used in calculating the link. For example, if the symmetry operation referred to by _topol_link.site_symmetry_symop_id is (x-1/2,y+1/2,z), the translation vector is [0, -1, 0] and the original position is (0.2,0.7,1.0) in fractional coordinates, then the resultant position is (-0.3,0.2,1.0).
+
+A vector of lattice translations that are added to the coordinates after application of the symmetry operation given by _topol_link.site_symmetry_symop_2 to generate the node used in calculating the link. For example, if the symmetry operation referred to by _topol_link.site_symmetry_symop_2 is (x-1/2,y+1/2,z), the translation vector is [0, -1, 0] and the original position is (0.2,0.7,1.0) in fractional coordinates, then the resultant position is (-0.3,0.2,1.0).
+
+An arbitrary description of the net.
+
+An arbitrary, unique identifier for this tile type.
+
+Blatov, V. A. (2006). A method for hierarchical comparative analysis of crystal structures. Acta Cryst. A62, 356-364.
+
+Formula of the residue or ion which corresponds to the edge, expressed as per the description for _chemical_formula_iupac.
+
+Formula of the residue or ion which corresponds to the edge. The formula is written in accordance with the rules of the _chemical_formula.sum tag.
+
+Formula of the residue or ion which corresponds to the edge. The formula is written in accordance with the rules of the _chemical_formula.moiety tag.
+
+Formula of the residue or ion which corresponds to the node, expressed as per the description for _chemical_formula_iupac.
+
+Formula of the residue or ion which corresponds to the node. The formula is written in accordance with the rules for IUPAC international chemical identifiers (InChI) as described by Heller et al. (2015). Reference: Heller, S. R., McNaught, A., Pletnev, I. & Tchekhovskoi, D. (2015). J. Cheminformat. 7:23, DOI:10.1186/s13321-015-0068-4.
+
+Formula of the residue or ion which corresponds to the node. The formula is written in accordance with the rules of the _chemical_formula.moiety tag.
+
+Formula of the residue or ion which corresponds to the node. The formula is written in accordance with the rules of the _chemical_formula.sum tag.
+
+Formula of the residue or ion which corresponds to the node. The formula is written in SMILES notation for describing chemical structure as formalised by the OpenSMILES group (https://www.opensmiles.org).
+
+fractional x coordinate of this node.
+
+fractional y coordinate of this node.
+
+fractional z coordinate of this node.
+
+Information about the link that is not expressed using other data names, for example, bond subtypes and explanations of links with _topol_link.type of 'sb'.
+
+loop_ _topol_tiling_tile.id _topol_tiling_tile.count a 3 b 1 c 1 loop_ _topol_tiling_faces.tile_id _topol_tiling_faces.size _topol_tiling_faces.count a 4 6 b 4 6 b 6 8 c 4 12 c 6 8 c 8 6
+
+Number of independent tile edges in the natural tiling.
+
+Number of independent tile faces in the natural tiling.
+
+Number of independent tile vertices in the natural tiling.
+
+Number of independent tiles in the natural tiling.
+
+Periodicity of the underlying net. The allowed data values have the following meaning: 0 0-periodic (finite) 1 1-periodic (chain) 2 2-periodic (layer) 3 3-periodic (framework)
+
+Reference to a publication, where a crystal structure with the underlying net topology was characterized. This item is a pointer to an item described in the core CITATION category. If a publication and database entry are not directly related, they should be listed in separate rows.
+
+The (short) point symbol of the node. This lists the number and size of the shortest closed chains of connected nodes (circuits) starting from any non-equivalent node in the net. For an N-coordinated node there are N(N-1) circuits
+
+The atom label corresponding to this node. Not all nodes have to coincide with atom sites. If a node does not correspond to an atom, then this item, if present, should be represented by '.'.
+
+The chemical bond type associated with the connection between the two sites. If no bond exists, use an undelimited period character. If the bond type is unknown, use ? or leave out the data name. The number of electron pairs participating in the bond can be indicated using _topol_link.order.
+
+The coordination sequence is a sequence of numbers counting the atoms in the 1st, 2nd, 3rd etc. coordination shells of any given node in the net. In other words, the kth entry in the list is the number of vertices linked to the node by a path of exactly k steps. It is usually listed up to k=10.
+
+The extended point symbol of the node lists all shortest circuits for each angle for each non-equivalent atom. A(b).B(c)... there are b A-rings and c B-rings for all the N(N-1) circuits per node. It is sorted so shortest rings come first. For 4-coordinated nodes only, the angles are grouped in opposite pairs; ab,cd and ac,bd and ad,bc (written in lexicographic order smallest numbers first).
+
+The genus of the underlying net, defined as the cyclomatic number of its own quotient graph: g = 1 + e - v, where e and v are the number of edges and vertices in the quotient graph. The quotient graph is a finite graph that contains all of the information of the periodic net: the vertices of the graph are the vertices of a translational repeat unit and the edges are all the edges of the repeat unit. Reference: Delgado-Friedrichs, O. & O'Keeffe, M. (2005). J. Solid State Chem. 178, 2480-2485.
+
+The identifier for the overall topology as listed in the EPINET database at http://epinet.anu.edu.au.
+
+The identifier of the link.
+
+The identifier of the net, to which this node belongs.
+
+The identifier of the net, which topology occurrence is described.
+
+The identifier of the underlying net.
+
+The label of the edge. These must match labels specified as _topol_link.id in the TOPOL_LINK list.
+
+The label of the first node associated with a link. This must match a _topol_node.label value.
+
+The label of the node, which corresponds to a particular node of the crystal structure representation.
+
+The label of the second node associated with a link This must match a _topol_node.label value.
+
+The link length in angstroms.
+
+The number of different sites that are generated by the application of the space-group symmetry to the coordinates given for this site. It is equal to the multiplicity given for this Wyckoff site in International Tables for Crystallography Vol. A (2002).
+
+The number of distinct (not symmetry-related) chambers in the tiling.
+
+The number of electron pairs participating in the bond described by _topol_link.type.
+
+The number of faces of this size in the tile.
+
+The number of these links in the unit cell.
+
+The number of this kind of tile in the tiling.
+
+The overall topology symbol according to the nomenclature of Fischer for sphere packings described by Koch et al. (2006). Reference: Koch, E., Fischer, W. & Sowa, H. (2006). Acta Cryst. A62, 152-167.
+
+The overall topology symbol according to the RCSR nomenclature described by O'Keeffe et al. (2008). Reference: O'Keeffe, M., Peskov, M. A., Ramsden, S. J. & Yaghi, O. M. (2008). Acc. Chem. Res. 41, 1782-1789.
+
+The overall topology symbol according to the TOPOS nomenclature. TOPOS symbols NDn are interpreted as follows: N is a sequence of degrees (coordination numbers) of all independent nodes; D is one of the letters C (chain), L (layer) or T (three-periodic) designating the dimensionality of the net; and n enumerates non-isomorphic nets with a given ND sequence. For finite (molecular) graphs the symbols NMK-n are used, where k is the number of vertices (atoms) in the graph. Reference: Aman, F., Asiri, A. M., Siddiqui, W. A., Arshad, M. N., Ashraf, A., Zakharov, N. S. & Blatov, V. A. (2014). Cryst. Eng. Comm, 16, 1963-1970.
+
+The overall topology symbol in an arbitrary form.
+
+The overall topology symbol of the dual net, which corresponds to the net of the dual of the natural tiling.
+
+The size of the tile face.
+
+The solid angle fraction of the interatomic contact A-X, which is the percentage of the sphere of unit radius cut by the pyramid with the basal face of the Voronoi polyhedron of A or X, the two atoms defining the contact. The total solid angle (the whole sphere) is equal to 100. The face used is that corresponding to the A-X interatomic contact.
+
+The symmetry operation that is applied to the coordinates of the node given by _topol_link.node_label_1 before addition of the translations in _topol_link.site_symmetry_translation_1. The value must match a value of _space_group_symop.id. No normalization of the resulting coordinates into the interval [0,1) is carried out. For example, (x+1/2, y+1/2,z) is not the same as (x-1/2, y+1/2,z) for these purposes.
+
+The symmetry operation that is applied to the coordinates of the node given by _topol_link.node_label_2 before addition of the translations in _topol_link.site_symmetry_translation_2. The value must match a value of _space_group_symop.id. No normalization of the resulting coordinates into the interval [0,1) is carried out. For example, (x+1/2, y+1/2,z) is not the same as (x-1/2, y+1/2,z) for these purposes.
+
+The third three-periodic trinodal net with two 3-coordinated and one 4-coordinated independent nodes
+
+The tile to which this face belongs. It must be one of the values provided in _topol_tiling_tile.id.
+
+The tiling signature, written in the form \a[A^a^ . B^b^ ...]+\b[C^c^ . D^d^ ...]+..., where square brackets envelop tile symbols, \a,\b,... are stoichiometric coefficients, A, B, C, D, ... are sizes of tile faces, a,b,c,d, ... are numbers of the faces of a given size in the tile.
+
+The TOPOL category covers data on connectivity between atoms and structural groups and the related structural properties as calculated from the ATOM, CELL and SPACE_GROUP data.
+
+The TOPOL_EDGE category describes the chemical composition of the edges of the underlying net.
+
+The TOPOL_ENTANGL category describes entanglements in the underlying net. This category is a placeholder for future development of descriptions of entanglement.
+
+The TOPOL_LINK category describes the crystal structure connectivity and encodes the weighted colored symmetry-labeled quotient graph, from which the whole periodic net describing the overall topology of the crystal structure can be restored. The definition of symmetry-labeled quotient graph was given by Klein (1996) and examples of weights and colors for the graph edges and vertices are provided by Blatov (2006). The connections described in TOPOL_LINK may correspond to any vectors in the structure, not just bonds or contacts. The nodes that are linked are listed in TOPOL_NODE. In order to properly describe the connectivity, _topol_link.node_label_1, _topol_link.node_label_2, _topol_link.site_symmetry_symop_1, _topol_link.site_symmetry_translation_1, _topol_link.site_symmetry_symop_2, and _topol_link.site_symmetry_translation_2 must be given for each link, which is identified by _topol_link.id. Other items in this category are optional. References: Klein, H.-J. (1996). Systematic generation of models for crystal structures. Math. Model. Sci. Comput. 6, 325-330
+
+The TOPOL_NET category describes an underlying net, its topological properties and occurrence in other structures. Reference: Delgado-Friedrichs, O., Foster, M. D., O'Keeffe, M., Proserpio, D. M., Treacy, M. M. J. & Yaghi, O. M. (2005). J. Solid State Chem. 178, 2533-2554
+
+The TOPOL_NODE category describes the chemical composition, structure and topological properties of the nodes of the underlying net. Nodes may be specified by reference to atom sites, or by explicitly giving their coordinates. Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010). Cryst. Eng. Comm. 12, 44-48.
+
+The TOPOL_OCCURRENCE category lists the appearances of the underlying net topology in crystal structures.
+
+The TOPOL_TILING category describes the natural tiling corresponding to the underlying net. A tiling is a partition of crystal space using generalised polyhedra, and a natural tiling is one for which tiles are the smallest possible that conserve the full symmetry of the net and for which the faces are all locally strong rings. This means that there is no single largest face (face with the largest number of vertices) as such a face will be the sum of the other smaller faces. The tile signature contains the sizes of the tile faces and the number of faces of a given size in the tile. Reference: Blatov, V. A., Delgado-Friedrichs, O., O'Keeffe M. & Proserpio D. M. (2007). Acta Cryst. A63, 418-425.
+
+The TOPOL_TILING_FACES category tabulates the faces belonging to each tile in the tiling. Together with the TOPOL_TILING_TILES category it tabulates the information contained in _topol_tiling.signature. See the TOPOL_TILING category for further information.
+
+The TOPOL_TILING_TILE category provides information on each of the tiles in the tiling. Together with the TOPOL_TILING_FACES category it tabulates the information contained in _topol_tiling.signature. See the TOPOL_TILING category for further information.
+
+The topological density TD10 of the underlying net. This is the cumulative sum of the first ten shells of topological neighbours including the central atom. For structures with more than one kind of vertex in the asymmetric unit the value given is a weighted average over the vertices.
+
+The Topology CIF dictionary provides datanames for describing crystal structure topology. This is a DRAFT version and datanames in this dictionary should not be used until final approval by COMCIFS.
+
+The total number of occurrences in literature and databases of the underlying net topology at the time the data file was prepared.
+
+The total point symbol of the underlying net. This value summarizes all the point symbols for the non-equivalent nodes with their stoichiometric coefficients.
+
+The vertex symbol of a node provides similar information to the extended point symbol, but only for rings, which are circuits that contain no shortcuts, that is, are not the sum of two smaller circuits. There may be circuits that cannot be rings. If there are no rings meeting at a particular angle of the node, the symbol '*' is used instead of the A^a symbol. It is sorted so shortest rings come first. For 4-coordinated nodes only, the angles are grouped in opposite pairs; ab,cd and ac,bd and ad,bc (written in lexicographic order smallest numbers first). In the ordering the symbol '*' is equivalent to zero.
+
+The Wyckoff symbol (letter) as listed in the space-group section of International Tables for Crystallography, Vol. A (1987).
+
+This category is the parent of all categories in the dictionary.
+
