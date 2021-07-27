@@ -38,8 +38,6 @@ fractional z coordinate of this node.
 
 Information about the link that is not expressed using other data names, for example, bond subtypes and explanations of links with _topol_link.type of 'sb'.
 
-loop_ _topol_tiling_tile.id _topol_tiling_tile.count a 3 b 1 c 1 loop_ _topol_tiling_faces.tile_id _topol_tiling_faces.size _topol_tiling_faces.count a 4 6 b 4 6 b 6 8 c 4 12 c 6 8 c 8 6
-
 Number of independent tile edges in the natural tiling.
 
 Number of independent tile faces in the natural tiling.
