@@ -383,7 +383,7 @@ save_topol_edge.chemical_formula_moiety
     _definition.update            2018-01-30
     _description.text
 ;
-    The formula of the residue or ion which corresponds to the edge, 
+    The formula of the residue or ion which corresponds to the edge,
     written in accordance with the rules for the _chemical_formula.moiety tag.
 ;
     _name.category_id             topol_edge
@@ -401,7 +401,7 @@ save_topol_edge.chemical_formula_sum
     _definition.update            2018-01-30
     _description.text
 ;
-    The formula of the residue or ion which corresponds to the edge, 
+    The formula of the residue or ion which corresponds to the edge,
     written in accordance with the rules of the _chemical_formula.sum tag.
 ;
     _name.category_id             topol_edge
@@ -607,10 +607,10 @@ save_topol_link.site_symmetry_symop_1
 ;
     The symmetry operation that is applied to the coordinates of
     the node given by _topol_link.node_label_1 before addition of
-    the translations in _topol_link.site_symmetry_translation_1. 
-    The value must match a value of _space_group_symop.id. No 
-    normalization of the resulting coordinates into the interval 
-    [0,1) is carried out. For example, (x+1/2,y+1/2,z) is not the 
+    the translations in _topol_link.site_symmetry_translation_1.
+    The value must match a value of _space_group_symop.id. No
+    normalization of the resulting coordinates into the interval
+    [0,1) is carried out. For example, (x+1/2,y+1/2,z) is not the
     same as (x-1/2,y+1/2,z) for these purposes.
 ;
     _name.category_id             topol_link
@@ -631,10 +631,10 @@ save_topol_link.site_symmetry_symop_2
 ;
     The symmetry operation that is applied to the coordinates of
     the node given by _topol_link.node_label_2 before addition of
-    the translations in _topol_link.site_symmetry_translation_2. 
-    The value must match a value of _space_group_symop.id. No 
-    normalization of the resulting coordinates into the interval 
-    [0,1) is carried out. For example, (x+1/2, y+1/2,z) is not the 
+    the translations in _topol_link.site_symmetry_translation_2.
+    The value must match a value of _space_group_symop.id. No
+    normalization of the resulting coordinates into the interval
+    [0,1) is carried out. For example, (x+1/2, y+1/2,z) is not the
     same as (x-1/2,y+1/2,z) for these purposes.
 ;
     _name.category_id             topol_link
@@ -658,7 +658,7 @@ save_topol_link.site_symmetry_translation_1
     _topol_link.site_symmetry_symop_1 to generate the node used in
     calculating the link.  For example, if the symmetry operation
     referred to by _topol_link.site_symmetry_symop_id is
-    (x-1/2,y+1/2,z), _topol_link.site_symmetry_translation_1 is [0,-1,0] 
+    (x-1/2,y+1/2,z), _topol_link.site_symmetry_translation_1 is [0,-1,0]
     and the original position is (0.2,0.7,1.0) in fractional coordinates,
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
     _topol_link.site_symmetry_translation_1_x,
@@ -682,10 +682,10 @@ save__topol_link.site_symmetry_translation_1_x
     _definition.update            2021-07-28
     _description.text
 ;
-     The x component of the vector of lattice translations that is added 
+     The x component of the vector of lattice translations that is added
     to the coordinates after application of the symmetry operation given by
      _topol_link.site_symmetry_symop_1 to generate the node used in
-     calculating the link.  
+     calculating the link.
 ;
     _name.category_id             topol_link
     _name.object_id               site_symmetry_translation_1_x
@@ -702,10 +702,10 @@ save__topol_link.site_symmetry_translation_1_y
     _definition.update            2021-07-28
     _description.text
 ;
-     The y component of the vector of lattice translations that is added 
+     The y component of the vector of lattice translations that is added
     to the coordinates after application of the symmetry operation given by
      _topol_link.site_symmetry_symop_1 to generate the node used in
-     calculating the link.  
+     calculating the link.
 ;
     _name.category_id             topol_link
     _name.object_id               site_symmetry_translation_1_y
@@ -722,10 +722,10 @@ save__topol_link.site_symmetry_translation_1_z
     _definition.update            2021-07-28
     _description.text
 ;
-     The z component of the vector of lattice translations that is added 
+     The z component of the vector of lattice translations that is added
     to the coordinates after application of the symmetry operation given by
      _topol_link.site_symmetry_symop_1 to generate the node used in
-     calculating the link.  
+     calculating the link.
 ;
     _name.category_id             topol_link
     _name.object_id               site_symmetry_translation_1_z
@@ -747,7 +747,7 @@ save_topol_link.site_symmetry_translation_2
     _topol_link.site_symmetry_symop_2 to generate the node used in
     calculating the link.  For example, if the symmetry operation
     referred to by _topol_link.site_symmetry_symop_2 is
-    (x-1/2,y+1/2,z), _topol_link.site_symmetry_translation_2 is [0,-1,0] 
+    (x-1/2,y+1/2,z), _topol_link.site_symmetry_translation_2 is [0,-1,0]
     and the original position is (0.2,0.7,1.0) in fractional coordinates,
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
     _topol_link.site_symmetry_translation_2_x,
@@ -771,10 +771,10 @@ save__topol_link.site_symmetry_translation_2_x
     _definition.update            2021-07-28
     _description.text
 ;
-     The x component of the vector of lattice translations that is added 
+     The x component of the vector of lattice translations that is added
     to the coordinates after application of the symmetry operation given by
      _topol_link.site_symmetry_symop_2 to generate the node used in
-     calculating the link.  
+     calculating the link.
 ;
     _name.category_id             topol_link
     _name.object_id               site_symmetry_translation_2_x
@@ -791,10 +791,10 @@ save__topol_link.site_symmetry_translation_2_y
     _definition.update            2021-07-28
     _description.text
 ;
-     The y component of the vector of lattice translations that is added 
+     The y component of the vector of lattice translations that is added
     to the coordinates after application of the symmetry operation given by
      _topol_link.site_symmetry_symop_2 to generate the node used in
-     calculating the link.  
+     calculating the link.
 ;
     _name.category_id             topol_link
     _name.object_id               site_symmetry_translation_2_y
@@ -811,10 +811,10 @@ save__topol_link.site_symmetry_translation_2_z
     _definition.update            2021-07-28
     _description.text
 ;
-     The z component of the vector of lattice translations that is added 
+     The z component of the vector of lattice translations that is added
     to the coordinates after application of the symmetry operation given by
      _topol_link.site_symmetry_symop_2 to generate the node used in
-     calculating the link.  
+     calculating the link.
 ;
     _name.category_id             topol_link
     _name.object_id               site_symmetry_translation_2_z
@@ -1088,7 +1088,7 @@ save_topol_net.overall_topology_topos
     _description_example.case     3,3,4T3
     _description_example.detail
 ;
-    The third non-isomorphic three-periodic trinodal net with two 3-coordinated 
+    The third non-isomorphic three-periodic trinodal net with two 3-coordinated
     and one 4-coordinated independent nodes.
 ;
 
@@ -1193,8 +1193,8 @@ save_TOPOL_NODE
     relationship using _topol_node.atom_label and should should list
     _topol_node.fract_x, _topol_node.fract_y, and _topol_node.fract_z
     as '.'; Nodes that do not correspond to an atom should list
-    _topol_node.atom_label as '.' and indicate their fractional 
-    coordinates here. If all nodes in a loop list a particular value as '.', 
+    _topol_node.atom_label as '.' and indicate their fractional
+    coordinates here. If all nodes in a loop list a particular value as '.',
     then that value's tag may be omitted.
 
     Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
@@ -1211,7 +1211,7 @@ save_topol_node.atom_label
     _definition.id                '_topol_node.atom_label'
     _description.text
 ;
-    The atom label corresponding to this node. If a node does not correspond 
+    The atom label corresponding to this node. If a node does not correspond
     to an atom, then this item, if present, should be represented by '.'.
 ;
     _name.category_id             topol_node
@@ -1309,8 +1309,8 @@ save__topol_node.coordination_sequence_plain
     _definition.update            2021-07-28
     _description.text
 ;
-    An alternative representation of the coordination sequence as plain text, as a
-    quoted string of white-space-separated numbers.
+    An alternative representation of the coordination sequence
+    as plain text, as a quoted string of white-space-separated numbers.
 ;
     _name.category_id             topol_node
     _name.object_id               coordination_sequence_plain
@@ -1318,7 +1318,7 @@ save__topol_node.coordination_sequence_plain
     _type.source                  Derived
     _type.container               Single
     _type.contents                Text
-    _description_example.case     "4 12 24 42 64 92 124 162 204 252"
+    _description_example.case     '4 12 24 42 64 92 124 162 204 252'
     _description_example.detail   'The diamond coordination sequence'
 
 save_
