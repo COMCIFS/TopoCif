@@ -678,8 +678,8 @@ save_
 
 save__topol_link.site_symmetry_translation_1_x
 
-    _definition.id                     '_topol_link.site_symmetry_translation_1_x'
-    _definition.update                      2021-07-28
+    _definition.id                '_topol_link.site_symmetry_translation_1_x'
+    _definition.update            2021-07-28
     _description.text
 ;
      The x component of the vector of lattice translations that is added 
@@ -698,8 +698,8 @@ save_
 
 save__topol_link.site_symmetry_translation_1_y
 
-    _definition.id                     '_topol_link.site_symmetry_translation_1_y'
-    _definition.update                      2021-07-28
+    _definition.id                '_topol_link.site_symmetry_translation_1_y'
+    _definition.update            2021-07-28
     _description.text
 ;
      The y component of the vector of lattice translations that is added 
@@ -718,8 +718,8 @@ save_
 
 save__topol_link.site_symmetry_translation_1_z
 
-    _definition.id                     '_topol_link.site_symmetry_translation_1_z'
-    _definition.update                      2021-07-28
+    _definition.id                '_topol_link.site_symmetry_translation_1_z'
+    _definition.update            2021-07-28
     _description.text
 ;
      The z component of the vector of lattice translations that is added 
@@ -767,8 +767,8 @@ save_
 
 save__topol_link.site_symmetry_translation_2_x
 
-    _definition.id                     '_topol_link.site_symmetry_translation_2_x'
-    _definition.update                      2021-07-28
+    _definition.id                '_topol_link.site_symmetry_translation_2_x'
+    _definition.update            2021-07-28
     _description.text
 ;
      The x component of the vector of lattice translations that is added 
@@ -787,8 +787,8 @@ save_
 
 save__topol_link.site_symmetry_translation_2_y
 
-    _definition.id                     '_topol_link.site_symmetry_translation_2_y'
-    _definition.update                      2021-07-28
+    _definition.id                '_topol_link.site_symmetry_translation_2_y'
+    _definition.update            2021-07-28
     _description.text
 ;
      The y component of the vector of lattice translations that is added 
@@ -807,8 +807,8 @@ save_
 
 save__topol_link.site_symmetry_translation_2_z
 
-    _definition.id                     '_topol_link.site_symmetry_translation_2_z'
-    _definition.update                      2021-07-28
+    _definition.id                '_topol_link.site_symmetry_translation_2_z'
+    _definition.update            2021-07-28
     _description.text
 ;
      The z component of the vector of lattice translations that is added 
