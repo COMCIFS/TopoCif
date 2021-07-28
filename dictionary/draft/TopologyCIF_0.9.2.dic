@@ -371,7 +371,7 @@ save__topol_edge.chemical_formula_iupac
 _definition.id                   	'_topol_edge.chemical_formula_iupac'
 _name.category_id                   	topol_edge
 _name.object_id                     	chemical_formula_iupac
-_definition.update                  	2021-07-28
+_definition.update                  	2018-01-30
 _description.text
 ;
 	Formula of the residue or ion which corresponds to the edge.
@@ -673,7 +673,7 @@ save__topol_link.site_symmetry_translation_1
 	_definition.id                 	'_topol_link.site_symmetry_translation_1'
 	_name.category_id                   	topol_link
 	_name.object_id                     	site_symmetry_translation_1
-	_definition.update                  	2021-07-28
+	_definition.update                  	2018-04-05
 	_type.contents                      	Integer
 	_description.text
 ;
@@ -1129,8 +1129,8 @@ loop_
   _description_example.detail
      	'3,3,4T3'
 ;
-	The third three-periodic trinodal net with two 3-coordinated and one
-	4-coordinated independent nodes
+	The third non-isomorphic three-periodic trinodal net with two 3-coordinated 
+	and one	4-coordinated independent nodes.
 ;
 _type.purpose                       	Encode
 _type.source                        	Assigned
@@ -1285,8 +1285,9 @@ _name.object_id                     	chemical_formula_iupac
 _definition.update                  	2018-01-30
 _description.text
 ;
- 	Formula of the residue or ion which corresponds to the node,
- 	expressed as per the description for _chemical_formula_iupac.
+ 	Formula of the residue or ion which corresponds to the node.
+	The formula is written in accordance with the rules of  the
+ 	_chemical_formula_iupac tag.
 ;
 _type.contents                      	Text
 _type.purpose                       	Encode
