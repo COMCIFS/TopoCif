@@ -689,10 +689,10 @@ save__topol_link.site_symmetry_translation_1_x
 ;
 	_name.category_id                   	topol_link
 	_name.object_id                     	site_symmetry_translation_1_x
-	_type.contents                      	Integer
 	_type.purpose                       	Number
 	_type.source                        	Derived
 	_type.container                     	Single
+	_type.contents                      	Integer
 
 save_
 
@@ -709,10 +709,10 @@ save__topol_link.site_symmetry_translation_1_y
 ;
 	_name.category_id                   	topol_link
 	_name.object_id                     	site_symmetry_translation_1_y
-	_type.contents                      	Integer
 	_type.purpose                       	Number
 	_type.source                        	Derived
 	_type.container                     	Single
+	_type.contents                      	Integer
 
 save_
 
@@ -729,10 +729,10 @@ save__topol_link.site_symmetry_translation_1_z
 ;
 	_name.category_id                   	topol_link
 	_name.object_id                     	site_symmetry_translation_1_z
-	_type.contents                      	Integer
 	_type.purpose                       	Number
 	_type.source                        	Derived
 	_type.container                     	Single
+	_type.contents                      	Integer
 
 save_
 
@@ -778,10 +778,10 @@ save__topol_link.site_symmetry_translation_2_x
 ;
 	_name.category_id                   	topol_link
 	_name.object_id                     	site_symmetry_translation_2_x
-	_type.contents                      	Integer
 	_type.purpose                       	Number
 	_type.source                        	Derived
 	_type.container                     	Single
+	_type.contents                      	Integer
 
 save_
 
@@ -798,10 +798,10 @@ save__topol_link.site_symmetry_translation_2_y
 ;
 	_name.category_id                   	topol_link
 	_name.object_id                     	site_symmetry_translation_2_y
-	_type.contents                      	Integer
 	_type.purpose                       	Number
 	_type.source                        	Derived
 	_type.container                     	Single
+	_type.contents                      	Integer
 
 save_
 
@@ -818,10 +818,10 @@ save__topol_link.site_symmetry_translation_2_z
 ;
 	_name.category_id                   	topol_link
 	_name.object_id                     	site_symmetry_translation_2_z
-	_type.contents                      	Integer
 	_type.purpose                       	Number
 	_type.source                        	Derived
 	_type.container                     	Single
+	_type.contents                      	Integer
 
 save_
 
