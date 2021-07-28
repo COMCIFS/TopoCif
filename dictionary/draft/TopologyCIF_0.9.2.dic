@@ -1564,7 +1564,7 @@ _description.text
  	The (short) point symbol of the node. This lists the number and size of
  	the shortest closed chains of connected nodes (circuits) starting from
  	any non-equivalent node in the net. For an N-coordinated node there are
- 	N(N-1) circuits
+ 	N(N-1) circuits.
 ;
 _type.contents                      	Text
 loop_
