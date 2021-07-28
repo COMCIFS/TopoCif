@@ -365,9 +365,8 @@ save_topol_edge.chemical_formula_iupac
     _definition.update            2018-01-30
     _description.text
 ;
-    The formula of the residue or ion which corresponds to the edge.
-    The formula is written in accordance with the rules of the
-     _chemical_formula_iupac tag.
+    The formula of the residue or ion which corresponds to the edge,
+    written in accordance with the rules for the _chemical_formula_iupac tag.
 ;
     _name.category_id             topol_edge
     _name.object_id               chemical_formula_iupac
@@ -384,9 +383,8 @@ save_topol_edge.chemical_formula_moiety
     _definition.update            2018-01-30
     _description.text
 ;
-    Formula of the residue or ion which corresponds to the edge.
-    The formula is written in accordance with the rules of the
-    _chemical_formula.moiety tag.
+    The formula of the residue or ion which corresponds to the edge, 
+    written in accordance with the rules for the _chemical_formula.moiety tag.
 ;
     _name.category_id             topol_edge
     _name.object_id               chemical_formula_moiety
@@ -403,9 +401,8 @@ save_topol_edge.chemical_formula_sum
     _definition.update            2018-01-30
     _description.text
 ;
-    Formula of the residue or ion which corresponds to the edge.
-    The formula is written in accordance with the rules of  the
-    _chemical_formula.sum tag.
+    The formula of the residue or ion which corresponds to the edge, 
+    written in accordance with the rules of the _chemical_formula.sum tag.
 ;
     _name.category_id             topol_edge
     _name.object_id               chemical_formula_sum
@@ -656,13 +653,13 @@ save_topol_link.site_symmetry_translation_1
     _definition.update            2018-04-05
     _description.text
 ;
-    The lattice translation that must be added to the
+    The lattice translation vector that must be added to the
     coordinates after application of the symmetry operation given by
     _topol_link.site_symmetry_symop_1 to generate the node used in
     calculating the link.  For example, if the symmetry operation
     referred to by _topol_link.site_symmetry_symop_id is
-    (x-1/2,y+1/2,z), the translation vector is [0,-1,0] and the
-    original position is (0.2,0.7,1.0) in fractional coordinates,
+    (x-1/2,y+1/2,z), _topol_link.site_symmetry_translation_1 is [0,-1,0] 
+    and the original position is (0.2,0.7,1.0) in fractional coordinates,
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
     _topol_link.site_symmetry_translation_1_x,
     _topol_link.site_symmetry_translation_1_y,and
@@ -685,7 +682,6 @@ save__topol_link.site_symmetry_translation_1_x
 	_definition.update                  	2021-07-28
 	_description.text
 ;
-
  	The x component of the vector of lattice translations that is added 
 	to the coordinates after application of the symmetry operation given by
  	_topol_link.site_symmetry_symop_1 to generate the node used in
@@ -706,7 +702,6 @@ save__topol_link.site_symmetry_translation_1_y
 	_definition.update                  	2021-07-28
 	_description.text
 ;
-
  	The y component of the vector of lattice translations that is added 
 	to the coordinates after application of the symmetry operation given by
  	_topol_link.site_symmetry_symop_1 to generate the node used in
@@ -727,7 +722,6 @@ save__topol_link.site_symmetry_translation_1_z
 	_definition.update                  	2021-07-28
 	_description.text
 ;
-
  	The z component of the vector of lattice translations that is added 
 	to the coordinates after application of the symmetry operation given by
  	_topol_link.site_symmetry_symop_1 to generate the node used in
@@ -748,13 +742,13 @@ save_topol_link.site_symmetry_translation_2
     _definition.update            2018-04-05
     _description.text
 ;
-    The lattice translation that must be added to the
+    The lattice translation vector that must be added to the
     coordinates after application of the symmetry operation given by
     _topol_link.site_symmetry_symop_2 to generate the node used in
     calculating the link.  For example, if the symmetry operation
     referred to by _topol_link.site_symmetry_symop_2 is
-    (x-1/2,y+1/2,z), the translation vector is [0, -1, 0] and the
-    original position is (0.2,0.7,1.0) in fractional coordinates,
+    (x-1/2,y+1/2,z), _topol_link.site_symmetry_translation_2 is [0,-1,0] 
+    and the original position is (0.2,0.7,1.0) in fractional coordinates,
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
 	_topol_link.site_symmetry_translation_2_x,
 	_topol_link.site_symmetry_translation_2_y, and
@@ -1106,7 +1100,7 @@ save_topol_net.period
     _definition.update            2018-01-30
     _description.text
 ;
-    Periodicity of the underlying net.  The allowed data values
+    The periodicity of the underlying net. The allowed data values
     have the following meaning:
        0     0-periodic (finite)
        1     1-periodic (chain)
@@ -1271,9 +1265,8 @@ save_topol_node.chemical_formula_sum
     _definition.update            2018-01-30
     _description.text
 ;
-    Formula of the residue or ion which corresponds to the node.
-    The formula is written in accordance with the rules of  the
-    _chemical_formula.sum tag.
+    The formula of the residue or ion which corresponds to the node,
+    written in accordance with the rules for the _chemical_formula.sum tag.
 ;
     _name.category_id             topol_node
     _name.object_id               chemical_formula_sum
@@ -1297,7 +1290,6 @@ save_topol_node.coordination_sequence
     steps. It is usually listed up to k=10. Alternatively, the
 	_topol_node.coordination_sequence_plain tag can be used to represent
 	the coordination sequence as a plain text.
-    
 ;
     _name.category_id             topol_node
     _name.object_id               coordination_sequence
@@ -1638,7 +1630,7 @@ save_topol_occurrence.citation_id
     _definition.update            2018-04-17
     _description.text
 ;
-    Reference to a publication, where a crystal structure with the
+    A reference to a publication where a crystal structure with the
     underlying net topology  was characterized. This item is a pointer
     to an item described in the core CITATION category. If a publication
     and database entry are not directly related, they should be listed
@@ -1758,7 +1750,7 @@ save_topol_tiling.edges
     _definition.update            2018-01-30
     _description.text
 ;
-    Number of independent tile edges in the natural tiling.
+    The number of independent tile edges in the natural tiling.
 ;
     _name.category_id             topol_tiling
     _name.object_id               edges
@@ -1775,7 +1767,7 @@ save_topol_tiling.faces
     _definition.update            2018-01-30
     _description.text
 ;
-    Number of independent tile faces in the natural tiling.
+    The number of independent tile faces in the natural tiling.
 ;
     _name.category_id             topol_tiling
     _name.object_id               faces
@@ -1819,7 +1811,7 @@ save_topol_tiling.tiles
     _definition.update            2018-01-30
     _description.text
 ;
-    Number of independent tiles in the natural tiling.
+    The number of independent tiles in the natural tiling.
 ;
     _name.category_id             topol_tiling
     _name.object_id               tiles
@@ -1836,7 +1828,7 @@ save_topol_tiling.vertices
     _definition.update            2018-01-30
     _description.text
 ;
-    Number of independent tile vertices in the natural tiling.
+    The number of independent tile vertices in the natural tiling.
 ;
     _name.category_id             topol_tiling
     _name.object_id               vertices
@@ -1991,7 +1983,7 @@ save_topol_tiling_tile.id
     _definition.update            2018-02-13
     _description.text
 ;
-    An arbitrary, unique identifier for this tile type.
+    An arbitrary unique identifier for this tile type.
 ;
     _name.category_id             topol_tiling_tile
     _name.object_id               id
