@@ -1111,8 +1111,12 @@ _description.text
 ;
     	The TOPOL_NODE category describes the chemical composition,
  	structure and topological properties of the nodes of the underlying
- 	net. Nodes may be specified by reference to atom sites, or by
- 	explicitly giving their coordinates.
+ 	net. Nodes that correspond to a crystallographic atom should indicate that
+    	relationship using _topol_node.atom_label and should should list
+    	_topol_node.fract_x, _topol_node.fract_y, and _topol_node.fract_z
+    	as '.'; Nodes that do not correspond to an atom should list
+    	_topol_node.atom_label as '.' and indicate their fractional coordinates here.
+   	If all nodes in a loop list a particular value as '.', then that value's tag may be omitted.
 
  	Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
  	Cryst. Eng. Comm. 12, 44-48.
