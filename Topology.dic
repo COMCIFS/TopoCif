@@ -687,12 +687,12 @@ save__topol_link.site_symmetry_translation_1_x
      _topol_link.site_symmetry_symop_1 to generate the node used in
      calculating the link.  
 ;
-    _name.category_id                       topol_link
-    _name.object_id                         site_symmetry_translation_1_x
-    _type.purpose                           Number
-    _type.source                            Derived
-    _type.container                         Single
-    _type.contents                          Integer
+    _name.category_id             topol_link
+    _name.object_id               site_symmetry_translation_1_x
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
 
 save_
 
@@ -707,12 +707,12 @@ save__topol_link.site_symmetry_translation_1_y
      _topol_link.site_symmetry_symop_1 to generate the node used in
      calculating the link.  
 ;
-    _name.category_id                       topol_link
-    _name.object_id                         site_symmetry_translation_1_y
-    _type.purpose                           Number
-    _type.source                            Derived
-    _type.container                         Single
-    _type.contents                          Integer
+    _name.category_id             topol_link
+    _name.object_id               site_symmetry_translation_1_y
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
 
 save_
 
@@ -727,12 +727,12 @@ save__topol_link.site_symmetry_translation_1_z
      _topol_link.site_symmetry_symop_1 to generate the node used in
      calculating the link.  
 ;
-    _name.category_id                       topol_link
-    _name.object_id                         site_symmetry_translation_1_z
-    _type.purpose                           Number
-    _type.source                            Derived
-    _type.container                         Single
-    _type.contents                          Integer
+    _name.category_id             topol_link
+    _name.object_id               site_symmetry_translation_1_z
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
 
 save_
 
@@ -776,12 +776,12 @@ save__topol_link.site_symmetry_translation_2_x
      _topol_link.site_symmetry_symop_2 to generate the node used in
      calculating the link.  
 ;
-    _name.category_id                       topol_link
-    _name.object_id                         site_symmetry_translation_2_x
-    _type.purpose                           Number
-    _type.source                            Derived
-    _type.container                         Single
-    _type.contents                          Integer
+    _name.category_id             topol_link
+    _name.object_id               site_symmetry_translation_2_x
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
 
 save_
 
@@ -796,12 +796,12 @@ save__topol_link.site_symmetry_translation_2_y
      _topol_link.site_symmetry_symop_2 to generate the node used in
      calculating the link.  
 ;
-    _name.category_id                       topol_link
-    _name.object_id                         site_symmetry_translation_2_y
-    _type.purpose                           Number
-    _type.source                            Derived
-    _type.container                         Single
-    _type.contents                          Integer
+    _name.category_id             topol_link
+    _name.object_id               site_symmetry_translation_2_y
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
 
 save_
 
@@ -816,12 +816,12 @@ save__topol_link.site_symmetry_translation_2_z
      _topol_link.site_symmetry_symop_2 to generate the node used in
      calculating the link.  
 ;
-    _name.category_id                       topol_link
-    _name.object_id                         site_symmetry_translation_2_z
-    _type.purpose                           Number
-    _type.source                            Derived
-    _type.container                         Single
-    _type.contents                          Integer
+    _name.category_id             topol_link
+    _name.object_id               site_symmetry_translation_2_z
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
 
 save_
 
@@ -1298,26 +1298,26 @@ save_topol_node.coordination_sequence
     _type.source                  Derived
     _type.container               List
     _type.contents                Integer
-    _description_example.case     [4 12 24 42 64 92 124 162 204 252]
+    _description_example.case     [4  12  24  42  64  92  124  162  204  252]
     _description_example.detail   'The diamond coordination sequence'
 
 save_
 
 save__topol_node.coordination_sequence_plain
 
-    _definition.id                        '_topol_node.coordination_sequence_plain'
-    _definition.update                      2021-07-28
+    _definition.id                '_topol_node.coordination_sequence_plain'
+    _definition.update            2021-07-28
     _description.text
 ;
     An alternative representation of the coordination sequence as plain text, as a
     quoted string of white-space-separated numbers.
 ;
-    _name.category_id                       topol_node
-    _name.object_id                         coordination_sequence_plain
-    _type.contents                          Text
-    _type.purpose                           Encode
-    _type.source                            Derived
-    _type.container                         Single
+    _name.category_id             topol_node
+    _name.object_id               coordination_sequence_plain
+    _type.purpose                 Encode
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Text
     _description_example.case     "4 12 24 42 64 92 124 162 204 252"
     _description_example.detail   'The diamond coordination sequence'
 
