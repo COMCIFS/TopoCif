@@ -2031,6 +2031,6 @@ save_
          0.9.3                    2021-07-28
 ;
        Added CIF-1.0 equivalents for _topol_link.site_symmetry_translation_1,
-       _topol_link.site_symmetry_translation_2, and 
+       _topol_link.site_symmetry_translation_2, and
        _topol_node.coordination_sequence (B. Hanson and V. Blatov)
 ;
