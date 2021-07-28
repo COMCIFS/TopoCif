@@ -10,7 +10,7 @@ _dictionary.title                   	TOPOLOGY_CIF
 _dictionary.class                   	Instance
 _dictionary.version                 	0.9.2
 _dictionary.ddl_conformance         	3.13.1
-_dictionary.date                    	2021-05-04
+_dictionary.date                    	2021-07-28
 _description.text
 ;
   The Topology CIF dictionary provides datanames for describing crystal
@@ -371,11 +371,12 @@ save__topol_edge.chemical_formula_iupac
 _definition.id                   	'_topol_edge.chemical_formula_iupac'
 _name.category_id                   	topol_edge
 _name.object_id                     	chemical_formula_iupac
-_definition.update                  	2018-01-30
+_definition.update                  	2021-07-28
 _description.text
 ;
-	Formula of the residue or ion which corresponds to the edge,
- 	expressed as per the description for _chemical_formula_iupac.
+	Formula of the residue or ion which corresponds to the edge.
+	The formula is written in accordance with the rules of  the
+ 	_chemical_formula_iupac tag.
 ;
 _type.contents                      	Text
 _type.purpose                       	Encode
@@ -629,12 +630,11 @@ save__topol_link.site_symmetry_symop_1
 
      	The symmetry operation that is applied to the coordinates of
      	the node given by _topol_link.node_label_1 before addition of
-     	the translations in
-     	_topol_link.site_symmetry_translation_1. The value must match
-     	a value of _space_group_symop.id. No normalization of the
-     	resulting coordinates into the interval [0,1) is carried
-     	out. For example, (x+1/2, y+1/2,z) is not the same as (x-1/2,
-     	y+1/2,z) for these purposes.
+     	the translations in _topol_link.site_symmetry_translation_1. 
+	The value must match a value of _space_group_symop.id. No 
+	normalization of the resulting coordinates into the interval 
+	[0,1) is carried out. For example, (x+1/2,y+1/2,z) is not the 
+	same as (x-1/2,y+1/2,z) for these purposes.
 
 ;
 	_type.purpose                       	Link
@@ -655,12 +655,11 @@ save__topol_link.site_symmetry_symop_2
 
      	The symmetry operation that is applied to the coordinates of
      	the node given by _topol_link.node_label_2 before addition of
-     	the translations in
-     	_topol_link.site_symmetry_translation_2. The value must match
-     	a value of _space_group_symop.id. No normalization of the
-     	resulting coordinates into the interval [0,1) is carried
-     	out. For example, (x+1/2, y+1/2,z) is not the same as (x-1/2,
-     	y+1/2,z) for these purposes.
+     	the translations in _topol_link.site_symmetry_translation_2. 
+	The value must match a value of _space_group_symop.id. No 
+	normalization of the resulting coordinates into the interval 
+	[0,1) is carried out. For example, (x+1/2, y+1/2,z) is not the 
+	same as (x-1/2,y+1/2,z) for these purposes.
 
 ;
 	_type.purpose                       	Link
@@ -674,7 +673,7 @@ save__topol_link.site_symmetry_translation_1
 	_definition.id                 	'_topol_link.site_symmetry_translation_1'
 	_name.category_id                   	topol_link
 	_name.object_id                     	site_symmetry_translation_1
-	_definition.update                  	2018-04-05
+	_definition.update                  	2021-07-28
 	_type.contents                      	Integer
 	_description.text
 ;
@@ -684,15 +683,82 @@ save__topol_link.site_symmetry_translation_1
  	_topol_link.site_symmetry_symop_1 to generate the node used in
  	calculating the link.  For example, if the symmetry operation
  	referred to by _topol_link.site_symmetry_symop_id is
- 	(x-1/2,y+1/2,z), the translation vector is [0, -1, 0] and the
+ 	(x-1/2,y+1/2,z), the translation vector is [0,-1,0] and the
  	original position is (0.2,0.7,1.0) in fractional coordinates,
- 	then the resultant position is (-0.3,0.2,1.0).
+ 	then the resultant position is (-0.3,0.2,1.0). Alternatively,
+	_topol_link.site_symmetry_translation_1_x,
+	_topol_link.site_symmetry_translation_1_y,
+	_topol_link.site_symmetry_translation_1_z tags can be used to
+	describe separate components of the vector.
 
 ;
 	_type.purpose                       	Number
 	_type.dimension                     	'[3]'
 	_type.source                        	Derived
 	_type.container                     	Matrix
+
+save_
+
+save__topol_link.site_symmetry_translation_1_x
+
+	_definition.id                 	'_topol_link.site_symmetry_translation_1_x'
+	_name.category_id                   	topol_link
+	_name.object_id                     	site_symmetry_translation_1_x
+	_definition.update                  	2021-07-28
+	_description.text
+;
+
+ 	The x component of the vector of lattice translations that is added 
+	to the coordinates after application of the symmetry operation given by
+ 	_topol_link.site_symmetry_symop_1 to generate the node used in
+ 	calculating the link.  
+;
+	_type.contents                      	Integer
+	_type.purpose                       	Number
+	_type.source                        	Derived
+	_type.container                     	Single
+
+save_
+
+save__topol_link.site_symmetry_translation_1_y
+
+	_definition.id                 	'_topol_link.site_symmetry_translation_1_y'
+	_name.category_id                   	topol_link
+	_name.object_id                     	site_symmetry_translation_1_y
+	_definition.update                  	2021-07-28
+	_description.text
+;
+
+ 	The y component of the vector of lattice translations that is added 
+	to the coordinates after application of the symmetry operation given by
+ 	_topol_link.site_symmetry_symop_1 to generate the node used in
+ 	calculating the link.  
+;
+	_type.contents                      	Integer
+	_type.purpose                       	Number
+	_type.source                        	Derived
+	_type.container                     	Single
+
+save_
+
+save__topol_link.site_symmetry_translation_1_z
+
+	_definition.id                 	'_topol_link.site_symmetry_translation_1_z'
+	_name.category_id                   	topol_link
+	_name.object_id                     	site_symmetry_translation_1_z
+	_definition.update                  	2021-07-28
+	_description.text
+;
+
+ 	The z component of the vector of lattice translations that is added 
+	to the coordinates after application of the symmetry operation given by
+ 	_topol_link.site_symmetry_symop_1 to generate the node used in
+ 	calculating the link.  
+;
+	_type.contents                      	Integer
+	_type.purpose                       	Number
+	_type.source                        	Derived
+	_type.container                     	Single
 
 save_
 
@@ -711,7 +777,7 @@ save__topol_link.site_symmetry_translation_2
  	_topol_link.site_symmetry_symop_2 to generate the node used in
  	calculating the link.  For example, if the symmetry operation
  	referred to by _topol_link.site_symmetry_symop_2 is
- 	(x-1/2,y+1/2,z), the translation vector is [0, -1, 0] and the
+ 	(x-1/2,y+1/2,z), the translation vector is [0,-1,0] and the
  	original position is (0.2,0.7,1.0) in fractional coordinates,
  	then the resultant position is (-0.3,0.2,1.0).
 
@@ -720,6 +786,69 @@ save__topol_link.site_symmetry_translation_2
 	_type.dimension                     	'[3]'
 	_type.source                        	Derived
 	_type.container                     	Matrix
+
+save_
+
+save__topol_link.site_symmetry_translation_2_x
+
+	_definition.id                 	'_topol_link.site_symmetry_translation_2_x'
+	_name.category_id                   	topol_link
+	_name.object_id                     	site_symmetry_translation_2_x
+	_definition.update                  	2021-07-28
+	_description.text
+;
+
+ 	The x component of the vector of lattice translations that is added 
+	to the coordinates after application of the symmetry operation given by
+ 	_topol_link.site_symmetry_symop_2 to generate the node used in
+ 	calculating the link.  
+;
+	_type.contents                      	Integer
+	_type.purpose                       	Number
+	_type.source                        	Derived
+	_type.container                     	Single
+
+save_
+
+save__topol_link.site_symmetry_translation_2_y
+
+	_definition.id                 	'_topol_link.site_symmetry_translation_2_y'
+	_name.category_id                   	topol_link
+	_name.object_id                     	site_symmetry_translation_2_y
+	_definition.update                  	2021-07-28
+	_description.text
+;
+
+ 	The y component of the vector of lattice translations that is added 
+	to the coordinates after application of the symmetry operation given by
+ 	_topol_link.site_symmetry_symop_2 to generate the node used in
+ 	calculating the link.  
+;
+	_type.contents                      	Integer
+	_type.purpose                       	Number
+	_type.source                        	Derived
+	_type.container                     	Single
+
+save_
+
+save__topol_link.site_symmetry_translation_2_z
+
+	_definition.id                 	'_topol_link.site_symmetry_translation_2_z'
+	_name.category_id                   	topol_link
+	_name.object_id                     	site_symmetry_translation_2_z
+	_definition.update                  	2021-07-28
+	_description.text
+;
+
+ 	The z component of the vector of lattice translations that is added 
+	to the coordinates after application of the symmetry operation given by
+ 	_topol_link.site_symmetry_symop_2 to generate the node used in
+ 	calculating the link.  
+;
+	_type.contents                      	Integer
+	_type.purpose                       	Number
+	_type.source                        	Derived
+	_type.container                     	Single
 
 save_
 
