@@ -1136,9 +1136,8 @@ _name.category_id                   	topol_node
 _definition.class                   	Datum
 _description.text
 ;
-    	The atom label corresponding to this node. Not all nodes have
- 	to coincide with atom sites. If a node does not correspond to an atom,
-        then this item, if present, should be represented by '.'.
+    	The atom label corresponding to this node. If a node does not correspond 
+	to an atom, then this item, if present, should be represented by '.'.
 ;
 _type.purpose                       	Link
 _type.source                        	Related
@@ -1321,7 +1320,8 @@ _name.category_id                   	topol_node
 _definition.class                   	Datum
 _description.text
 ;
-    fractional x coordinate of this node.
+    The fractional x coordinate of this node. If a node corresponds
+    to an atom, then this item, if present, should be represented by '.'.
 ;
 _type.purpose                       Link
 _type.source                         Related
@@ -1345,7 +1345,8 @@ _name.category_id                   	topol_node
 _definition.class                   	Datum
 _description.text
 ;
-    fractional y coordinate of this node.
+    The fractional y coordinate of this node. If a node corresponds
+    to an atom, then this item, if present, should be represented by '.'.
 ;
 _type.purpose                       Link
 _type.source                         Related
@@ -1369,7 +1370,8 @@ _name.category_id                   	topol_node
 _definition.class                   	Datum
 _description.text
 ;
-    fractional z coordinate of this node.
+    The fractional z coordinate of this node. If a node corresponds
+    to an atom, then this item, if present, should be represented by '.'.
 ;
 _type.purpose                       Link
 _type.source                         Related
