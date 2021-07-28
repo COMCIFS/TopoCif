@@ -1396,7 +1396,9 @@ _description.text
  	atoms in the 1st, 2nd, 3rd etc. coordination shells of any given
  	node in the net. In other words, the kth entry in the list is the
  	number of vertices linked to the node by a path of exactly k
- 	steps. It is usually listed up to k=10.
+ 	steps. It is usually listed up to k=10. Alternatively, the
+	_topol_node.coordination_sequence_plain tag can be used to represent
+	the coordination sequence as a plain text.
 ;
 _type.contents                      	Integer
 _type.container                     	List
@@ -1410,6 +1412,23 @@ _type.source                        	Derived
 
 save_
 
+
+save__topol_node.coordination_sequence_plain
+
+_definition.id                    	'_topol_node.coordination_sequence_plain'
+_name.category_id                   	topol_node
+_name.object_id                     	coordination_sequence_plain
+_definition.update                  	2021-07-28
+_description.text
+;
+	An alternative representation of the coordination sequence as a plain text.
+;
+_type.contents                      	Text
+_type.purpose                       	Encode
+_type.source                        	Derived
+_type.container                     	Single
+
+save_
 
 save__topol_node.extended_point_symbol
 
