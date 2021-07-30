@@ -9,7 +9,7 @@ data_TOPOLOGY_CIF
 
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
-    _dictionary.version           0.9.2
+    _dictionary.version           0.9.3
     _dictionary.date              2021-07-28
     _dictionary.ddl_conformance   3.13.1
     _description.text
