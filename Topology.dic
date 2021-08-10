@@ -657,7 +657,7 @@ save_topol_link.site_symmetry_translation_1
     coordinates after application of the symmetry operation given by
     _topol_link.site_symmetry_symop_1 to generate the node used in
     calculating the link.  For example, if the symmetry operation
-    referred to by _topol_link.site_symmetry_symop_id is
+    referred to by _topol_link.site_symmetry_symop_1 is
     (x-1/2,y+1/2,z), _topol_link.site_symmetry_translation_1 is [0,-1,0]
     and the original position is (0.2,0.7,1.0) in fractional coordinates,
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
