@@ -366,7 +366,7 @@ save_topol_edge.chemical_formula_iupac
     _description.text
 ;
     The formula of the residue or ion which corresponds to the edge,
-    written in accordance with the rules for the _chemical_formula_iupac tag.
+    written in accordance with the rules for the _chemical_formula.iupac tag.
 ;
     _name.category_id             topol_edge
     _name.object_id               chemical_formula_iupac
@@ -662,7 +662,7 @@ save_topol_link.site_symmetry_translation_1
     and the original position is (0.2,0.7,1.0) in fractional coordinates,
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
     _topol_link.site_symmetry_translation_1_x,
-    _topol_link.site_symmetry_translation_1_y,and
+    _topol_link.site_symmetry_translation_1_y, and
     _topol_link.site_symmetry_translation_1_z tags may be used to
     describe separate components of the vector.
 ;
@@ -1231,7 +1231,7 @@ save_topol_node.chemical_formula_iupac
     _description.text
 ;
     The formula of the residue or ion which corresponds to the node,
-    written in accordance with the rules for the _chemical_formula_iupac tag.
+    written in accordance with the rules for the _chemical_formula.iupac tag.
 ;
     _name.category_id             topol_node
     _name.object_id               chemical_formula_iupac
@@ -1850,7 +1850,7 @@ save_TOPOL_TILING_FACES
 ;
     The TOPOL_TILING_FACES category tabulates the faces
     belonging to each tile in the tiling.  Together with the
-    TOPOL_TILING_TILES category it tabulates the information
+    TOPOL_TILING_TILE category it tabulates the information
     contained in _topol_tiling.signature. See the
     TOPOL_TILING category for further information.
 ;
