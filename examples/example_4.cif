@@ -1,3 +1,4 @@
+#\#CIF_2.0
 data_1-TOPOS_FUBYUW_C4CO1O4-,LI1+/Z=2
 _database_code_ICSD                 FUBYUW
 _audit_creation_date                2021-04-28

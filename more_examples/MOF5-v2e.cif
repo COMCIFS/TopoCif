@@ -23,7 +23,7 @@ loop_
 _publ_author_name
 'Hailian LI'
 'Eddaoudi M.'
-'O'Keeffe M.'
+"O'Keeffe M."
 'Yaghi O.M.'
 _cell_length_a                      25.669
 _cell_length_b                      25.669
@@ -330,7 +330,7 @@ _topol_atom.translation
 40	C3	.	8	.	.	# C3	C3 #4	x,y,z	
 41	C2	.	8	26 	.	# C2	C2 #3	x,y,-z	
 42	C2	.	8	.	.	# C2	C2 #3	x,y,z	
-$ #End of data_1-TOPOS_SAHYIK_C54H73Cl1N8O21Zn4
+#End of data_1-TOPOS_SAHYIK_C54H73Cl1N8O21Zn4
 
 
 
