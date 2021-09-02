@@ -253,7 +253,24 @@ _topol_net.label
 _topol_net.special_details
 _topol_net.overall_topology_TOPOS
 1 Net_1 'Atomic net' 'Unknown'
-2 Net_2 'Underlying net with zinc tetranuclear complex groups as nodes and benzene rings as links' 'pcu'
+2 Net_2 'Underlying net with zinc tetranuclear complex groups as nodes and benzene rings as links (cluster representation)' 'pcu'
+3 Net_3 'Underlying net with zinc, oxygen and benzenedicarboxylato ligands as 4-coordinates nodes (standard representation)' 'fff'
+
+loop_
+_topol_node.id
+_topol_node.net_id
+_topol_node.chemical_formula_sum
+1  1  H
+2  1  C
+3  1  C
+4  1  C
+5  1  O
+6  1  O
+7  1  Zn
+8  2  C6O13Zn4
+9  3  C8H4O4
+10 3  O
+11 3  Zn
 
 loop_
 _topol_link.id
@@ -261,38 +278,21 @@ _topol_link.net_id
 _topol_link.node_id_1
 _topol_link.node_id_2
 _topol_link.symop_2
-_topol_link.tanslation_2
+_topol_link.translation_2
 _topol_link.distance
 _topol_link.type
 _topol_link.multiplicity
 _topol_link.chemical_formula_sum
 1 1  1  3  .  .  0.9594 v 96  .  
-2 1  2  8  .  .  1.3013 v 96  .
+2 1  2  6  37  .  1.3013 v 96  .
 3 1  2  4  .  .  1.4554 v 48  .
-4 1  3  9  .  .  1.3502 v 48  .
+4 1  3  3  26  .  1.3502 v 48  .
 5 1  3  4  .  .  1.3936 v 96  .
 6 1  5  7  .  .  1.9340 v 32  .
 7 1  6  7  .  .  1.9114 v 96  .
-8 2 10  10  26  .  12.8345 v 24  C6H4
-
-loop_
-_topol_node.id
-_topol_node.net_id
-_topol_node.atom_label
-_topol_node.symop
-_topol_node.translation
-_topol_node.chemical_formula_sum
-1  1  H1   .  .  H
-2  1  C1   .  .  C
-3  1  C2   .  .  C
-4  1  C3   .  .  C
-5  1  O1   .  .  O
-6  1  O2   .  .  O
-7  1  Zn1  .  .  Zn
-8  1  O2   37 .  O
-9  1  C2   26 .  C
-10 2   .   .  .  C6O13Zn4
-
+8 2  8  .  26  .  12.8345 v 24  C6H4
+9 3  9 11  5  .  5.5309 v 96 .
+10 3 10 11 .  .  1.9340 v 32 .
 
 loop_
 _topol_atom.id
@@ -301,38 +301,65 @@ _topol_atom.node_id
 _topol_atom.link_id
 _topol_atom.symop
 _topol_atom.translation
-1	C1	10	.	1 	.	# C1	C1 #2	x,y,z	
-2	C1	10	.	55 	.	# C1	C1 #2	x,-y+1/2,-z+1/2	
-3	O2	10	.	55 	.	# O2	O2 #6	x,-y+1/2,-z+1/2	
-4	O2	10	.	80 	.	# O2	O2 #6	-z+1/2,x,-y+1/2	
-5	O2	10	.	6 	.	# O2	O2 #6	y,z,x	
-6	O2	10	.	59 	.	# O2	O2 #6	-x+1/2,y,-z+1/2	
-7	O2	10	.	42 	.	# O2	O2 #6	z,y,x	
-8	O2	10	.	78 	.	# O2	O2 #6	-y+1/2,-z+1/2,x	
-9	C1	10	.	78 	.	# C1	C1 #2	-y+1/2,-z+1/2,x	
-10	C1	10	.	5 	.	# C1	C1 #2	z,x,y	
-11	Zn1	10	.	6 	.	# Zn1	Zn1 #7	y,z,x	
-12	Zn1	10	.	55 	.	# Zn1	Zn1 #7	x,-y+1/2,-z+1/2	
-13	C1	10	.	69 	.	# C1	C1 #2	-z+1/2,-x+1/2,y	
-14	C1	10	.	6 	.	# C1	C1 #2	y,z,x	
-15	O2	10	.	41 	.	# O2	O2 #6	x,z,y	
-16	O2	10	.	69 	.	# O2	O2 #6	-z+1/2,-x+1/2,y	
-17	O1	10	.	1 	.	# O1	O1 #5	x,y,z	
-18	O2	10	.	5 	.	# O2	O2 #6	z,x,y	
-19	O2	10	.	82 	.	# O2	O2 #6	y,-z+1/2,-x+1/2	
-20	Zn1	10	.	5 	.	# Zn1	Zn1 #7	z,x,y	
-21	Zn1	10	.	1 	.	# Zn1	Zn1 #7	x,y,z	
-22	O2	10	.	1 	.	# O2	O2 #6	x,y,z	
-23	O2	10	.	37 	.	# O2	O2 #6	y,x,z	
-24	H1	.	8	1 	.	# H1	H1 #1	x,y,z	
-25	H1	.	8	14 	.	# H1	H1 #1	y,x,-z	
-26	H1	.	8	37 	.	# H1	H1 #1	y,x,z	
-27	C2	.	8	14 	.	# C2	C2 #3	y,x,-z	
-28	C3	.	8	14 	.	# C3	C3 #4	y,x,-z	
-29	H1	.	8	26 	.	# H1	H1 #1	x,y,-z	
-30	C2	.	8	37 	.	# C2	C2 #3	y,x,z	
-31	C3	.	8	1 	.	# C3	C3 #4	x,y,z	
-32	C2	.	8	26 	.	# C2	C2 #3	x,y,-z	
-33	C2	.	8	1 	.	# C2	C2 #3	x,y,z	
+1	H1	1	.	.	.
+2	C1	2	.	.	.
+3	C2	3	.	.	.
+4	C3	4	.	.	.
+5	O1	5	.	.	.
+6	O2	6	.	.	.
+7	Zn1	7	.	.	.
+10	C1	8	.	.	.	# C1	C1 #2	x,y,z	
+11	C1	8	.	55 	.	# C1	C1 #2	x,-y+1/2,-z+1/2	
+12	O2	8	.	55 	.	# O2	O2 #6	x,-y+1/2,-z+1/2	
+13	O2	8	.	80 	.	# O2	O2 #6	-z+1/2,x,-y+1/2	
+14	O2	8	.	6 	.	# O2	O2 #6	y,z,x	
+15	O2	8	.	59 	.	# O2	O2 #6	-x+1/2,y,-z+1/2	
+16	O2	8	.	42 	.	# O2	O2 #6	z,y,x	
+17	O2	8	.	78 	.	# O2	O2 #6	-y+1/2,-z+1/2,x	
+18	C1	8	.	78 	.	# C1	C1 #2	-y+1/2,-z+1/2,x	
+19	C1	8	.	5 	.	# C1	C1 #2	z,x,y	
+20	Zn1	8	.	6 	.	# Zn1	Zn1 #7	y,z,x	
+21	Zn1	8	.	55 	.	# Zn1	Zn1 #7	x,-y+1/2,-z+1/2	
+22	C1	8	.	69 	.	# C1	C1 #2	-z+1/2,-x+1/2,y	
+23	C1	8	.	6 	.	# C1	C1 #2	y,z,x	
+24	O2	8	.	41 	.	# O2	O2 #6	x,z,y	
+25	O2	8	.	69 	.	# O2	O2 #6	-z+1/2,-x+1/2,y	
+26	O1	8	.	.	.	# O1	O1 #5	x,y,z	
+27	O2	8	.	5 	.	# O2	O2 #6	z,x,y	
+28	O2	8	.	82 	.	# O2	O2 #6	y,-z+1/2,-x+1/2	
+29	Zn1	8	.	5 	.	# Zn1	Zn1 #7	z,x,y	
+30	Zn1	8	.	.	.	# Zn1	Zn1 #7	x,y,z	
+31	O2	8	.	.	.	# O2	O2 #6	x,y,z	
+32	O2	8	.	37 	.	# O2	O2 #6	y,x,z	
+33	H1	.	8	.	.	# H1	H1 #1	x,y,z	
+34	H1	.	8	14 	.	# H1	H1 #1	y,x,-z	
+35	H1	.	8	37 	.	# H1	H1 #1	y,x,z	
+36	C2	.	8	14 	.	# C2	C2 #3	y,x,-z	
+37	C3	.	8	14 	.	# C3	C3 #4	y,x,-z	
+38	H1	.	8	26 	.	# H1	H1 #1	x,y,-z	
+39	C2	.	8	37 	.	# C2	C2 #3	y,x,z	
+40	C3	.	8	.	.	# C3	C3 #4	x,y,z	
+41	C2	.	8	26 	.	# C2	C2 #3	x,y,-z	
+42	C2	.	8	.	.	# C2	C2 #3	x,y,z
+43	H1	9	.	.	.	# H1	H1 #1	x,y,z	
+44	H1	9	.	14 	.	# H1	H1 #1	y,x,-z	
+45	O2	9	.	14 	.	# O2	O2 #6	y,x,-z	
+46	O2	9	.	26 	.	# O2	O2 #6	x,y,-z	
+47	H1	9	.	37 	.	# H1	H1 #1	y,x,z	
+48	O2	9	.	.	.	# O2	O2 #6	x,y,z	
+49	O2	9	.	37 	.	# O2	O2 #6	y,x,z	
+50	C1	9	.	14 	.	# C1	C1 #2	y,x,-z	
+51	C2	9	.	14 	.	# C2	C2 #3	y,x,-z	
+52	C3	9	.	14 	.	# C3	C3 #4	y,x,-z	
+53	H1	9	.	26 	.	# H1	H1 #1	x,y,-z	
+54	C1	9	.	.	.	# C1	C1 #2	x,y,z	
+55	C2	9	.	37 	.	# C2	C2 #3	y,x,z	
+56	C3	9	.	.	.	# C3	C3 #4	x,y,z	
+57	C2	9	.	26 	.	# C2	C2 #3	x,y,-z	
+58	C2	9	.	.	.	# C2	C2 #3	x,y,z	
+59	O1	10	.	.	.
+60	Zn1	11	.	.	.
 $ #End of data_1-TOPOS_SAHYIK_C54H73Cl1N8O21Zn4
+
+
 
