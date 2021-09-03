@@ -1,5 +1,5 @@
 #\#CIF_2.0
-# topoCIF example 2 2021.09.01
+# topoCIF example 2 2021.05.05
 data_15-TOPOS_16710_CaCO3/Calcite
 _database_code_CSD                  16710
 _audit_creation_date                2021-05-04
@@ -100,25 +100,25 @@ O1 O2- 18 0.25930 0.00000 0.25000 1.0000
 Ca1 Ca2+ 6 0.00000 0.00000 0.00000 1.0000
 
 loop_
-_topol_node.id
 _topol_node.label
 _topol_node.chemical_formula_sum
 _topol_node.fract_x
 _topol_node.fract_y
 _topol_node.fract_z
-1 ZA1 CO3 0.00000 0.00000 0.25000
-2 ZB1 Ca 0.00000 0.00000 0.00000
+ZA1 CO3 0.00000 0.00000 0.25000
+ZB1 Ca 0.00000 0.00000 0.00000
 
 loop_
-_topol_link.node_id_1
-_topol_link.node_id_2
-_topol_link.symop_1
-_topol_link.translation_1
-_topol_link.symop_2
-_topol_link.translation_2
+_topol_link.node_label_1
+_topol_link.node_label_2
+_topol_link.site_symmetry_symop_1
+_topol_link.site_symmetry_translation_1
+_topol_link.site_symmetry_symop_2
+_topol_link.site_symmetry_translation_2
 _topol_link.distance
+_topol_link.type
 _topol_link.multiplicity
-1 2 1 [0 0 0] 20 [-1 -1 0] 3.2122 36
+ZA1 ZB1 1 [0 0 0] 20 [-1 -1 0] 3.2122 v 36
 
 _topol_net.overall_topology_RCSR pcu-b
 

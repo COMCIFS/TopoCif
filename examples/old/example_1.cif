@@ -1,5 +1,3 @@
-#\#CIF_2.0
-# topoCIF example 1 2021.09.01
 data_3-TOPOS_dia_dia
 _database_code_TOPOS                dia
 _audit_creation_date                2021-05-04

@@ -109,26 +109,25 @@ O1 O 2 0.25000 0.25000 0.25000 1.0000
 Cu1 Cu 4 0.00000 0.00000 0.00000 1.0000
 
 loop_
-_topol_node.label
-_topol_node.atom_label
-Node1 O1
+_topol_node.id 
+_topol_node.atom_site_label
+1 O1
 
 loop_
 _topol_link.id
-_topol_link.node_label_1
-_topol_link.node_label_2
-_topol_link.site_symmetry_symop_1
-_topol_link.site_symmetry_translation_1
-_topol_link.site_symmetry_symop_2
-_topol_link.site_symmetry_translation_2
-_topol_link.type
+_topol_link.node_id_1
+_topol_link.node_id_2
+_topol_link.symop_1
+_topol_link.translation_1
+_topol_link.symop_2
+_topol_link.translation_2
 _topol_link.multiplicity
-1 Node1 Node1 1 [0 0 0] 13 [0 0 0] v 4
+1 1 1 1 [0 0 0] 13 [0 0 0] 4
 
 loop_
-_topol_edge.id
-_topol_edge.chemical_formula_sum
-1 Cu
+_topol_atom.link_id
+_topol_atom.atom_label
+1 Cu1
 
 _topol_net.overall_topology_RCSR dia
 
