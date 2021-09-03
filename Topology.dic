@@ -392,8 +392,8 @@ save_topol_atom.elemental_symbol
     _description.text
 ;
     The elemental symbol for this atom, written in accordance with
-    the IUPAC systematic nomenclature for periodic elements. This should be 
-    a single elemental symbol found on the official IUPAC Periodic Table. 
+    the IUPAC systematic nomenclature for periodic elements. This should be
+    a single elemental symbol found on the official IUPAC Periodic Table.
     For example: 'C', 'H', or 'Co', without isotope or charge.
 ;
     _name.category_id             topol_atom
@@ -428,7 +428,7 @@ save_topol_atom.link_id
     _definition.update            2021-08-29
     _description.text
 ;
-    The link associated with this atom, if applicable. 
+    The link associated with this atom, if applicable.
     It must match a value provided for _topol_link.id.
     Note that this association is in a bridging sense, not
     the end points of the link. For example, a net may
@@ -452,7 +452,7 @@ save_topol_atom.node_id
     _definition.update            2021-08-29
     _description.text
 ;
-    The node associated with this atom, if applicable. 
+    The node associated with this atom, if applicable.
     It must match a value provided for _topol_node.id.
 ;
     _name.category_id             topol_atom
@@ -791,7 +791,7 @@ save_topol_link.node_id_1
     _description.text
 ;
     The identifier of the first node associated with a link
-    This must match a _topol_node.id value. If present along 
+    This must match a _topol_node.id value. If present along
     with _topol_node.atom_label, the latter value is to be
     ignored.
 ;
@@ -812,7 +812,7 @@ save_topol_link.node_id_2
     _description.text
 ;
     The identifier of the second node associated with a link
-    This must match a _topol_node.id value. If present along 
+    This must match a _topol_node.id value. If present along
     with _topol_node.atom_label, the latter value is to be
     ignored.
 ;
