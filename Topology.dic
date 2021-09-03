@@ -96,7 +96,7 @@ save_TOPOL
          Example 1 - Connectivity of the diamond crystal structure.
          All atoms coincide with the nodes and all bonds coincide
          with the edges, so the atomic network coincides with the
-         underlying net. Thus, no special TOPOL_NET and TOPOL_NODE 
+         underlying net. Thus, no special TOPOL_NET and TOPOL_NODE
          sections are needed.
 ;
 ;
@@ -177,7 +177,7 @@ save_TOPOL
          Cu1 Cu 4 0.00000 0.00000 0.00000 1.0000
 
          loop_
-         _topol_node.id 
+         _topol_node.id
          _topol_node.atom_label
          1 O1
 
@@ -355,9 +355,9 @@ save_TOPOL_ATOM
     _definition.update            2021-08-29
     _description.text
 ;
-    The TOPOL_ATOM category provides information on the atoms of the initial 
-    structure which compose links or nodes of a net. The _topol_atom.atom_label links 
-    to the ATOM_SITE list must be used to refer to the atoms.
+    The TOPOL_ATOM category provides information on the atoms of the initial
+    structure that compose links or nodes of a net. The _topol_atom.atom_label
+    value must match a value in ATOM_SITE.label.
 ;
     _name.category_id             TOPOLOGY
     _name.object_id               TOPOL_ATOM
@@ -371,8 +371,9 @@ save_topol_atom.atom_label
     _definition.update            2021-08-29
     _description.text
 ;
-    The label of an atom which belongs to a link or a node. It must coincide with
-    a label given in the ATOM_SITE list.
+    A pointer to an atom that is associated with a link or a node
+    (not including link end-point atoms). It must coincide with a
+    value given for ATOM_SITE.label.
 ;
     _name.category_id             topol_atom
     _name.object_id               atom_label
@@ -612,7 +613,7 @@ save_TOPOL_LINK
     _topol_link.atom_label_1 and _topol_link.atom_label_2 (for atoms) or
     _topol_link.node_id_1 and _topol_link.node_id_2 (for nodes) must be given
     for each link, which is identified by _topol_link.id. Other
-    items in this category are optional. The atoms composing 
+    items in this category are optional. The atoms composing
     the link should be specified in the TOPOL_ATOM list.
 
     References: Klein, H.-J. (1996). Systematic generation of models
@@ -631,10 +632,11 @@ save_topol_link.atom_label_1
     _definition.id                '_topol_link.atom_label_1'
     _description.text
 ;
-    The label of the first atom associated with a link.
-    This must match a _atom_site.label value.
-    If no atoms are associated with the link, then this item, 
-    if present, should be represented by '.'.
+    The atom label corresponding to the first node and matching a value in
+    ATOM_SITE.label when the node is associated with exactly one atom.
+    It may be omitted if this node's TOPOL_NODE.id is referred to
+    by TOPOL_ATOM.node_id. If the node is polyatomic, then
+    TOPOL_NODE.atom_label, if present, should be represented by '.'.
 ;
     _name.category_id             topol_link
     _name.object_id               atom_label_1
@@ -651,10 +653,11 @@ save_topol_link.atom_label_2
     _definition.id                '_topol_link.atom_label_2'
     _description.text
 ;
-    The label of the second atom associated with a link.
-    This must match a _atom_site.label value.
-    If no atoms are associated with the link, then this item, 
-    if present, should be represented by '.'.
+    The atom label corresponding to the second node and matching a value in
+    ATOM_SITE.label when the node is associated with exactly one atom.
+    It may be omitted if this node's TOPOL_NODE.id is referred to
+    by TOPOL_ATOM.node_id. If the node is polyatomic, then
+    TOPOL_NODE.atom_label, if present, should be represented by '.'.
 ;
     _name.category_id             topol_link
     _name.object_id               atom_label_2
@@ -1464,9 +1467,9 @@ save_TOPOL_NODE
 ;
     The TOPOL_NODE category describes the chemical composition,
     structure and topological properties of the nodes of the underlying
-    net. If the node correspond to an atom from the ATOM_SITE list the link 
+    net. If the node correspond to an atom from the ATOM_SITE list the link
     _topol_node.atom_label should be used to refer to the atom. If the node
-    is polyatomic the atoms composing the node should be specified in the TOPOL_ATOM list.
+    is polyatomic, its TOPOL_NODE.id must match a value in TOPOL_ATOM.node_id.
 
     Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
     Cryst. Eng. Comm. 12, 44-48.
@@ -1482,8 +1485,11 @@ save_topol_node.atom_label
     _definition.id                '_topol_node.atom_label'
     _description.text
 ;
-    The atom label corresponding to this node. If a node does not correspond
-    to an atom, then this item, if present, should be represented by '.'.
+    The atom label corresponding to this node and matching a value in
+    ATOM_SITE.label when the node is associated with exactly one atom.
+    It may be omitted if this node's TOPOL_NODE.id is referred to
+    by TOPOL_ATOM.node_id. If the node is polyatomic, then
+    TOPOL_NODE.atom_label, if present, should be represented by '.'.
 ;
     _name.category_id             topol_node
     _name.object_id               atom_label
@@ -2323,11 +2329,14 @@ save_
 ;
          0.9.4                    2021-08-31
 ;
-       Added TOPOL_ATOM subcategory; _topol_link.node_id_1, _topol_link.node_id_2,
-       _topol_link.structural_formula_InChI, _topol_link.structural_formula_SMILES, _topol_node.id items
+       Added TOPOL_ATOM subcategory; _topol_link.node_id_1,
+       _topol_link.node_id_2, _topol_link.structural_formula_InChI,
+       _topol_link.structural_formula_SMILES, and _topol_node.id items
        Removed TOPOL_EDGE subcategory
        Renamed _topol_link.site_symmetry_symop_1(2) to _topol_link.symop_1(2)
-       _topol_link.site_symmetry_translation_1(2) to _topol_link.translation_1(2)
+       _topol_link.site_symmetry_translation_1(2)
+       to _topol_link.translation_1(2)
        _topol_node.site_symmetry_symop_1(2) to _topol_node.symop_1(2)
-       _topol_node.site_symmetry_translation_1(2) to _topol_node.translation_1(2)
+       _topol_node.site_symmetry_translation_1(2)
+       to _topol_node.translation_1(2)
 ;
