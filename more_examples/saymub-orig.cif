@@ -1,5 +1,5 @@
 data_25-TOPOS_SAYMUB01_C18.03H16.02N2O4.02/Z=1818-foldH-bond
-_database_code_TOPOS                SAYMUB01
+#_database_code_TOPOS                SAYMUB01
 _audit_creation_date                2020-11-17
 _audit_creation_method              ToposPro
 _chemical_formula_structural        'C18.03 H16.02 N2 O4.02/Z=18  18-fold H-bond'
