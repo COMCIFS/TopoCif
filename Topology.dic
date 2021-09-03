@@ -10,7 +10,7 @@ data_TOPOLOGY_CIF
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.4
-    _dictionary.date              2021-08-31
+    _dictionary.date              2021-09-03
     _dictionary.ddl_conformance   3.13.1
     _description.text
 ;
@@ -391,8 +391,10 @@ save_topol_atom.elemental_symbol
     _definition.update            2021-08-29
     _description.text
 ;
-    The elemental composition of the atom site. It should be
-    written in accordance with the rules for the _chemical_formula.moiety tag.
+    The elemental symbol for this atom, written in accordance with
+    the IUPAC systematic nomenclature for periodic elements. This should be 
+    a single elemental symbol found on the official IUPAC Periodic Table. 
+    For example: 'C', 'H', or 'Co', without isotope or charge.
 ;
     _name.category_id             topol_atom
     _name.object_id               elemental_symbol
@@ -426,8 +428,13 @@ save_topol_atom.link_id
     _definition.update            2021-08-29
     _description.text
 ;
-    The link to which this atom belongs. It must be one of the values provided
-    in _topol_link.id.
+    The link associated with this atom, if applicable. 
+    It must match a value provided for _topol_link.id.
+    Note that this association is in a bridging sense, not
+    the end points of the link. For example, a net may
+    specify a link that is composed of a carbonyl CO group
+    or an aromatic ring, taking the place of those atoms
+    in an abstract representation.
 ;
     _name.category_id             topol_atom
     _name.object_id               link_id
@@ -445,8 +452,8 @@ save_topol_atom.node_id
     _definition.update            2021-08-29
     _description.text
 ;
-    The node to which this atom belongs. It must be one of the values provided
-    in _topol_node.id.
+    The node associated with this atom, if applicable. 
+    It must match a value provided for _topol_node.id.
 ;
     _name.category_id             topol_atom
     _name.object_id               node_id
@@ -783,8 +790,10 @@ save_topol_link.node_id_1
     _definition.update            2021-08-29
     _description.text
 ;
-    The identifier of the first node associated with a link.
-    This must match a _topol_node.id value.
+    The identifier of the first node associated with a link
+    This must match a _topol_node.id value. If present along 
+    with _topol_node.atom_label, the latter value is to be
+    ignored.
 ;
     _name.category_id             topol_link
     _name.object_id               node_id_1
@@ -803,7 +812,9 @@ save_topol_link.node_id_2
     _description.text
 ;
     The identifier of the second node associated with a link
-    This must match a _topol_node.id value.
+    This must match a _topol_node.id value. If present along 
+    with _topol_node.atom_label, the latter value is to be
+    ignored.
 ;
     _name.category_id             topol_link
     _name.object_id               node_id_2
@@ -2339,4 +2350,9 @@ save_
        _topol_node.site_symmetry_symop_1(2) to _topol_node.symop_1(2)
        _topol_node.site_symmetry_translation_1(2)
        to _topol_node.translation_1(2)
+       (V. Blatov)
+;
+         0.9.4                    2021-09-03
+;
+       editorial adjustments, formatting (B. Hanson)
 ;
