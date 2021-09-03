@@ -2351,8 +2351,5 @@ save_
        _topol_node.site_symmetry_translation_1(2)
        to _topol_node.translation_1(2)
        (V. Blatov)
-;
-         0.9.4                    2021-09-03
-;
        editorial adjustments, formatting (B. Hanson)
 ;
