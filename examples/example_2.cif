@@ -120,7 +120,10 @@ _topol_link.distance
 _topol_link.multiplicity
 1 2 1 [0 0 0] 20 [-1 -1 0] 3.2122 36
 
-_topol_net.overall_topology_RCSR pcu-b
+loop_
+_topol_net.id
+_topol_net.overall_topology_RCSR
+1 pcu-b
 
 #End of data_15-TOPOS_16710_CaCO3/Calcite
 

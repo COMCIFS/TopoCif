@@ -129,7 +129,9 @@ _topol_atom.link_id
 _topol_atom.atom_label
 1 Cu1
 
-_topol_net.overall_topology_RCSR dia
+_topol_net.id
+_topol_net.overall_topology_RCSR
+1 dia
 
 #End of data_3-TOPOS_63281_Cu2O
 

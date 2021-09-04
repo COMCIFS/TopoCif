@@ -237,7 +237,11 @@ _topol_link.type
 _topol_link.multiplicity
 1 C1 C1 1 [0 0 0] 13 [0 0 0] 1.5446 22.04 v 16
 
-_topol_net.overall_topology_RCSR dia
+loop_
+_topol_net.id
+_topol_net.overall_topology_RCSR
+1 dia
+
 
 #End of data_3-TOPOS_dia_dia
 
