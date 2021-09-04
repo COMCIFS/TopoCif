@@ -110,7 +110,7 @@ Cu1 Cu 4 0.00000 0.00000 0.00000 1.0000
 
 loop_
 _topol_node.id 
-_topol_node.atom_site_label
+_topol_node.atom_label
 1 O1
 
 loop_
@@ -129,6 +129,7 @@ _topol_atom.link_id
 _topol_atom.atom_label
 1 Cu1
 
+loop_
 _topol_net.id
 _topol_net.overall_topology_RCSR
 1 dia
