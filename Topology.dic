@@ -2355,7 +2355,7 @@ save_
        to _topol_node.translation_1(2)
        (V. Blatov)
        editorial adjustments, formatting (B. Hanson)
-       
+
        Corrected the definitions of the _topol_node.fract_x,
        _topol_node.fract_y and _topol_node.fract_z data items. (A. Vaitkus)
 ;
