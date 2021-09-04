@@ -1649,6 +1649,7 @@ save_
 save_topol_node.fract_x
 
     _definition.id                '_topol_node.fract_x'
+    _definition.update            2021-09-03
     _description.text
 ;
     The fractional x coordinate of this node. If a node corresponds
@@ -1656,11 +1657,11 @@ save_topol_node.fract_x
 ;
     _name.category_id             topol_node
     _name.object_id               fract_x
-    _name.linked_item_id          '_atom_site.label'
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Measurand
+    _type.source                  Derived
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Real
+    _units.code                   none
     _method.purpose               Definition
     _method.expression
 ;
@@ -1672,6 +1673,7 @@ save_
 save_topol_node.fract_y
 
     _definition.id                '_topol_node.fract_y'
+    _definition.update            2021-09-03
     _description.text
 ;
     The fractional y coordinate of this node. If a node corresponds
@@ -1679,11 +1681,11 @@ save_topol_node.fract_y
 ;
     _name.category_id             topol_node
     _name.object_id               fract_y
-    _name.linked_item_id          '_atom_site.label'
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Measurand
+    _type.source                  Derived
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Real
+    _units.code                   none
     _method.purpose               Definition
     _method.expression
 ;
@@ -1695,6 +1697,7 @@ save_
 save_topol_node.fract_z
 
     _definition.id                '_topol_node.fract_z'
+    _definition.update            2021-09-03
     _description.text
 ;
     The fractional z coordinate of this node. If a node corresponds
@@ -1702,11 +1705,11 @@ save_topol_node.fract_z
 ;
     _name.category_id             topol_node
     _name.object_id               fract_z
-    _name.linked_item_id          '_atom_site.label'
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Measurand
+    _type.source                  Derived
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Real
+    _units.code                   none
     _method.purpose               Definition
     _method.expression
 ;
@@ -2338,7 +2341,7 @@ save_
        _topol_link.site_symmetry_translation_2, and
        _topol_node.coordination_sequence (B. Hanson and V. Blatov)
 ;
-         0.9.4                    2021-08-31
+         0.9.4                    2021-09-03
 ;
        Added TOPOL_ATOM subcategory; _topol_link.node_id_1,
        _topol_link.node_id_2, _topol_link.structural_formula_InChI,
@@ -2352,4 +2355,7 @@ save_
        to _topol_node.translation_1(2)
        (V. Blatov)
        editorial adjustments, formatting (B. Hanson)
+
+       Corrected the definitions of the _topol_node.fract_x,
+       _topol_node.fract_y and _topol_node.fract_z data items. (A. Vaitkus)
 ;
