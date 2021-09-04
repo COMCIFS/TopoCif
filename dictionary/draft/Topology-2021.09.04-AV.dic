@@ -1656,11 +1656,11 @@ save_topol_node.fract_x
 ;
     _name.category_id             topol_node
     _name.object_id               fract_x
-    _name.linked_item_id          '_atom_site.label'
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Measurand
+    _type.source                  Derived
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Real
+    _units.code                   none
     _method.purpose               Definition
     _method.expression
 ;
@@ -1672,6 +1672,7 @@ save_
 save_topol_node.fract_y
 
     _definition.id                '_topol_node.fract_y'
+    _definition.update            2021-09-03
     _description.text
 ;
     The fractional y coordinate of this node. If a node corresponds
@@ -1679,11 +1680,11 @@ save_topol_node.fract_y
 ;
     _name.category_id             topol_node
     _name.object_id               fract_y
-    _name.linked_item_id          '_atom_site.label'
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Measurand
+    _type.source                  Derived
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Real
+    _units.code                   none
     _method.purpose               Definition
     _method.expression
 ;
@@ -1695,6 +1696,7 @@ save_
 save_topol_node.fract_z
 
     _definition.id                '_topol_node.fract_z'
+    _definition.update            2021-09-03
     _description.text
 ;
     The fractional z coordinate of this node. If a node corresponds
@@ -1702,11 +1704,11 @@ save_topol_node.fract_z
 ;
     _name.category_id             topol_node
     _name.object_id               fract_z
-    _name.linked_item_id          '_atom_site.label'
-    _type.purpose                 Link
-    _type.source                  Related
+    _type.purpose                 Measurand
+    _type.source                  Derived
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Real
+    _units.code                   none
     _method.purpose               Definition
     _method.expression
 ;
@@ -2352,4 +2354,7 @@ save_
        to _topol_node.translation_1(2)
        (V. Blatov)
        editorial adjustments, formatting (B. Hanson)
+
+       Corrected the definitions of the _topol_node.fract_x,
+       _topol_node.fract_y and _topol_node.fract_z data items. (A. Vaitkus)
 ;

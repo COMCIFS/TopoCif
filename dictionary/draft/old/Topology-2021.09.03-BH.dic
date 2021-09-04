@@ -1,0 +1,2360 @@
+#\#CIF_2.0
+################################################################################
+#                                                                              #
+#       Topology CIF dictionary                                                #
+#                                                                              #
+################################################################################
+
+data_TOPOLOGY_CIF
+
+    _dictionary.title             TOPOLOGY_CIF
+    _dictionary.class             Instance
+    _dictionary.version           0.9.4
+    _dictionary.date              2021-09-03
+    _dictionary.ddl_conformance   3.13.1
+    _description.text
+;
+    The Topology CIF dictionary provides datanames for describing crystal
+    structure topology. This is a DRAFT version and datanames in this
+    dictionary should not be used until final approval by COMCIFS.
+;
+
+save_TOPOLOGY
+
+    _definition.id                TOPOLOGY
+    _definition.scope             Category
+    _definition.class             Head
+    _description.text
+;
+    This category is the parent of all categories in the dictionary.
+;
+    _name.category_id             TOPOLOGY_CIF
+    _name.object_id               TOPOLOGY
+
+    _import.get
+        [{'file':cif_core.dic  'mode':Full  'save':CIF_CORE}]
+
+save_
+
+save_TOPOL
+
+    _definition.id                TOPOL
+    _definition.scope             Category
+    _definition.class             Set
+    _definition.update            2018-01-30
+    _description.text
+;
+    The TOPOL category covers data on connectivity
+    between atoms and structural groups and the
+    related structural properties as calculated from
+    the ATOM, CELL and SPACE_GROUP data.
+;
+    _name.category_id             TOPOLOGY
+    _name.object_id               TOPOL
+
+    loop_
+      _description_example.case
+      _description_example.detail
+;
+         loop_
+         _space_group_symop.id
+         _space_group_symop.operation_xyz
+         1 x,y,z
+         2 1/4-x,1/4-y,z
+         # Other symmetry elements skipped
+         13 -y,-x,-z
+         # Other symmetry elements skipped
+         192 3/4-z,1/2+y,1/4-x
+
+         loop_
+         _atom_site.label
+         _atom_site.type_symbol
+         _atom_site.symmetry_multiplicity
+         _atom_site.fract_x
+         _atom_site.fract_y
+         _atom_site.fract_z
+         _atom_site.occupancy
+         C1 C 8 0.12500 0.12500 0.12500 1.0000
+
+         loop_
+         _topol_link.id
+         _topol_link.atom_label_1
+         _topol_link.atom_label_2
+         _topol_link.symop_1
+         _topol_link.translation_1
+         _topol_link.symop_2
+         _topol_link.translation_2
+         _topol_link.distance
+         _topol_link.Voronoi_solidangle
+         _topol_link.type
+         _topol_link.multiplicity
+         1 C1 C1 1 [0 0 0] 13 [0 0 0] 1.5446 22.04 v 16
+
+         _topol_net.overall_topology_RCSR dia
+;
+;
+         Example 1 - Connectivity of the diamond crystal structure.
+         All atoms coincide with the nodes and all bonds coincide
+         with the edges, so the atomic network coincides with the
+         underlying net. Thus, no special TOPOL_NET and TOPOL_NODE
+         sections are needed.
+;
+;
+         loop_
+         _space_group_symop.id
+         _space_group_symop.operation_xyz
+         1 x,y,z
+         2 -y,x-y,z
+         # Other symmetry elements elided
+         20 1/3+x-y,2/3-y,1/6-z
+         # Other symmetry elements elided
+         36 1/3-y,2/3-x,1/6+z
+
+         loop_
+         _atom_site.label
+         _atom_site.type_symbol
+         _atom_site.site_symmetry_multiplicity
+         _atom_site.fract_x
+         _atom_site.fract_y
+         _atom_site.fract_z
+         _atom_site.occupancy
+         C1 C 6 0.00000 0.00000 0.25000 1.0000
+         O1 O 18 0.25930 0.00000 0.25000 1.0000
+         Ca1 Ca 6 0.00000 0.00000 0.00000 1.0000
+
+         loop_
+         _topol_node.id
+         _topol_node.label
+         _topol_node.chemical_formula_sum
+         _topol_node.fract_x
+         _topol_node.fract_y
+         _topol_node.fract_z
+         1 ZA1 CO3 0.00000 0.00000 0.25000
+         2 ZB1 Ca 0.00000 0.00000 0.00000
+
+         loop_
+         _topol_link.id
+         _topol_link.node_id_1
+         _topol_link.node_id_2
+         _topol_link.symop_1
+         _topol_link.translation_1
+         _topol_link.symop_2
+         _topol_link.translation_2
+         _topol_link.distance
+         _topol_link.multiplicity
+         1 1 2 1 [0 0 0] 20 [-1 -1 0] 3.2122 36
+
+         _topol_net.overall_topology_RCSR pcu-b
+;
+;
+         Example 2 - Connectivity of an underlying net of the calcite
+         (CaCO3) crystal structure. The nodes of the underlying
+         net correspond to Ca atoms and carbonate (CO3) groups.
+         The underlying net has the NaCl (pcu-b in the RCSR
+         nomenclature) topology. Only the underlying net topology
+         is described, thus, no special TOPOL_NET section is needed.
+;
+;
+         loop_
+         _space_group_symop.id
+         _space_group_symop.operation_xyz
+         1 x,y,z
+         2 1/2-x,1/2-y,z
+         # Symmetry elements elided
+         13 -y,-x,-z
+         # Symmetry elements elided
+         48 1/2-z,y,1/2-x
+
+         loop_
+         _atom_site.label
+         _atom_site.type_symbol
+         _atom_site.site_symmetry_multiplicity
+         _atom_site.fract_x
+         _atom_site.fract_y
+         _atom_site.fract_z
+         _atom_site.occupancy
+         O1 O 2 0.25000 0.25000 0.25000 1.0000
+         Cu1 Cu 4 0.00000 0.00000 0.00000 1.0000
+
+         loop_
+         _topol_node.id
+         _topol_node.atom_label
+         1 O1
+
+         loop_
+         _topol_link.id
+         _topol_link.node_id_1
+         _topol_link.node_id_2
+         _topol_link.symop_1
+         _topol_link.translation_1
+         _topol_link.symop_2
+         _topol_link.translation_2
+         _topol_link.multiplicity
+         1 1 1 1 [0 0 0] 13 [0 0 0] 4
+
+         loop_
+         _topol_atom.link_id
+         _topol_atom.atom_label
+         1 Cu1
+
+         _topol_net.overall_topology_RCSR dia
+;
+;
+         Example 3 - Connectivity of an underlying net of the cuprite (Cu2O)
+         crystal structure. Oxygen atoms coincide with the nodes,
+         while copper atoms represent the links. There are two
+         interpenetrating networks of the diamond topology. Only the underlying
+         net topology is described, thus, no special TOPOL_NET section is
+         needed.
+;
+;
+         loop_
+         _space_group_symop.id
+         _space_group_symop.operation_xyz
+         1 x,y,z
+         2 -x,-y,z
+         3 x,-y,-z
+         # Symmetry elements elided
+         24 -z,y,-x
+
+         loop_
+         _atom_site.label
+         _atom_site.type_symbol
+         _atom_site.site_symmetry_multiplicity
+         _atom_site.fract_x
+         _atom_site.fract_y
+         _atom_site.fract_z
+         _atom_site.occupancy
+         Li1 Li 1 0.00000 0.00000 0.00000 1.0000
+         C1 C 4 0.31850 0.31850 0.31850 1.0000
+         O1 O 4 0.19920 0.19920 0.19920 1.0000
+         Co1 Co 1 0.50000 0.50000 0.50000 1.0000
+
+         loop_
+         _topol_net_id
+         _topol_net.special_details
+         _topol_net.overall_topology_TOPOS
+         Net_1 'Atomic net' 'Unknown'
+         Net_2 'Underlying net with carbonyl ligands as nodes' '2,4T3'
+
+         loop_
+         _topol_node.id
+         _topol_node.label
+         _topol_node.net_id
+         _topol_node.chemical_formula_sum
+         _topol_node.atom_label
+         _topol_node.fract_x
+         _topol_node.fract_y
+         _topol_node.fract_z
+         1 Li1 Net_1 . Li1 . . .
+         2 C1 Net_1 . C1 . . .
+         3 O1 Net_1 . O1 . . .
+         4 Co1 Net_1 . Co1 . . .
+         5 ZA1 Net_2 Li . 0.00000 0.00000 0.00000
+         6 ZB1 Net_2 CO . 0.25036 0.25036 0.25036
+         7 ZC1 Net_2 Co . 0.50000 0.50000 0.50000
+
+         loop_
+         _topol_atom.node_id
+         _topol_atom.atom_label
+         6 C1
+         6 O1
+
+         loop_
+         _topol_link.id
+         _topol_link.node_id_1
+         _topol_link.node_id_2
+         _topol_link.distance
+         _topol_link.symop_1
+         _topol_link.translation_1
+         _topol_link.symop_2
+         _topol_link.translation_2
+         _topol_link.type
+         _topol_link.multiplicity
+         1 1 3 1.9121 1 [0 0 0] 3 [0 0 0] v 4
+         2 2 3 1.1452 1 [0 0 0] 1 [0 0 0] v 4
+         3 2 4 1.7422 1 [0 0 0] 1 [0 0 0] v 4
+         4 5 6 2.4032 1 [0 0 0] 3 [0 0 0] v 4
+         5 6 7 2.3963 1 [0 0 0] 1 [0 0 0] v 4
+;
+;
+         Example 4 - Connectivity of atomic and underlying nets for
+         an interpenetrating array of two LiCo(CO)4 networks. The atomic
+         net consists of Li, C, O, and Co atoms, while the underlying
+         net is built from three kinds of nodes: Li and Co atoms and
+         carbonyl (CO) ligand; the nodes are labeled as ZA1, ZC1, and
+         ZB1, respectively. The _topol_node_* items include references
+         to atom labels for the atoms and coordinates for the nodes.
+         Some fields, which values are not required or should be taken
+         from the ATOM_SITE block, are specified with the '.' symbol.
+         Two possible variants are shown: the coordinates of ZA1 are
+         specified by a reference to Li1 atom, while the coordinates of
+         ZC1 are specified explicitly. Both atomic and underlying nets
+         are described in the TOPOL_NET section.
+;
+;
+         loop_
+         _topol_net_id
+         _topol_net.special_details
+         _topol_net.overall_topology_TOPOS
+         _topol_net.occurrence_total
+         Net_1 'Occurrence data are taken from topcryst.com' dia-a-a 5
+
+         loop_
+         _citation_id
+         _citation_database_id_CSD
+         1 MUMYIC
+         2 MUNDAA
+         3 MUMYUO
+         4 MUMYEY
+         5 MUMYAU
+
+         loop_
+         _topol_occurrence.id
+         _topol_occurrence.net_id
+         _topol_occurrence.citation_id
+         1 Net_1 1
+         2 Net_1 2
+         3 Net_1 3
+         4 Net_1 4
+         5 Net_1 5
+;
+;
+         Example 5 - Description of the occurrence of a particular topology
+         specified in the TOPOL_NET section. Here all occurrences refer to
+         structural determinations from the CSD. The total occurrence is
+         specified in _topol_net.occurrence_total; actually, it includes all
+         crystal structures with this topology that are currently known.
+;
+
+save_
+
+save_topol.special_details
+
+    _definition.id                '_topol.special_details'
+    _definition.update            2018-01-30
+    _description.text
+;
+    A description of topological information not covered by the
+    existing data names in the topology categories.
+;
+    _name.category_id             topol
+    _name.object_id               special_details
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_TOPOL_ATOM
+
+    _definition.id                TOPOL_ATOM
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2021-08-29
+    _description.text
+;
+    The TOPOL_ATOM category provides information on the atoms of the initial
+    structure that compose links or nodes of a net. The _topol_atom.atom_label
+    value must match a value in ATOM_SITE.label.
+;
+    _name.category_id             TOPOLOGY
+    _name.object_id               TOPOL_ATOM
+    _category_key.name            '_topol_atom.id'
+
+save_
+
+save_topol_atom.atom_label
+
+    _definition.id                '_topol_atom.atom_label'
+    _definition.update            2021-08-29
+    _description.text
+;
+    A pointer to an atom that is associated with a link or a node
+    (not including link end-point atoms). It must coincide with a
+    value given for ATOM_SITE.label.
+;
+    _name.category_id             topol_atom
+    _name.object_id               atom_label
+    _name.linked_item_id          '_atom_site.label'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_atom.elemental_symbol
+
+    _definition.id                '_topol_atom.elemental_symbol'
+    _definition.update            2021-08-29
+    _description.text
+;
+    The elemental symbol for this atom, written in accordance with
+    the IUPAC systematic nomenclature for periodic elements. This should be
+    a single elemental symbol found on the official IUPAC Periodic Table.
+    For example: 'C', 'H', or 'Co', without isotope or charge.
+;
+    _name.category_id             topol_atom
+    _name.object_id               elemental_symbol
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_atom.id
+
+    _definition.id                '_topol_atom.id'
+    _definition.update            2021-08-29
+    _description.text
+;
+    The identifier of an atom which belongs to a link or a node.
+;
+    _name.category_id             topol_atom
+    _name.object_id               id
+    _type.purpose                 Key
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_atom.link_id
+
+    _definition.id                '_topol_atom.link_id'
+    _definition.update            2021-08-29
+    _description.text
+;
+    The link associated with this atom, if applicable.
+    It must match a value provided for _topol_link.id.
+    Note that this association is in a bridging sense, not
+    the end points of the link. For example, a net may
+    specify a link that is composed of a carbonyl CO group
+    or an aromatic ring, taking the place of those atoms
+    in an abstract representation.
+;
+    _name.category_id             topol_atom
+    _name.object_id               link_id
+    _name.linked_item_id          '_topol_link.id'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_atom.node_id
+
+    _definition.id                '_topol_atom.node_id'
+    _definition.update            2021-08-29
+    _description.text
+;
+    The node associated with this atom, if applicable.
+    It must match a value provided for _topol_node.id.
+;
+    _name.category_id             topol_atom
+    _name.object_id               node_id
+    _name.linked_item_id          '_topol_node.id'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_atom.symop
+
+    _definition.id                '_topol_atom.symop'
+    _definition.update            2021-08-29
+    _description.text
+;
+    The symmetry operation that is applied to the coordinates of
+    the atom given by _topol_atom.atom_label before addition of
+    the translations in _topol_atom.translation.
+    The value must match a value of _space_group_symop.id. No
+    normalization of the resulting coordinates into the interval
+    [0,1) is carried out. For example, (x+1/2,y+1/2,z) is not the
+    same as (x-1/2,y+1/2,z) for these purposes. If this item is omitted or
+    assigned to '.' it is assumed to be equal to (x,y,z).
+;
+    _name.category_id             topol_atom
+    _name.object_id               symop
+    _name.linked_item_id          '_space_group_symop.id'
+    _type.purpose                 Link
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_atom.translation
+
+    _definition.id                '_topol_atom.translation'
+    _definition.update            2021-08-29
+    _description.text
+;
+    The lattice translation vector that must be added to the
+    coordinates after application of the symmetry operation given by
+    _topol_atom.symop to generate the atom belonging to
+    a link or a node.  For example, if the symmetry operation
+    referred to by _topol_atom.symop is
+    (x-1/2,y+1/2,z), _topol_atom.translation is [0,-1,0]
+    and the original position is (0.2,0.7,1.0) in fractional coordinates,
+    then the resultant position is (-0.3,0.2,1.0). Alternatively,
+    _topol_atom.translation_x,
+    _topol_atom.translation_y, and
+    _topol_atom.translation_z tags may be used to
+    describe separate components of the vector. If this item is omitted or
+    assigned to '.' it is assumed to be equal to [0,0,0].
+;
+    _name.category_id             topol_atom
+    _name.object_id               translation
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Matrix
+    _type.dimension               '[3]'
+    _type.contents                Integer
+
+save_
+
+save_topol_atom.translation_x
+
+    _definition.id                '_topol_atom.translation_x'
+    _definition.update            2021-08-29
+    _description.text
+;
+     The x component of the vector of lattice translations that is added
+     to the coordinates after application of the symmetry operation given by
+     _topol_atom.symop to generate an atom belonging to a link or a node.
+     Default value is 0.
+;
+    _name.category_id             topol_atom
+    _name.object_id               translation_x
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_atom.translation_y
+
+    _definition.id                '_topol_atom.translation_y'
+    _definition.update            2021-08-29
+    _description.text
+;
+     The y component of the vector of lattice translations that is added
+     to the coordinates after application of the symmetry operation given by
+     _topol_atom.symop to generate an atom belonging to a link or a node.
+     Default value is 0.
+;
+    _name.category_id             topol_atom
+    _name.object_id               translation_y
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_atom.translation_z
+
+    _definition.id                '_topol_atom.translation_z'
+    _definition.update            2021-08-29
+    _description.text
+;
+     The z component of the vector of lattice translations that is added
+     to the coordinates after application of the symmetry operation given by
+     _topol_atom.symop to generate an atom belonging to a link or a node.
+     Default value is 0.
+;
+    _name.category_id             topol_atom
+    _name.object_id               translation_z
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_TOPOL_ENTANGL
+
+    _definition.id                TOPOL_ENTANGL
+    _definition.scope             Category
+    _definition.class             Set
+    _definition.update            2018-01-30
+    _description.text
+;
+    The TOPOL_ENTANGL category describes entanglements in the
+    underlying net.  This category is a placeholder for future development
+    of descriptions of entanglement.
+;
+    _name.category_id             TOPOLOGY
+    _name.object_id               TOPOL_ENTANGL
+
+save_
+
+save_TOPOL_LINK
+
+    _definition.id                TOPOL_LINK
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2021-08-29
+    _description.text
+;
+    The TOPOL_LINK category describes the crystal structure
+    connectivity and encodes the weighted colored
+    symmetry-labeled quotient graph, from which the whole
+    periodic net describing the overall topology of the crystal
+    structure can be restored. The definition of
+    symmetry-labeled quotient graph was given by Klein (1996)
+    and examples of weights and colors for the graph edges and
+    vertices are provided by Blatov (2006). The
+    connections described in TOPOL_LINK may correspond to any
+    vectors in the structure, not just bonds or contacts. The
+    nodes that are linked are listed in TOPOL_NODE. In
+    order to properly describe the connectivity,
+    _topol_link.atom_label_1 and _topol_link.atom_label_2 (for atoms) or
+    _topol_link.node_id_1 and _topol_link.node_id_2 (for nodes) must be given
+    for each link, which is identified by _topol_link.id. Other
+    items in this category are optional. The atoms composing
+    the link should be specified in the TOPOL_ATOM list.
+
+    References: Klein, H.-J. (1996). Systematic generation of models
+    for crystal structures. Math. Model. Sci. Comput. 6, 325-330;
+    Blatov, V. A. (2006). A method for hierarchical comparative
+    analysis of crystal structures. Acta Cryst. A62, 356-364.
+;
+    _name.category_id             TOPOLOGY
+    _name.object_id               TOPOL_LINK
+    _category_key.name            '_topol_link.id'
+
+save_
+
+save_topol_link.atom_label_1
+
+    _definition.id                '_topol_link.atom_label_1'
+    _description.text
+;
+    The atom label corresponding to the first node and matching a value in
+    ATOM_SITE.label when the node is associated with exactly one atom.
+    It may be omitted if this node's TOPOL_NODE.id is referred to
+    by TOPOL_ATOM.node_id. If the node is polyatomic, then
+    TOPOL_NODE.atom_label, if present, should be represented by '.'.
+;
+    _name.category_id             topol_link
+    _name.object_id               atom_label_1
+    _name.linked_item_id          '_atom_site.label'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_link.atom_label_2
+
+    _definition.id                '_topol_link.atom_label_2'
+    _description.text
+;
+    The atom label corresponding to the second node and matching a value in
+    ATOM_SITE.label when the node is associated with exactly one atom.
+    It may be omitted if this node's TOPOL_NODE.id is referred to
+    by TOPOL_ATOM.node_id. If the node is polyatomic, then
+    TOPOL_NODE.atom_label, if present, should be represented by '.'.
+;
+    _name.category_id             topol_link
+    _name.object_id               atom_label_2
+    _name.linked_item_id          '_atom_site.label'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_link.chemical_formula_iupac
+
+    _definition.id                '_topol_link.chemical_formula_iupac'
+    _definition.update            2021-08-25
+    _description.text
+;
+    The formula of the residue or ion which corresponds to the link,
+    written in accordance with the rules for the _chemical_formula.iupac tag.
+;
+    _name.category_id             topol_link
+    _name.object_id               chemical_formula_iupac
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_link.chemical_formula_moiety
+
+    _definition.id                '_topol_link.chemical_formula_moiety'
+    _definition.update            2021-08-25
+    _description.text
+;
+    The formula of the residue or ion which corresponds to the link,
+    written in accordance with the rules for the _chemical_formula.moiety tag.
+;
+    _name.category_id             topol_link
+    _name.object_id               chemical_formula_moiety
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_link.chemical_formula_sum
+
+    _definition.id                '_topol_link.chemical_formula_sum'
+    _definition.update            2021-08-25
+    _description.text
+;
+    The formula of the residue or ion which corresponds to the link,
+    written in accordance with the rules of the _chemical_formula.sum tag.
+;
+    _name.category_id             topol_link
+    _name.object_id               chemical_formula_sum
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_link.distance
+
+    _definition.id                '_topol_link.distance'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The link length in angstroms.
+;
+    _name.category_id             topol_link
+    _name.object_id               distance
+    _type.purpose                 Measurand
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Real
+    _enumeration.range            0.:
+    _units.code                   angstroms
+
+save_
+
+save_topol_link.id
+
+    _definition.id                '_topol_link.id'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The identifier of the link.
+;
+    _name.category_id             topol_link
+    _name.object_id               id
+    _type.purpose                 Key
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_link.multiplicity
+
+    _definition.id                '_topol_link.multiplicity'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The number of these links in the unit cell.
+;
+    _name.category_id             topol_link
+    _name.object_id               multiplicity
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+    _enumeration.range            1:
+
+save_
+
+save_topol_link.node_id_1
+
+    _definition.id                '_topol_link.node_id_1'
+    _definition.update            2021-08-29
+    _description.text
+;
+    The identifier of the first node associated with a link
+    This must match a _topol_node.id value. If present along
+    with _topol_node.atom_label, the latter value is to be
+    ignored.
+;
+    _name.category_id             topol_link
+    _name.object_id               node_id_1
+    _name.linked_item_id          '_topol_node.id'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_link.node_id_2
+
+    _definition.id                '_topol_link.node_id_2'
+    _definition.update            2021-08-29
+    _description.text
+;
+    The identifier of the second node associated with a link
+    This must match a _topol_node.id value. If present along
+    with _topol_node.atom_label, the latter value is to be
+    ignored.
+;
+    _name.category_id             topol_link
+    _name.object_id               node_id_2
+    _name.linked_item_id          '_topol_node.id'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_link.order
+
+    _definition.id                '_topol_link.order'
+    _definition.update            2018-05-16
+    _description.text
+;
+    The number of electron pairs participating in the bond
+    described by _topol_link.type.
+;
+    _name.category_id             topol_link
+    _name.object_id               order
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Real
+
+save_
+
+save_topol_link.special_details
+
+    _definition.id                '_topol_link.special_details'
+    _definition.update            2018-05-24
+    _description.text
+;
+    Information about the link that is not expressed using other
+    data names, for example, bond subtypes and explanations
+    of links with _topol_link.type of 'sb'.
+;
+    _name.category_id             topol_link
+    _name.object_id               special_details
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_link.structural_formula_inchi
+
+    _definition.id                '_topol_link.structural_formula_InChI'
+    _definition.update            2021-08-25
+    _description.text
+;
+    Formula of the residue or ion which corresponds to the link.
+    The formula is written in accordance with the rules for IUPAC
+    international chemical identifiers (InChI) as described
+    by Heller et al. (2015).
+
+    Reference: Heller, S. R., McNaught, A., Pletnev, I. &
+    Tchekhovskoi, D. (2015). J. Cheminformat. 7:23,
+    DOI:10.1186/s13321-015-0068-4.
+;
+    _name.category_id             topol_link
+    _name.object_id               structural_formula_inchi
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_link.structural_formula_smiles
+
+    _definition.id                '_topol_link.structural_formula_SMILES'
+    _definition.update            2021-08-25
+    _description.text
+;
+    Formula of the residue or ion which corresponds to the link.
+    The formula is written in SMILES notation for describing
+    chemical structure as formalised by the OpenSMILES group
+    (https://www.opensmiles.org).
+;
+    _name.category_id             topol_link
+    _name.object_id               structural_formula_smiles
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_link.symop_1
+
+    _definition.id                '_topol_link.symop_1'
+    _definition.update            2018-04-05
+    _description.text
+;
+    The symmetry operation that is applied to the coordinates of
+    the node given by _topol_link.node_id_1 before addition of
+    the translations in _topol_link.translation_1.
+    The value must match a value of _space_group_symop.id. No
+    normalization of the resulting coordinates into the interval
+    [0,1) is carried out. For example, (x+1/2,y+1/2,z) is not the
+    same as (x-1/2,y+1/2,z) for these purposes.
+;
+    _name.category_id             topol_link
+    _name.object_id               symop_1
+    _name.linked_item_id          '_space_group_symop.id'
+    _type.purpose                 Link
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_link.symop_2
+
+    _definition.id                '_topol_link.symop_2'
+    _definition.update            2018-04-05
+    _description.text
+;
+    The symmetry operation that is applied to the coordinates of
+    the node given by _topol_link.node_id_2 before addition of
+    the translations in _topol_link.translation_2.
+    The value must match a value of _space_group_symop.id. No
+    normalization of the resulting coordinates into the interval
+    [0,1) is carried out. For example, (x+1/2, y+1/2,z) is not the
+    same as (x-1/2,y+1/2,z) for these purposes.
+;
+    _name.category_id             topol_link
+    _name.object_id               symop_2
+    _name.linked_item_id          '_space_group_symop.id'
+    _type.purpose                 Link
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_link.translation_1
+
+    _definition.id                '_topol_link.translation_1'
+    _definition.update            2018-04-05
+    _description.text
+;
+    The lattice translation vector that must be added to the
+    coordinates after application of the symmetry operation given by
+    _topol_link.symop_1 to generate the node used in
+    calculating the link.  For example, if the symmetry operation
+    referred to by _topol_link.symop_1 is
+    (x-1/2,y+1/2,z), _topol_link.translation_1 is [0,-1,0]
+    and the original position is (0.2,0.7,1.0) in fractional coordinates,
+    then the resultant position is (-0.3,0.2,1.0). Alternatively,
+    _topol_link.translation_1_x,
+    _topol_link.translation_1_y, and
+    _topol_link.translation_1_z tags may be used to
+    describe separate components of the vector.
+;
+    _name.category_id             topol_link
+    _name.object_id               translation_1
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Matrix
+    _type.dimension               '[3]'
+    _type.contents                Integer
+
+save_
+
+save_topol_link.translation_1_x
+
+    _definition.id                '_topol_link.translation_1_x'
+    _definition.update            2021-07-28
+    _description.text
+;
+     The x component of the vector of lattice translations that is added
+     to the coordinates after application of the symmetry operation given by
+     _topol_link.symop_1 to generate the node used in
+     calculating the link.
+;
+    _name.category_id             topol_link
+    _name.object_id               translation_1_x
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_link.translation_1_y
+
+    _definition.id                '_topol_link.translation_1_y'
+    _definition.update            2021-07-28
+    _description.text
+;
+     The y component of the vector of lattice translations that is added
+     to the coordinates after application of the symmetry operation given by
+     _topol_link.symop_1 to generate the node used in
+     calculating the link.
+;
+    _name.category_id             topol_link
+    _name.object_id               translation_1_y
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_link.translation_1_z
+
+    _definition.id                '_topol_link.translation_1_z'
+    _definition.update            2021-07-28
+    _description.text
+;
+     The z component of the vector of lattice translations that is added
+     to the coordinates after application of the symmetry operation given by
+     _topol_link.symop_1 to generate the node used in
+     calculating the link.
+;
+    _name.category_id             topol_link
+    _name.object_id               translation_1_z
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_link.translation_2
+
+    _definition.id                '_topol_link.translation_2'
+    _definition.update            2018-04-05
+    _description.text
+;
+    The lattice translation vector that must be added to the
+    coordinates after application of the symmetry operation given by
+    _topol_link.symop_2 to generate the node used in
+    calculating the link.  For example, if the symmetry operation
+    referred to by _topol_link.symop_2 is
+    (x-1/2,y+1/2,z), _topol_link.translation_2 is [0,-1,0]
+    and the original position is (0.2,0.7,1.0) in fractional coordinates,
+    then the resultant position is (-0.3,0.2,1.0). Alternatively,
+    _topol_link.translation_2_x,
+    _topol_link.translation_2_y, and
+    _topol_link.translation_2_z tags may be used to
+    describe separate components of the vector.
+;
+    _name.category_id             topol_link
+    _name.object_id               translation_2
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Matrix
+    _type.dimension               '[3]'
+    _type.contents                Integer
+
+save_
+
+save_topol_link.translation_2_x
+
+    _definition.id                '_topol_link.translation_2_x'
+    _definition.update            2021-07-28
+    _description.text
+;
+     The x component of the vector of lattice translations that is added
+     to the coordinates after application of the symmetry operation given by
+     _topol_link.symop_2 to generate the node used in
+     calculating the link.
+;
+    _name.category_id             topol_link
+    _name.object_id               translation_2_x
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_link.translation_2_y
+
+    _definition.id                '_topol_link.translation_2_y'
+    _definition.update            2021-07-28
+    _description.text
+;
+     The y component of the vector of lattice translations that is added
+     to the coordinates after application of the symmetry operation given by
+     _topol_link.symop_2 to generate the node used in
+     calculating the link.
+;
+    _name.category_id             topol_link
+    _name.object_id               translation_2_y
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_link.translation_2_z
+
+    _definition.id                '_topol_link.translation_2_z'
+    _definition.update            2021-07-28
+    _description.text
+;
+     The z component of the vector of lattice translations that is added
+     to the coordinates after application of the symmetry operation given by
+     _topol_link.symop_2 to generate the node used in
+     calculating the link.
+;
+    _name.category_id             topol_link
+    _name.object_id               translation_2_z
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_link.type
+
+    _definition.id                '_topol_link.type'
+    _definition.update            2018-02-06
+    _description.text
+;
+    The chemical bond type associated with the connection between the
+    two sites.  If no bond exists, use an undelimited period character.
+    If the bond type is unknown, use ? or leave out the data name. The
+    number of electron pairs participating in the bond can be indicated
+    using _topol_link.order.
+;
+    _name.category_id             topol_link
+    _name.object_id               type
+    _type.purpose                 State
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+    loop_
+      _enumeration_set.state
+      _enumeration_set.detail
+         ar        'aromatic bond'
+         v         'valence bond'
+         pi        'pi bond'
+         hb        'hydrogen bond'
+         vw        'van der Waals contact'
+         sb        'special bond type described in _topol_link.special_details'
+         .         'no bond'
+
+save_
+
+save_topol_link.voronoi_solidangle
+
+    _definition.id                '_topol_link.voronoi_solidangle'
+    _definition.update            2018-02-06
+    _description.text
+;
+    The solid angle fraction of the interatomic contact A-X, which is
+    the percentage of the sphere of unit radius cut by the pyramid with the
+    basal face of the Voronoi polyhedron of A or X, the two atoms defining
+    the contact. The total solid angle (the whole sphere) is equal to 100.
+    The face used is that corresponding to the A-X interatomic contact.
+;
+    _name.category_id             topol_link
+    _name.object_id               voronoi_solidangle
+    _type.purpose                 Measurand
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Real
+    _enumeration.range            0:50
+    _units.code                   none
+
+save_
+
+save_TOPOL_NET
+
+    _definition.id                TOPOL_NET
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2021-05-03
+    _description.text
+;
+    The TOPOL_NET category describes an underlying net, its
+    topological properties and occurrence in other structures.
+
+    Reference: Delgado-Friedrichs, O., Foster, M. D., O'Keeffe, M.,
+          Proserpio, D. M., Treacy, M. M. J. & Yaghi, O. M. (2005).
+          J. Solid State Chem. 178, 2533-2554
+;
+    _name.category_id             TOPOLOGY
+    _name.object_id               TOPOL_NET
+    _category_key.name            '_topol_net.id'
+
+save_
+
+save_topol_net.genus
+
+    _definition.id                '_topol_net.genus'
+    _definition.update            2018-02-06
+    _description.text
+;
+    The genus of the underlying net, defined as the cyclomatic number of
+    its own quotient graph: g = 1 + e - v, where e and v are the number
+    of edges and vertices in the quotient graph.  The quotient graph is
+    a finite graph that contains all of the information of the periodic
+    net: the vertices of the graph are the vertices of a translational
+    repeat unit and the edges are all the edges of the repeat unit.
+
+    Reference: Delgado-Friedrichs, O. & O'Keeffe, M.
+    (2005). J. Solid State Chem. 178, 2480-2485.
+;
+    _name.category_id             topol_net
+    _name.object_id               genus
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_net.id
+
+    _definition.id                '_topol_net.id'
+    _definition.update            2021-05-05
+    _description.text
+;
+    The identifier of the underlying net.
+;
+    _name.category_id             topol_net
+    _name.object_id               id
+    _type.purpose                 Key
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_net.occurrence_total
+
+    _definition.id                '_topol_net.occurrence_total'
+    _definition.update            2018-02-13
+    _description.text
+;
+    The total number of occurrences in literature and databases of the
+    underlying net topology at the time the data file was prepared.
+;
+    _name.category_id             topol_net
+    _name.object_id               occurrence_total
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_net.overall_topology
+
+    _definition.id                '_topol_net.overall_topology'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The overall topology symbol in an arbitrary form.
+;
+    _name.category_id             topol_net
+    _name.object_id               overall_topology
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    _description_example.case     'face-centered cubic topology'
+
+save_
+
+save_topol_net.overall_topology_epinet
+
+    _definition.id                '_topol_net.overall_topology_EPINET'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The identifier for the overall topology as listed
+    in the EPINET database at http://epinet.anu.edu.au.
+;
+    _name.category_id             topol_net
+    _name.object_id               overall_topology_EPINET
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    _description_example.case     sqc6
+
+save_
+
+save_topol_net.overall_topology_rcsr
+
+    _definition.id                '_topol_net.overall_topology_RCSR'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The overall topology symbol according to the RCSR nomenclature described
+    by O'Keeffe et al. (2008).
+
+    Reference: O'Keeffe, M., Peskov, M. A., Ramsden, S. J. & Yaghi, O. M.
+    (2008). Acc. Chem. Res. 41, 1782-1789.
+;
+    _name.category_id             topol_net
+    _name.object_id               overall_topology_RCSR
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    _description_example.case     dia
+
+save_
+
+save_topol_net.overall_topology_sp
+
+    _definition.id                '_topol_net.overall_topology_SP'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The overall topology symbol according to the nomenclature of
+    Fischer for sphere packings described by Koch et al. (2006).
+
+    Reference: Koch, E., Fischer, W. & Sowa, H. (2006). Acta Cryst.
+    A62, 152-167.
+;
+    _name.category_id             topol_net
+    _name.object_id               overall_topology_SP
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    _description_example.case     4/6/c1
+
+save_
+
+save_topol_net.overall_topology_topos
+
+    _definition.id                '_topol_net.overall_topology_TOPOS'
+    _definition.update            2018-02-06
+    _description.text
+;
+    The overall topology symbol according to the TOPOS nomenclature. TOPOS
+    symbols NDn are interpreted as follows: N is a sequence of degrees
+    (coordination numbers) of all independent nodes; D is one of the letters
+    C (chain), L (layer) or T (three-periodic) designating the dimensionality
+    of the net; and n enumerates non-isomorphic nets with a given ND sequence.
+    For finite (molecular) graphs the symbols NMK-n are used, where k is the
+    number of vertices (atoms) in the graph.
+
+    Reference: Aman, F., Asiri, A. M., Siddiqui, W. A., Arshad, M. N.,
+    Ashraf, A., Zakharov, N. S. & Blatov, V. A. (2014). Cryst. Eng. Comm,
+    16, 1963-1970.
+;
+    _name.category_id             topol_net
+    _name.object_id               overall_topology_TOPOS
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    _description_example.case     3,3,4T3
+    _description_example.detail
+;
+    The third non-isomorphic three-periodic trinodal net with two 3-coordinated
+    and one 4-coordinated independent nodes.
+;
+
+save_
+
+save_topol_net.period
+
+    _definition.id                '_topol_net.period'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The periodicity of the underlying net. The allowed data values
+    have the following meaning:
+       0     0-periodic (finite)
+       1     1-periodic (chain)
+       2     2-periodic (layer)
+       3     3-periodic (framework)
+;
+    _name.category_id             topol_net
+    _name.object_id               period
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+    _enumeration.range            0:3
+
+save_
+
+save_topol_net.special_details
+
+    _definition.id                '_topol_net.special_details'
+    _definition.update            2021-05-03
+    _description.text
+;
+    An arbitrary description of the net.
+;
+    _name.category_id             topol_net
+    _name.object_id               special_details
+    _type.purpose                 Describe
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_net.td10
+
+    _definition.id                '_topol_net.td10'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The topological density TD10 of the underlying net. This is the cumulative
+    sum of the first ten shells of topological neighbours including the central
+    atom. For structures with more than one kind of vertex in the asymmetric
+    unit the value given is a weighted average over the vertices.
+;
+    _name.category_id             topol_net
+    _name.object_id               td10
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_net.total_point_symbol
+
+    _definition.id                '_topol_net.total_point_symbol'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The total point symbol of the underlying net.  This value summarizes all
+    the point symbols for the non-equivalent nodes with their stoichiometric
+    coefficients.
+;
+    _name.category_id             topol_net
+    _name.object_id               total_point_symbol
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+    loop_
+      _description_example.case
+      _description_example.detail
+         '{6^6}'                       'Point symbol for diamond'
+         '{4.6^2}_2{4^2.6^10.8^3}'     '3,6-coordinated underlying net of TiO2'
+
+save_
+
+save_TOPOL_NODE
+
+    _definition.id                TOPOL_NODE
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2021-08-29
+    _description.text
+;
+    The TOPOL_NODE category describes the chemical composition,
+    structure and topological properties of the nodes of the underlying
+    net. If the node correspond to an atom from the ATOM_SITE list the link
+    _topol_node.atom_label should be used to refer to the atom. If the node
+    is polyatomic, its TOPOL_NODE.id must match a value in TOPOL_ATOM.node_id.
+
+    Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
+    Cryst. Eng. Comm. 12, 44-48.
+;
+    _name.category_id             TOPOLOGY
+    _name.object_id               TOPOL_NODE
+    _category_key.name            '_topol_node.id'
+
+save_
+
+save_topol_node.atom_label
+
+    _definition.id                '_topol_node.atom_label'
+    _description.text
+;
+    The atom label corresponding to this node and matching a value in
+    ATOM_SITE.label when the node is associated with exactly one atom.
+    It may be omitted if this node's TOPOL_NODE.id is referred to
+    by TOPOL_ATOM.node_id. If the node is polyatomic, then
+    TOPOL_NODE.atom_label, if present, should be represented by '.'.
+;
+    _name.category_id             topol_node
+    _name.object_id               atom_label
+    _name.linked_item_id          '_atom_site.label'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_node.chemical_formula_iupac
+
+    _definition.id                '_topol_node.chemical_formula_iupac'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The formula of the residue or ion which corresponds to the node,
+    written in accordance with the rules for the _chemical_formula.iupac tag.
+;
+    _name.category_id             topol_node
+    _name.object_id               chemical_formula_iupac
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_node.chemical_formula_moiety
+
+    _definition.id                '_topol_node.chemical_formula_moiety'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The formula of the residue or ion which corresponds to the node,
+    written in accordance with the rules for the _chemical_formula.moiety tag.
+;
+    _name.category_id             topol_node
+    _name.object_id               chemical_formula_moiety
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_node.chemical_formula_sum
+
+    _definition.id                '_topol_node.chemical_formula_sum'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The formula of the residue or ion which corresponds to the node,
+    written in accordance with the rules for the _chemical_formula.sum tag.
+;
+    _name.category_id             topol_node
+    _name.object_id               chemical_formula_sum
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_node.coordination_sequence
+
+    _definition.id                '_topol_node.coordination_sequence'
+    _definition.update            2018-02-06
+    _description.text
+;
+    The coordination sequence is a sequence of numbers counting the
+    atoms in the 1st, 2nd, 3rd etc. coordination shells of any given
+    node in the net. In other words, the kth entry in the list is the
+    number of vertices linked to the node by a path of exactly k
+    steps. It is usually listed up to k=10. Alternatively, the
+    _topol_node.coordination_sequence_plain tag can be used to represent
+    the coordination sequence as a plain text.
+;
+    _name.category_id             topol_node
+    _name.object_id               coordination_sequence
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               List
+    _type.contents                Integer
+    _description_example.case     [4  12  24  42  64  92  124  162  204  252]
+    _description_example.detail   'The diamond coordination sequence'
+
+save_
+
+save_topol_node.coordination_sequence_plain
+
+    _definition.id                '_topol_node.coordination_sequence_plain'
+    _definition.update            2021-07-28
+    _description.text
+;
+    An alternative representation of the coordination sequence
+    as plain text, as a quoted string of white-space-separated numbers.
+;
+    _name.category_id             topol_node
+    _name.object_id               coordination_sequence_plain
+    _type.purpose                 Encode
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Text
+    _description_example.case     '4 12 24 42 64 92 124 162 204 252'
+    _description_example.detail   'The diamond coordination sequence'
+
+save_
+
+save_topol_node.extended_point_symbol
+
+    _definition.id                '_topol_node.extended_point_symbol'
+    _definition.update            2018-02-06
+    _description.text
+;
+    The extended point symbol of the node lists all shortest circuits
+    for each angle for each non-equivalent atom. A(b).B(c)... there
+    are b A-rings and c B-rings for all the N(N-1) circuits per node.
+    It is sorted so shortest rings come first. For 4-coordinated
+    nodes only, the  angles are grouped in opposite pairs; ab,cd and
+    ac,bd and ad,bc (written in lexicographic order smallest numbers
+    first).
+;
+    _name.category_id             topol_node
+    _name.object_id               extended_point_symbol
+    _type.purpose                 Encode
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Text
+
+    loop_
+      _description_example.case
+      _description_example.detail
+         6(2).6(2).6(2).6(2).6(2).6(2)
+             'ES for a vertex in the diamond structure'
+         4.6(2).4.8(3).6(2).6(2)
+             'ES for one vertex of feldspar net'
+         7(2).9(2).7(3).7(3).7(3).7(3)
+             'ES for the vertex of qzd net'
+         4.4.4.4.6(3).6(3).6(5).6(5).6(5).6(5)
+             'ES for the vertex of 5-c sqp net'
+
+save_
+
+save_topol_node.fract_x
+
+    _definition.id                '_topol_node.fract_x'
+    _description.text
+;
+    The fractional x coordinate of this node. If a node corresponds
+    to an atom, then this item, if present, should be represented by '.'.
+;
+    _name.category_id             topol_node
+    _name.object_id               fract_x
+    _type.purpose                 Measurand
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Real
+    _units.code                   none
+    _method.purpose               Definition
+    _method.expression
+;
+    _enumeration.default = atom_site[topol_node.atom_label].fract_x
+;
+
+save_
+
+save_topol_node.fract_y
+
+    _definition.id                '_topol_node.fract_y'
+    _definition.update            2021-09-03
+    _description.text
+;
+    The fractional y coordinate of this node. If a node corresponds
+    to an atom, then this item, if present, should be represented by '.'.
+;
+    _name.category_id             topol_node
+    _name.object_id               fract_y
+    _type.purpose                 Measurand
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Real
+    _units.code                   none
+    _method.purpose               Definition
+    _method.expression
+;
+    _enumeration.default = atom_site[topol_node.atom_label].fract_y
+;
+
+save_
+
+save_topol_node.fract_z
+
+    _definition.id                '_topol_node.fract_z'
+    _definition.update            2021-09-03
+    _description.text
+;
+    The fractional z coordinate of this node. If a node corresponds
+    to an atom, then this item, if present, should be represented by '.'.
+;
+    _name.category_id             topol_node
+    _name.object_id               fract_z
+    _type.purpose                 Measurand
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Real
+    _units.code                   none
+    _method.purpose               Definition
+    _method.expression
+;
+    _enumeration.default = atom_site[topol_node.atom_label].fract_z
+;
+
+save_
+
+save_topol_node.id
+
+    _definition.id                '_topol_node.id'
+    _definition.update            2021-08-29
+    _description.text
+;
+    The identifier of the node.
+;
+    _name.category_id             topol_node
+    _name.object_id               id
+    _type.purpose                 Key
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_node.label
+
+    _definition.id                '_topol_node.label'
+    _definition.update            2021-08-29
+    _description.text
+;
+    The label of a particular node in an underlying net.
+;
+    _name.category_id             topol_node
+    _name.object_id               label
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_node.net_id
+
+    _definition.id                '_topol_node.net_id'
+    _description.text
+;
+    The identifier of the net, to which this node belongs.
+;
+    _name.category_id             topol_node
+    _name.object_id               net_id
+    _name.linked_item_id          '_topol_net.id'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_node.point_symbol
+
+    _definition.id                '_topol_node.point_symbol'
+    _definition.update            2018-02-06
+    _description.text
+;
+    The (short) point symbol of the node. This lists the number and size of
+    the shortest closed chains of connected nodes (circuits) starting from
+    any non-equivalent node in the net. For an N-coordinated node there are
+    N(N-1) circuits.
+;
+    _name.category_id             topol_node
+    _name.object_id               point_symbol
+    _type.purpose                 Encode
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Text
+
+    loop_
+      _description_example.case
+      _description_example.detail
+         6^6                 'Point symbol for a diamond vertex'
+         4^2.6^3.8           'Point symbol for a feldspar 4-coordinated vertex'
+         7^5.9               'Point symbol for the vertex of 4-c qzd net'
+         4^4.6^6             'Point symbol for the vertex of 5-c sqp net'
+
+save_
+
+save_topol_node.structural_formula_inchi
+
+    _definition.id                '_topol_node.structural_formula_InChI'
+    _definition.update            2018-04-05
+    _description.text
+;
+    Formula of the residue or ion which corresponds to the node.
+    The formula is written in accordance with the rules for IUPAC
+    international chemical identifiers (InChI) as described
+    by Heller et al. (2015).
+
+    Reference: Heller, S. R., McNaught, A., Pletnev, I. &
+    Tchekhovskoi, D. (2015). J. Cheminformat. 7:23,
+    DOI:10.1186/s13321-015-0068-4.
+;
+    _name.category_id             topol_node
+    _name.object_id               structural_formula_inchi
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_node.structural_formula_smiles
+
+    _definition.id                '_topol_node.structural_formula_SMILES'
+    _definition.update            2018-04-05
+    _description.text
+;
+    Formula of the residue or ion which corresponds to the node.
+    The formula is written in SMILES notation for describing
+    chemical structure as formalised by the OpenSMILES group
+    (https://www.opensmiles.org).
+;
+    _name.category_id             topol_node
+    _name.object_id               structural_formula_smiles
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_node.symmetry_multiplicity
+
+    _definition.id                '_topol_node.symmetry_multiplicity'
+    _definition.update            2018-02-23
+    _description.text
+;
+    The number of different sites that are generated by the
+    application of the space-group symmetry to the coordinates
+    given for this site. It is equal to the multiplicity given
+    for this Wyckoff site in International Tables for Crystallography
+    Vol. A (2002).
+;
+    _name.category_id             topol_node
+    _name.object_id               symmetry_multiplicity
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+    _enumeration.range            1:192
+
+save_
+
+save_topol_node.vertex_symbol
+
+    _definition.id                '_topol_node.vertex_symbol'
+    _definition.update            2018-02-06
+    _description.text
+;
+    The vertex symbol of a node provides similar information to the
+    extended point symbol, but only for rings, which are circuits
+    that contain no shortcuts, that is, are not the sum of  two
+    smaller circuits. There may be circuits that cannot be rings. If
+    there are no rings meeting at a particular angle of the node, the
+    symbol '*' is used instead of the A^a symbol. It is sorted so
+    shortest rings come first. For 4-coordinated nodes only, the
+    angles are grouped in opposite pairs; ab,cd and ac,bd and ad,bc
+    (written in lexicographic order smallest numbers first). In the
+    ordering the symbol '*' is equivalent to zero.
+;
+    _name.category_id             topol_node
+    _name.object_id               vertex_symbol
+    _type.purpose                 Encode
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Text
+
+    loop_
+      _description_example.case
+      _description_example.detail
+         6(2).6(2).6(2).6(2).6(2).6(2)      'Vertex symbol for diamond'
+         4.6(2).4.8.6.6(2)                  'VS for one vertex of feldspar net'
+         7(2).*.7(3).7(3).7(3).7(3)         'VS for the vertex of qzd net'
+         4.4.4.4.6.6.6(5).6(5).6(5).6(5)    'VS for the vertex of 5-c sqp net'
+
+save_
+
+save_topol_node.wyckoff_symbol
+
+    _definition.id                '_topol_node.Wyckoff_symbol'
+    _definition.update            2018-02-23
+    _description.text
+;
+    The Wyckoff symbol (letter) as listed in the space-group section
+    of International Tables for Crystallography, Vol. A (1987).
+;
+    _name.category_id             topol_node
+    _name.object_id               Wyckoff_symbol
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_TOPOL_OCCURRENCE
+
+    _definition.id                TOPOL_OCCURRENCE
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2018-01-30
+    _description.text
+;
+    The TOPOL_OCCURRENCE category lists the appearances of the
+    underlying net topology in crystal structures.
+;
+    _name.category_id             TOPOLOGY
+    _name.object_id               TOPOL_OCCURRENCE
+    _category_key.name            '_topol_occurrence.id'
+
+save_
+
+save_topol_occurrence.citation_id
+
+    _definition.id                '_topol_occurrence.citation_id'
+    _definition.update            2018-04-17
+    _description.text
+;
+    A reference to a publication where a crystal structure with the
+    underlying net topology  was characterized. This item is a pointer
+    to an item described in the core CITATION category. If a publication
+    and database entry are not directly related, they should be listed
+    in separate rows.
+;
+    _name.category_id             topol_occurrence
+    _name.object_id               citation_id
+    _name.linked_item_id          '_citation.id'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_occurrence.id
+
+    _definition.id                '_topol_occurrence.id'
+    _definition.update            2018-02-13
+    _description.text
+;
+    A unique identifier for the literature or database reference.
+;
+    _name.category_id             topol_occurrence
+    _name.object_id               id
+    _type.purpose                 Key
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_occurrence.net_id
+
+    _definition.id                '_topol_occurrence.net_id'
+    _description.text
+;
+    The identifier of the net, which topology occurrence is described.
+;
+    _name.category_id             topol_occurrence
+    _name.object_id               net_id
+    _name.linked_item_id          '_topol_net.id'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_TOPOL_TILING
+
+    _definition.id                TOPOL_TILING
+    _definition.scope             Category
+    _definition.class             Set
+    _definition.update            2018-02-06
+    _description.text
+;
+    The TOPOL_TILING category describes the natural tiling
+    corresponding to the underlying net.  A tiling is a
+    partition of crystal space using generalised polyhedra, and a
+    natural tiling is one for which tiles are the smallest possible
+    that conserve the full symmetry of the net and for which the
+    faces are all locally strong rings. This means that there is no
+    single largest face (face with the largest number of vertices)
+    as such a face will be the sum of the other smaller faces.
+
+    The tile signature contains the sizes of the tile faces and
+    the number of faces of a given size in the tile.
+
+    Reference: Blatov, V. A., Delgado-Friedrichs, O., O'Keeffe M. &
+    Proserpio D. M. (2007). Acta Cryst. A63, 418-425.
+;
+    _name.category_id             TOPOLOGY
+    _name.object_id               TOPOL_TILING
+
+save_
+
+save_topol_tiling.dsize
+
+    _definition.id                '_topol_tiling.Dsize'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The number of distinct (not symmetry-related) chambers in the
+    tiling.
+;
+    _name.category_id             topol_tiling
+    _name.object_id               Dsize
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_tiling.dual
+
+    _definition.id                '_topol_tiling.dual'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The overall topology symbol of the dual net, which  corresponds
+    to the net of the dual of the natural tiling.
+;
+    _name.category_id             topol_tiling
+    _name.object_id               dual
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+save_
+
+save_topol_tiling.edges
+
+    _definition.id                '_topol_tiling.edges'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The number of independent tile edges in the natural tiling.
+;
+    _name.category_id             topol_tiling
+    _name.object_id               edges
+    _type.purpose                 Number
+    _type.source                  Recorded
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_tiling.faces
+
+    _definition.id                '_topol_tiling.faces'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The number of independent tile faces in the natural tiling.
+;
+    _name.category_id             topol_tiling
+    _name.object_id               faces
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_tiling.signature
+
+    _definition.id                '_topol_tiling.signature'
+    _definition.update            2018-02-06
+    _description.text
+;
+    The tiling signature, written in the form
+    \a[A^a^ . B^b^ ...]+\b[C^c^ . D^d^ ...]+...,
+    where square brackets envelop tile symbols, \a,\b,... are stoichiometric
+    coefficients, A, B, C, D, ... are sizes of tile faces, a,b,c,d, ... are
+    numbers of the faces of a given size in the tile.
+;
+    _name.category_id             topol_tiling
+    _name.object_id               signature
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+
+    loop_
+      _description_example.case
+      _description_example.detail
+         '[6^4]'                               'Natural tiling for diamond'
+         '3[4^6]+[4^6.6^8]+[4^12.6^8.8^6]'     'Natural tiling for zeolite LTA'
+
+save_
+
+save_topol_tiling.tiles
+
+    _definition.id                '_topol_tiling.tiles'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The number of independent tiles in the natural tiling.
+;
+    _name.category_id             topol_tiling
+    _name.object_id               tiles
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_tiling.vertices
+
+    _definition.id                '_topol_tiling.vertices'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The number of independent tile vertices in the natural tiling.
+;
+    _name.category_id             topol_tiling
+    _name.object_id               vertices
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_TOPOL_TILING_FACES
+
+    _definition.id                TOPOL_TILING_FACES
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2018-02-13
+    _description.text
+;
+    The TOPOL_TILING_FACES category tabulates the faces
+    belonging to each tile in the tiling.  Together with the
+    TOPOL_TILING_TILE category it tabulates the information
+    contained in _topol_tiling.signature. See the
+    TOPOL_TILING category for further information.
+;
+    _name.category_id             TOPOLOGY
+    _name.object_id               TOPOL_TILING_FACES
+
+    loop_
+      _category_key.name
+         '_topol_tiling_faces.tile_id'
+         '_topol_tiling_faces.size'
+
+    _description_example.case
+;
+    loop_
+       _topol_tiling_tile.id
+       _topol_tiling_tile.count
+       a  3
+       b  1
+       c  1
+
+     loop_
+       _topol_tiling_faces.tile_id
+       _topol_tiling_faces.size
+       _topol_tiling_faces.count
+       a 4   6
+       b 4   6
+       b 6   8
+       c 4   12
+       c 6   8
+       c 8   6
+;
+    _description_example.detail
+        'Expanded description of 3[4^6^]+[4^6^.6^8^]+[4^12^.6^8^.8^6^] tiling'
+
+save_
+
+save_topol_tiling_faces.count
+
+    _definition.id                '_topol_tiling_faces.count'
+    _definition.update            2018-02-13
+    _description.text
+;
+    The number of faces of this size in the tile.
+;
+    _name.category_id             topol_tiling_faces
+    _name.object_id               count
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_tiling_faces.size
+
+    _definition.id                '_topol_tiling_faces.size'
+    _definition.update            2018-02-13
+    _description.text
+;
+    The size of the tile face.
+;
+    _name.category_id             topol_tiling_faces
+    _name.object_id               size
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Integer
+    _enumeration.range            3:
+
+save_
+
+save_topol_tiling_faces.tile_id
+
+    _definition.id                '_topol_tiling_faces.tile_id'
+    _definition.update            2018-02-13
+    _description.text
+;
+    The tile to which this face belongs. It must be one of the values provided
+    in _topol_tiling_tile.id.
+;
+    _name.category_id             topol_tiling_faces
+    _name.object_id               tile_id
+    _name.linked_item_id          '_topol_tiling_tile.id'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_TOPOL_TILING_TILE
+
+    _definition.id                TOPOL_TILING_TILE
+    _definition.scope             Category
+    _definition.class             Loop
+    _definition.update            2018-02-13
+    _description.text
+;
+    The TOPOL_TILING_TILE category provides information on
+    each of the tiles in the tiling. Together with the
+    TOPOL_TILING_FACES category it tabulates the information
+    contained in _topol_tiling.signature. See the
+    TOPOL_TILING category for further information.
+;
+    _name.category_id             TOPOLOGY
+    _name.object_id               TOPOL_TILING_TILE
+    _category_key.name            '_topol_tiling_tile.id'
+
+save_
+
+save_topol_tiling_tile.count
+
+    _definition.id                '_topol_tiling_tile.count'
+    _definition.update            2018-02-13
+    _description.text
+;
+    The number of this kind of tile in the tiling.
+;
+    _name.category_id             topol_tiling_tile
+    _name.object_id               count
+    _type.purpose                 Number
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_tiling_tile.id
+
+    _definition.id                '_topol_tiling_tile.id'
+    _definition.update            2018-02-13
+    _description.text
+;
+    An arbitrary unique identifier for this tile type.
+;
+    _name.category_id             topol_tiling_tile
+    _name.object_id               id
+    _type.purpose                 Key
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+    loop_
+      _dictionary_audit.version
+      _dictionary_audit.date
+      _dictionary_audit.revision
+         0.3                      2018-02-23
+;
+       Changed topol_bond to topol_link using node labels instead of atom
+       labels. Added coordinates, multiplicity and Wyckoff symbol to topol_node.
+       Added in type and linking information. (J Hester.)
+;
+         0.4                      2018-02-27
+;
+       Added long-form examples provided by V Blatov. Version for review.
+;
+         0.5                      2018-04-05
+;
+       Added InChI, SMILES structural formulas and replaced symops with explicit
+       symmetry operator ids and vector translations. Clarified bond types.
+;
+         0.9                      2018-05-28
+;
+       Version for final approval after review. Removed most datanames from
+       TOPOL_ENTANGL and subcategories.
+;
+         0.9.1                    2019-07-17
+;
+       Fixed a few typos. (B. McMahon)
+;
+         0.9.2                    2021-05-04
+;
+       Replaced TOPOL_REPRES category by TOPOL_NET; all TOPOL_REPRES categories
+       are moved to TOPOL category; Examples 4 and 5 added
+;
+         0.9.3                    2021-07-28
+;
+       Added CIF-1.0 equivalents for _topol_link.site_symmetry_translation_1,
+       _topol_link.site_symmetry_translation_2, and
+       _topol_node.coordination_sequence (B. Hanson and V. Blatov)
+;
+         0.9.4                    2021-08-31
+;
+       Added TOPOL_ATOM subcategory; _topol_link.node_id_1,
+       _topol_link.node_id_2, _topol_link.structural_formula_InChI,
+       _topol_link.structural_formula_SMILES, and _topol_node.id items
+       Removed TOPOL_EDGE subcategory
+       Renamed _topol_link.site_symmetry_symop_1(2) to _topol_link.symop_1(2)
+       _topol_link.site_symmetry_translation_1(2)
+       to _topol_link.translation_1(2)
+       _topol_node.site_symmetry_symop_1(2) to _topol_node.symop_1(2)
+       _topol_node.site_symmetry_translation_1(2)
+       to _topol_node.translation_1(2)
+       (V. Blatov)
+       editorial adjustments, formatting (B. Hanson)
+
+       Corrected the definitions of the _topol_node.fract_x,
+       _topol_node.fract_y and _topol_node.fract_z data items. (A. Vaitkus)
+;
