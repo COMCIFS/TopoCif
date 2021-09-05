@@ -1264,6 +1264,24 @@ save_topol_net.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
+    _type.contents                Integer
+
+save_
+
+save_topol_net.label
+
+    _definition.id                '_topol_net.label'
+    _definition.update            2021-09-05
+    _description.text
+;
+    A simple label to be used for this net, such as "Net1". This value is not a key
+    and does not have to be unique. It should not be used in place of _topol_net.id.
+;
+    _name.category_id             topol_net
+    _name.object_id               label
+    _type.purpose                 Key
+    _type.source                  Assigned
+    _type.container               Single
     _type.contents                Text
 
 save_
