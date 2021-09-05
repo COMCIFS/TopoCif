@@ -1503,6 +1503,25 @@ save_topol_net.total_point_symbol
 
 save_
 
+save_topol_net.z_number
+
+    _definition.id                '_topol_net.z_number'
+    _definition.update            2021-09-04
+    _description.text
+;
+    For 3-periodic nets, the number of symmetry-equivalent nets of this kind
+    in the crystal structure.
+;
+    _name.category_id             topol_net
+    _name.object_id               z_number
+    _type.purpose                 Number
+    _type.source                  Derived
+    _type.container               Single
+    _type.contents                Integer
+    _enumeration.range            1:
+
+save_
+
 save_TOPOL_NODE
 
     _definition.id                TOPOL_NODE
