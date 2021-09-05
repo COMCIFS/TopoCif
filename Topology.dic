@@ -199,9 +199,9 @@ save_TOPOL
          1 1 1 1 [0 0 0] 13 [0 0 0] 4
 
          loop_
-         _topol_node.id 
+         _topol_node.id
          _topol_node.atom_label
-         1 O1         
+         1 O1
 
          loop_
          _topol_atom.link_id
@@ -247,7 +247,7 @@ save_TOPOL
          _topol_net.overall_topology_TOPOS
          1 Net_1 'Atomic net' 'Unknown'
          2 Net_2 'Underlying net with carbonyl ligands as nodes' '2,4T3'
-         
+
          loop_
          _topol_link.id
          _topol_link.node_id_1
@@ -264,7 +264,7 @@ save_TOPOL
          3 2 4 1.7422 1 [0 0 0] 1 [0 0 0] v 4
          4 5 6 2.4032 1 [0 0 0] 1 [0 0 0] v 4
          5 6 7 2.3963 1 [0 0 0] 1 [0 0 0] v 4
-         
+
          loop_
          _topol_node.id
          _topol_node.label
@@ -281,7 +281,7 @@ save_TOPOL
          5 ZA1 2 Li . 0.00000 0.00000 0.00000
          6 ZB1 2 CO . 0.25036 0.25036 0.25036
          7 ZC1 2 Co . 0.50000 0.50000 0.50000
-         
+
          loop_
          _topol_atom.node_id
          _topol_atom.atom_label
