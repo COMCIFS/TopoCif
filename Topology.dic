@@ -321,7 +321,7 @@ save_topol_atom.translation
     _topol_atom.translation_x,
     _topol_atom.translation_y, and
     _topol_atom.translation_z tags may be used to
-    describe separate components of the vector for CIF1 compatibility. 
+    describe separate components of the vector for CIF1 compatibility.
     If this item is omitted or
     assigned to '.' it is assumed to be equal to [0,0,0].
 ;
