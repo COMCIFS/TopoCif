@@ -443,12 +443,11 @@ save_topol_atom.link_id
     _description.text
 ;
     The link associated with this atom, if applicable.
-    It must match a value provided for _topol_link.id.
-    Note that this association is in a bridging sense, not
+    It must match a value provided for _topol_link.id. Note that this
+    association is in a bridging or molecular linker sense, not
     the end points of the link. For example, a net may
-    specify a link that is composed of a carbonyl CO group
-    or an aromatic ring, taking the place of those atoms
-    in an abstract representation.
+    specify a link that is composed of a carbonyl CO group or an
+    aromatic ring, representing those groups for the purposes of the net.
 ;
     _name.category_id             topol_atom
     _name.object_id               link_id
@@ -521,7 +520,8 @@ save_topol_atom.translation
     _topol_atom.translation_x,
     _topol_atom.translation_y, and
     _topol_atom.translation_z tags may be used to
-    describe separate components of the vector. If this item is omitted or
+    describe separate components of the vector for CIF1 compatibility.
+    If this item is omitted or
     assigned to '.' it is assumed to be equal to [0,0,0].
 ;
     _name.category_id             topol_atom
@@ -616,7 +616,7 @@ save_TOPOL_LINK
     _definition.id                TOPOL_LINK
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2021-08-29
+    _definition.update            2021-09-05
     _description.text
 ;
     The TOPOL_LINK category describes the crystal structure
@@ -628,14 +628,16 @@ save_TOPOL_LINK
     and examples of weights and colors for the graph edges and
     vertices are provided by Blatov (2006). The
     connections described in TOPOL_LINK may correspond to any
-    vectors in the structure, not just bonds or contacts. The
-    nodes that are linked are listed in TOPOL_NODE. In
-    order to properly describe the connectivity,
-    _topol_link.atom_label_1 and _topol_link.atom_label_2 (for atoms) or
-    _topol_link.node_id_1 and _topol_link.node_id_2 (for nodes) must be given
-    for each link, which is identified by _topol_link.id. Other
-    items in this category are optional. The atoms composing
-    the link should be specified in the TOPOL_ATOM list.
+    vectors in the structure, not just bonds or contacts. The two end-point
+    references can be to nodes listed in TOPOL_NODE using
+    _topol_link.node_id_1 and
+    _topol_link.node_id_2, or to atoms listed in ATOM_SITE using
+    _topol_link.atom_label_1 and _topol_link.atom_label_2.
+    In the case of multiple nets, _topol_link.net_id is required. Other
+    items in this category are optional. If the link itself represents
+     atoms, the atoms comprising the link must be specified in
+     TOPOL_ATOM, where _topol_atom.link_id references
+     _topol_link.id.
 
     References: Klein, H.-J. (1996). Systematic generation of models
     for crystal structures. Math. Model. Sci. Comput. 6, 325-330;
@@ -654,7 +656,7 @@ save_topol_link.atom_label_1
     _description.text
 ;
     The atom label corresponding to the first node and matching a value in
-    ATOM_SITE.label when the node is associated with exactly one atom.
+    _atom_site.label when the node is associated with exactly one atom.
     It may be omitted if this node's TOPOL_NODE.id is referred to
     by TOPOL_ATOM.node_id. If the node is polyatomic, then
     TOPOL_NODE.atom_label, if present, should be represented by '.'.
@@ -865,7 +867,7 @@ save_topol_link.special_details
     _description.text
 ;
     Information about the link that is not expressed using other
-    data names, for example, bond subtypes and explanations
+    tags, for example, bond subtypes and explanations
     of links with _topol_link.type of 'sb'.
 ;
     _name.category_id             topol_link
@@ -1155,7 +1157,7 @@ save_topol_link.type
 ;
     The chemical bond type associated with the connection between the
     two sites.  If no bond exists, use an undelimited period character.
-    If the bond type is unknown, use ? or leave out the data name. The
+    If the bond type is unknown, use ? or leave out the tag. The
     number of electron pairs participating in the bond can be indicated
     using _topol_link.order.
 ;
@@ -2376,7 +2378,7 @@ save_
        to _topol_node.translation_1(2)
        (V. Blatov)
        editorial adjustments, formatting (B. Hanson)
-       
+
        Corrected the definitions of the _topol_node.fract_x,
        _topol_node.fract_y and _topol_node.fract_z data items. (A. Vaitkus)
 
