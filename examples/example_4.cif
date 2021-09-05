@@ -124,5 +124,4 @@ _topol_atom.element_symbol
 6 C1 C
 6 O1 O
 
-
 #End of data_1-TOPOS_FUBYUW_C4CO1O4-,LI1+/Z=2
