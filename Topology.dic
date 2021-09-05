@@ -10,12 +10,12 @@ data_TOPOLOGY_CIF
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.4
-    _dictionary.date              2021-09-03
+    _dictionary.date              2021-09-05
     _dictionary.ddl_conformance   3.13.1
     _description.text
 ;
-    The Topology CIF dictionary provides datanames for describing crystal
-    structure topology. This is a DRAFT version and datanames in this
+    The Topology CIF dictionary provides tags for describing crystal
+    structure topology. This is a DRAFT version and tags in this
     dictionary should not be used until final approval by COMCIFS.
 ;
 
@@ -661,7 +661,7 @@ save_topol_link.atom_label_2
     _description.text
 ;
     The atom label corresponding to the second node and matching a value in
-    ATOM_SITE.label when the node is associated with exactly one atom.
+    _atom_site.label when the node is associated with exactly one atom.
     It may be omitted if this node's TOPOL_NODE.id is referred to
     by TOPOL_ATOM.node_id. If the node is polyatomic, then
     TOPOL_NODE.atom_label, if present, should be represented by '.'.
@@ -1237,10 +1237,11 @@ save_
 save_topol_net.id
 
     _definition.id                '_topol_net.id'
-    _definition.update            2021-05-05
+    _definition.update            2021-09-05
     _description.text
 ;
-    The identifier of the underlying net.
+    The unique integer identifier for this net, generally
+    a serial number starting with 1.
 ;
     _name.category_id             topol_net
     _name.object_id               id
@@ -1473,14 +1474,20 @@ save_TOPOL_NODE
     _definition.id                TOPOL_NODE
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2021-08-29
+    _definition.update            2021-09-05
     _description.text
 ;
     The TOPOL_NODE category describes the chemical composition,
     structure and topological properties of the nodes of the underlying
-    net. If the node correspond to an atom from the ATOM_SITE list the link
-    _topol_node.atom_label should be used to refer to the atom. If the node
-    is polyatomic, its TOPOL_NODE.id must match a value in TOPOL_ATOM.node_id.
+    net. If the node corresponds to a single atom from the ATOM_SITE list,
+    _topol_node.atom_label can be used to refer to _atom_site.label.
+    Optionally if the node is monoatomic, or necessarily if the node is
+    polyatomic, its associated atom references  will be
+    listed in the TOPOL_ATOM category, where the value of _topol_atom.node_id
+    must match this node's _topol_node.id. Note that the TOPOL_NODE category
+    is optional. It is only required for polyatomic nodes or in cases where the
+    label given to the node is different from _atom_site.label. In the case of
+    multiple nets, _topol_node.net_id is also required.
 
     Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
     Cryst. Eng. Comm. 12, 44-48.
@@ -1497,7 +1504,7 @@ save_topol_node.atom_label
     _description.text
 ;
     The atom label corresponding to this node and matching a value in
-    ATOM_SITE.label when the node is associated with exactly one atom.
+    _atom_site.label when the node is associated with exactly one atom.
     It may be omitted if this node's TOPOL_NODE.id is referred to
     by TOPOL_ATOM.node_id. If the node is polyatomic, then
     TOPOL_NODE.atom_label, if present, should be represented by '.'.
@@ -1569,7 +1576,7 @@ save_
 save_topol_node.coordination_sequence
 
     _definition.id                '_topol_node.coordination_sequence'
-    _definition.update            2018-02-06
+    _definition.update            2021-09-05
     _description.text
 ;
     The coordination sequence is a sequence of numbers counting the
@@ -1578,7 +1585,7 @@ save_topol_node.coordination_sequence
     number of vertices linked to the node by a path of exactly k
     steps. It is usually listed up to k=10. Alternatively, the
     _topol_node.coordination_sequence_plain tag can be used to represent
-    the coordination sequence as a plain text.
+    the coordination sequence as plain text.
 ;
     _name.category_id             topol_node
     _name.object_id               coordination_sequence
@@ -1597,7 +1604,7 @@ save_topol_node.coordination_sequence_plain
     _definition.update            2021-07-28
     _description.text
 ;
-    An alternative representation of the coordination sequence
+    A CIF1-compatible alternative representation of the coordination sequence
     as plain text, as a quoted string of white-space-separated numbers.
 ;
     _name.category_id             topol_node
@@ -2089,14 +2096,14 @@ save_
 save_topol_tiling.signature
 
     _definition.id                '_topol_tiling.signature'
-    _definition.update            2018-02-06
+    _definition.update            2021-09-05
     _description.text
 ;
     The tiling signature, written in the form
-    \a[A^a^ . B^b^ ...]+\b[C^c^ . D^d^ ...]+...,
-    where square brackets envelop tile symbols, \a,\b,... are stoichiometric
-    coefficients, A, B, C, D, ... are sizes of tile faces, a,b,c,d, ... are
-    numbers of the faces of a given size in the tile.
+    n[A^a^.B^b^...]+m[C^c^.D^d^...]+...,
+    where square brackets envelop tile symbols, n,m,... are stoichiometric
+    coefficients, A, B, C, D, ... are sizes of tile faces, and a,b,c,d, ...
+    are numbers of the faces of a given size in the tile.
 ;
     _name.category_id             topol_tiling
     _name.object_id               signature
@@ -2323,7 +2330,7 @@ save_
 ;
          0.9                      2018-05-28
 ;
-       Version for final approval after review. Removed most datanames from
+       Version for final approval after review. Removed most tags from
        TOPOL_ENTANGL and subcategories.
 ;
          0.9.1                    2019-07-17
@@ -2341,9 +2348,9 @@ save_
        _topol_link.site_symmetry_translation_2, and
        _topol_node.coordination_sequence (B. Hanson and V. Blatov)
 ;
-         0.9.4                    2021-09-03
+         0.9.4                    2021-09-05
 ;
-       Added TOPOL_ATOM subcategory; _topol_link.node_id_1,
+       Added TOPOL_ATOM subcategory, _topol_link.node_id_1,
        _topol_link.node_id_2, _topol_link.structural_formula_InChI,
        _topol_link.structural_formula_SMILES, and _topol_node.id items
        Removed TOPOL_EDGE subcategory
@@ -2358,4 +2365,17 @@ save_
        
        Corrected the definitions of the _topol_node.fract_x,
        _topol_node.fract_y and _topol_node.fract_z data items. (A. Vaitkus)
+
+       added _topol_net.label (B. Hanson)
+
+       changing "dataname" to "tag" as per VOl. G 2.2.3.3.4 and 2.2.2(2)
+       changing "field" to "data value" or "value" as per Vol. G 2.2.3.1.5
+       and 2.2.3.1.7
+       changing various terms to "loop" as per Vol. g 2.2.2(4) and 2.2.3.1.7
+       updated Example 5 for net.id being a number
+       temporarily replaced examples 1-4 with TODO as a reminder to get these
+       updated
+       changing ATOM_SITE.label to _atom_site.label
+       changed "block" or "section" to "data items"
+       changed elemental_symbol to element_symbol
 ;
