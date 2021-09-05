@@ -77,6 +77,11 @@ save_TOPOL
          C1 C 8 0.12500 0.12500 0.12500 1.0000
 
          loop_
+         _topol_net.id
+         _topol_net.overall_topology_RCSR
+         1 dia
+
+         loop_
          _topol_link.id
          _topol_link.atom_label_1
          _topol_link.atom_label_2
@@ -87,10 +92,9 @@ save_TOPOL
          _topol_link.distance
          _topol_link.Voronoi_solidangle
          _topol_link.type
+         _topol_link.order
          _topol_link.multiplicity
-         1 C1 C1 1 [0 0 0] 13 [0 0 0] 1.5446 22.04 v 16
-
-         _topol_net.overall_topology_RCSR dia
+         1 C1 C1 1 [0 0 0] 13 [0 0 0] 1.5446 22.04 v 1 16
 ;
 ;
          Example 1 - Connectivity of the diamond crystal structure.
@@ -123,17 +127,11 @@ save_TOPOL
          Ca1 Ca 6 0.00000 0.00000 0.00000 1.0000
 
          loop_
-         _topol_node.id
-         _topol_node.label
-         _topol_node.chemical_formula_sum
-         _topol_node.fract_x
-         _topol_node.fract_y
-         _topol_node.fract_z
-         1 ZA1 CO3 0.00000 0.00000 0.25000
-         2 ZB1 Ca 0.00000 0.00000 0.00000
+         _topol_net.id
+         _topol_net.overall_topology_RCSR
+         1 pcu-b
 
          loop_
-         _topol_link.id
          _topol_link.node_id_1
          _topol_link.node_id_2
          _topol_link.symop_1
@@ -142,9 +140,17 @@ save_TOPOL
          _topol_link.translation_2
          _topol_link.distance
          _topol_link.multiplicity
-         1 1 2 1 [0 0 0] 20 [-1 -1 0] 3.2122 36
+         1 2 1 [0 0 0] 20 [-1 -1 0] 3.2122 36
 
-         _topol_net.overall_topology_RCSR pcu-b
+         loop_
+         _topol_node.id
+         _topol_node.label
+         _topol_node.chemical_formula_sum
+         _topol_node.fract_x
+         _topol_node.fract_y
+         _topol_node.fract_z
+         1 ZA1 CO3 0.00000 0.00000 0.25000
+         2 ZB1 Ca 0.00000 0.00000 0.00000
 ;
 ;
          Example 2 - Connectivity of an underlying net of the calcite
@@ -177,9 +183,9 @@ save_TOPOL
          Cu1 Cu 4 0.00000 0.00000 0.00000 1.0000
 
          loop_
-         _topol_node.id
-         _topol_node.atom_label
-         1 O1
+         _topol_net.id
+         _topol_net.overall_topology_RCSR
+         1 dia
 
          loop_
          _topol_link.id
@@ -193,11 +199,15 @@ save_TOPOL
          1 1 1 1 [0 0 0] 13 [0 0 0] 4
 
          loop_
+         _topol_node.id
+         _topol_node.atom_label
+         1 O1
+
+         loop_
          _topol_atom.link_id
          _topol_atom.atom_label
-         1 Cu1
-
-         _topol_net.overall_topology_RCSR dia
+         _topol_atom.element_symbol
+         1 Cu1 Cu
 ;
 ;
          Example 3 - Connectivity of an underlying net of the cuprite (Cu2O)
@@ -231,34 +241,12 @@ save_TOPOL
          Co1 Co 1 0.50000 0.50000 0.50000 1.0000
 
          loop_
-         _topol_net_id
+         _topol_net.id
+         _topol_net.label
          _topol_net.special_details
          _topol_net.overall_topology_TOPOS
-         Net_1 'Atomic net' 'Unknown'
-         Net_2 'Underlying net with carbonyl ligands as nodes' '2,4T3'
-
-         loop_
-         _topol_node.id
-         _topol_node.label
-         _topol_node.net_id
-         _topol_node.chemical_formula_sum
-         _topol_node.atom_label
-         _topol_node.fract_x
-         _topol_node.fract_y
-         _topol_node.fract_z
-         1 Li1 Net_1 . Li1 . . .
-         2 C1 Net_1 . C1 . . .
-         3 O1 Net_1 . O1 . . .
-         4 Co1 Net_1 . Co1 . . .
-         5 ZA1 Net_2 Li . 0.00000 0.00000 0.00000
-         6 ZB1 Net_2 CO . 0.25036 0.25036 0.25036
-         7 ZC1 Net_2 Co . 0.50000 0.50000 0.50000
-
-         loop_
-         _topol_atom.node_id
-         _topol_atom.atom_label
-         6 C1
-         6 O1
+         1 Net_1 'Atomic net' 'Unknown'
+         2 Net_2 'Underlying net with carbonyl ligands as nodes' '2,4T3'
 
          loop_
          _topol_link.id
@@ -271,11 +259,35 @@ save_TOPOL
          _topol_link.translation_2
          _topol_link.type
          _topol_link.multiplicity
-         1 1 3 1.9121 1 [0 0 0] 3 [0 0 0] v 4
+         1 1 3 1.9121 1 [0 0 0] 1 [0 0 0] v 4
          2 2 3 1.1452 1 [0 0 0] 1 [0 0 0] v 4
          3 2 4 1.7422 1 [0 0 0] 1 [0 0 0] v 4
-         4 5 6 2.4032 1 [0 0 0] 3 [0 0 0] v 4
+         4 5 6 2.4032 1 [0 0 0] 1 [0 0 0] v 4
          5 6 7 2.3963 1 [0 0 0] 1 [0 0 0] v 4
+
+         loop_
+         _topol_node.id
+         _topol_node.label
+         _topol_node.net_id
+         _topol_node.chemical_formula_sum
+         _topol_node.atom_label
+         _topol_node.fract_x
+         _topol_node.fract_y
+         _topol_node.fract_z
+         1 Li1 1 . Li1 . . .
+         2 C1 1 . C1 . . .
+         3 O1 1 . O1 . . .
+         4 Co1 1 . Co1 . . .
+         5 ZA1 2 Li . 0.00000 0.00000 0.00000
+         6 ZB1 2 CO . 0.25036 0.25036 0.25036
+         7 ZC1 2 Co . 0.50000 0.50000 0.50000
+
+         loop_
+         _topol_atom.node_id
+         _topol_atom.atom_label
+         _topol_atom.element_symbol
+         6 C1 C
+         6 O1 O
 ;
 ;
          Example 4 - Connectivity of atomic and underlying nets for
@@ -285,8 +297,8 @@ save_TOPOL
          carbonyl (CO) ligand; the nodes are labeled as ZA1, ZC1, and
          ZB1, respectively. The _topol_node_* items include references
          to atom labels for the atoms and coordinates for the nodes.
-         Some fields, which values are not required or should be taken
-         from the ATOM_SITE block, are specified with the '.' symbol.
+         Data values that are not required or are derivable from
+         ATOM_SITE data items, are specified with the '.' symbol.
          Two possible variants are shown: the coordinates of ZA1 are
          specified by a reference to Li1 atom, while the coordinates of
          ZC1 are specified explicitly. Both atomic and underlying nets
@@ -298,7 +310,7 @@ save_TOPOL
          _topol_net.special_details
          _topol_net.overall_topology_TOPOS
          _topol_net.occurrence_total
-         Net_1 'Occurrence data are taken from topcryst.com' dia-a-a 5
+         1 'Occurrence data are taken from topcryst.com' dia-a-a 5
 
          loop_
          _citation_id
@@ -313,11 +325,11 @@ save_TOPOL
          _topol_occurrence.id
          _topol_occurrence.net_id
          _topol_occurrence.citation_id
-         1 Net_1 1
-         2 Net_1 2
-         3 Net_1 3
-         4 Net_1 4
-         5 Net_1 5
+         1 1 1
+         2 1 2
+         3 1 3
+         4 1 4
+         5 1 5
 ;
 ;
          Example 5 - Description of the occurrence of a particular topology
@@ -336,7 +348,7 @@ save_topol.special_details
     _description.text
 ;
     A description of topological information not covered by the
-    existing data names in the topology categories.
+    existing tags in the topology categories.
 ;
     _name.category_id             topol
     _name.object_id               special_details
@@ -357,7 +369,7 @@ save_TOPOL_ATOM
 ;
     The TOPOL_ATOM category provides information on the atoms of the initial
     structure that compose links or nodes of a net. The _topol_atom.atom_label
-    value must match a value in ATOM_SITE.label.
+    value must match a value for _atom_site.label.
 ;
     _name.category_id             TOPOLOGY
     _name.object_id               TOPOL_ATOM
@@ -373,7 +385,7 @@ save_topol_atom.atom_label
 ;
     A pointer to an atom that is associated with a link or a node
     (not including link end-point atoms). It must coincide with a
-    value given for ATOM_SITE.label.
+    value given for _atom_site.label.
 ;
     _name.category_id             topol_atom
     _name.object_id               atom_label
@@ -385,19 +397,21 @@ save_topol_atom.atom_label
 
 save_
 
-save_topol_atom.elemental_symbol
+save_topol_atom.element_symbol
 
-    _definition.id                '_topol_atom.elemental_symbol'
-    _definition.update            2021-08-29
+    _definition.id                '_topol_atom.element_symbol'
+    _definition.update            2021-09-05
     _description.text
 ;
-    The elemental symbol for this atom, written in accordance with
+    The element symbol for this atom, written in accordance with
     the IUPAC systematic nomenclature for periodic elements. This should be
-    a single elemental symbol found on the official IUPAC Periodic Table.
+    a single element symbol found on the official IUPAC Periodic Table.
     For example: 'C', 'H', or 'Co', without isotope or charge.
+    Data items in the ATOM_SITE category that do not correspond to elements
+    of the periodic table should be represented here as '.'.
 ;
     _name.category_id             topol_atom
-    _name.object_id               elemental_symbol
+    _name.object_id               element_symbol
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
