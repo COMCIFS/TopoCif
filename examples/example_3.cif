@@ -1,5 +1,5 @@
 #\#CIF_2.0
-# topoCIF example 3 2021.05.05
+# topoCIF example 3 2021.09.05
 
 data_3-TOPOS_63281_Cu2O
 _database_code_ICSD                 63281
@@ -127,7 +127,9 @@ _topol_link.multiplicity
 loop_
 _topol_atom.link_id
 _topol_atom.atom_label
-1 Cu1
+_topol_atom.element_symbol
+1 Cu1 Cu
+
 
 loop_
 _topol_net.id

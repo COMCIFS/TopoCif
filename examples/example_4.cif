@@ -84,6 +84,23 @@ _topol_net.overall_topology_TOPOS
 2 Net_2 'Underlying net with carbonyl ligands as nodes' '2,4T3'
 
 loop_
+_topol_link.id
+_topol_link.node_id_1
+_topol_link.node_id_2
+_topol_link.distance
+_topol_link.symop_1
+_topol_link.translation_1
+_topol_link.symop_2
+_topol_link.translation_2
+_topol_link.type
+_topol_link.multiplicity
+1 1 3 1.9121 1 [0 0 0] 1 [0 0 0] v 4
+2 2 3 1.1452 1 [0 0 0] 1 [0 0 0] v 4
+3 2 4 1.7422 1 [0 0 0] 1 [0 0 0] v 4
+4 5 6 2.4032 1 [0 0 0] 1 [0 0 0] v 4
+5 6 7 2.3963 1 [0 0 0] 1 [0 0 0] v 4
+
+loop_
 _topol_node.id
 _topol_node.label
 _topol_node.net_id
@@ -107,21 +124,5 @@ _topol_atom.element_symbol
 6 C1 C
 6 O1 O
 
-loop_
-_topol_link.id
-_topol_link.node_id_1
-_topol_link.node_id_2
-_topol_link.distance
-_topol_link.symop_1
-_topol_link.translation_1
-_topol_link.symop_2
-_topol_link.translation_2
-_topol_link.type
-_topol_link.multiplicity
-1 1 3 1.9121 1 [0 0 0] 1 [0 0 0] v 4
-2 2 3 1.1452 1 [0 0 0] 1 [0 0 0] v 4
-3 2 4 1.7422 1 [0 0 0] 1 [0 0 0] v 4
-4 5 6 2.4032 1 [0 0 0] 1 [0 0 0] v 4
-5 6 7 2.3963 1 [0 0 0] 1 [0 0 0] v 4
 
 #End of data_1-TOPOS_FUBYUW_C4CO1O4-,LI1+/Z=2
