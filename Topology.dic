@@ -56,7 +56,45 @@ save_TOPOL
       _description_example.case
       _description_example.detail
 ;
-         TODO
+         loop_
+         _space_group_symop.id
+         _space_group_symop.operation_xyz
+         1 x,y,z
+         2 1/4-x,1/4-y,z
+         # Other symmetry elements skipped
+         13 -y,-x,-z
+         # Other symmetry elements skipped
+         192 3/4-z,1/2+y,1/4-x
+
+         loop_
+         _atom_site.label
+         _atom_site.type_symbol
+         _atom_site.symmetry_multiplicity
+         _atom_site.fract_x
+         _atom_site.fract_y
+         _atom_site.fract_z
+         _atom_site.occupancy
+         C1 C 8 0.12500 0.12500 0.12500 1.0000
+
+         loop_
+         _topol_net.id
+         _topol_net.overall_topology_RCSR
+         1 dia
+
+         loop_
+         _topol_link.id
+         _topol_link.atom_label_1
+         _topol_link.atom_label_2
+         _topol_link.symop_1
+         _topol_link.translation_1
+         _topol_link.symop_2
+         _topol_link.translation_2
+         _topol_link.distance
+         _topol_link.Voronoi_solidangle
+         _topol_link.type
+         _topol_link.order
+         _topol_link.multiplicity
+         1 C1 C1 1 [0 0 0] 13 [0 0 0] 1.5446 22.04 v 1 16
 ;
 ;
          Example 1 - Connectivity of the diamond crystal structure.
@@ -66,7 +104,53 @@ save_TOPOL
          sections are needed.
 ;
 ;
-         TODO
+         loop_
+         _space_group_symop.id
+         _space_group_symop.operation_xyz
+         1 x,y,z
+         2 -y,x-y,z
+         # Other symmetry elements elided
+         20 1/3+x-y,2/3-y,1/6-z
+         # Other symmetry elements elided
+         36 1/3-y,2/3-x,1/6+z
+
+         loop_
+         _atom_site.label
+         _atom_site.type_symbol
+         _atom_site.site_symmetry_multiplicity
+         _atom_site.fract_x
+         _atom_site.fract_y
+         _atom_site.fract_z
+         _atom_site.occupancy
+         C1 C 6 0.00000 0.00000 0.25000 1.0000
+         O1 O 18 0.25930 0.00000 0.25000 1.0000
+         Ca1 Ca 6 0.00000 0.00000 0.00000 1.0000
+
+         loop_
+         _topol_net.id
+         _topol_net.overall_topology_RCSR
+         1 pcu-b
+
+         loop_
+         _topol_link.node_id_1
+         _topol_link.node_id_2
+         _topol_link.symop_1
+         _topol_link.translation_1
+         _topol_link.symop_2
+         _topol_link.translation_2
+         _topol_link.distance
+         _topol_link.multiplicity
+         1 2 1 [0 0 0] 20 [-1 -1 0] 3.2122 36
+
+         loop_
+         _topol_node.id
+         _topol_node.label
+         _topol_node.chemical_formula_sum
+         _topol_node.fract_x
+         _topol_node.fract_y
+         _topol_node.fract_z
+         1 ZA1 CO3 0.00000 0.00000 0.25000
+         2 ZB1 Ca 0.00000 0.00000 0.00000
 ;
 ;
          Example 2 - Connectivity of an underlying net of the calcite
@@ -77,7 +161,53 @@ save_TOPOL
          is described, thus, no special TOPOL_NET section is needed.
 ;
 ;
-         TODO
+         loop_
+         _space_group_symop.id
+         _space_group_symop.operation_xyz
+         1 x,y,z
+         2 1/2-x,1/2-y,z
+         # Symmetry elements elided
+         13 -y,-x,-z
+         # Symmetry elements elided
+         48 1/2-z,y,1/2-x
+
+         loop_
+         _atom_site.label
+         _atom_site.type_symbol
+         _atom_site.site_symmetry_multiplicity
+         _atom_site.fract_x
+         _atom_site.fract_y
+         _atom_site.fract_z
+         _atom_site.occupancy
+         O1 O 2 0.25000 0.25000 0.25000 1.0000
+         Cu1 Cu 4 0.00000 0.00000 0.00000 1.0000
+
+         loop_
+         _topol_net.id
+         _topol_net.overall_topology_RCSR
+         1 dia
+
+         loop_
+         _topol_link.id
+         _topol_link.node_id_1
+         _topol_link.node_id_2
+         _topol_link.symop_1
+         _topol_link.translation_1
+         _topol_link.symop_2
+         _topol_link.translation_2
+         _topol_link.multiplicity
+         1 1 1 1 [0 0 0] 13 [0 0 0] 4
+
+         loop_
+         _topol_node.id 
+         _topol_node.atom_label
+         1 O1         
+
+         loop_
+         _topol_atom.link_id
+         _topol_atom.atom_label
+         _topol_atom.element_symbol
+         1 Cu1 Cu
 ;
 ;
          Example 3 - Connectivity of an underlying net of the cuprite (Cu2O)
@@ -88,7 +218,76 @@ save_TOPOL
          needed.
 ;
 ;
-         TODO
+         loop_
+         _space_group_symop.id
+         _space_group_symop.operation_xyz
+         1 x,y,z
+         2 -x,-y,z
+         3 x,-y,-z
+         # Symmetry elements elided
+         24 -z,y,-x
+
+         loop_
+         _atom_site.label
+         _atom_site.type_symbol
+         _atom_site.site_symmetry_multiplicity
+         _atom_site.fract_x
+         _atom_site.fract_y
+         _atom_site.fract_z
+         _atom_site.occupancy
+         Li1 Li 1 0.00000 0.00000 0.00000 1.0000
+         C1 C 4 0.31850 0.31850 0.31850 1.0000
+         O1 O 4 0.19920 0.19920 0.19920 1.0000
+         Co1 Co 1 0.50000 0.50000 0.50000 1.0000
+
+         loop_
+         _topol_net.id
+         _topol_net.label
+         _topol_net.special_details
+         _topol_net.overall_topology_TOPOS
+         1 Net_1 'Atomic net' 'Unknown'
+         2 Net_2 'Underlying net with carbonyl ligands as nodes' '2,4T3'
+         
+         loop_
+         _topol_link.id
+         _topol_link.node_id_1
+         _topol_link.node_id_2
+         _topol_link.distance
+         _topol_link.symop_1
+         _topol_link.translation_1
+         _topol_link.symop_2
+         _topol_link.translation_2
+         _topol_link.type
+         _topol_link.multiplicity
+         1 1 3 1.9121 1 [0 0 0] 1 [0 0 0] v 4
+         2 2 3 1.1452 1 [0 0 0] 1 [0 0 0] v 4
+         3 2 4 1.7422 1 [0 0 0] 1 [0 0 0] v 4
+         4 5 6 2.4032 1 [0 0 0] 1 [0 0 0] v 4
+         5 6 7 2.3963 1 [0 0 0] 1 [0 0 0] v 4
+         
+         loop_
+         _topol_node.id
+         _topol_node.label
+         _topol_node.net_id
+         _topol_node.chemical_formula_sum
+         _topol_node.atom_label
+         _topol_node.fract_x
+         _topol_node.fract_y
+         _topol_node.fract_z
+         1 Li1 1 . Li1 . . .
+         2 C1 1 . C1 . . .
+         3 O1 1 . O1 . . .
+         4 Co1 1 . Co1 . . .
+         5 ZA1 2 Li . 0.00000 0.00000 0.00000
+         6 ZB1 2 CO . 0.25036 0.25036 0.25036
+         7 ZC1 2 Co . 0.50000 0.50000 0.50000
+         
+         loop_
+         _topol_atom.node_id
+         _topol_atom.atom_label
+         _topol_atom.element_symbol
+         6 C1 C
+         6 O1 O
 ;
 ;
          Example 4 - Connectivity of atomic and underlying nets for
@@ -2222,7 +2421,7 @@ save_
 ;
          0.9.4                    2021-09-05
 ;
-       Added TOPOL_ATOM subcategory; _topol_link.node_id_1,
+       Added TOPOL_ATOM subcategory, _topol_link.node_id_1,
        _topol_link.node_id_2, _topol_link.structural_formula_InChI,
        _topol_link.structural_formula_SMILES, and _topol_node.id items
        Removed TOPOL_EDGE subcategory
