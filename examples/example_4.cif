@@ -103,8 +103,9 @@ _topol_node.fract_z
 loop_
 _topol_atom.node_id
 _topol_atom.atom_label
-6 C1
-6 O1
+_topol_atom.element_symbol
+6 C1 C
+6 O1 O
 
 loop_
 _topol_link.id
