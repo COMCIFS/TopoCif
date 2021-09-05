@@ -241,6 +241,12 @@ save_TOPOL
          Co1 Co 1 0.50000 0.50000 0.50000 1.0000
 
          loop_
+         _atom_type_symbol
+         _atom_type_oxidation_number
+         Co 3
+         O -1
+
+         loop_
          _topol_net.id
          _topol_net.label
          _topol_net.special_details
@@ -302,7 +308,7 @@ save_TOPOL
          Two possible variants are shown: the coordinates of ZA1 are
          specified by a reference to Li1 atom, while the coordinates of
          ZC1 are specified explicitly. Both atomic and underlying nets
-         are described in the TOPOL_NET section.
+         are described in the TOPOL_NET category.
 ;
 ;
          loop_
@@ -333,7 +339,7 @@ save_TOPOL
 ;
 ;
          Example 5 - Description of the occurrence of a particular topology
-         specified in the TOPOL_NET section. Here all occurrences refer to
+         specified in the TOPOL_NET category. Here all occurrences refer to
          structural determinations from the CSD. The total occurrence is
          specified in _topol_net.occurrence_total; actually, it includes all
          crystal structures with this topology that are currently known.
@@ -797,6 +803,23 @@ save_topol_link.multiplicity
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+
+save_
+
+save_topol_link.net_id
+
+    _definition.id                '_topol_link.net_id'
+    _description.text
+;
+    The identifier of the net, to which this node belongs.
+;
+    _name.category_id             topol_link
+    _name.object_id               net_id
+    _name.linked_item_id          '_topol_net.id'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
 
 save_
 
@@ -2430,6 +2453,8 @@ save_
        temporarily replaced examples 1-4 with TODO as a reminder to get these
        updated
        changing ATOM_SITE.label to _atom_site.label
-       changed "block" or "section" to "data items"
+       changed "block" or "section" to "data items" or "category"
        changed elemental_symbol to element_symbol
+       added _topol_link.net_id
+       updated examples 2-4 for _chemical_formula_sum  and ATOM_TYPE
 ;

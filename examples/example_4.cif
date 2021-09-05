@@ -76,6 +76,12 @@ O1 O 4 0.19920 0.19920 0.19920 1.0000
 Co1 Co 1 0.50000 0.50000 0.50000 1.0000
 
 loop_
+_atom_type_symbol
+_atom_type_oxidation_number
+Co 3
+O -1
+
+loop_
 _topol_net.id
 _topol_net.label
 _topol_net.special_details

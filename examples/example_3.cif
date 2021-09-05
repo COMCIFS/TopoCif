@@ -91,12 +91,14 @@ _symmetry_equiv_pos_as_xyz
 46 1/2-z,1/2-y,x
 47 x,1/2-z,1/2-y
 48 1/2-z,y,1/2-x
+
 loop_
 _atom_type_symbol
 _atom_type_oxidation_number
-O2- -2
-Cu1+ 1
-ZA0+ 0
+_atom_type_radius_bond
+O2- -2 0.01
+Cu1+ 1 0.01
+
 loop_
 _atom_site.label
 _atom_site.type_symbol
@@ -105,8 +107,8 @@ _atom_site.fract_x
 _atom_site.fract_y
 _atom_site.fract_z
 _atom_site.occupancy
-O1 O 2 0.25000 0.25000 0.25000 1.0000
-Cu1 Cu 4 0.00000 0.00000 0.00000 1.0000
+O1 O2- 2 0.25000 0.25000 0.25000 1.0000
+Cu1 Cu1+ 4 0.00000 0.00000 0.00000 1.0000
 
 loop_
 _topol_net.id
