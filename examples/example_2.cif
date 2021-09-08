@@ -99,21 +99,7 @@ C1 C4+ 6 0.00000 0.00000 0.25000 1.0000
 O1 O2- 18 0.25930 0.00000 0.25000 1.0000
 Ca1 Ca2+ 6 0.00000 0.00000 0.00000 1.0000
 
-loop_
-_topol_net.id
-_topol_net.overall_topology_RCSR
-1 pcu-b
-
-loop_
-_topol_link.node_id_1
-_topol_link.node_id_2
-_topol_link.symop_1
-_topol_link.translation_1
-_topol_link.symop_2
-_topol_link.translation_2
-_topol_link.distance
-_topol_link.multiplicity
-1 2 1 [0 0 0] 20 [-1 -1 0] 3.2122 36
+_topol_net.overall_topology_RCSR pcu-b
 
 loop_
 _topol_node.id
@@ -125,5 +111,16 @@ _topol_node.fract_z
 1 ZA1 CO3 0.00000 0.00000 0.25000
 2 ZB1 Ca 0.00000 0.00000 0.00000
 
-#End of data_15-TOPOS_16710_CaCO3/Calcite
+loop_
+_topol_link.id
+_topol_link.node_id_1
+_topol_link.node_id_2
+_topol_link.symop_1
+_topol_link.translation_1
+_topol_link.symop_2
+_topol_link.translation_2
+_topol_link.distance
+_topol_link.multiplicity
+1 1 2 1 [0 0 0] 20 [-1 -1 0] 3.2122 36
 
+#End of data_15-TOPOS_16710_CaCO3/Calcite

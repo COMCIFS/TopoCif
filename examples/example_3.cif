@@ -110,10 +110,12 @@ _atom_site.occupancy
 O1 O2- 2 0.25000 0.25000 0.25000 1.0000
 Cu1 Cu1+ 4 0.00000 0.00000 0.00000 1.0000
 
+_topol_net.overall_topology_RCSR dia
+
 loop_
-_topol_net.id
-_topol_net.overall_topology_RCSR
-1 dia
+_topol_node.id 
+_topol_node.atom_label
+1 O1
 
 loop_
 _topol_link.id
@@ -127,15 +129,11 @@ _topol_link.multiplicity
 1 1 1 1 [0 0 0] 13 [0 0 0] 4
 
 loop_
-_topol_node.id 
-_topol_node.atom_label
-1 O1
-
-loop_
+_topol_atom.id
 _topol_atom.link_id
 _topol_atom.atom_label
 _topol_atom.element_symbol
-1 Cu1 Cu
+1 1 Cu1 Cu
 
 #End of data_3-TOPOS_63281_Cu2O
 
