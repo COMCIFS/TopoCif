@@ -365,6 +365,7 @@ _topol_atom.translation
 58	C2	9	.	.	.	# C2	C2 #3	x,y,z	
 59	O1	10	.	.	.
 60	Zn1	11	.	.	.
+
 # #End of data_1-TOPOS_SAHYIK_C54H73Cl1N8O21Zn4
 
 
