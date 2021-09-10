@@ -1559,9 +1559,9 @@ save_topol_net.overall_topology_EPINET
 
 save_
 
-save_topol_net.overall_topology_IZA
+save_topol_net.overall_topology_iza
 
-    _definition.id                '_topol_net.overall_topology_IZA'
+    _definition.id                '_topol_net.overall_topology_iza'
     _definition.update            2018-01-30
     _description.text
 ;
@@ -1573,7 +1573,7 @@ save_topol_net.overall_topology_IZA
     http://www.iza-structure.org/databases/
 ;
     _name.category_id             topol_net
-    _name.object_id               overall_topology_IZA
+    _name.object_id               overall_topology_iza
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -1582,9 +1582,9 @@ save_topol_net.overall_topology_IZA
 
 save_
 
-save_topol_net.overall_topology_RCSR
+save_topol_net.overall_topology_rscr
 
-    _definition.id                '_topol_net.overall_topology_RCSR'
+    _definition.id                '_topol_net.overall_topology_rscr'
     _definition.update            2018-01-30
     _description.text
 ;
@@ -1595,7 +1595,7 @@ save_topol_net.overall_topology_RCSR
     (2008). Acc. Chem. Res. 41, 1782-1789.
 ;
     _name.category_id             topol_net
-    _name.object_id               overall_topology_RCSR
+    _name.object_id               overall_topology_rscr
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -1604,9 +1604,9 @@ save_topol_net.overall_topology_RCSR
 
 save_
 
-save_topol_net.overall_topology_SP
+save_topol_net.overall_topology_sp
 
-    _definition.id                '_topol_net.overall_topology_SP'
+    _definition.id                '_topol_net.overall_topology_sp'
     _definition.update            2018-01-30
     _description.text
 ;
@@ -1617,7 +1617,7 @@ save_topol_net.overall_topology_SP
     A62, 152-167.
 ;
     _name.category_id             topol_net
-    _name.object_id               overall_topology_SP
+    _name.object_id               overall_topology_sp
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -1626,9 +1626,9 @@ save_topol_net.overall_topology_SP
 
 save_
 
-save_topol_net.overall_topology_TOPOS
+save_topol_net.overall_topology_topos
 
-    _definition.id                '_topol_net.overall_topology_TOPOS'
+    _definition.id                '_topol_net.overall_topology_topos'
     _definition.update            2018-02-06
     _description.text
 ;
@@ -1645,7 +1645,7 @@ save_topol_net.overall_topology_TOPOS
     16, 1963-1970.
 ;
     _name.category_id             topol_net
-    _name.object_id               overall_topology_TOPOS
+    _name.object_id               overall_topology_topos
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
