@@ -373,17 +373,17 @@ save_TOPOL
          _topol_net.overall_topology_RCSR
          1 Net_1 'Atomic net' 'Unknown'
          2 Net_2
-;
-Underlying net with zinc tetranuclear complex groups as nodes and benzene
-rings as links (cluster representation)
-;
-pcu
+         ;
+         Underlying net with zinc tetranuclear complex groups as nodes and
+         benzene rings as links (cluster representation)
+         ;
+         pcu
          3 Net_3
-;
-Underlying net with zinc, oxygen atoms and benzenedicarboxylato ligands
-as 4-coordinates nodes (standard representation)
-;
-fff
+         ;
+         Underlying net with zinc, oxygen atoms and benzenedicarboxylato
+         ligands as 4-coordinates nodes (standard representation)
+         ;
+         fff
 
          loop_
          _topol_node.id
