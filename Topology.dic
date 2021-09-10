@@ -1582,9 +1582,9 @@ save_topol_net.overall_topology_iza
 
 save_
 
-save_topol_net.overall_topology_rscr
+save_topol_net.overall_topology_RSCR
 
-    _definition.id                '_topol_net.overall_topology_rscr'
+    _definition.id                '_topol_net.overall_topology_RSCR'
     _definition.update            2018-01-30
     _description.text
 ;
@@ -1595,7 +1595,7 @@ save_topol_net.overall_topology_rscr
     (2008). Acc. Chem. Res. 41, 1782-1789.
 ;
     _name.category_id             topol_net
-    _name.object_id               overall_topology_rscr
+    _name.object_id               overall_topology_RSCR
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
