@@ -10,7 +10,7 @@ data_TOPOLOGY_CIF
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.4
-    _dictionary.date              2021-09-05
+    _dictionary.date              2021-09-10
     _dictionary.ddl_conformance   3.13.1
     _description.text
 ;
@@ -61,9 +61,9 @@ save_TOPOL
          _space_group_symop.operation_xyz
          1 x,y,z
          2 1/4-x,1/4-y,z
-         # Other symmetry elements skipped
+         # Symmetry elements skipped
          13 -y,-x,-z
-         # Other symmetry elements skipped
+         # Symmetry elements skipped
          192 3/4-z,1/2+y,1/4-x
 
          loop_
@@ -109,9 +109,10 @@ save_TOPOL
          _space_group_symop.operation_xyz
          1 x,y,z
          2 -y,x-y,z
-         # Other symmetry elements elided
+         3 -x+y,-x,z
+         # Symmetry elements skipped
          20 1/3+x-y,2/3-y,1/6-z
-         # Other symmetry elements elided
+         # Symmetry elements skipped
          36 1/3-y,2/3-x,1/6+z
 
          loop_
@@ -122,14 +123,24 @@ save_TOPOL
          _atom_site.fract_y
          _atom_site.fract_z
          _atom_site.occupancy
-         C1 C 6 0.00000 0.00000 0.25000 1.0000
-         O1 O 18 0.25930 0.00000 0.25000 1.0000
-         Ca1 Ca 6 0.00000 0.00000 0.00000 1.0000
+         C1 C4+ 6 0.00000 0.00000 0.25000 1.0000
+         O1 O2- 18 0.25930 0.00000 0.25000 1.0000
+         Ca1 Ca2+ 6 0.00000 0.00000 0.00000 1.0000
 
          loop_
          _topol_net.id
          _topol_net.overall_topology_RCSR
          1 pcu-b
+
+         loop_
+         _topol_node.id
+         _topol_node.label
+         _topol_node.chemical_formula_sum
+         _topol_node.fract_x
+         _topol_node.fract_y
+         _topol_node.fract_z
+         1 ZA1 CO3 0.00000 0.00000 0.25000
+         2 ZB1 Ca 0.00000 0.00000 0.00000
 
          loop_
          _topol_link.node_id_1
@@ -143,14 +154,16 @@ save_TOPOL
          1 2 1 [0 0 0] 20 [-1 -1 0] 3.2122 36
 
          loop_
-         _topol_node.id
-         _topol_node.label
-         _topol_node.chemical_formula_sum
-         _topol_node.fract_x
-         _topol_node.fract_y
-         _topol_node.fract_z
-         1 ZA1 CO3 0.00000 0.00000 0.25000
-         2 ZB1 Ca 0.00000 0.00000 0.00000
+         _topol_atom.id
+         _topol_atom.node_id
+         _topol_atom.atom_label
+         _topol_atom.symop
+         _topol_atom.translation
+         1 1 C1 1 [0 0 0]
+         2 1 O1 1 [0 0 0]
+         3 1 O1 2 [0 0 0]
+         4 1 O1 3 [0 0 0]
+         5 2 Ca1 1 [0 0 0]
 ;
 ;
          Example 2 - Connectivity of an underlying net of the calcite
@@ -166,9 +179,9 @@ save_TOPOL
          _space_group_symop.operation_xyz
          1 x,y,z
          2 1/2-x,1/2-y,z
-         # Symmetry elements elided
+         # Symmetry elements skipped
          13 -y,-x,-z
-         # Symmetry elements elided
+         # Symmetry elements skipped
          48 1/2-z,y,1/2-x
 
          loop_
@@ -179,13 +192,19 @@ save_TOPOL
          _atom_site.fract_y
          _atom_site.fract_z
          _atom_site.occupancy
-         O1 O 2 0.25000 0.25000 0.25000 1.0000
-         Cu1 Cu 4 0.00000 0.00000 0.00000 1.0000
+         O1 O2- 2 0.25000 0.25000 0.25000 1.0000
+         Cu1 Cu1+ 4 0.00000 0.00000 0.00000 1.0000
 
          loop_
          _topol_net.id
          _topol_net.overall_topology_RCSR
-         1 dia
+         _topol_net.z_number
+         1 dia 2
+
+         loop_
+         _topol_node.id
+         _topol_node.atom_label
+         1 O1
 
          loop_
          _topol_link.id
@@ -197,11 +216,6 @@ save_TOPOL
          _topol_link.translation_2
          _topol_link.multiplicity
          1 1 1 1 [0 0 0] 13 [0 0 0] 4
-
-         loop_
-         _topol_node.id
-         _topol_node.atom_label
-         1 O1
 
          loop_
          _topol_atom.link_id
@@ -224,7 +238,7 @@ save_TOPOL
          1 x,y,z
          2 -x,-y,z
          3 x,-y,-z
-         # Symmetry elements elided
+         # Symmetry elements skipped
          24 -z,y,-x
 
          loop_
@@ -241,35 +255,13 @@ save_TOPOL
          Co1 Co 1 0.50000 0.50000 0.50000 1.0000
 
          loop_
-         _atom_type_symbol
-         _atom_type_oxidation_number
-         Co 3
-         O -1
-
-         loop_
          _topol_net.id
          _topol_net.label
          _topol_net.special_details
          _topol_net.overall_topology_TOPOS
-         1 Net_1 'Atomic net' 'Unknown'
-         2 Net_2 'Underlying net with carbonyl ligands as nodes' '2,4T3'
-
-         loop_
-         _topol_link.id
-         _topol_link.node_id_1
-         _topol_link.node_id_2
-         _topol_link.distance
-         _topol_link.symop_1
-         _topol_link.translation_1
-         _topol_link.symop_2
-         _topol_link.translation_2
-         _topol_link.type
-         _topol_link.multiplicity
-         1 1 3 1.9121 1 [0 0 0] 1 [0 0 0] v 4
-         2 2 3 1.1452 1 [0 0 0] 1 [0 0 0] v 4
-         3 2 4 1.7422 1 [0 0 0] 1 [0 0 0] v 4
-         4 5 6 2.4032 1 [0 0 0] 1 [0 0 0] v 4
-         5 6 7 2.3963 1 [0 0 0] 1 [0 0 0] v 4
+         _topol_net.z_number
+         1 Net_1 'Atomic net' 'Unknown' 2
+         2 Net_2 'Underlying net with carbonyl ligands as nodes' '2,4T3' 2
 
          loop_
          _topol_node.id
@@ -287,6 +279,23 @@ save_TOPOL
          5 ZA1 2 Li . 0.00000 0.00000 0.00000
          6 ZB1 2 CO . 0.25036 0.25036 0.25036
          7 ZC1 2 Co . 0.50000 0.50000 0.50000
+
+         loop_
+         _topol_link.id
+         _topol_link.node_id_1
+         _topol_link.node_id_2
+         _topol_link.distance
+         _topol_link.symop_1
+         _topol_link.translation_1
+         _topol_link.symop_2
+         _topol_link.translation_2
+         _topol_link.type
+         _topol_link.multiplicity
+         1 1 3 1.9121 1 [0 0 0] 1 [0 0 0] v 4
+         2 2 3 1.1452 1 [0 0 0] 1 [0 0 0] v 4
+         3 2 4 1.7422 1 [0 0 0] 1 [0 0 0] v 4
+         4 5 6 2.4032 1 [0 0 0] 1 [0 0 0] v 4
+         5 6 7 2.3963 1 [0 0 0] 1 [0 0 0] v 4
 
          loop_
          _topol_atom.node_id
@@ -312,9 +321,180 @@ save_TOPOL
 ;
 ;
          loop_
+         _symmetry_equiv_pos_site_id
+         _symmetry_equiv_pos_as_xyz
+         1 x,y,z
+         # Symmetry elements skipped
+         5 z,x,y
+         6 y,z,x
+         # Symmetry elements skipped
+         14 y,x,-z
+         # Symmetry elements skipped
+         26 x,y,-z
+         # Symmetry elements skipped
+         37 y,x,z
+         # Symmetry elements skipped
+         41 x,z,y
+         42 z,y,x
+         # Symmetry elements skipped
+         55 x,1/2-y,1/2-z
+         # Symmetry elements skipped
+         59 1/2-x,y,1/2-z
+         # Symmetry elements skipped
+         69 1/2-z,1/2-x,y
+         # Symmetry elements skipped
+         78 1/2-y,1/2-z,x
+         # Symmetry elements skipped
+         80 1/2-z,x,1/2-y
+         # Symmetry elements skipped
+         82 y,1/2-z,1/2-x
+         # Symmetry elements skipped
+         192 1/2-z,1/2+y,-x
+
+         loop_
+         _atom_site.label
+         _atom_site.type_symbol
+         _atom_site.symmetry_multiplicity
+         _atom_site.fract_x
+         _atom_site.fract_y
+         _atom_site.fract_z
+         H1 H 96 0.30590 0.19410 0.04520
+         C1 C 48 0.25000 0.25000 0.11050
+         C2 C 96 0.28310 0.21690 0.02630
+         C3 C 48 0.25000 0.25000 0.05380
+         O1 O 8 0.25000 0.25000 0.25000
+         O2 O 96 0.28180 0.21820 0.13390
+         Zn1 Zn 32 0.29350 0.20650 0.20650
+
+         loop_
+         _topol_net.id
+         _topol_net.label
+         _topol_net.special_details
+         _topol_net.overall_topology_RCSR
+         1 Net_1 'Atomic net' 'Unknown'
+         2 Net_2 'Underlying net with zinc tetranuclear complex groups as nodes and benzene rings as links (cluster representation)' 'pcu'
+         3 Net_3 'Underlying net with zinc, oxygen atoms and benzenedicarboxylato ligands as 4-coordinates nodes (standard representation)' 'fff'
+
+         loop_
+         _topol_node.id
+         _topol_node.net_id
+         _topol_node.chemical_formula_sum
+         1  1  H1
+         2  1  C
+         3  1  C
+         4  1  C
+         5  1  O
+         6  1  O
+         7  1  Zn
+         8  2  C6O13Zn4
+         9  3  C8H4O4
+         10 3  O
+         11 3  Zn
+
+         loop_
+         _topol_link.id
+         _topol_link.net_id
+         _topol_link.node_id_1
+         _topol_link.node_id_2
+         _topol_link.symop_2
+         _topol_link.translation_2
+         _topol_link.distance
+         _topol_link.type
+         _topol_link.multiplicity
+         _topol_link.chemical_formula_sum
+         1 1  1  3  .  .  0.9594 v 96  .  
+         2 1  2  6  37  .  1.3013 v 96  .
+         3 1  2  4  .  .  1.4554 v 48  .
+         4 1  3  3  26  .  1.3502 v 48  .
+         5 1  3  4  .  .  1.3936 v 96  .
+         6 1  5  7  .  .  1.9340 v 32  .
+         7 1  6  7  .  .  1.9114 v 96  .
+         8 2  8  .  26  .  12.8345 v 24  C6H4
+         9 3  9 11  5  .  5.5309 v 96 .
+         10 3 10 11 .  .  1.9340 v 32 .
+
+         loop_
+         _topol_atom.id
+         _topol_atom.atom_label
+         _topol_atom.node_id
+         _topol_atom.link_id
+         _topol_atom.symop
+         _topol_atom.translation
+         1	H1	1	.	.	.
+         2	C1	2	.	.	.
+         3	C2	3	.	.	.
+         4	C3	4	.	.	.
+         5	O1	5	.	.	.
+         6	O2	6	.	.	.
+         7	Zn1	7	.	.	.
+         10	C1	8	.	.	.	
+         11	C1	8	.	55 	.	
+         12	O2	8	.	55 	.	
+         13	O2	8	.	80 	.	
+         14	O2	8	.	6 	.	
+         15	O2	8	.	59 	.	
+         16	O2	8	.	42 	.	
+         17	O2	8	.	78 	.	
+         18	C1	8	.	78 	.	
+         19	C1	8	.	5 	.	
+         20	Zn1	8	.	6 	.	
+         21	Zn1	8	.	55 	.	
+         22	C1	8	.	69 	.	
+         23	C1	8	.	6 	.	
+         24	O2	8	.	41 	.	
+         25	O2	8	.	69 	.	
+         26	O1	8	.	.	.	
+         27	O2	8	.	5 	.	
+         28	O2	8	.	82 	.	
+         29	Zn1	8	.	5 	.	
+         30	Zn1	8	.	.	.	
+         31	O2	8	.	.	.	
+         32	O2	8	.	37 	.	
+         33	H1	.	8	.	.	
+         34	H1	.	8	14 	.	
+         35	H1	.	8	37 	.	
+         36	C2	.	8	14 	.	
+         37	C3	.	8	14 	.	
+         38	H1	.	8	26 	.	
+         39	C2	.	8	37 	.	
+         40	C3	.	8	.	.	
+         41	C2	.	8	26 	.	
+         42	C2	.	8	.	.	
+         43	H1	9	.	.	.	
+         44	H1	9	.	14 	.	
+         45	O2	9	.	14 	.	
+         46	O2	9	.	26 	.	
+         47	H1	9	.	37 	.	
+         48	O2	9	.	.	.	
+         49	O2	9	.	37 	.	
+         50	C1	9	.	14 	.	
+         51	C2	9	.	14 	.	
+         52	C3	9	.	14 	.	
+         53	H1	9	.	26 	.	
+         54	C1	9	.	.	.	
+         55	C2	9	.	37 	.	
+         56	C3	9	.	.	.	
+         57	C2	9	.	26 	.	
+         58	C2	9	.	.	.	
+         59	O1	10	.	.	.
+         60	Zn1	11	.	.	. 
+;
+;
+         Example 5 - Description of three nets in the crystal structure
+         of metal-organic framework MOF-5. The first net (Net_1) corresponds to
+         the initial frameworks; the other two nets correspond to underlying nets
+         for two possible representatins of the structure: as zinc tetranuclear 
+         complex groups connected by benzene rings (Net_2) or as interconnected 
+         zinc, oxygen atoms and benzenedicarboxylato ligands. The TOPOL_NODE block
+         contains nodes of all three nets, and the TOPOL_LINK block containes links
+         between them. The TOPOL_ATOM block describes atoms of the initial framework 
+         belonging to different nodes and links of these three nets.
+;
+;
+         loop_
          _topol_net_id
          _topol_net.special_details
-         _topol_net.overall_topology_TOPOS
+         _topol_net.overall_topology_RCSR
          _topol_net.occurrence_total
          1 'Occurrence data are taken from topcryst.com' dia-a-a 5
 
@@ -338,7 +518,7 @@ save_TOPOL
          5 1 5
 ;
 ;
-         Example 5 - Description of the occurrence of a particular topology
+         Example 6 - Description of the occurrence of a particular topology
          specified in the TOPOL_NET category. Here all occurrences refer to
          structural determinations from the CSD. The total occurrence is
          specified in _topol_net.occurrence_total; actually, it includes all
@@ -659,6 +839,7 @@ save_
 save_topol_link.atom_label_1
 
     _definition.id                '_topol_link.atom_label_1'
+    _definition.update            2021-09-10
     _description.text
 ;
     The atom label corresponding to the first node and matching a value in
@@ -680,6 +861,7 @@ save_
 save_topol_link.atom_label_2
 
     _definition.id                '_topol_link.atom_label_2'
+    _definition.update            2021-09-10
     _description.text
 ;
     The atom label corresponding to the second node and matching a value in
@@ -809,6 +991,7 @@ save_
 save_topol_link.net_id
 
     _definition.id                '_topol_link.net_id'
+    _definition.update            2021-09-10
     _description.text
 ;
     The identifier of the net, to which this node belongs.
@@ -1346,7 +1529,7 @@ save_topol_net.overall_topology
 
 save_
 
-save_topol_net.overall_topology_epinet
+save_topol_net.overall_topology_EPINET
 
     _definition.id                '_topol_net.overall_topology_EPINET'
     _definition.update            2018-01-30
@@ -1365,7 +1548,30 @@ save_topol_net.overall_topology_epinet
 
 save_
 
-save_topol_net.overall_topology_rcsr
+save_topol_net.overall_topology_IZA
+
+    _definition.id                '_topol_net.overall_topology_IZA'
+    _definition.update            2018-01-30
+    _description.text
+;
+    The three-letters symbol for a Zeolite Framework Types that has
+    been approved by the Structure Commission of the International 
+    Zeolite Association (IZA-SC).    
+
+    Reference: Database for Zeolite Structures
+    http://www.iza-structure.org/databases/
+;
+    _name.category_id             topol_net
+    _name.object_id               overall_topology_IZA
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
+    _description_example.case     FAU
+
+save_
+
+save_topol_net.overall_topology_RCSR
 
     _definition.id                '_topol_net.overall_topology_RCSR'
     _definition.update            2018-01-30
@@ -1387,7 +1593,7 @@ save_topol_net.overall_topology_rcsr
 
 save_
 
-save_topol_net.overall_topology_sp
+save_topol_net.overall_topology_SP
 
     _definition.id                '_topol_net.overall_topology_SP'
     _definition.update            2018-01-30
@@ -1409,7 +1615,7 @@ save_topol_net.overall_topology_sp
 
 save_
 
-save_topol_net.overall_topology_topos
+save_topol_net.overall_topology_TOPOS
 
     _definition.id                '_topol_net.overall_topology_TOPOS'
     _definition.update            2018-02-06
@@ -1439,8 +1645,6 @@ save_topol_net.overall_topology_topos
     The third non-isomorphic three-periodic trinodal net with two 3-coordinated
     and one 4-coordinated independent nodes.
 ;
-
-save_
 
 save_topol_net.period
 
@@ -1578,6 +1782,7 @@ save_
 save_topol_node.atom_label
 
     _definition.id                '_topol_node.atom_label'
+    _definition.update            2021-09-04
     _description.text
 ;
     The atom label corresponding to this node and matching a value in
@@ -1839,6 +2044,7 @@ save_
 save_topol_node.net_id
 
     _definition.id                '_topol_node.net_id'
+    _definition.update            2021-09-10
     _description.text
 ;
     The identifier of the net, to which this node belongs.
@@ -2058,6 +2264,7 @@ save_
 save_topol_occurrence.net_id
 
     _definition.id                '_topol_occurrence.net_id'
+    _definition.update            2021-09-10
     _description.text
 ;
     The identifier of the net, which topology occurrence is described.
@@ -2097,17 +2304,23 @@ save_TOPOL_TILING
 ;
     _name.category_id             TOPOLOGY
     _name.object_id               TOPOL_TILING
+    _category_key.name            '_topol_tiling.id'
 
 save_
 
-save_topol_tiling.dsize
+save_topol_tiling.Dsize
 
     _definition.id                '_topol_tiling.Dsize'
     _definition.update            2018-01-30
     _description.text
 ;
     The number of distinct (not symmetry-related) chambers in the
-    tiling.
+    tiling as expressed by the Delaney Dress symbol or just D-symbol,
+    as a measure of the complexity of the tiling (D-size)
+
+    Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
+    Cryst. Eng. Comm. 12, 44-48.
+ 
 ;
     _name.category_id             topol_tiling
     _name.object_id               Dsize
@@ -2167,6 +2380,41 @@ save_topol_tiling.faces
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+
+save_
+
+save_topol_tiling.id
+
+    _definition.id                '_topol_tiling.id'
+    _definition.update            2021-08-10
+    _description.text
+;
+    The identifier of the tiling.
+;
+    _name.category_id             topol_tiling
+    _name.object_id               id
+    _type.purpose                 Key
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
+save_topol_tiling.net_id
+
+    _definition.id                '_topol_tiling.net_id'
+    _definition.update            2021-09-10
+    _description.text
+;
+    The identifier of the net, which carries this tiling.
+;
+    _name.category_id             topol_tiling
+    _name.object_id               net_id
+    _name.linked_item_id          '_topol_net.id'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
 
 save_
 
@@ -2386,6 +2634,24 @@ save_topol_tiling_tile.id
 
 save_
 
+save_topol_tiling_tile.tiling_id
+
+    _definition.id                '_topol_tiling_tile.tiling_id'
+    _definition.update            2021-09-10
+    _description.text
+;
+    The identifier of the tiling, to which this tile belongs.
+;
+    _name.category_id             topol_tiling_tile
+    _name.object_id               tiling_id
+    _name.linked_item_id          '_topol_tiling.id'
+    _type.purpose                 Link
+    _type.source                  Related
+    _type.container               Single
+    _type.contents                Code
+
+save_
+
     loop_
       _dictionary_audit.version
       _dictionary_audit.date
@@ -2425,7 +2691,7 @@ save_
        _topol_link.site_symmetry_translation_2, and
        _topol_node.coordination_sequence (B. Hanson and V. Blatov)
 ;
-         0.9.4                    2021-09-05
+         0.9.4                    2021-09-10
 ;
        Added TOPOL_ATOM subcategory, _topol_link.node_id_1,
        _topol_link.node_id_2, _topol_link.structural_formula_InChI,
@@ -2457,4 +2723,6 @@ save_
        changed elemental_symbol to element_symbol
        added _topol_link.net_id
        updated examples 2-4 for _chemical_formula_sum  and ATOM_TYPE
+       
+       [details] (V. Blatov)
 ;
