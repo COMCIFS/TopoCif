@@ -1604,9 +1604,9 @@ save_topol_net.overall_topology_rscr
 
 save_
 
-save_topol_net.overall_topology_sp
+save_topol_net.overall_topology_SP
 
-    _definition.id                '_topol_net.overall_topology_sp'
+    _definition.id                '_topol_net.overall_topology_SP'
     _definition.update            2018-01-30
     _description.text
 ;
@@ -1617,7 +1617,7 @@ save_topol_net.overall_topology_sp
     A62, 152-167.
 ;
     _name.category_id             topol_net
-    _name.object_id               overall_topology_sp
+    _name.object_id               overall_topology_SP
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -1626,9 +1626,9 @@ save_topol_net.overall_topology_sp
 
 save_
 
-save_topol_net.overall_topology_topos
+save_topol_net.overall_topology_TOPOS
 
-    _definition.id                '_topol_net.overall_topology_topos'
+    _definition.id                '_topol_net.overall_topology_TOPOS'
     _definition.update            2018-02-06
     _description.text
 ;
@@ -1645,7 +1645,7 @@ save_topol_net.overall_topology_topos
     16, 1963-1970.
 ;
     _name.category_id             topol_net
-    _name.object_id               overall_topology_topos
+    _name.object_id               overall_topology_TOPOS
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
