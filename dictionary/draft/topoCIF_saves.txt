@@ -1,10 +1,9 @@
-TOPOLOGY
 TOPOL
 topol.special_details
 
 TOPOL_ATOM
 topol_atom.atom_label
-topol_atom.elemental_symbol
+topol_atom.element_symbol
 topol_atom.id
 topol_atom.link_id
 topol_atom.node_id
@@ -24,7 +23,9 @@ topol_link.chemical_formula_moiety
 topol_link.chemical_formula_sum
 topol_link.distance
 topol_link.id
+topol_link.label
 topol_link.multiplicity
+topol_link.net_id
 topol_link.node_id_1
 topol_link.node_id_2
 topol_link.order
@@ -47,16 +48,19 @@ topol_link.voronoi_solidangle
 TOPOL_NET
 topol_net.genus
 topol_net.id
+topol_net.label
 topol_net.occurrence_total
 topol_net.overall_topology
-topol_net.overall_topology_epinet
-topol_net.overall_topology_rcsr
-topol_net.overall_topology_sp
-topol_net.overall_topology_topos
+topol_net.overall_topology_EPINET
+topol_net.overall_topology_iza
+topol_net.overall_topology_rscr
+topol_net.overall_topology_SP
+topol_net.overall_topology_TOPOS
 topol_net.period
 topol_net.special_details
 topol_net.td10
 topol_net.total_point_symbol
+topol_net.z_number
 
 TOPOL_NODE
 topol_node.atom_label
@@ -85,17 +89,23 @@ topol_occurrence.id
 topol_occurrence.net_id
 
 TOPOL_TILING
-topol_tiling.dsize
+topol_tiling.Dsize
 topol_tiling.dual
 topol_tiling.edges
 topol_tiling.faces
+topol_tiling.id
+topol_tiling.net_id
 topol_tiling.signature
 topol_tiling.tiles
 topol_tiling.vertices
+
 TOPOL_TILING_FACES
 topol_tiling_faces.count
 topol_tiling_faces.size
 topol_tiling_faces.tile_id
+
 TOPOL_TILING_TILE
 topol_tiling_tile.count
 topol_tiling_tile.id
+topol_tiling_tile.tiling_id
+TOPOLOGY

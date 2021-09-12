@@ -2779,4 +2779,7 @@ save_
        added Example 5; renamed old Example 5 to Example 6 (V. Blatov)
 
        switched _topol_*.id to Integer/enum 1: (B. Hanson)
+
+       TODO: adjust _category_key.name to allow for optional id in all
+       TOPOL_* categories with _topol_*.id, as in _CHEMICAL_CONN_BOND
 ;
