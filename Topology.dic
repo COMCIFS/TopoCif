@@ -10,7 +10,7 @@ data_TOPOLOGY_CIF
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.4
-    _dictionary.date              2021-09-11
+    _dictionary.date              2021-09-12
     _dictionary.ddl_conformance   3.13.1
     _description.text
 ;
@@ -629,8 +629,8 @@ save_topol_atom.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Code
-
+    _type.contents                Integer
+    _enumeration.range            1:
 save_
 
 save_topol_atom.link_id
@@ -652,7 +652,8 @@ save_topol_atom.link_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -671,7 +672,8 @@ save_topol_atom.node_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -967,7 +969,7 @@ save_
 save_topol_link.id
 
     _definition.id                '_topol_link.id'
-    _definition.update            2018-01-30
+    _definition.update            2021-09-12
     _description.text
 ;
     The identifier of the link.
@@ -977,7 +979,25 @@ save_topol_link.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:
+
+save_
+
+save_topol_link.label
+
+    _definition.id                '_topol_link.label'
+    _definition.update            2021-09-12
+    _description.text
+;
+    The label of a particular link in an underlying net.
+;
+    _name.category_id             topol_link
+    _name.object_id               label
+    _type.purpose                 Encode
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Text
 
 save_
 
@@ -1002,7 +1022,7 @@ save_
 save_topol_link.net_id
 
     _definition.id                '_topol_link.net_id'
-    _definition.update            2021-09-10
+    _definition.update            2021-09-11
     _description.text
 ;
     The identifier of the net, to which this node belongs.
@@ -1013,7 +1033,8 @@ save_topol_link.net_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -1034,7 +1055,8 @@ save_topol_link.node_id_1
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -1055,7 +1077,8 @@ save_topol_link.node_id_2
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -1482,6 +1505,7 @@ save_topol_net.id
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -2033,7 +2057,8 @@ save_topol_node.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -2068,7 +2093,8 @@ save_topol_node.net_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -2288,7 +2314,8 @@ save_topol_occurrence.net_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -2409,7 +2436,8 @@ save_topol_tiling.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -2427,7 +2455,8 @@ save_topol_tiling.net_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -2589,7 +2618,8 @@ save_topol_tiling_faces.tile_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -2643,7 +2673,8 @@ save_topol_tiling_tile.id
     _type.purpose                 Key
     _type.source                  Assigned
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -2661,7 +2692,8 @@ save_topol_tiling_tile.tiling_id
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -2704,7 +2736,7 @@ save_
        _topol_link.site_symmetry_translation_2, and
        _topol_node.coordination_sequence (B. Hanson and V. Blatov)
 ;
-         0.9.4                    2021-09-11
+         0.9.4                    2021-09-12
 ;
        Added TOPOL_ATOM subcategory, _topol_link.node_id_1,
        _topol_link.node_id_2, _topol_link.structural_formula_InChI,
@@ -2722,8 +2754,7 @@ save_
        Corrected the definitions of the _topol_node.fract_x,
        _topol_node.fract_y and _topol_node.fract_z data items. (A. Vaitkus)
 
-       added _topol_net.label (B. Hanson)
-
+       added _topol_net.label
        changing "dataname" to "tag" as per VOl. G 2.2.3.3.4 and 2.2.2(2)
        changing "field" to "data value" or "value" as per Vol. G 2.2.3.1.5
        and 2.2.3.1.7
@@ -2736,11 +2767,15 @@ save_
        changed elemental_symbol to element_symbol
        added _topol_link.net_id
        updated examples 2-4 for _chemical_formula_sum  and ATOM_TYPE
+       (B. Hanson)
 
        added new tags (V. Blatov)
+       _topol_link.label
        _topol_net.overall_topology_IZA
        _topol_tiling.id
        _topol_tiling.net_id
        _topol_tiling_tile.tiling_id
-       added Example 5; renamed old Example 5 to Example 6
+       added Example 5; renamed old Example 5 to Example 6 (V. Blatov)
+
+       switched _topol_*.id to Integer/enum 1: (B. Hanson)
 ;
