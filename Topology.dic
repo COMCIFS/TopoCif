@@ -1607,10 +1607,10 @@ save_topol_net.overall_topology_iza
 
 save_
 
-save_topol_net.overall_topology_rscr
+save_topol_net.overall_topology_rcsr
 
-    _definition.id                '_topol_net.overall_topology_rscr'
-    _definition.update            2018-01-30
+    _definition.id                '_topol_net.overall_topology_rcsr'
+    _definition.update            2021-09-13
     _description.text
 ;
     The overall topology symbol according to the RCSR nomenclature described
@@ -1620,7 +1620,7 @@ save_topol_net.overall_topology_rscr
     (2008). Acc. Chem. Res. 41, 1782-1789.
 ;
     _name.category_id             topol_net
-    _name.object_id               overall_topology_rscr
+    _name.object_id               overall_topology_rcsr
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -2784,6 +2784,9 @@ save_
        _topol_link.symop_2 to _topol_atom.symop_id, _topol_link.symop_id_1
        and _topol_link.symop_id_2 respectively. Adjusted multiple examples
        and data item definitions to reflect this change.
+
+       Renamed data item _topol_net.overall_topology_rscr to
+       _topol_net.overall_topology_rcsr. (A. Vaitkus)
 
        TODO: adjust _category_key.name to allow for optional id in all
        TOPOL_* categories with _topol_*.id, as in _CHEMICAL_CONN_BOND
