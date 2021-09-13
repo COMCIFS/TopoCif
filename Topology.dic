@@ -2783,7 +2783,7 @@ save_
        Renamed data items _topol_atom.symop, _topol_link.symop_1 and
        _topol_link.symop_2 to _topol_atom.symop_id, _topol_link.symop_id_1
        and _topol_link.symop_id_2 respectively. Adjusted multiple examples
-       and data item definitions to reflect this change. 
+       and data item definitions to reflect this change.
 
        TODO: adjust _category_key.name to allow for optional id in all
        TOPOL_* categories with _topol_*.id, as in _CHEMICAL_CONN_BOND
