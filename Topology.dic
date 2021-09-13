@@ -14,8 +14,8 @@ data_TOPOLOGY_CIF
     _dictionary.ddl_conformance   3.13.1
     _description.text
 ;
-    The Topology CIF dictionary provides tags for describing crystal
-    structure topology. This is a DRAFT version and tags in this
+    The Topology CIF dictionary provides data items for describing crystal
+    structure topology. This is a DRAFT version and data items in this
     dictionary should not be used until final approval by COMCIFS.
 ;
 
@@ -545,7 +545,7 @@ save_topol.special_details
     _description.text
 ;
     A description of topological information not covered by the
-    existing tags in the topology categories.
+    existing data items in the topology categories.
 ;
     _name.category_id             topol
     _name.object_id               special_details
@@ -719,7 +719,7 @@ save_topol_atom.translation
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
     _topol_atom.translation_x,
     _topol_atom.translation_y, and
-    _topol_atom.translation_z tags may be used to
+    _topol_atom.translation_z data items may be used to
     describe separate components of the vector for CIF1 compatibility.
     If this item is omitted or
     assigned to '.' it is assumed to be equal to [0,0,0].
@@ -901,7 +901,8 @@ save_topol_link.chemical_formula_iupac
     _description.text
 ;
     The formula of the residue or ion which corresponds to the link,
-    written in accordance with the rules for the _chemical_formula.iupac tag.
+    written in accordance with the rules for the _chemical_formula.iupac
+    data item.
 ;
     _name.category_id             topol_link
     _name.object_id               chemical_formula_iupac
@@ -919,7 +920,8 @@ save_topol_link.chemical_formula_moiety
     _description.text
 ;
     The formula of the residue or ion which corresponds to the link,
-    written in accordance with the rules for the _chemical_formula.moiety tag.
+    written in accordance with the rules for the _chemical_formula.moiety
+    data item.
 ;
     _name.category_id             topol_link
     _name.object_id               chemical_formula_moiety
@@ -937,7 +939,8 @@ save_topol_link.chemical_formula_sum
     _description.text
 ;
     The formula of the residue or ion which corresponds to the link,
-    written in accordance with the rules of the _chemical_formula.sum tag.
+    written in accordance with the rules of the _chemical_formula.sum
+    data item.
 ;
     _name.category_id             topol_link
     _name.object_id               chemical_formula_sum
@@ -1108,7 +1111,7 @@ save_topol_link.special_details
     _description.text
 ;
     Information about the link that is not expressed using other
-    tags, for example, bond subtypes and explanations
+    data items, for example, bond subtypes and explanations
     of links with _topol_link.type of 'sb'.
 ;
     _name.category_id             topol_link
@@ -1228,7 +1231,7 @@ save_topol_link.translation_1
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
     _topol_link.translation_1_x,
     _topol_link.translation_1_y, and
-    _topol_link.translation_1_z tags may be used to
+    _topol_link.translation_1_z data items may be used to
     describe separate components of the vector.
 ;
     _name.category_id             topol_link
@@ -1317,7 +1320,7 @@ save_topol_link.translation_2
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
     _topol_link.translation_2_x,
     _topol_link.translation_2_y, and
-    _topol_link.translation_2_z tags may be used to
+    _topol_link.translation_2_z data items may be used to
     describe separate components of the vector.
 ;
     _name.category_id             topol_link
@@ -1397,8 +1400,8 @@ save_topol_link.type
     _description.text
 ;
     The chemical bond type associated with the connection between the
-    two sites.  If no bond exists, use an undelimited period character.
-    If the bond type is unknown, use ? or leave out the tag. The
+    two sites. If no bond exists, use an undelimited period character.
+    If the bond type is unknown, use ? or leave out the data item. The
     number of electron pairs participating in the bond can be indicated
     using _topol_link.order.
 ;
@@ -1846,7 +1849,8 @@ save_topol_node.chemical_formula_iupac
     _description.text
 ;
     The formula of the residue or ion which corresponds to the node,
-    written in accordance with the rules for the _chemical_formula.iupac tag.
+    written in accordance with the rules for the _chemical_formula.iupac
+    data item.
 ;
     _name.category_id             topol_node
     _name.object_id               chemical_formula_iupac
@@ -1864,7 +1868,8 @@ save_topol_node.chemical_formula_moiety
     _description.text
 ;
     The formula of the residue or ion which corresponds to the node,
-    written in accordance with the rules for the _chemical_formula.moiety tag.
+    written in accordance with the rules for the _chemical_formula.moiety
+    data item.
 ;
     _name.category_id             topol_node
     _name.object_id               chemical_formula_moiety
@@ -1882,7 +1887,8 @@ save_topol_node.chemical_formula_sum
     _description.text
 ;
     The formula of the residue or ion which corresponds to the node,
-    written in accordance with the rules for the _chemical_formula.sum tag.
+    written in accordance with the rules for the _chemical_formula.sum
+    data item.
 ;
     _name.category_id             topol_node
     _name.object_id               chemical_formula_sum
@@ -1904,8 +1910,8 @@ save_topol_node.coordination_sequence
     node in the net. In other words, the kth entry in the list is the
     number of vertices linked to the node by a path of exactly k
     steps. It is usually listed up to k=10. Alternatively, the
-    _topol_node.coordination_sequence_plain tag can be used to represent
-    the coordination sequence as plain text.
+    _topol_node.coordination_sequence_plain data item can be used to
+    represent the coordination sequence as plain text.
 ;
     _name.category_id             topol_node
     _name.object_id               coordination_sequence
