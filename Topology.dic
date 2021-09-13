@@ -858,9 +858,9 @@ save_topol_link.atom_label_1
 ;
     The atom label corresponding to the first node and matching a value in
     _atom_site.label when the node is associated with exactly one atom.
-    It may be omitted if this node's TOPOL_NODE.id is referred to
-    by TOPOL_ATOM.node_id. If the node is polyatomic, then
-    TOPOL_NODE.atom_label, if present, should be represented by '.'.
+    It may be omitted if this node's _topol_node.id is referred to
+    by _topol_atom.node_id. If the node is polyatomic, then
+    _topol_node.atom_label, if present, should be represented by '.'.
 ;
     _name.category_id             topol_link
     _name.object_id               atom_label_1
@@ -880,9 +880,9 @@ save_topol_link.atom_label_2
 ;
     The atom label corresponding to the second node and matching a value in
     _atom_site.label when the node is associated with exactly one atom.
-    It may be omitted if this node's TOPOL_NODE.id is referred to
-    by TOPOL_ATOM.node_id. If the node is polyatomic, then
-    TOPOL_NODE.atom_label, if present, should be represented by '.'.
+    It may be omitted if this node's _topol_node.id is referred to
+    by _topol_atom.node_id. If the node is polyatomic, then
+    _topol_node.atom_label, if present, should be represented by '.'.
 ;
     _name.category_id             topol_link
     _name.object_id               atom_label_2
@@ -1825,9 +1825,9 @@ save_topol_node.atom_label
 ;
     The atom label corresponding to this node and matching a value in
     _atom_site.label when the node is associated with exactly one atom.
-    It may be omitted if this node's TOPOL_NODE.id is referred to
-    by TOPOL_ATOM.node_id. If the node is polyatomic, then
-    TOPOL_NODE.atom_label, if present, should be represented by '.'.
+    It may be omitted if this node's _topol_node.id is referred to
+    by _topol_atom.node_id. If the node is polyatomic, then
+    _topol_node.atom_label, if present, should be represented by '.'.
 ;
     _name.category_id             topol_node
     _name.object_id               atom_label
