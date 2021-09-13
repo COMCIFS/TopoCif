@@ -2572,7 +2572,7 @@ save_
 save_topol_tiling_faces.count
 
     _definition.id                '_topol_tiling_faces.count'
-    _definition.update            2018-02-13
+    _definition.update            2021-09-13
     _description.text
 ;
     The number of faces of this size in the tile.
@@ -2583,6 +2583,7 @@ save_topol_tiling_faces.count
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            0:
 
 save_
 
@@ -2647,7 +2648,7 @@ save_
 save_topol_tiling_tile.count
 
     _definition.id                '_topol_tiling_tile.count'
-    _definition.update            2018-02-13
+    _definition.update            2021-09-13
     _description.text
 ;
     The number of this kind of tile in the tiling.
@@ -2658,6 +2659,7 @@ save_topol_tiling_tile.count
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            0:
 
 save_
 
@@ -2783,7 +2785,10 @@ save_
        Renamed data items _topol_atom.symop, _topol_link.symop_1 and
        _topol_link.symop_2 to _topol_atom.symop_id, _topol_link.symop_id_1
        and _topol_link.symop_id_2 respectively. Adjusted multiple examples
-       and data item definitions to reflect this change.
+       and data item definitions to reflect this change. (A. Vaitkus)
+
+       Added an enumeration range of 0: to the _topol_tiling_tile.count
+       and _topol_tiling_faces.count data items. (A. Vaitkus)
 
        TODO: adjust _category_key.name to allow for optional id in all
        TOPOL_* categories with _topol_*.id, as in _CHEMICAL_CONN_BOND
