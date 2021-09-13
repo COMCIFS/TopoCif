@@ -283,7 +283,7 @@ _topol_link.id
 _topol_link.net_id
 _topol_link.node_id_1
 _topol_link.node_id_2
-_topol_link.symop_2
+_topol_link.symop_id_2
 _topol_link.translation_2
 _topol_link.distance
 _topol_link.type
@@ -305,7 +305,7 @@ _topol_atom.id
 _topol_atom.atom_label
 _topol_atom.node_id
 _topol_atom.link_id
-_topol_atom.symop
+_topol_atom.symop_id
 _topol_atom.translation
 1	H1	1	.	.	.
 2	C1	2	.	.	.
