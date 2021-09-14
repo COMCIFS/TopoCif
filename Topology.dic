@@ -10,12 +10,12 @@ data_TOPOLOGY_CIF
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.4
-    _dictionary.date              2021-09-13
+    _dictionary.date              2021-09-14
     _dictionary.ddl_conformance   3.13.1
     _description.text
 ;
-    The Topology CIF dictionary provides tags for describing crystal
-    structure topology. This is a DRAFT version and tags in this
+    The Topology CIF dictionary provides data items for describing crystal
+    structure topology. This is a DRAFT version and data items in this
     dictionary should not be used until final approval by COMCIFS.
 ;
 
@@ -541,11 +541,11 @@ save_
 save_topol.special_details
 
     _definition.id                '_topol.special_details'
-    _definition.update            2018-01-30
+    _definition.update            2021-09-14
     _description.text
 ;
     A description of topological information not covered by the
-    existing tags in the topology categories.
+    existing data items in the topology categories.
 ;
     _name.category_id             topol
     _name.object_id               special_details
@@ -706,7 +706,7 @@ save_
 save_topol_atom.translation
 
     _definition.id                '_topol_atom.translation'
-    _definition.update            2021-09-13
+    _definition.update            2021-09-14
     _description.text
 ;
     The lattice translation vector that must be added to the
@@ -719,7 +719,7 @@ save_topol_atom.translation
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
     _topol_atom.translation_x,
     _topol_atom.translation_y, and
-    _topol_atom.translation_z tags may be used to
+    _topol_atom.translation_z data items may be used to
     describe separate components of the vector for CIF1 compatibility.
     If this item is omitted or
     assigned to '.' it is assumed to be equal to [0,0,0].
@@ -853,14 +853,14 @@ save_
 save_topol_link.atom_label_1
 
     _definition.id                '_topol_link.atom_label_1'
-    _definition.update            2021-09-10
+    _definition.update            2021-09-14
     _description.text
 ;
     The atom label corresponding to the first node and matching a value in
     _atom_site.label when the node is associated with exactly one atom.
-    It may be omitted if this node's TOPOL_NODE.id is referred to
-    by TOPOL_ATOM.node_id. If the node is polyatomic, then
-    TOPOL_NODE.atom_label, if present, should be represented by '.'.
+    It may be omitted if this node's _topol_node.id is referred to
+    by _topol_atom.node_id. If the node is polyatomic, then
+    _topol_node.atom_label, if present, should be represented by '.'.
 ;
     _name.category_id             topol_link
     _name.object_id               atom_label_1
@@ -875,14 +875,14 @@ save_
 save_topol_link.atom_label_2
 
     _definition.id                '_topol_link.atom_label_2'
-    _definition.update            2021-09-10
+    _definition.update            2021-09-14
     _description.text
 ;
     The atom label corresponding to the second node and matching a value in
     _atom_site.label when the node is associated with exactly one atom.
-    It may be omitted if this node's TOPOL_NODE.id is referred to
-    by TOPOL_ATOM.node_id. If the node is polyatomic, then
-    TOPOL_NODE.atom_label, if present, should be represented by '.'.
+    It may be omitted if this node's _topol_node.id is referred to
+    by _topol_atom.node_id. If the node is polyatomic, then
+    _topol_node.atom_label, if present, should be represented by '.'.
 ;
     _name.category_id             topol_link
     _name.object_id               atom_label_2
@@ -897,11 +897,12 @@ save_
 save_topol_link.chemical_formula_iupac
 
     _definition.id                '_topol_link.chemical_formula_iupac'
-    _definition.update            2021-08-25
+    _definition.update            2021-09-14
     _description.text
 ;
     The formula of the residue or ion which corresponds to the link,
-    written in accordance with the rules for the _chemical_formula.iupac tag.
+    written in accordance with the rules for the _chemical_formula.iupac
+    data item.
 ;
     _name.category_id             topol_link
     _name.object_id               chemical_formula_iupac
@@ -915,11 +916,12 @@ save_
 save_topol_link.chemical_formula_moiety
 
     _definition.id                '_topol_link.chemical_formula_moiety'
-    _definition.update            2021-08-25
+    _definition.update            2021-09-14
     _description.text
 ;
     The formula of the residue or ion which corresponds to the link,
-    written in accordance with the rules for the _chemical_formula.moiety tag.
+    written in accordance with the rules for the _chemical_formula.moiety
+    data item.
 ;
     _name.category_id             topol_link
     _name.object_id               chemical_formula_moiety
@@ -933,11 +935,12 @@ save_
 save_topol_link.chemical_formula_sum
 
     _definition.id                '_topol_link.chemical_formula_sum'
-    _definition.update            2021-08-25
+    _definition.update            2021-09-14
     _description.text
 ;
     The formula of the residue or ion which corresponds to the link,
-    written in accordance with the rules of the _chemical_formula.sum tag.
+    written in accordance with the rules of the _chemical_formula.sum
+    data item.
 ;
     _name.category_id             topol_link
     _name.object_id               chemical_formula_sum
@@ -1104,11 +1107,11 @@ save_
 save_topol_link.special_details
 
     _definition.id                '_topol_link.special_details'
-    _definition.update            2018-05-24
+    _definition.update            2021-09-14
     _description.text
 ;
     Information about the link that is not expressed using other
-    tags, for example, bond subtypes and explanations
+    data items, for example, bond subtypes and explanations
     of links with _topol_link.type of 'sb'.
 ;
     _name.category_id             topol_link
@@ -1215,7 +1218,7 @@ save_
 save_topol_link.translation_1
 
     _definition.id                '_topol_link.translation_1'
-    _definition.update            2021-09-13
+    _definition.update            2021-09-14
     _description.text
 ;
     The lattice translation vector that must be added to the
@@ -1228,7 +1231,7 @@ save_topol_link.translation_1
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
     _topol_link.translation_1_x,
     _topol_link.translation_1_y, and
-    _topol_link.translation_1_z tags may be used to
+    _topol_link.translation_1_z data items may be used to
     describe separate components of the vector.
 ;
     _name.category_id             topol_link
@@ -1304,7 +1307,7 @@ save_
 save_topol_link.translation_2
 
     _definition.id                '_topol_link.translation_2'
-    _definition.update            2021-09-13
+    _definition.update            2021-09-14
     _description.text
 ;
     The lattice translation vector that must be added to the
@@ -1317,7 +1320,7 @@ save_topol_link.translation_2
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
     _topol_link.translation_2_x,
     _topol_link.translation_2_y, and
-    _topol_link.translation_2_z tags may be used to
+    _topol_link.translation_2_z data items may be used to
     describe separate components of the vector.
 ;
     _name.category_id             topol_link
@@ -1393,12 +1396,12 @@ save_
 save_topol_link.type
 
     _definition.id                '_topol_link.type'
-    _definition.update            2018-02-06
+    _definition.update            2021-09-14
     _description.text
 ;
     The chemical bond type associated with the connection between the
-    two sites.  If no bond exists, use an undelimited period character.
-    If the bond type is unknown, use ? or leave out the tag. The
+    two sites. If no bond exists, use an undelimited period character.
+    If the bond type is unknown, use ? or leave out the data item. The
     number of electron pairs participating in the bond can be indicated
     using _topol_link.order.
 ;
@@ -1818,14 +1821,14 @@ save_
 save_topol_node.atom_label
 
     _definition.id                '_topol_node.atom_label'
-    _definition.update            2021-09-04
+    _definition.update            2021-09-14
     _description.text
 ;
     The atom label corresponding to this node and matching a value in
     _atom_site.label when the node is associated with exactly one atom.
-    It may be omitted if this node's TOPOL_NODE.id is referred to
-    by TOPOL_ATOM.node_id. If the node is polyatomic, then
-    TOPOL_NODE.atom_label, if present, should be represented by '.'.
+    It may be omitted if this node's _topol_node.id is referred to
+    by _topol_atom.node_id. If the node is polyatomic, then
+    _topol_node.atom_label, if present, should be represented by '.'.
 ;
     _name.category_id             topol_node
     _name.object_id               atom_label
@@ -1840,11 +1843,12 @@ save_
 save_topol_node.chemical_formula_iupac
 
     _definition.id                '_topol_node.chemical_formula_iupac'
-    _definition.update            2018-01-30
+    _definition.update            2021-09-14
     _description.text
 ;
     The formula of the residue or ion which corresponds to the node,
-    written in accordance with the rules for the _chemical_formula.iupac tag.
+    written in accordance with the rules for the _chemical_formula.iupac
+    data item.
 ;
     _name.category_id             topol_node
     _name.object_id               chemical_formula_iupac
@@ -1858,11 +1862,12 @@ save_
 save_topol_node.chemical_formula_moiety
 
     _definition.id                '_topol_node.chemical_formula_moiety'
-    _definition.update            2018-01-30
+    _definition.update            2021-09-14
     _description.text
 ;
     The formula of the residue or ion which corresponds to the node,
-    written in accordance with the rules for the _chemical_formula.moiety tag.
+    written in accordance with the rules for the _chemical_formula.moiety
+    data item.
 ;
     _name.category_id             topol_node
     _name.object_id               chemical_formula_moiety
@@ -1876,11 +1881,12 @@ save_
 save_topol_node.chemical_formula_sum
 
     _definition.id                '_topol_node.chemical_formula_sum'
-    _definition.update            2018-01-30
+    _definition.update            2021-09-14
     _description.text
 ;
     The formula of the residue or ion which corresponds to the node,
-    written in accordance with the rules for the _chemical_formula.sum tag.
+    written in accordance with the rules for the _chemical_formula.sum
+    data item.
 ;
     _name.category_id             topol_node
     _name.object_id               chemical_formula_sum
@@ -1894,7 +1900,7 @@ save_
 save_topol_node.coordination_sequence
 
     _definition.id                '_topol_node.coordination_sequence'
-    _definition.update            2021-09-05
+    _definition.update            2021-09-14
     _description.text
 ;
     The coordination sequence is a sequence of numbers counting the
@@ -1902,8 +1908,8 @@ save_topol_node.coordination_sequence
     node in the net. In other words, the kth entry in the list is the
     number of vertices linked to the node by a path of exactly k
     steps. It is usually listed up to k=10. Alternatively, the
-    _topol_node.coordination_sequence_plain tag can be used to represent
-    the coordination sequence as plain text.
+    _topol_node.coordination_sequence_plain data item can be used to
+    represent the coordination sequence as plain text.
 ;
     _name.category_id             topol_node
     _name.object_id               coordination_sequence
@@ -2861,7 +2867,7 @@ save_
        _topol_link.site_symmetry_translation_2, and
        _topol_node.coordination_sequence (B. Hanson and V. Blatov)
 ;
-         0.9.4                    2021-09-13
+         0.9.4                    2021-09-14
 ;
        Added TOPOL_ATOM subcategory, _topol_link.node_id_1,
        _topol_link.node_id_2, _topol_link.structural_formula_InChI,
@@ -2915,8 +2921,11 @@ save_
        Renamed data item _topol_net.overall_topology_rscr to
        _topol_net.overall_topology_RCSR. (A. Vaitkus)
 
-       Added _topol_node.symop_id and _topol_node.translation* (B. Hanson)
+       Updated several descriptions by replacing the term 'tag' with
+       'data item' and correcting data item references. (A. Vaitkus)
 
+       Added _topol_node.symop_id and _topol_node.translation* (B. Hanson)
+       
        TODO: adjust _category_key.name to allow for optional id in all
        TOPOL_* categories with _topol_*.id, as in _CHEMICAL_CONN_BOND
 ;
