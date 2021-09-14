@@ -2925,7 +2925,7 @@ save_
        'data item' and correcting data item references. (A. Vaitkus)
 
        Added _topol_node.symop_id and _topol_node.translation* (B. Hanson)
-       
+
        TODO: adjust _category_key.name to allow for optional id in all
        TOPOL_* categories with _topol_*.id, as in _CHEMICAL_CONN_BOND
 ;
