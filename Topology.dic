@@ -1793,7 +1793,7 @@ save_TOPOL_NODE
     _definition.id                TOPOL_NODE
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2021-09-05
+    _definition.update            2021-09-14
     _description.text
 ;
     The TOPOL_NODE category, along with TOPOL_ATOM, describes the topological
