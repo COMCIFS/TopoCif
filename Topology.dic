@@ -835,9 +835,8 @@ save_TOPOL_LINK
     _topol_link.atom_label_1 and _topol_link.atom_label_2.
     In the case of multiple nets, _topol_link.net_id is required. Other
     items in this category are optional. If the link itself represents
-    atoms, the atoms comprising the link must be specified in
-    TOPOL_ATOM, where _topol_atom.link_id references
-    _topol_link.id.
+    atoms (as in the case of a molecular linker), the atoms comprising the
+    link must be referenced by _topol_atom.link_id.
 
     References: Klein, H.-J. (1996). Systematic generation of models
     for crystal structures. Math. Model. Sci. Comput. 6, 325-330;
@@ -1797,17 +1796,18 @@ save_TOPOL_NODE
     _definition.update            2021-09-05
     _description.text
 ;
-    The TOPOL_NODE category describes the chemical composition,
-    structure and topological properties of the nodes of the underlying
-    net. If the node corresponds to a single atom from the ATOM_SITE list,
-    _topol_node.atom_label can be used to refer to _atom_site.label.
-    Optionally if the node is monoatomic, or necessarily if the node is
-    polyatomic, its associated atom references  will be
-    listed in the TOPOL_ATOM category, where the value of _topol_atom.node_id
-    must match this node's _topol_node.id. Note that the TOPOL_NODE category
-    is optional. It is only required for polyatomic nodes or in cases where the
-    label given to the node is different from _atom_site.label. In the case of
-    multiple nets, _topol_node.net_id is also required.
+    The TOPOL_NODE category, along with TOPOL_ATOM, describes the topological
+    properties, position, and chemical composition
+    of the nodes of the underlying net. The TOPOL_NODE category is optional.
+    It is only required for polyatomic nodes or in cases where the
+    label given to the node is different from _atom_site.label. Data items
+    _topol_node.fract_x, _topol_node.fract_y, and _topol_node.fract_z must be
+    present only if the node's position cannot be derived from
+    other data items in TOPOL_NODE or TOPOL_ATOM.
+    Fractional coordinates can be given in other
+    cases, but are to be considered secondary to calculations based on explicit
+    or default symmetry transformations, present only for convenience.
+    In the case of multiple nets, _topol_node.net_id is also required.
 
     Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
     Cryst. Eng. Comm. 12, 44-48.
@@ -1980,72 +1980,63 @@ save_
 save_topol_node.fract_x
 
     _definition.id                '_topol_node.fract_x'
-    _definition.update            2021-09-03
+    _definition.update            2021-09-14
     _description.text
 ;
-    The fractional x coordinate of this node. If a node corresponds
-    to an atom, then this item, if present, should be represented by '.'.
+    The fractional x coordinate of this node. If present, this data item
+    indicates the final, symmetry-transformed x coordinate of the node.
+    This data item is only necessary if _topol_node.atom_label is not given
+    and this node is not referenced by _topol_atom.node_id.
 ;
     _name.category_id             topol_node
     _name.object_id               fract_x
     _type.purpose                 Measurand
-    _type.source                  Derived
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Real
     _units.code                   none
-    _method.purpose               Definition
-    _method.expression
-;
-    _enumeration.default = atom_site[topol_node.atom_label].fract_x
-;
 
 save_
 
 save_topol_node.fract_y
 
     _definition.id                '_topol_node.fract_y'
-    _definition.update            2021-09-03
+    _definition.update            2021-09-14
     _description.text
 ;
-    The fractional y coordinate of this node. If a node corresponds
-    to an atom, then this item, if present, should be represented by '.'.
+    The fractional y coordinate of this node. If present, this data item
+    indicates the final, symmetry-transformed y coordinate of the node.
+    This data item is only necessary if _topol_node.atom_label is not given
+    and this node is not referenced by _topol_atom.node_id.
 ;
     _name.category_id             topol_node
     _name.object_id               fract_y
     _type.purpose                 Measurand
-    _type.source                  Derived
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Real
     _units.code                   none
-    _method.purpose               Definition
-    _method.expression
-;
-    _enumeration.default = atom_site[topol_node.atom_label].fract_y
-;
 
 save_
 
 save_topol_node.fract_z
 
     _definition.id                '_topol_node.fract_z'
-    _definition.update            2021-09-03
+    _definition.update            2021-09-14
     _description.text
 ;
-    The fractional z coordinate of this node. If a node corresponds
-    to an atom, then this item, if present, should be represented by '.'.
+    The fractional z coordinate of this node. If present, this data item
+    indicates the final, symmetry-transformed z coordinate of the node.
+    This data item is only necessary if _topol_node.atom_label is not given
+    and this node is not referenced by _topol_atom.node_id.
 ;
     _name.category_id             topol_node
     _name.object_id               fract_z
     _type.purpose                 Measurand
-    _type.source                  Derived
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Real
     _units.code                   none
-    _method.purpose               Definition
-    _method.expression
-;
-    _enumeration.default = atom_site[topol_node.atom_label].fract_z
-;
 
 save_
 
@@ -2925,6 +2916,8 @@ save_
        'data item' and correcting data item references. (A. Vaitkus)
 
        Added _topol_node.symop_id and _topol_node.translation* (B. Hanson)
+
+       issue #37 Removed method for _topol_node.fract_* (B. Hanson)
 
        TODO: adjust _category_key.name to allow for optional id in all
        TOPOL_* categories with _topol_*.id, as in _CHEMICAL_CONN_BOND
