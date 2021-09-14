@@ -115,9 +115,9 @@ loop_
 _topol_link.id
 _topol_link.node_id_1
 _topol_link.node_id_2
-_topol_link.symop_1
+_topol_link.symop_id_1
 _topol_link.translation_1
-_topol_link.symop_2
+_topol_link.symop_id_2
 _topol_link.translation_2
 _topol_link.distance
 _topol_link.multiplicity
