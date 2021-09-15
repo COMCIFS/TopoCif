@@ -234,7 +234,7 @@ _topol_link.translation_1
 _topol_link.symop_id_2
 _topol_link.translation_2
 _topol_link.distance
-_topol_link.Voronoi_solidangle
+_topol_link.Voronoi_solid_angle
 _topol_link.type
 _topol_link.order
 _topol_link.multiplicity

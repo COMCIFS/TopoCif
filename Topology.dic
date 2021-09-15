@@ -41,7 +41,7 @@ save_TOPOL
     _definition.id                TOPOL
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2021-09-13
+    _definition.update            2021-09-15
     _description.text
 ;
     The TOPOL category covers data on connectivity
@@ -90,7 +90,7 @@ save_TOPOL
          _topol_link.symop_id_2
          _topol_link.translation_2
          _topol_link.distance
-         _topol_link.Voronoi_solidangle
+         _topol_link.Voronoi_solid_angle
          _topol_link.type
          _topol_link.order
          _topol_link.multiplicity
@@ -1425,10 +1425,10 @@ save_topol_link.type
 
 save_
 
-save_topol_link.voronoi_solidangle
+save_topol_link.voronoi_solid_angle
 
-    _definition.id                '_topol_link.Voronoi_solidangle'
-    _definition.update            2018-02-06
+    _definition.id                '_topol_link.Voronoi_solid_angle'
+    _definition.update            2021-09-15
     _description.text
 ;
     The solid angle fraction of the interatomic contact A-X, which is
@@ -1438,7 +1438,7 @@ save_topol_link.voronoi_solidangle
     The face used is that corresponding to the A-X interatomic contact.
 ;
     _name.category_id             topol_link
-    _name.object_id               Voronoi_solidangle
+    _name.object_id               Voronoi_solid_angle
     _type.purpose                 Measurand
     _type.source                  Derived
     _type.container               Single
@@ -2472,9 +2472,9 @@ save_TOPOL_TILING
 
 save_
 
-save_topol_tiling.Dsize
+save_topol_tiling.D_size
 
-    _definition.id                '_topol_tiling.Dsize'
+    _definition.id                '_topol_tiling.D_size'
     _definition.update            2021-09-15
     _description.text
 ;
@@ -2487,7 +2487,7 @@ save_topol_tiling.Dsize
 
 ;
     _name.category_id             topol_tiling
-    _name.object_id               Dsize
+    _name.object_id               D_size
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
@@ -2924,6 +2924,10 @@ save_
        issue #37 Removed method for _topol_node.fract_* (B. Hanson)
 
        Added DOIs to multiple references. (A. Vaitkus)
+
+       Renamed _topol_tiling.Dsize to _topol_tiling.D_size and
+       _topol_link.Voronoi_solidangle to _topol_link.Voronoi_solid_angle.
+       (A. Vaitkus)
 
        TODO: adjust _category_key.name to allow for optional id in all
        TOPOL_* categories with _topol_*.id, as in _CHEMICAL_CONN_BOND

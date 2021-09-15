@@ -181,7 +181,7 @@ _topol_link.node_id_2
 _topol_link.distance						
 _topol_link.type						
 _topol_link.multiplicity						
-_topol_link.Voronoi_solidangle						
+_topol_link.Voronoi_solid_angle						
 1	1	110	0.9675	v	8	33.97
 2	1	121	2.7148	vw	8	9.19
 3	1	122	3.2146	vw	8	4.31
