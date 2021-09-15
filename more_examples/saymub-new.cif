@@ -564,7 +564,7 @@ _topol_link.Voronoi_solidangle
 loop_						
 _topol_node.id						
 _topol_node.atom_label						
-_topol_node.symop						
+_topol_node.symop_id						
 _topol_node.translation						
 _topol_node.chemical_formula_sum						
 1	H1	1 [0 0 0]	H			

@@ -267,7 +267,7 @@ _topol_link.net_id
 _topol_link.node_id_1
 _topol_link.node_id_2
 _topol_link.symop_id_2
-_topol_link.tanslation_2
+_topol_link.translation_2
 _topol_link.distance
 _topol_link.type
 _topol_link.multiplicity
@@ -285,7 +285,7 @@ loop_
 _topol_node.id
 _topol_node.net_id
 _topol_node.atom_label
-_topol_node.symop
+_topol_node.symop_id
 _topol_node.translation
 _topol_node.chemical_formula_sum
 1  1  H1   .  .  H

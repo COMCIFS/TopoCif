@@ -503,7 +503,7 @@ save_TOPOL
 ;
 ;
          loop_
-         _topol_net_id
+         _topol_net.id
          _topol_net.special_details
          _topol_net.overall_topology_RCSR
          _topol_net.occurrence_total
