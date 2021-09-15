@@ -10,7 +10,7 @@ data_TOPOLOGY_CIF
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.4
-    _dictionary.date              2021-09-14
+    _dictionary.date              2021-09-15
     _dictionary.ddl_conformance   3.13.1
     _description.text
 ;
@@ -816,7 +816,7 @@ save_TOPOL_LINK
     _definition.id                TOPOL_LINK
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2021-09-05
+    _definition.update            2021-09-15
     _description.text
 ;
     The TOPOL_LINK category describes the crystal structure
@@ -841,7 +841,8 @@ save_TOPOL_LINK
     References: Klein, H.-J. (1996). Systematic generation of models
     for crystal structures. Math. Model. Sci. Comput. 6, 325-330;
     Blatov, V. A. (2006). A method for hierarchical comparative
-    analysis of crystal structures. Acta Cryst. A62, 356-364.
+    analysis of crystal structures. Acta Cryst. A62, 356-364,
+    DOI:10.1107/S0108767306025591.
 ;
     _name.category_id             TOPOLOGY
     _name.object_id               TOPOL_LINK
@@ -1452,7 +1453,7 @@ save_TOPOL_NET
     _definition.id                TOPOL_NET
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2021-05-03
+    _definition.update            2021-09-15
     _description.text
 ;
     The TOPOL_NET category describes an underlying net, its
@@ -1460,7 +1461,8 @@ save_TOPOL_NET
 
     Reference: Delgado-Friedrichs, O., Foster, M. D., O'Keeffe, M.,
           Proserpio, D. M., Treacy, M. M. J. & Yaghi, O. M. (2005).
-          J. Solid State Chem. 178, 2533-2554
+          J. Solid State Chem. 178, 2533-2554,
+          DOI:10.1016/j.jssc.2005.06.037.
 ;
     _name.category_id             TOPOLOGY
     _name.object_id               TOPOL_NET
@@ -1471,7 +1473,7 @@ save_
 save_topol_net.genus
 
     _definition.id                '_topol_net.genus'
-    _definition.update            2018-02-06
+    _definition.update            2021-09-15
     _description.text
 ;
     The genus of the underlying net, defined as the cyclomatic number of
@@ -1482,7 +1484,8 @@ save_topol_net.genus
     repeat unit and the edges are all the edges of the repeat unit.
 
     Reference: Delgado-Friedrichs, O. & O'Keeffe, M.
-    (2005). J. Solid State Chem. 178, 2480-2485.
+    (2005). J. Solid State Chem. 178, 2480-2485,
+    DOI:10.1016/j.jssc.2005.06.011.
 ;
     _name.category_id             topol_net
     _name.object_id               genus
@@ -1610,14 +1613,14 @@ save_
 save_topol_net.overall_topology_RCSR
 
     _definition.id                '_topol_net.overall_topology_RCSR'
-    _definition.update            2021-09-13
+    _definition.update            2021-09-15
     _description.text
 ;
     The overall topology symbol according to the RCSR nomenclature described
     by O'Keeffe et al. (2008).
 
     Reference: O'Keeffe, M., Peskov, M. A., Ramsden, S. J. & Yaghi, O. M.
-    (2008). Acc. Chem. Res. 41, 1782-1789.
+    (2008). Acc. Chem. Res. 41, 1782-1789, DOI:10.1021/ar800124u.
 ;
     _name.category_id             topol_net
     _name.object_id               overall_topology_RCSR
@@ -1632,14 +1635,14 @@ save_
 save_topol_net.overall_topology_SP
 
     _definition.id                '_topol_net.overall_topology_SP'
-    _definition.update            2018-01-30
+    _definition.update            2021-09-15
     _description.text
 ;
     The overall topology symbol according to the nomenclature of
     Fischer for sphere packings described by Koch et al. (2006).
 
     Reference: Koch, E., Fischer, W. & Sowa, H. (2006). Acta Cryst.
-    A62, 152-167.
+    A62, 152-167, DOI:10.1107/S010876730600362X.
 ;
     _name.category_id             topol_net
     _name.object_id               overall_topology_SP
@@ -1654,7 +1657,7 @@ save_
 save_topol_net.overall_topology_TOPOS
 
     _definition.id                '_topol_net.overall_topology_TOPOS'
-    _definition.update            2018-02-06
+    _definition.update            2021-09-15
     _description.text
 ;
     The overall topology symbol according to the TOPOS nomenclature. TOPOS
@@ -1667,7 +1670,7 @@ save_topol_net.overall_topology_TOPOS
 
     Reference: Aman, F., Asiri, A. M., Siddiqui, W. A., Arshad, M. N.,
     Ashraf, A., Zakharov, N. S. & Blatov, V. A. (2014). Cryst. Eng. Comm,
-    16, 1963-1970.
+    16, 1963-1970, DOI:10.1039/C3CE42218F.
 ;
     _name.category_id             topol_net
     _name.object_id               overall_topology_TOPOS
@@ -1793,7 +1796,7 @@ save_TOPOL_NODE
     _definition.id                TOPOL_NODE
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2021-09-14
+    _definition.update            2021-09-15
     _description.text
 ;
     The TOPOL_NODE category, along with TOPOL_ATOM, describes the topological
@@ -1810,7 +1813,7 @@ save_TOPOL_NODE
     In the case of multiple nets, _topol_node.net_id is also required.
 
     Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
-    Cryst. Eng. Comm. 12, 44-48.
+    Cryst. Eng. Comm. 12, 44-48, DOI:10.1039/B910671E.
 ;
     _name.category_id             TOPOLOGY
     _name.object_id               TOPOL_NODE
@@ -2444,7 +2447,7 @@ save_TOPOL_TILING
     _definition.id                TOPOL_TILING
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2018-02-06
+    _definition.update            2021-09-15
     _description.text
 ;
     The TOPOL_TILING category describes the natural tiling
@@ -2460,7 +2463,8 @@ save_TOPOL_TILING
     the number of faces of a given size in the tile.
 
     Reference: Blatov, V. A., Delgado-Friedrichs, O., O'Keeffe M. &
-    Proserpio D. M. (2007). Acta Cryst. A63, 418-425.
+    Proserpio D. M. (2007). Acta Cryst. A63, 418-425,
+    DOI:10.1107/S0108767307038287.
 ;
     _name.category_id             TOPOLOGY
     _name.object_id               TOPOL_TILING
@@ -2471,7 +2475,7 @@ save_
 save_topol_tiling.Dsize
 
     _definition.id                '_topol_tiling.Dsize'
-    _definition.update            2018-01-30
+    _definition.update            2021-09-15
     _description.text
 ;
     The number of distinct (not symmetry-related) chambers in the
@@ -2479,7 +2483,7 @@ save_topol_tiling.Dsize
     as a measure of the complexity of the tiling (D-size)
 
     Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
-    Cryst. Eng. Comm. 12, 44-48.
+    Cryst. Eng. Comm. 12, 44-48, DOI:10.1039/B910671E.
 
 ;
     _name.category_id             topol_tiling
@@ -2858,7 +2862,7 @@ save_
        _topol_link.site_symmetry_translation_2, and
        _topol_node.coordination_sequence (B. Hanson and V. Blatov)
 ;
-         0.9.4                    2021-09-14
+         0.9.4                    2021-09-15
 ;
        Added TOPOL_ATOM subcategory, _topol_link.node_id_1,
        _topol_link.node_id_2, _topol_link.structural_formula_InChI,
@@ -2918,6 +2922,8 @@ save_
        Added _topol_node.symop_id and _topol_node.translation* (B. Hanson)
 
        issue #37 Removed method for _topol_node.fract_* (B. Hanson)
+
+       Added DOIs to multiple references. (A. Vaitkus)
 
        TODO: adjust _category_key.name to allow for optional id in all
        TOPOL_* categories with _topol_*.id, as in _CHEMICAL_CONN_BOND
