@@ -198,7 +198,7 @@ save_TOPOL
          loop_
          _topol_net.id
          _topol_net.overall_topology_RCSR
-         _topol_net.z_number
+         _topol_net.Z_number
          1 dia 2
 
          loop_
@@ -259,7 +259,7 @@ save_TOPOL
          _topol_net.label
          _topol_net.special_details
          _topol_net.overall_topology_TOPOS
-         _topol_net.z_number
+         _topol_net.Z_number
          1 Net_1 'Atomic net' 'Unknown' 2
          2 Net_2 'Underlying net with carbonyl ligands as nodes' '2,4T3' 2
 
@@ -1426,7 +1426,7 @@ save_
 
 save_topol_link.voronoi_solidangle
 
-    _definition.id                '_topol_link.voronoi_solidangle'
+    _definition.id                '_topol_link.Voronoi_solidangle'
     _definition.update            2018-02-06
     _description.text
 ;
@@ -1437,7 +1437,7 @@ save_topol_link.voronoi_solidangle
     The face used is that corresponding to the A-X interatomic contact.
 ;
     _name.category_id             topol_link
-    _name.object_id               voronoi_solidangle
+    _name.object_id               Voronoi_solidangle
     _type.purpose                 Measurand
     _type.source                  Derived
     _type.container               Single
@@ -1584,9 +1584,9 @@ save_topol_net.overall_topology_EPINET
 
 save_
 
-save_topol_net.overall_topology_iza
+save_topol_net.overall_topology_IZA
 
-    _definition.id                '_topol_net.overall_topology_iza'
+    _definition.id                '_topol_net.overall_topology_IZA'
     _definition.update            2018-01-30
     _description.text
 ;
@@ -1598,7 +1598,7 @@ save_topol_net.overall_topology_iza
     http://www.iza-structure.org/databases/
 ;
     _name.category_id             topol_net
-    _name.object_id               overall_topology_iza
+    _name.object_id               overall_topology_IZA
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -1724,9 +1724,9 @@ save_topol_net.special_details
 
 save_
 
-save_topol_net.td10
+save_topol_net.TD10
 
-    _definition.id                '_topol_net.td10'
+    _definition.id                '_topol_net.TD10'
     _definition.update            2018-01-30
     _description.text
 ;
@@ -1736,7 +1736,7 @@ save_topol_net.td10
     unit the value given is a weighted average over the vertices.
 ;
     _name.category_id             topol_net
-    _name.object_id               td10
+    _name.object_id               TD10
     _type.purpose                 Number
     _type.source                  Assigned
     _type.container               Single
@@ -1769,9 +1769,9 @@ save_topol_net.total_point_symbol
 
 save_
 
-save_topol_net.z_number
+save_topol_net.Z_number
 
-    _definition.id                '_topol_net.z_number'
+    _definition.id                '_topol_net.Z_number'
     _definition.update            2021-09-04
     _description.text
 ;
@@ -1779,7 +1779,7 @@ save_topol_net.z_number
     in the crystal structure.
 ;
     _name.category_id             topol_net
-    _name.object_id               z_number
+    _name.object_id               Z_number
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
