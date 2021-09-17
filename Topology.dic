@@ -2477,7 +2477,7 @@ save_
 save_topol_tiling.D_size
 
     _definition.id                '_topol_tiling.D_size'
-    _definition.update            2021-09-15
+    _definition.update            2021-09-17
     _description.text
 ;
     The number of distinct (not symmetry-related) chambers in the
@@ -2486,7 +2486,6 @@ save_topol_tiling.D_size
 
     Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
     Cryst. Eng. Comm. 12, 44-48, DOI:10.1039/B910671E.
-
 ;
     _name.category_id             topol_tiling
     _name.object_id               D_size
@@ -2494,6 +2493,7 @@ save_topol_tiling.D_size
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -2931,6 +2931,7 @@ save_
        _topol_link.Voronoi_solidangle to _topol_link.Voronoi_solid_angle.
        (A. Vaitkus)
 
+       Added enumeration range of 1: to the _topol_tiling.D_size data item.
        Redefined the _topol_net.period data item as an enumeration set.
        (A. Vaitkus)
 
