@@ -1690,23 +1690,25 @@ save_
 save_topol_net.period
 
     _definition.id                '_topol_net.period'
-    _definition.update            2018-01-30
+    _definition.update            2021-09-17
     _description.text
 ;
-    The periodicity of the underlying net. The allowed data values
-    have the following meaning:
-       0     0-periodic (finite)
-       1     1-periodic (chain)
-       2     2-periodic (layer)
-       3     3-periodic (framework)
+    The periodicity of the underlying net.
 ;
     _name.category_id             topol_net
     _name.object_id               period
-    _type.purpose                 Number
+    _type.purpose                 State
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
-    _enumeration.range            0:3
+    _type.contents                Code
+
+    loop_
+      _enumeration_set.state
+      _enumeration_set.detail
+         0                        '0-periodic (finite)'
+         1                        '1-periodic (chain)'
+         2                        '2-periodic (layer)'
+         3                        '3-periodic (framework)'
 
 save_
 
@@ -2930,6 +2932,7 @@ save_
        (A. Vaitkus)
 
        Added enumeration range of 1: to the _topol_tiling.D_size data item.
+       Redefined the _topol_net.period data item as an enumeration set.
        (A. Vaitkus)
 
        TODO: adjust _category_key.name to allow for optional id in all
