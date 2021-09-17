@@ -10,7 +10,7 @@ data_TOPOLOGY_CIF
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.4
-    _dictionary.date              2021-09-15
+    _dictionary.date              2021-09-17
     _dictionary.ddl_conformance   3.13.1
     _description.text
 ;
@@ -2475,7 +2475,7 @@ save_
 save_topol_tiling.D_size
 
     _definition.id                '_topol_tiling.D_size'
-    _definition.update            2021-09-15
+    _definition.update            2021-09-17
     _description.text
 ;
     The number of distinct (not symmetry-related) chambers in the
@@ -2484,7 +2484,6 @@ save_topol_tiling.D_size
 
     Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
     Cryst. Eng. Comm. 12, 44-48, DOI:10.1039/B910671E.
-
 ;
     _name.category_id             topol_tiling
     _name.object_id               D_size
@@ -2492,6 +2491,7 @@ save_topol_tiling.D_size
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            1:
 
 save_
 
@@ -2862,7 +2862,7 @@ save_
        _topol_link.site_symmetry_translation_2, and
        _topol_node.coordination_sequence (B. Hanson and V. Blatov)
 ;
-         0.9.4                    2021-09-15
+         0.9.4                    2021-09-17
 ;
        Added TOPOL_ATOM subcategory, _topol_link.node_id_1,
        _topol_link.node_id_2, _topol_link.structural_formula_InChI,
@@ -2927,6 +2927,9 @@ save_
 
        Renamed _topol_tiling.Dsize to _topol_tiling.D_size and
        _topol_link.Voronoi_solidangle to _topol_link.Voronoi_solid_angle.
+       (A. Vaitkus)
+
+       Added enumeration range of 1: to the _topol_tiling.D_size data item.
        (A. Vaitkus)
 
        TODO: adjust _category_key.name to allow for optional id in all
