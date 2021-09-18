@@ -2936,5 +2936,5 @@ save_
        (A. Vaitkus)
 
        TODO: adjust _category_key.name to allow for optional id in all
-       TOPOL_* categories with _topol_*.id, as in _CHEMICAL_CONN_BOND
+       TOPOL_* categories with _topol_*.id, as in CHEMICAL_CONN_BOND
 ;
