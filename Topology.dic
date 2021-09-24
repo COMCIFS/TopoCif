@@ -41,7 +41,7 @@ save_TOPOL
     _definition.id                TOPOL
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2021-09-15
+    _definition.update            2021-09-24
     _description.text
 ;
     The TOPOL category covers data on connectivity
@@ -198,7 +198,7 @@ save_TOPOL
          loop_
          _topol_net.id
          _topol_net.overall_topology_RCSR
-         _topol_net.Z_number
+         _topol_net.z_number
          1 dia 2
 
          loop_
@@ -259,7 +259,7 @@ save_TOPOL
          _topol_net.label
          _topol_net.special_details
          _topol_net.overall_topology_TOPOS
-         _topol_net.Z_number
+         _topol_net.z_number
          1 Net_1 'Atomic net' 'Unknown' 2
          2 Net_2 'Underlying net with carbonyl ligands as nodes' '2,4T3' 2
 
@@ -896,16 +896,16 @@ save_
 
 save_topol_link.chemical_formula_iupac
 
-    _definition.id                '_topol_link.chemical_formula_iupac'
-    _definition.update            2021-09-14
+    _definition.id                '_topol_link.chemical_formula_IUPAC'
+    _definition.update            2021-09-24
     _description.text
 ;
     The formula of the residue or ion which corresponds to the link,
-    written in accordance with the rules for the _chemical_formula.iupac
+    written in accordance with the rules for the _chemical_formula.IUPAC
     data item.
 ;
     _name.category_id             topol_link
-    _name.object_id               chemical_formula_iupac
+    _name.object_id               chemical_formula_IUPAC
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -1126,7 +1126,7 @@ save_
 save_topol_link.structural_formula_inchi
 
     _definition.id                '_topol_link.structural_formula_InChI'
-    _definition.update            2021-08-25
+    _definition.update            2021-09-24
     _description.text
 ;
     Formula of the residue or ion which corresponds to the link.
@@ -1139,7 +1139,7 @@ save_topol_link.structural_formula_inchi
     DOI:10.1186/s13321-015-0068-4.
 ;
     _name.category_id             topol_link
-    _name.object_id               structural_formula_inchi
+    _name.object_id               structural_formula_InChI
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -1150,7 +1150,7 @@ save_
 save_topol_link.structural_formula_smiles
 
     _definition.id                '_topol_link.structural_formula_SMILES'
-    _definition.update            2021-08-25
+    _definition.update            2021-09-24
     _description.text
 ;
     Formula of the residue or ion which corresponds to the link.
@@ -1159,7 +1159,7 @@ save_topol_link.structural_formula_smiles
     (https://www.opensmiles.org).
 ;
     _name.category_id             topol_link
-    _name.object_id               structural_formula_smiles
+    _name.object_id               structural_formula_SMILES
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -1568,7 +1568,7 @@ save_topol_net.overall_topology
 
 save_
 
-save_topol_net.overall_topology_EPINET
+save_topol_net.overall_topology_epinet
 
     _definition.id                '_topol_net.overall_topology_EPINET'
     _definition.update            2018-01-30
@@ -1587,7 +1587,7 @@ save_topol_net.overall_topology_EPINET
 
 save_
 
-save_topol_net.overall_topology_IZA
+save_topol_net.overall_topology_iza
 
     _definition.id                '_topol_net.overall_topology_IZA'
     _definition.update            2018-01-30
@@ -1610,7 +1610,7 @@ save_topol_net.overall_topology_IZA
 
 save_
 
-save_topol_net.overall_topology_RCSR
+save_topol_net.overall_topology_rcsr
 
     _definition.id                '_topol_net.overall_topology_RCSR'
     _definition.update            2021-09-15
@@ -1632,7 +1632,7 @@ save_topol_net.overall_topology_RCSR
 
 save_
 
-save_topol_net.overall_topology_SP
+save_topol_net.overall_topology_sp
 
     _definition.id                '_topol_net.overall_topology_SP'
     _definition.update            2021-09-15
@@ -1654,7 +1654,7 @@ save_topol_net.overall_topology_SP
 
 save_
 
-save_topol_net.overall_topology_TOPOS
+save_topol_net.overall_topology_topos
 
     _definition.id                '_topol_net.overall_topology_TOPOS'
     _definition.update            2021-09-15
@@ -1729,10 +1729,10 @@ save_topol_net.special_details
 
 save_
 
-save_topol_net.TD10
+save_topol_net.td10
 
-    _definition.id                '_topol_net.TD10'
-    _definition.update            2018-01-30
+    _definition.id                '_topol_net.td10'
+    _definition.update            2021-09-24
     _description.text
 ;
     The topological density TD10 of the underlying net. This is the cumulative
@@ -1741,7 +1741,7 @@ save_topol_net.TD10
     unit the value given is a weighted average over the vertices.
 ;
     _name.category_id             topol_net
-    _name.object_id               TD10
+    _name.object_id               td10
     _type.purpose                 Number
     _type.source                  Assigned
     _type.container               Single
@@ -1774,17 +1774,17 @@ save_topol_net.total_point_symbol
 
 save_
 
-save_topol_net.Z_number
+save_topol_net.z_number
 
-    _definition.id                '_topol_net.Z_number'
-    _definition.update            2021-09-04
+    _definition.id                '_topol_net.z_number'
+    _definition.update            2021-09-24
     _description.text
 ;
     For 3-periodic nets, the number of symmetry-equivalent nets of this kind
     in the crystal structure.
 ;
     _name.category_id             topol_net
-    _name.object_id               Z_number
+    _name.object_id               z_number
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
@@ -1847,16 +1847,16 @@ save_
 
 save_topol_node.chemical_formula_iupac
 
-    _definition.id                '_topol_node.chemical_formula_iupac'
-    _definition.update            2021-09-14
+    _definition.id                '_topol_node.chemical_formula_IUPAC'
+    _definition.update            2021-09-24
     _description.text
 ;
     The formula of the residue or ion which corresponds to the node,
-    written in accordance with the rules for the _chemical_formula.iupac
+    written in accordance with the rules for the _chemical_formula.IUPAC
     data item.
 ;
     _name.category_id             topol_node
-    _name.object_id               chemical_formula_iupac
+    _name.object_id               chemical_formula_IUPAC
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -2130,7 +2130,7 @@ save_
 save_topol_node.structural_formula_inchi
 
     _definition.id                '_topol_node.structural_formula_InChI'
-    _definition.update            2018-04-05
+    _definition.update            2021-09-24
     _description.text
 ;
     Formula of the residue or ion which corresponds to the node.
@@ -2143,7 +2143,7 @@ save_topol_node.structural_formula_inchi
     DOI:10.1186/s13321-015-0068-4.
 ;
     _name.category_id             topol_node
-    _name.object_id               structural_formula_inchi
+    _name.object_id               structural_formula_InChI
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -2154,7 +2154,7 @@ save_
 save_topol_node.structural_formula_smiles
 
     _definition.id                '_topol_node.structural_formula_SMILES'
-    _definition.update            2018-04-05
+    _definition.update            2021-09-24
     _description.text
 ;
     Formula of the residue or ion which corresponds to the node.
@@ -2163,7 +2163,7 @@ save_topol_node.structural_formula_smiles
     (https://www.opensmiles.org).
 ;
     _name.category_id             topol_node
-    _name.object_id               structural_formula_smiles
+    _name.object_id               structural_formula_SMILES
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -2477,21 +2477,21 @@ save_TOPOL_TILING
 
 save_
 
-save_topol_tiling.D_size
+save_topol_tiling.d_size
 
-    _definition.id                '_topol_tiling.D_size'
-    _definition.update            2021-09-17
+    _definition.id                '_topol_tiling.d_size'
+    _definition.update            2021-09-24
     _description.text
 ;
     The number of distinct (not symmetry-related) chambers in the
     tiling as expressed by the Delaney Dress symbol or just D-symbol,
-    as a measure of the complexity of the tiling (D-size)
+    as a measure of the complexity of the tiling (D-size).
 
     Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
     Cryst. Eng. Comm. 12, 44-48, DOI:10.1039/B910671E.
 ;
     _name.category_id             topol_tiling
-    _name.object_id               D_size
+    _name.object_id               d_size
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
@@ -2832,22 +2832,22 @@ save_
       _dictionary_audit.version
       _dictionary_audit.date
       _dictionary_audit.revision
-         0.3                      2018-02-23
+         0.3.0                    2018-02-23
 ;
        Changed topol_bond to topol_link using node labels instead of atom
        labels. Added coordinates, multiplicity and Wyckoff symbol to topol_node.
        Added in type and linking information. (J Hester.)
 ;
-         0.4                      2018-02-27
+         0.4.0                    2018-02-27
 ;
        Added long-form examples provided by V Blatov. Version for review.
 ;
-         0.5                      2018-04-05
+         0.5.0                    2018-04-05
 ;
        Added InChI, SMILES structural formulas and replaced symops with explicit
        symmetry operator ids and vector translations. Clarified bond types.
 ;
-         0.9                      2018-05-28
+         0.9.0                    2018-05-28
 ;
        Version for final approval after review. Removed most tags from
        TOPOL_ENTANGL and subcategories.
@@ -2930,11 +2930,11 @@ save_
 
        Added DOIs to multiple references. (A. Vaitkus)
 
-       Renamed _topol_tiling.Dsize to _topol_tiling.D_size and
+       Renamed _topol_tiling.Dsize to _topol_tiling.d_size and
        _topol_link.Voronoi_solidangle to _topol_link.Voronoi_solid_angle.
        (A. Vaitkus)
 
-       Added enumeration range of 1: to the _topol_tiling.D_size data item.
+       Added enumeration range of 1: to the _topol_tiling.d_size data item.
        Redefined the _topol_net.period data item as an enumeration set.
        (A. Vaitkus)
 
