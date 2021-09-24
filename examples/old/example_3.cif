@@ -100,7 +100,7 @@ ZA0+ 0
 loop_
 _atom_site.label
 _atom_site.type_symbol
-_atom_site.site_symmetry_multiplicity
+_atom_site.symmetry_multiplicity
 _atom_site.fract_x
 _atom_site.fract_y
 _atom_site.fract_z
