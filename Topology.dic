@@ -896,16 +896,16 @@ save_
 
 save_topol_link.chemical_formula_iupac
 
-    _definition.id                '_topol_link.chemical_formula_iupac'
-    _definition.update            2021-09-14
+    _definition.id                '_topol_link.chemical_formula_IUPAC'
+    _definition.update            2021-09-24
     _description.text
 ;
     The formula of the residue or ion which corresponds to the link,
-    written in accordance with the rules for the _chemical_formula.iupac
+    written in accordance with the rules for the _chemical_formula.IUPAC
     data item.
 ;
     _name.category_id             topol_link
-    _name.object_id               chemical_formula_iupac
+    _name.object_id               chemical_formula_IUPAC
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -1126,7 +1126,7 @@ save_
 save_topol_link.structural_formula_inchi
 
     _definition.id                '_topol_link.structural_formula_InChI'
-    _definition.update            2021-08-25
+    _definition.update            2021-09-24
     _description.text
 ;
     Formula of the residue or ion which corresponds to the link.
@@ -1139,7 +1139,7 @@ save_topol_link.structural_formula_inchi
     DOI:10.1186/s13321-015-0068-4.
 ;
     _name.category_id             topol_link
-    _name.object_id               structural_formula_inchi
+    _name.object_id               structural_formula_InChI
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -1150,7 +1150,7 @@ save_
 save_topol_link.structural_formula_smiles
 
     _definition.id                '_topol_link.structural_formula_SMILES'
-    _definition.update            2021-08-25
+    _definition.update            2021-09-24
     _description.text
 ;
     Formula of the residue or ion which corresponds to the link.
@@ -1159,7 +1159,7 @@ save_topol_link.structural_formula_smiles
     (https://www.opensmiles.org).
 ;
     _name.category_id             topol_link
-    _name.object_id               structural_formula_smiles
+    _name.object_id               structural_formula_SMILES
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -1847,16 +1847,16 @@ save_
 
 save_topol_node.chemical_formula_iupac
 
-    _definition.id                '_topol_node.chemical_formula_iupac'
-    _definition.update            2021-09-14
+    _definition.id                '_topol_node.chemical_formula_IUPAC'
+    _definition.update            2021-09-24
     _description.text
 ;
     The formula of the residue or ion which corresponds to the node,
-    written in accordance with the rules for the _chemical_formula.iupac
+    written in accordance with the rules for the _chemical_formula.IUPAC
     data item.
 ;
     _name.category_id             topol_node
-    _name.object_id               chemical_formula_iupac
+    _name.object_id               chemical_formula_IUPAC
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -2130,7 +2130,7 @@ save_
 save_topol_node.structural_formula_inchi
 
     _definition.id                '_topol_node.structural_formula_InChI'
-    _definition.update            2018-04-05
+    _definition.update            2021-09-24
     _description.text
 ;
     Formula of the residue or ion which corresponds to the node.
@@ -2143,7 +2143,7 @@ save_topol_node.structural_formula_inchi
     DOI:10.1186/s13321-015-0068-4.
 ;
     _name.category_id             topol_node
-    _name.object_id               structural_formula_inchi
+    _name.object_id               structural_formula_InChI
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
@@ -2154,7 +2154,7 @@ save_
 save_topol_node.structural_formula_smiles
 
     _definition.id                '_topol_node.structural_formula_SMILES'
-    _definition.update            2018-04-05
+    _definition.update            2021-09-24
     _description.text
 ;
     Formula of the residue or ion which corresponds to the node.
@@ -2163,7 +2163,7 @@ save_topol_node.structural_formula_smiles
     (https://www.opensmiles.org).
 ;
     _name.category_id             topol_node
-    _name.object_id               structural_formula_smiles
+    _name.object_id               structural_formula_SMILES
     _type.purpose                 Encode
     _type.source                  Assigned
     _type.container               Single
