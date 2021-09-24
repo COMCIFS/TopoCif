@@ -1568,7 +1568,7 @@ save_topol_net.overall_topology
 
 save_
 
-save_topol_net.overall_topology_EPINET
+save_topol_net.overall_topology_epinet
 
     _definition.id                '_topol_net.overall_topology_EPINET'
     _definition.update            2018-01-30
@@ -1587,7 +1587,7 @@ save_topol_net.overall_topology_EPINET
 
 save_
 
-save_topol_net.overall_topology_IZA
+save_topol_net.overall_topology_iza
 
     _definition.id                '_topol_net.overall_topology_IZA'
     _definition.update            2018-01-30
@@ -1610,7 +1610,7 @@ save_topol_net.overall_topology_IZA
 
 save_
 
-save_topol_net.overall_topology_RCSR
+save_topol_net.overall_topology_rcsr
 
     _definition.id                '_topol_net.overall_topology_RCSR'
     _definition.update            2021-09-15
@@ -1632,7 +1632,7 @@ save_topol_net.overall_topology_RCSR
 
 save_
 
-save_topol_net.overall_topology_SP
+save_topol_net.overall_topology_sp
 
     _definition.id                '_topol_net.overall_topology_SP'
     _definition.update            2021-09-15
@@ -1654,7 +1654,7 @@ save_topol_net.overall_topology_SP
 
 save_
 
-save_topol_net.overall_topology_TOPOS
+save_topol_net.overall_topology_topos
 
     _definition.id                '_topol_net.overall_topology_TOPOS'
     _definition.update            2021-09-15
