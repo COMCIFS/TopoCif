@@ -226,9 +226,13 @@ C1 C 8 0.12500 0.12500 0.12500 1.0000
 _topol_net.overall_topology_RCSR dia
 
 loop_
+_topol_node.id 
+1
+
+loop_
 _topol_link.id
-_topol_link.atom_label_1
-_topol_link.atom_label_2
+_topol_link.node_id_1
+_topol_link.node_id_2
 _topol_link.symop_id_1
 _topol_link.translation_1
 _topol_link.symop_id_2
@@ -238,7 +242,14 @@ _topol_link.Voronoi_solid_angle
 _topol_link.type
 _topol_link.order
 _topol_link.multiplicity
-1 C1 C1 1 [0 0 0] 13 [0 0 0] 1.5446 22.04 v 1 16
+1 1 1 1 [0 0 0] 13 [0 0 0] 1.5446 22.04 v 1 16
+
+loop_
+_topol_atom.id
+_topol_atom.node_id
+_topol_atom.atom_label
+_topol_atom.element_symbol
+1 1 C1 C
 
 #End of data_3-TOPOS_dia_dia
 

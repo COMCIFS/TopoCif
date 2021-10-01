@@ -301,7 +301,7 @@ _topol_link.chemical_formula_sum
 10 3 10 11 .  .  1.9340 v 32 .
 
 loop_
-_topol_atom.id
+	_topol_atom.id
 _topol_atom.atom_label
 _topol_atom.node_id
 _topol_atom.link_id
