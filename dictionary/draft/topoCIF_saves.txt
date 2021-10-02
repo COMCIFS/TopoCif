@@ -13,11 +13,6 @@ _topol_atom.translation_y
 _topol_atom.translation_z
 _TOPOL_ENTANGL
 _TOPOL_LINK
-_topol_link.atom_label_1
-_topol_link.atom_label_2
-_topol_link.chemical_formula_iupac
-_topol_link.chemical_formula_moiety
-_topol_link.chemical_formula_sum
 _topol_link.distance
 _topol_link.id
 _topol_link.label
@@ -27,8 +22,6 @@ _topol_link.node_id_1
 _topol_link.node_id_2
 _topol_link.order
 _topol_link.special_details
-_topol_link.structural_formula_inchi
-_topol_link.structural_formula_smiles
 _topol_link.symop_id_1
 _topol_link.symop_id_2
 _topol_link.translation_1
@@ -59,9 +52,6 @@ _topol_net.total_point_symbol
 _topol_net.Z_number
 _TOPOL_NODE
 _topol_node.atom_label
-_topol_node.chemical_formula_iupac
-_topol_node.chemical_formula_moiety
-_topol_node.chemical_formula_sum
 _topol_node.coordination_sequence
 _topol_node.coordination_sequence_plain
 _topol_node.extended_point_symbol
@@ -72,8 +62,6 @@ _topol_node.id
 _topol_node.label
 _topol_node.net_id
 _topol_node.point_symbol
-_topol_node.structural_formula_inchi
-_topol_node.structural_formula_smiles
 _topol_node.symmetry_multiplicity
 _topol_node.symop_id
 _topol_node.translation
