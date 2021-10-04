@@ -82,12 +82,26 @@ Co 3
 O -1
 
 loop_
+_atom_site.label
+_atom_site.type_symbol
+_atom_site.site_symmetry_multiplicity
+_atom_site.fract_x
+_atom_site.fract_y
+_atom_site.fract_z
+_atom_site.occupancy
+Li1 Li 1 0.00000 0.00000 0.00000 1.0000
+C1 C 4 0.31850 0.31850 0.31850 1.0000
+O1 O 4 0.19920 0.19920 0.19920 1.0000
+Co1 Co 1 0.50000 0.50000 0.50000 1.0000
+
+loop_
 _topol_net.id
 _topol_net.label
+_topol_net.z_number
 _topol_net.special_details
 _topol_net.overall_topology_TOPOS
-1 Net_1 'Atomic net' 'Unknown'
-2 Net_2 'Underlying net with carbonyl ligands as nodes' '2,4T3'
+1 Net_1 2 'Atomic net' 'Unknown'
+2 Net_2 2 'Underlying net with carbonyl ligands as nodes' '2,4T3'
 
 loop_
 _topol_node.id
@@ -135,5 +149,6 @@ _topol_atom.element_symbol
 6 6 C1  C
 7 6 O1  O
 8 7 Co1 Co
+
 
 #End of data_1-TOPOS_FUBYUW_C4CO1O4-,LI1+/Z=2
