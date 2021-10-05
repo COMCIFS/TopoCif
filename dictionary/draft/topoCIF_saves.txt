@@ -33,7 +33,7 @@ _topol_link.translation_2_x
 _topol_link.translation_2_y
 _topol_link.translation_2_z
 _topol_link.type
-_topol_link.voronoi_solid_angle
+_topol_link.Voronoi_solid_angle
 _TOPOL_NET
 _topol_net.genus
 _topol_net.id
@@ -68,7 +68,7 @@ _topol_node.translation_x
 _topol_node.translation_y
 _topol_node.translation_z
 _topol_node.vertex_symbol
-_topol_node.wyckoff_symbol
+_topol_node.Wyckoff_symbol
 _TOPOL_OCCURRENCE
 _topol_occurrence.citation_id
 _topol_occurrence.id
