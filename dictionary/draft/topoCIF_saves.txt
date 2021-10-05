@@ -47,11 +47,10 @@ _topol_net.overall_topology_SP
 _topol_net.overall_topology_TOPOS
 _topol_net.period
 _topol_net.special_details
-_topol_net.TD10
+_topol_net.td10
 _topol_net.total_point_symbol
-_topol_net.Z_number
+_topol_net.z_number
 _TOPOL_NODE
-_topol_node.atom_label
 _topol_node.coordination_sequence
 _topol_node.coordination_sequence_plain
 _topol_node.extended_point_symbol
@@ -75,7 +74,7 @@ _topol_occurrence.citation_id
 _topol_occurrence.id
 _topol_occurrence.net_id
 _TOPOL_TILING
-_topol_tiling.D_size
+_topol_tiling.d_size
 _topol_tiling.dual
 _topol_tiling.edges
 _topol_tiling.faces
