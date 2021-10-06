@@ -95,9 +95,8 @@ _symmetry_equiv_pos_as_xyz
 loop_
 _atom_type_symbol
 _atom_type_oxidation_number
-_atom_type_radius_bond
-O2- -2 0.01
-Cu1+ 1 0.01
+O2- -2
+Cu1+ 1
 
 loop_
 _atom_site.label

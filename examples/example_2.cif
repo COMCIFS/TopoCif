@@ -64,22 +64,15 @@ _symmetry_equiv_pos_as_xyz
 24 -z,y,-x
 loop_
 _atom_site_label
-_atom_site_type_symbol
 _atom_site_symmetry_multiplicity
 _atom_site_fract_x
 _atom_site_fract_y
 _atom_site_fract_z
 _atom_site_occupancy
-Li1 Li 1 0.00000 0.00000 0.00000 1.0000
-C1 C 4 0.31850 0.31850 0.31850 1.0000
-O1 O 4 0.19920 0.19920 0.19920 1.0000
-Co1 Co 1 0.50000 0.50000 0.50000 1.0000
-
-loop_
-_atom_type_symbol
-_atom_type_oxidation_number
-Co 3
-O -1
+Li1 1 0.00000 0.00000 0.00000 1.0000
+C1  4 0.31850 0.31850 0.31850 1.0000
+O1  4 0.19920 0.19920 0.19920 1.0000
+Co1 1 0.50000 0.50000 0.50000 1.0000
 
 loop_
 _topol_net.id
