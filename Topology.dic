@@ -10,7 +10,9 @@ data_TOPOLOGY_CIF
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.4
-    _dictionary.date              2021-09-24
+    _dictionary.date              2021-10-08
+    _dictionary.uri
+        https://raw.githubusercontent.com/COMCIFS/TopoCif/master/Topology.dic
     _dictionary.ddl_conformance   3.13.1
     _description.text
 ;
@@ -2867,7 +2869,7 @@ save_
        _topol_link.site_symmetry_translation_2, and
        _topol_node.coordination_sequence (B. Hanson and V. Blatov)
 ;
-         0.9.4                    2021-09-24
+         0.9.4                    2021-10-08
 ;
        Added TOPOL_ATOM subcategory, _topol_link.node_id_1,
        _topol_link.node_id_2, _topol_link.structural_formula_InChI,
@@ -2940,6 +2942,8 @@ save_
 
        Restricted the _topol_node.Wyckoff_symbol data item values
        to a set of case-sensitive enumeration values. (A. Vaitkus)
+
+       Added the _dictionary.uri attribute. (A. Vaitkus)
 
        TODO: adjust _category_key.name to allow for optional id in all
        TOPOL_* categories with _topol_*.id, as in CHEMICAL_CONN_BOND
