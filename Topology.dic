@@ -41,7 +41,7 @@ save_TOPOL
     _definition.id                TOPOL
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2021-09-24
+    _definition.update            2021-09-27
     _description.text
 ;
     The TOPOL category covers data on connectivity
@@ -321,8 +321,8 @@ save_TOPOL
 ;
 ;
          loop_
-         _symmetry_equiv_pos_site_id
-         _symmetry_equiv_pos_as_xyz
+         _space_group_symop.id
+         _space_group_symop.operation_xyz
          1 x,y,z
          # Symmetry operations skipped
          5 z,x,y
@@ -510,8 +510,8 @@ save_TOPOL
          1 'Occurrence data are taken from topcryst.com' dia-a-a 5
 
          loop_
-         _citation_id
-         _citation_database_id_CSD
+         _citation.id
+         _citation.database_id_CSD
          1 MUMYIC
          2 MUNDAA
          3 MUMYUO
