@@ -11,6 +11,8 @@ data_TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.4
     _dictionary.date              2021-10-08
+    _dictionary.uri
+        https://raw.githubusercontent.com/COMCIFS/TopoCif/master/Topology.dic
     _dictionary.ddl_conformance   3.13.1
     _description.text
 ;
@@ -2988,7 +2990,7 @@ save_
 
        Restricted the _topol_node.Wyckoff_symbol data item values
        to a set of case-sensitive enumeration values. (A. Vaitkus)
-
+       Added the _dictionary.uri attribute. (A. Vaitkus)
        Added the 'none' measurement units to the definitions of multiple
        data items. (A. Vaitkus)
 
