@@ -62,11 +62,6 @@ _topol_node.label
 _topol_node.net_id
 _topol_node.point_symbol
 _topol_node.symmetry_multiplicity
-_topol_node.symop_id
-_topol_node.translation
-_topol_node.translation_x
-_topol_node.translation_y
-_topol_node.translation_z
 _topol_node.vertex_symbol
 _topol_node.Wyckoff_symbol
 _TOPOL_OCCURRENCE

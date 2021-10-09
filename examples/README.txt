@@ -3,6 +3,7 @@ example_2: LITHIUM TETRACARBONYL-COBALT
 example_3: Calcium carbonate  MINR Calcite - synthetic 
 example_4: Copper(I) Oxide
 example_5: MOF-5
+example_6: SAYMUB
  
 2021-10-05 examples 1-5 updated and loading into Jmol (BH)
 
