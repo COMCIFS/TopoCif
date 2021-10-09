@@ -43,7 +43,7 @@ save_TOPOL
     _definition.id                TOPOL
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2021-09-24
+    _definition.update            2021-09-27
     _description.text
 ;
     The TOPOL category covers data on connectivity
@@ -323,8 +323,8 @@ save_TOPOL
 ;
 ;
          loop_
-         _symmetry_equiv_pos_site_id
-         _symmetry_equiv_pos_as_xyz
+         _space_group_symop.id
+         _space_group_symop.operation_xyz
          1 x,y,z
          # Symmetry operations skipped
          5 z,x,y
@@ -512,8 +512,8 @@ save_TOPOL
          1 'Occurrence data are taken from topcryst.com' dia-a-a 5
 
          loop_
-         _citation_id
-         _citation_database_id_CSD
+         _citation.id
+         _citation.database_id_CSD
          1 MUMYIC
          2 MUNDAA
          3 MUMYUO
@@ -621,7 +621,7 @@ save_
 save_topol_atom.id
 
     _definition.id                '_topol_atom.id'
-    _definition.update            2021-08-29
+    _definition.update            2021-10-08
     _description.text
 ;
     The unique identifier of a topological "atom" that
@@ -634,13 +634,14 @@ save_topol_atom.id
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
 save_topol_atom.link_id
 
     _definition.id                '_topol_atom.link_id'
-    _definition.update            2021-08-29
+    _definition.update            2021-10-08
     _description.text
 ;
     The link associated with this atom, if applicable.
@@ -658,13 +659,14 @@ save_topol_atom.link_id
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
 save_topol_atom.node_id
 
     _definition.id                '_topol_atom.node_id'
-    _definition.update            2021-08-29
+    _definition.update            2021-10-08
     _description.text
 ;
     The node associated with this atom, if applicable.
@@ -678,6 +680,7 @@ save_topol_atom.node_id
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
@@ -708,7 +711,7 @@ save_
 save_topol_atom.translation
 
     _definition.id                '_topol_atom.translation'
-    _definition.update            2021-09-14
+    _definition.update            2021-10-08
     _description.text
 ;
     The lattice translation vector that must be added to the
@@ -733,13 +736,14 @@ save_topol_atom.translation
     _type.container               Matrix
     _type.dimension               '[3]'
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_atom.translation_x
 
     _definition.id                '_topol_atom.translation_x'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
      The x component of the vector of lattice translations that is added
@@ -753,13 +757,14 @@ save_topol_atom.translation_x
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_atom.translation_y
 
     _definition.id                '_topol_atom.translation_y'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
     The y component of the vector of lattice translations that is added
@@ -773,13 +778,14 @@ save_topol_atom.translation_y
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_atom.translation_z
 
     _definition.id                '_topol_atom.translation_z'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
     The z component of the vector of lattice translations that is added
@@ -793,6 +799,7 @@ save_topol_atom.translation_z
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
@@ -975,7 +982,7 @@ save_
 save_topol_link.id
 
     _definition.id                '_topol_link.id'
-    _definition.update            2021-09-12
+    _definition.update            2021-10-08
     _description.text
 ;
     The identifier of the link.
@@ -987,6 +994,7 @@ save_topol_link.id
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
@@ -1010,7 +1018,7 @@ save_
 save_topol_link.multiplicity
 
     _definition.id                '_topol_link.multiplicity'
-    _definition.update            2018-01-30
+    _definition.update            2021-10-08
     _description.text
 ;
     The number of these links in the unit cell.
@@ -1022,13 +1030,14 @@ save_topol_link.multiplicity
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
 save_topol_link.net_id
 
     _definition.id                '_topol_link.net_id'
-    _definition.update            2021-09-11
+    _definition.update            2021-10-08
     _description.text
 ;
     The identifier of the net, to which this node belongs.
@@ -1041,13 +1050,14 @@ save_topol_link.net_id
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
 save_topol_link.node_id_1
 
     _definition.id                '_topol_link.node_id_1'
-    _definition.update            2021-08-29
+    _definition.update            2021-10-08
     _description.text
 ;
     The identifier of the first node associated with a link
@@ -1063,13 +1073,14 @@ save_topol_link.node_id_1
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
 save_topol_link.node_id_2
 
     _definition.id                '_topol_link.node_id_2'
-    _definition.update            2021-08-29
+    _definition.update            2021-10-08
     _description.text
 ;
     The identifier of the second node associated with a link
@@ -1085,13 +1096,14 @@ save_topol_link.node_id_2
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
 save_topol_link.order
 
     _definition.id                '_topol_link.order'
-    _definition.update            2018-05-16
+    _definition.update            2021-10-08
     _description.text
 ;
     The number of electron pairs participating in the bond
@@ -1103,6 +1115,7 @@ save_topol_link.order
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Real
+    _units.code                   none
 
 save_
 
@@ -1220,7 +1233,7 @@ save_
 save_topol_link.translation_1
 
     _definition.id                '_topol_link.translation_1'
-    _definition.update            2021-09-14
+    _definition.update            2021-10-08
     _description.text
 ;
     The lattice translation vector that must be added to the
@@ -1243,13 +1256,14 @@ save_topol_link.translation_1
     _type.container               Matrix
     _type.dimension               '[3]'
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_link.translation_1_x
 
     _definition.id                '_topol_link.translation_1_x'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
      The x component of the vector of lattice translations that is added
@@ -1263,13 +1277,14 @@ save_topol_link.translation_1_x
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_link.translation_1_y
 
     _definition.id                '_topol_link.translation_1_y'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
      The y component of the vector of lattice translations that is added
@@ -1283,13 +1298,14 @@ save_topol_link.translation_1_y
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_link.translation_1_z
 
     _definition.id                '_topol_link.translation_1_z'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
      The z component of the vector of lattice translations that is added
@@ -1303,13 +1319,14 @@ save_topol_link.translation_1_z
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_link.translation_2
 
     _definition.id                '_topol_link.translation_2'
-    _definition.update            2021-09-14
+    _definition.update            2021-10-08
     _description.text
 ;
     The lattice translation vector that must be added to the
@@ -1332,13 +1349,14 @@ save_topol_link.translation_2
     _type.container               Matrix
     _type.dimension               '[3]'
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_link.translation_2_x
 
     _definition.id                '_topol_link.translation_2_x'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
      The x component of the vector of lattice translations that is added
@@ -1352,13 +1370,14 @@ save_topol_link.translation_2_x
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_link.translation_2_y
 
     _definition.id                '_topol_link.translation_2_y'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
      The y component of the vector of lattice translations that is added
@@ -1372,13 +1391,14 @@ save_topol_link.translation_2_y
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_link.translation_2_z
 
     _definition.id                '_topol_link.translation_2_z'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
      The z component of the vector of lattice translations that is added
@@ -1392,6 +1412,7 @@ save_topol_link.translation_2_z
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
@@ -1475,7 +1496,7 @@ save_
 save_topol_net.genus
 
     _definition.id                '_topol_net.genus'
-    _definition.update            2021-09-15
+    _definition.update            2021-10-08
     _description.text
 ;
     The genus of the underlying net, defined as the cyclomatic number of
@@ -1495,13 +1516,14 @@ save_topol_net.genus
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_net.id
 
     _definition.id                '_topol_net.id'
-    _definition.update            2021-09-05
+    _definition.update            2021-10-08
     _description.text
 ;
     The unique integer identifier for this net, generally
@@ -1514,6 +1536,7 @@ save_topol_net.id
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
@@ -1537,7 +1560,7 @@ save_
 save_topol_net.occurrence_total
 
     _definition.id                '_topol_net.occurrence_total'
-    _definition.update            2018-02-13
+    _definition.update            2021-10-08
     _description.text
 ;
     The total number of occurrences in literature and databases of the
@@ -1549,6 +1572,7 @@ save_topol_net.occurrence_total
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
@@ -1734,7 +1758,7 @@ save_
 save_topol_net.td10
 
     _definition.id                '_topol_net.td10'
-    _definition.update            2021-09-24
+    _definition.update            2021-10-08
     _description.text
 ;
     The topological density TD10 of the underlying net. This is the cumulative
@@ -1748,6 +1772,7 @@ save_topol_net.td10
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
@@ -1779,7 +1804,7 @@ save_
 save_topol_net.z_number
 
     _definition.id                '_topol_net.z_number'
-    _definition.update            2021-09-24
+    _definition.update            2021-10-08
     _description.text
 ;
     For 3-periodic nets, the number of symmetry-equivalent nets of this kind
@@ -1792,6 +1817,7 @@ save_topol_net.z_number
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
@@ -1907,7 +1933,7 @@ save_
 save_topol_node.coordination_sequence
 
     _definition.id                '_topol_node.coordination_sequence'
-    _definition.update            2021-09-14
+    _definition.update            2021-10-08
     _description.text
 ;
     The coordination sequence is a sequence of numbers counting the
@@ -1924,6 +1950,7 @@ save_topol_node.coordination_sequence
     _type.source                  Derived
     _type.container               List
     _type.contents                Integer
+    _units.code                   none
     _description_example.case     [4  12  24  42  64  92  124  162  204  252]
     _description_example.detail   'The diamond coordination sequence'
 
@@ -2050,7 +2077,7 @@ save_
 save_topol_node.id
 
     _definition.id                '_topol_node.id'
-    _definition.update            2021-08-29
+    _definition.update            2021-10-08
     _description.text
 ;
     The identifier of the node.
@@ -2062,6 +2089,7 @@ save_topol_node.id
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
@@ -2085,7 +2113,7 @@ save_
 save_topol_node.net_id
 
     _definition.id                '_topol_node.net_id'
-    _definition.update            2021-09-10
+    _definition.update            2021-10-08
     _description.text
 ;
     The unique identifier of the net to which this node belongs.
@@ -2098,6 +2126,7 @@ save_topol_node.net_id
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
@@ -2176,7 +2205,7 @@ save_
 save_topol_node.symmetry_multiplicity
 
     _definition.id                '_topol_node.symmetry_multiplicity'
-    _definition.update            2018-02-23
+    _definition.update            2021-10-08
     _description.text
 ;
     The number of different sites that are generated by the
@@ -2192,6 +2221,7 @@ save_topol_node.symmetry_multiplicity
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:192
+    _units.code                   none
 
 save_
 
@@ -2224,7 +2254,7 @@ save_
 save_topol_node.translation
 
     _definition.id                '_topol_node.translation'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
     In the case where _topol_node.atom_label is given
@@ -2250,13 +2280,14 @@ save_topol_node.translation
     _type.container               Matrix
     _type.dimension               '[3]'
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_node.translation_x
 
     _definition.id                '_topol_node.translation_x'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
     In the case where _topol_node.atom_label is given
@@ -2272,13 +2303,14 @@ save_topol_node.translation_x
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_node.translation_y
 
     _definition.id                '_topol_node.translation_y'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
     In the case where _topol_node.atom_label is given
@@ -2294,13 +2326,14 @@ save_topol_node.translation_y
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_node.translation_z
 
     _definition.id                '_topol_node.translation_z'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
     In the case where _topol_node.atom_label is given
@@ -2316,6 +2349,7 @@ save_topol_node.translation_z
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
@@ -2433,7 +2467,7 @@ save_
 save_topol_occurrence.net_id
 
     _definition.id                '_topol_occurrence.net_id'
-    _definition.update            2021-09-10
+    _definition.update            2021-10-08
     _description.text
 ;
     The identifier of the net for which this occurrence is described.
@@ -2446,6 +2480,7 @@ save_topol_occurrence.net_id
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
@@ -2482,7 +2517,7 @@ save_
 save_topol_tiling.d_size
 
     _definition.id                '_topol_tiling.d_size'
-    _definition.update            2021-09-24
+    _definition.update            2021-10-08
     _description.text
 ;
     The number of distinct (not symmetry-related) chambers in the
@@ -2499,6 +2534,7 @@ save_topol_tiling.d_size
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
@@ -2523,7 +2559,7 @@ save_
 save_topol_tiling.edges
 
     _definition.id                '_topol_tiling.edges'
-    _definition.update            2018-01-30
+    _definition.update            2021-10-08
     _description.text
 ;
     The number of independent tile edges in the natural tiling.
@@ -2534,13 +2570,14 @@ save_topol_tiling.edges
     _type.source                  Recorded
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_tiling.faces
 
     _definition.id                '_topol_tiling.faces'
-    _definition.update            2018-01-30
+    _definition.update            2021-10-08
     _description.text
 ;
     The number of independent tile faces in the natural tiling.
@@ -2551,13 +2588,14 @@ save_topol_tiling.faces
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_tiling.id
 
     _definition.id                '_topol_tiling.id'
-    _definition.update            2021-08-10
+    _definition.update            2021-10-08
     _description.text
 ;
     The unique identifier of the tiling.
@@ -2569,13 +2607,14 @@ save_topol_tiling.id
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
 save_topol_tiling.net_id
 
     _definition.id                '_topol_tiling.net_id'
-    _definition.update            2021-09-10
+    _definition.update            2021-10-08
     _description.text
 ;
     The identifier of the net that carries this tiling.
@@ -2588,6 +2627,7 @@ save_topol_tiling.net_id
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
@@ -2621,7 +2661,7 @@ save_
 save_topol_tiling.tiles
 
     _definition.id                '_topol_tiling.tiles'
-    _definition.update            2018-01-30
+    _definition.update            2021-10-08
     _description.text
 ;
     The number of independent tiles in the natural tiling.
@@ -2632,13 +2672,14 @@ save_topol_tiling.tiles
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
 save_topol_tiling.vertices
 
     _definition.id                '_topol_tiling.vertices'
-    _definition.update            2018-01-30
+    _definition.update            2021-10-08
     _description.text
 ;
     The number of independent tile vertices in the natural tiling.
@@ -2649,6 +2690,7 @@ save_topol_tiling.vertices
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _units.code                   none
 
 save_
 
@@ -2702,7 +2744,7 @@ save_
 save_topol_tiling_faces.count
 
     _definition.id                '_topol_tiling_faces.count'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
     The number of faces of this size in the tile.
@@ -2714,13 +2756,14 @@ save_topol_tiling_faces.count
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            0:
+    _units.code                   none
 
 save_
 
 save_topol_tiling_faces.size
 
     _definition.id                '_topol_tiling_faces.size'
-    _definition.update            2018-02-13
+    _definition.update            2021-10-08
     _description.text
 ;
     The size of the tile face.
@@ -2732,13 +2775,14 @@ save_topol_tiling_faces.size
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            3:
+    _units.code                   none
 
 save_
 
 save_topol_tiling_faces.tile_id
 
     _definition.id                '_topol_tiling_faces.tile_id'
-    _definition.update            2018-02-13
+    _definition.update            2021-10-08
     _description.text
 ;
     The identifier of the tile to which this face belongs.
@@ -2752,6 +2796,7 @@ save_topol_tiling_faces.tile_id
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
@@ -2778,7 +2823,7 @@ save_
 save_topol_tiling_tile.count
 
     _definition.id                '_topol_tiling_tile.count'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-08
     _description.text
 ;
     The number of this kind of tile in the tiling.
@@ -2790,13 +2835,14 @@ save_topol_tiling_tile.count
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            0:
+    _units.code                   none
 
 save_
 
 save_topol_tiling_tile.id
 
     _definition.id                '_topol_tiling_tile.id'
-    _definition.update            2018-02-13
+    _definition.update            2021-10-08
     _description.text
 ;
     The unique identifier for this tile type.
@@ -2808,13 +2854,14 @@ save_topol_tiling_tile.id
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
 save_topol_tiling_tile.tiling_id
 
     _definition.id                '_topol_tiling_tile.tiling_id'
-    _definition.update            2021-09-10
+    _definition.update            2021-10-08
     _description.text
 ;
     The identifier of the tiling to which this tile belongs.
@@ -2827,6 +2874,7 @@ save_topol_tiling_tile.tiling_id
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
+    _units.code                   none
 
 save_
 
@@ -2942,8 +2990,9 @@ save_
 
        Restricted the _topol_node.Wyckoff_symbol data item values
        to a set of case-sensitive enumeration values. (A. Vaitkus)
-
        Added the _dictionary.uri attribute. (A. Vaitkus)
+       Added the 'none' measurement units to the definitions of multiple
+       data items. (A. Vaitkus)
 
        TODO: adjust _category_key.name to allow for optional id in all
        TOPOL_* categories with _topol_*.id, as in CHEMICAL_CONN_BOND
