@@ -10,7 +10,7 @@ data_TOPOLOGY_CIF
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.4
-    _dictionary.date              2021-10-11
+    _dictionary.date              2021-10-13
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/TopoCif/master/Topology.dic
     _dictionary.ddl_conformance   4.1.0
@@ -2182,8 +2182,8 @@ save_TOPOL_TILING
 
     _definition.id                TOPOL_TILING
     _definition.scope             Category
-    _definition.class             Set
-    _definition.update            2021-09-15
+    _definition.class             Loop
+    _definition.update            2021-10-13
     _description.text
 ;
     The TOPOL_TILING category describes the natural tiling
@@ -2611,7 +2611,7 @@ save_
        _topol_link.site_symmetry_translation_2, and
        _topol_node.coordination_sequence (B. Hanson and V. Blatov)
 ;
-         0.9.4                    2021-10-11
+         0.9.4                    2021-10-13
 ;
        Added TOPOL_ATOM subcategory, _topol_link.node_id_1,
        _topol_link.node_id_2, _topol_link.structural_formula_InChI,
@@ -2692,6 +2692,8 @@ save_
 
        Added the _dictionary.namespace attribute and changed the DDL
        conformance version from 3.13.1 to 4.1.0.
+
+       Declared the TOPOL_TILING category as looped. (A. Vaitkus)
 
        Removed the _topol_link.atom_label_1, _topol_link.atom_label_2,
        _topol_link.chemical_formula_IUPAC, _topol_link.chemical_formula_moiety,
