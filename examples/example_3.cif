@@ -1,34 +1,11 @@
 #\#CIF_2.0
-# topoCIF example 3 2021.10.05 BH
-data_15-TOPOS_16710_CaCO3/Calcite
-_database_code_CSD                  16710
-_audit_creation_date                2021-05-04
-_audit_creation_method              ToposPro
-_chemical_formula_structural        CaCO3/Calcite
+data_example_3
+_database_code_ICSD                  16710
 _chemical_name_systematic
 ;
-Calcium carbonate  MINR Calcite - synthetic 
+Calcium carbonate  MINR Calcite  
 ;
 _chemical_formula_sum               'C1 Ca1 O3'
-_citation_journal_abbrev            'Acta Crystallographica (1,1948-23,1967)'
-_citation_year                      1957
-_citation_journal_volume            10
-_citation_page_first                567
-_citation_page_last                 570
-_citation_special_details
-;
- TITL Interatomic Distances and Thermal Anisotropy in Sodium Nitrate 
- Calcite  (refinement of earlier measured intensity data) M PDF 5-586
-
-CENTAT: Ca1
-SIMPLIG: ZA=CO3 ZB=Ca
-SIMPPAR: METH=Stand; INTRA=V
-;
-loop_
-_publ_author_name
-'Sass R L'
-'Vidale R'
-'Donohue J'
 _cell_length_a                      4.989
 _cell_length_b                      4.989
 _cell_length_c                      17.062
@@ -39,7 +16,6 @@ _cell_volume                        367.7795
 _cell_formula_units_Z               6
 _symmetry_space_group_name_H-M      'R -3 c'
 _symmetry_Int_Tables_number         167
-_refine_ls_R_factor_all             0
 loop_
 _symmetry_equiv_pos_site_id
 _symmetry_equiv_pos_as_xyz
@@ -109,8 +85,8 @@ _topol_link.node_id_2
 _topol_link.symop_id_2
 _topol_link.translation_2
 _topol_link.distance
-_topol_link.multiplicity
-1 1 2 20 [-1 -1 0] 3.2122 36
+_topol_link.type
+1 1 2 20 [-1 -1 0] 3.2122 gl
 
 loop_
 _topol_atom.id
@@ -124,4 +100,4 @@ _topol_atom.symop_id
 4 1 O1 O 3
 5 2 Ca1 Ca 1
 
-#End of data_15-TOPOS_16710_CaCO3/Calcite
+#End of data_example_3

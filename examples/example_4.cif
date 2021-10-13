@@ -1,34 +1,11 @@
 #\#CIF_2.0
-# topoCIF example 4 2021.10.05 BH
-
-data_3-TOPOS_63281_Cu2O
+data_example_4
 _database_code_ICSD                 63281
-_audit_creation_date                2021-05-04
-_audit_creation_method              ToposPro
-_chemical_formula_structural        Cu2O
 _chemical_name_systematic
 ;
 Copper(I) Oxide. 
 ;
-_chemical_formula_sum               'Cu2 O1 ZA1'
-_citation_journal_abbrev            'Acta Crystallogr., Sect. B: Struct. Sci.'
-_citation_year                      1986
-_citation_journal_volume            42
-_citation_page_first                201
-_citation_page_last                 208
-_citation_special_details
-;
-Mineral: Cuprite. Title: Charge density in Cuprite, Cu2 O.. File: ics
-d727.cif. 
-CENTAT: O1
-SIMPLIG: ZA=O ZB=Cu
-SIMPPAR: METH=Stand; INT
-RA=V
-;
-loop_
-_publ_author_name
-'Restori R.'
-'Schwarzenbach D.'
+_chemical_formula_sum               'Cu2 O1'
 _cell_length_a                      4.267
 _cell_length_b                      4.267
 _cell_length_c                      4.267
@@ -39,7 +16,6 @@ _cell_volume                        77.69051
 _cell_formula_units_Z               2
 _symmetry_space_group_name_H-M      'P n -3 m'
 _symmetry_Int_Tables_number         224
-_refine_ls_R_factor_all             0.0102
 loop_
 _symmetry_equiv_pos_site_id
 _symmetry_equiv_pos_as_xyz
@@ -123,8 +99,8 @@ _topol_link.id
 _topol_link.node_id_1
 _topol_link.node_id_2
 _topol_link.symop_id_2
-_topol_link.multiplicity
-1 1 1 13 4 # Cu
+_topol_link.type
+1 1 1 13 gl # Cu
 
 loop_
 _topol_atom.id
@@ -135,5 +111,5 @@ _topol_atom.element_symbol
 1 1 . O1  O
 2 . 1 Cu1 Cu
 
-#End of data_3-TOPOS_63281_Cu2O
+#End of data_example_4
 
