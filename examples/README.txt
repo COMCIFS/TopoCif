@@ -1,9 +1,10 @@
-example_1: diamond
-example_2: LITHIUM TETRACARBONYL-COBALT 
-example_3: Calcium carbonate  MINR Calcite - synthetic 
-example_4: Copper(I) Oxide
-example_5: MOF-5
-example_6: SAYMUB
+example_1: diamond (atomic network)
+example_2: lithium tetracarbonyl-cobalt (polyatomic node) 
+example_3: calcium carbonate (calcite polyatomic node) 
+example_4: copper(I) oxide  (two interpenetrating nets with molecular linker)
+example_5: MOF-5 (multiple nets; two polyatomic nodes and a molecular linker)
+example_6: cyanamide (simple atomic network example with hydrogen bonding)
+example_7: FAU tiling example
  
 2021-10-05 examples 1-5 updated and loading into Jmol (BH)
 
