@@ -1,8 +1,10 @@
 data_example_6
-_database_code_CSD        CYANAM01
-_chemical_name_systematic cyanamide
-_chemical_formula_sum     'C1 H2 N2'
-
+_database_code_CSD                  CYANAM01
+_chemical_name_systematic
+;
+Cyanamide. 
+;
+_chemical_formula_sum               'C1 H2 N2'
 _cell_length_a                      6.856
 _cell_length_b                      6.628
 _cell_length_c                      9.147
@@ -54,12 +56,12 @@ _topol_link.translation_2_y
 _topol_link.translation_2_z
 _topol_link.type
 _topol_link.order
-1 4 0.8988 1 0 0  0 v  1 # H1-N1
-1 5 2.1228 2 0 0 -1 hb 0 # H1-N2
-2 4 0.8826 1 0 0  0 v  1 # H2-N1
-2 5 2.2152 4 0 0  0 hb 0 # H2-N2
-3 5 1.1520 1 0 0  0 v  3 # C1-N2
-3 4 1.3148 1 0 0  0 v  1 # C1-N1
+1 4 0.8988 1 0 0  0 v  1
+1 5 2.1228 2 0 0 -1 hb 0
+2 4 0.8826 1 0 0  0 v  1
+2 5 2.2152 4 0 0  0 hb 0
+3 5 1.1520 1 0 0  0 v  3
+3 4 1.3148 1 0 0  0 v  1
 
 loop_
 _topol_atom.id
@@ -71,5 +73,5 @@ _topol_atom.elment_symbol
 3 C1 3 C
 4 N1 4 N
 5 N2 5 N
-#End of data_example_6
+
 

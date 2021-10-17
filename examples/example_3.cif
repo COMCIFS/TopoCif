@@ -58,14 +58,15 @@ _symmetry_equiv_pos_as_xyz
 
 loop_
 _atom_site_label
+_atom_site_type_symbol
 _atom_site_symmetry_multiplicity
 _atom_site_fract_x
 _atom_site_fract_y
 _atom_site_fract_z
 _atom_site_occupancy
-C1 6 0.00000 0.00000 0.25000 1.0000
-O1 18 0.25930 0.00000 0.25000 1.0000
-Ca1 6 0.00000 0.00000 0.00000 1.0000
+C1 C 6 0.00000 0.00000 0.25000 1.0000
+O1 O 18 0.25930 0.00000 0.25000 1.0000
+Ca1 Ca 6 0.00000 0.00000 0.00000 1.0000
 
 _topol_net.overall_topology_RCSR pcu-b
 

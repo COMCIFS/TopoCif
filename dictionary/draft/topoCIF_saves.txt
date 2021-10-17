@@ -64,10 +64,6 @@ _topol_node.point_symbol
 _topol_node.symmetry_multiplicity
 _topol_node.vertex_symbol
 _topol_node.Wyckoff_symbol
-_TOPOL_OCCURRENCE
-_topol_occurrence.citation_id
-_topol_occurrence.id
-_topol_occurrence.net_id
 _TOPOL_TILING
 _topol_tiling.d_size
 _topol_tiling.dual
@@ -78,12 +74,4 @@ _topol_tiling.net_id
 _topol_tiling.signature
 _topol_tiling.tiles
 _topol_tiling.vertices
-_TOPOL_TILING_FACES
-_topol_tiling_faces.count
-_topol_tiling_faces.size
-_topol_tiling_faces.tile_id
-_TOPOL_TILING_TILE
-_topol_tiling_tile.count
-_topol_tiling_tile.id
-_topol_tiling_tile.tiling_id
 _TOPOLOGY

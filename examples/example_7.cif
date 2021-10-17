@@ -233,7 +233,7 @@ _topol_link.distance
 _topol_link.symop_1
 _topol_link.translation_1
 _topol_link.symop_2
-_topol_link.translation_2
+_topol_link.site_symmetry_translation_2
 _topol_link.type
 1 1 3.0470 1 [0 0 0] 47 [0 0 0] gl
 1 1 3.0473 1 [0 0 0] 13 [1 1 0] gl
