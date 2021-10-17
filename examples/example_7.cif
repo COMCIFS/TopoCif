@@ -209,12 +209,11 @@ _space_group_symop.operation_xyz
 
 loop_
 _atom_site.label
-_atom_site.type_symbol
 _atom_site.symmetry_multiplicity
 _atom_site.fract_x
 _atom_site.fract_y
 _atom_site.fract_z
-Si1 Si 192 0.94690 0.12510 0.03640
+Si1 192 0.94690 0.12510 0.03640
 
 loop_
 _topol_net.id

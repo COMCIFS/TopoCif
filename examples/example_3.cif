@@ -56,15 +56,14 @@ _space_group_symop.operation_xyz
 
 loop_
 _atom_site.label
-_atom_site.type_symbol
 _atom_site.symmetry_multiplicity
 _atom_site.fract_x
 _atom_site.fract_y
 _atom_site.fract_z
 _atom_site.occupancy
-C1 C 6 0.00000 0.00000 0.25000 1.0000
-O1 O 18 0.25930 0.00000 0.25000 1.0000
-Ca1 Ca 6 0.00000 0.00000 0.00000 1.0000
+C1 6 0.00000 0.00000 0.25000 1.0000
+O1 18 0.25930 0.00000 0.25000 1.0000
+Ca1 6 0.00000 0.00000 0.00000 1.0000
 
 _topol_net.overall_topology_RCSR pcu-b
 

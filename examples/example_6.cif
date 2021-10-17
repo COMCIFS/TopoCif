@@ -29,17 +29,16 @@ _space_group_symop.operation_xyz
 
 loop_
 _atom_site.label
-_atom_site.type_symbol
 _atom_site.symmetry_multiplicity
 _atom_site.fract_x
 _atom_site.fract_y
 _atom_site.fract_z
 _atom_site.occupancy
-H1 H 8 0.19700 0.11100 0.02200 1.0000
-H2 H 8 0.05900 0.26600 0.08700 1.0000
-C1 C 8 0.14120 0.08370 0.23120 1.0000
-N1 N 8 0.14590 0.16990 0.10179 1.0000
-N2 N 8 0.14010 0.01250 0.34609 1.0000
+H1 8 0.19700 0.11100 0.02200 1.0000
+H2 8 0.05900 0.26600 0.08700 1.0000
+C1 8 0.14120 0.08370 0.23120 1.0000
+N1 8 0.14590 0.16990 0.10179 1.0000
+N2 8 0.14010 0.01250 0.34609 1.0000
 
 loop_
 _topol_node.id
@@ -66,7 +65,7 @@ loop_
 _topol_atom.id
 _topol_atom.atom_label
 _topol_atom.node_id
-_topol_atom.elment_symbol
+_topol_atom.element_symbol
 1 H1 1 H
 2 H2 2 H
 3 C1 3 C

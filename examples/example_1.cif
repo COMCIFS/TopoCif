@@ -210,13 +210,12 @@ _space_group_symop.operation_xyz
 
 loop_
 _atom_site.label
-_atom_site.type_symbol
 _atom_site.symmetry_multiplicity
 _atom_site.fract_x
 _atom_site.fract_y
 _atom_site.fract_z
 _atom_site.occupancy
-C1 C 8 0.12500 0.12500 0.12500 1.0000
+C1 8 0.12500 0.12500 0.12500 1.0000
 
 _topol_net.overall_topology_RCSR dia
 
