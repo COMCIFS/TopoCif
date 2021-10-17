@@ -14,6 +14,7 @@ _topol_atom.translation_z
 _TOPOL_ENTANGL
 _TOPOL_LINK
 _topol_link.distance
+_topol_link.distance_su
 _topol_link.id
 _topol_link.label
 _topol_link.multiplicity
@@ -34,6 +35,7 @@ _topol_link.translation_2_y
 _topol_link.translation_2_z
 _topol_link.type
 _topol_link.Voronoi_solid_angle
+_topol_link.Voronoi_solid_angle_su
 _TOPOL_NET
 _topol_net.genus
 _topol_net.id
@@ -55,8 +57,11 @@ _topol_node.coordination_sequence
 _topol_node.coordination_sequence_plain
 _topol_node.extended_point_symbol
 _topol_node.fract_x
+_topol_node.fract_x_su
 _topol_node.fract_y
+_topol_node.fract_y_su
 _topol_node.fract_z
+_topol_node.fract_z_su
 _topol_node.id
 _topol_node.label
 _topol_node.net_id
