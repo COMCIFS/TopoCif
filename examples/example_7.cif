@@ -228,16 +228,17 @@ _topol_node.label
 1 1 Si
 
 loop_
+_topol_link.id
 _topol_link.node_id_1
 _topol_link.node_id_2
 _topol_link.distance
 _topol_link.symop_id_2
 _topol_link.translation_2
 _topol_link.type
-1 1 3.0470 47 [0 0 0] gl
-1 1 3.0473 13 [1 1 0] gl
-1 1 3.0539 41 [0 0 0] gl
-1 1 3.0814 42 [1 0 -1] gl
+1 1 1 3.0470 47 [0 0 0] gl
+2 1 1 3.0473 13 [1 1 0] gl
+3 1 1 3.0539 41 [0 0 0] gl
+4 1 1 3.0814 42 [1 0 -1] gl
 
 loop_
 _topol_atom.node_id
