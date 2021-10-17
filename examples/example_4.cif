@@ -67,6 +67,12 @@ _space_group.symop_operation_xyz
 48 1/2-z,y,1/2-x
 
 loop_
+_atom_type.symbol
+_atom_type.oxidation_number
+O2- -2
+Cu1+ 1
+
+loop_
 _atom_site.label
 _atom_site.type_symbol
 _atom_site.site_symmetry_multiplicity
@@ -74,8 +80,8 @@ _atom_site.fract_x
 _atom_site.fract_y
 _atom_site.fract_z
 _atom_site.occupancy
-O1  O  2 0.25000 0.25000 0.25000 1.0000
-Cu1 Cu 4 0.00000 0.00000 0.00000 1.0000
+O1  O2-  2 0.25000 0.25000 0.25000 1.0000
+Cu1 Cu1+ 4 0.00000 0.00000 0.00000 1.0000
 
 loop_
 _topol_net.z_number
