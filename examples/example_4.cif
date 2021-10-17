@@ -1,22 +1,22 @@
 #\#CIF_2.0
 data_example_4
-_database_code_ICSD          63281
-_chemical_name_systematic    'copper(I) oxide'
-_chemical_formula_sum        'Cu2 O1'
-_cell_length_a                      4.267
-_cell_length_b                      4.267
-_cell_length_c                      4.267
-_cell_angle_alpha                   90
-_cell_angle_beta                    90
-_cell_angle_gamma                   90
-_cell_volume                        77.69051
-_cell_formula_units_Z               2
-_space_group_name_H-M_alt      'P n -3 m'
-_space_group_name_Hall         '-P 4bc 2bc 3'
-_space_group_IT_number         224
+_database.code_ICSD          63281
+_chemical.name_systematic    'copper(I) oxide'
+_chemical_formula.sum        'Cu2 O1'
+_cell.length_a                      4.267
+_cell.length_b                      4.267
+_cell.length_c                      4.267
+_cell.angle_alpha                   90
+_cell.angle_beta                    90
+_cell.angle_gamma                   90
+_cell.volume                        77.69051
+_cell.formula_units_Z               2
+_space_group.name_H-M_alt      'P n -3 m'
+_space_group.name_Hall         '-P 4bc 2bc 3'
+_space_group.IT_number         224
 loop_
-_space_group_symop_id
-_space_group_symop_operation_xyz
+_space_group.symop_id
+_space_group.symop_operation_xyz
 1 x,y,z
 2 1/2-x,1/2-y,z
 3 x,1/2-y,1/2-z

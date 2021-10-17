@@ -1,22 +1,22 @@
 #\#CIF_2.0
 data_example_2
-_database_code_CSD        FUBYUW
-_chemical_name_systematic 'lithium tetracarbonyl-cobalt'
-_chemical_formula_sum     'C4 Co1 Li1 O4'
-_cell_length_a                      5.542
-_cell_length_b                      5.542
-_cell_length_c                      5.542
-_cell_angle_alpha                   90
-_cell_angle_beta                    90
-_cell_angle_gamma                   90
-_cell_volume                        170.2157
-_cell_formula_units_Z               1
-_space_group_name_H-M_alt      'P -4 3 m'
-_space_group_name_Hall         'P -4 2 3'
-_space_group_IT_number         215
+_database.code_CSD        FUBYUW
+_chemical.name_systematic 'lithium tetracarbonyl-cobalt'
+_chemical_formula.sum     'C4 Co1 Li1 O4'
+_cell.length_a                      5.542
+_cell.length_b                      5.542
+_cell.length_c                      5.542
+_cell.angle_alpha                   90
+_cell.angle_beta                    90
+_cell.angle_gamma                   90
+_cell.volume                        170.2157
+_cell.formula_units_Z               1
+_space_group.name_H-M_alt      'P -4 3 m'
+_space_group.name_Hall         'P -4 2 3'
+_space_group.IT_number         215
 loop_
-_space_group_symop_id
-_space_group_symop_operation_xyz
+_space_group.symop_id
+_space_group.symop_operation_xyz
 1 x,y,z
 2 -x,-y,z
 3 x,-y,-z
@@ -42,13 +42,13 @@ _space_group_symop_operation_xyz
 23 x,-z,-y
 24 -z,y,-x
 loop_
-_atom_site_label
-_atom_site_type_symbol
-_atom_site_symmetry_multiplicity
-_atom_site_fract_x
-_atom_site_fract_y
-_atom_site_fract_z
-_atom_site_occupancy
+_atom_site.label
+_atom_site.type_symbol
+_atom_site.symmetry_multiplicity
+_atom_site.fract_x
+_atom_site.fract_y
+_atom_site.fract_z
+_atom_site.occupancy
 Li1 Li 1 0.00000 0.00000 0.00000 1.0000
 C1  C  4 0.31850 0.31850 0.31850 1.0000
 O1  O  4 0.19920 0.19920 0.19920 1.0000

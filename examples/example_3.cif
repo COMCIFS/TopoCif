@@ -1,22 +1,22 @@
 #\#CIF_2.0
 data_example_3
-_database_code_ICSD       16710
-_chemical_name_systematic 'calcium carbonate' # Calcite  
-_chemical_formula_sum     'C1 Ca1 O3'
-_cell_length_a                      4.989
-_cell_length_b                      4.989
-_cell_length_c                      17.062
-_cell_angle_alpha                   90
-_cell_angle_beta                    90
-_cell_angle_gamma                   120
-_cell_volume                        367.7795
-_cell_formula_units_Z               6
-_space_group_name_H-M_alt      'R -3 c'
-_space_group_name_Hall         '-R 3 2"c'
-_space_group_IT_number         167
+_database.code_ICSD       16710
+_chemical.name_systematic 'calcium carbonate' # Calcite  
+_chemical_formula.sum     'C1 Ca1 O3'
+_cell.length_a                      4.989
+_cell.length_b                      4.989
+_cell.length_c                      17.062
+_cell.angle_alpha                   90
+_cell.angle_beta                    90
+_cell.angle_gamma                   120
+_cell.volume                        367.7795
+_cell.formula_units_Z               6
+_space_group.name_H-M_alt      'R -3 c'
+_space_group.name_Hall         '-R 3 2"c'
+_space_group.IT_number         167
 loop_
-_space_group_symop_id
-_space_group_symop_operation_xyz
+_space_group.symop_id
+_space_group.symop_operation_xyz
 1 x,y,z
 2 -y,x-y,z
 3 -x+y,-x,z
@@ -55,13 +55,13 @@ _space_group_symop_operation_xyz
 36 1/3-y,2/3-x,1/6+z
 
 loop_
-_atom_site_label
-_atom_site_type_symbol
-_atom_site_symmetry_multiplicity
-_atom_site_fract_x
-_atom_site_fract_y
-_atom_site_fract_z
-_atom_site_occupancy
+_atom_site.label
+_atom_site.type_symbol
+_atom_site.symmetry_multiplicity
+_atom_site.fract_x
+_atom_site.fract_y
+_atom_site.fract_z
+_atom_site.occupancy
 C1 C 6 0.00000 0.00000 0.25000 1.0000
 O1 O 18 0.25930 0.00000 0.25000 1.0000
 Ca1 Ca 6 0.00000 0.00000 0.00000 1.0000
