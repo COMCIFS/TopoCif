@@ -1995,8 +1995,8 @@ save_
 ;
          0.9.5                    2021-10-17
 ;
-     Removed _topol_net.occurrence_total                  (B. Hanson)
-     Removed TOPOL_OCCURRENCE                             (B. Hanson)
-     Removed TOPOL_TILING_FACES and TOPOL_TILING_TILE     (B. Hanson)
-     Added _topol_link.type 'gl' (generic link)           (B. Hanson)
+       Removed _topol_net.occurrence_total                  (B. Hanson)
+       Removed TOPOL_OCCURRENCE                             (B. Hanson)
+       Removed TOPOL_TILING_FACES and TOPOL_TILING_TILE     (B. Hanson)
+       Added _topol_link.type 'gl' (generic link)           (B. Hanson)
 ;
