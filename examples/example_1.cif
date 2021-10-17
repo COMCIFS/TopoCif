@@ -9,11 +9,12 @@ _cell_angle_beta                    90
 _cell_angle_gamma                   90
 _cell_volume                        45.38468
 _cell_formula_units_Z               8
-_symmetry_space_group_name_H-M      'F d -3 m'
-_symmetry_Int_Tables_number         227
+_space_group_name_H-M_alt      'F d -3 m'
+_space_group_name_Hall         '-F 4vw 2vw 3'
+_space_group_IT_number         227
 loop_
-_symmetry_equiv_pos_site_id
-_symmetry_equiv_pos_as_xyz
+_space_group_symop_id
+_space_group_symop_operation_xyz
 1 x,y,z
 2 1/4-x,1/4-y,z
 3 x,1/4-y,1/4-z
