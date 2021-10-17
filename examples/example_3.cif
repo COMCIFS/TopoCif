@@ -85,7 +85,7 @@ _topol_link.symop_id_2
 _topol_link.translation_2
 _topol_link.distance
 _topol_link.type
-1 1 2 20 [-1 -1 0] 3.2122 gl
+1 1 2 20 [-1 -1 0] 3.2122 gl # (CO3)-Ca
 
 loop_
 _topol_atom.id
