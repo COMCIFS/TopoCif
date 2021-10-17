@@ -1795,11 +1795,11 @@ save_
 save_topol_tiling.signature
 
     _definition.id                '_topol_tiling.signature'
-    _definition.update            2021-09-05
+    _definition.update            2021-10-17
     _description.text
 ;
     The tiling signature, written in the form
-    n[A^a^.B^b^...]+m[C^c^.D^d^...]+...,
+    n[A^a.B^b...]+m[C^c.D^d...]+...,
     where square brackets envelop tile symbols, n,m,... are stoichiometric
     coefficients, A, B, C, D, ... are sizes of tile faces, and a,b,c,d, ...
     are numbers of the faces of a given size in the tile.
