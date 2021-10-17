@@ -227,8 +227,7 @@ Zn1 Zn 32 0.29350 0.20650 0.20650 1.0000
 loop_
 _atom_type.symbol
 _atom_type.oxidation_number
-_atom_type.radius_bond
-Zn 2 0.95
+Zn 2
 
 loop_
 _topol_net.id
