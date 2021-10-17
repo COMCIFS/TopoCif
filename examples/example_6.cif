@@ -16,8 +16,8 @@ _space_group.name_Hall         '-P 2ac 2ab'
 _space_group.IT_number         61
 
 loop_
-_space_group.symop_id
-_space_group.symop_operation_xyz
+_space_group_symop.id
+_space_group_symop.operation_xyz
 1 x,y,z
 2 1/2-x,-y,1/2+z
 3 1/2+x,1/2-y,-z

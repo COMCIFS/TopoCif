@@ -15,8 +15,8 @@ _space_group.name_H-M_alt      'P -4 3 m'
 _space_group.name_Hall         'P -4 2 3'
 _space_group.IT_number         215
 loop_
-_space_group.symop_id
-_space_group.symop_operation_xyz
+_space_group_symop.id
+_space_group_symop.operation_xyz
 1 x,y,z
 2 -x,-y,z
 3 x,-y,-z
