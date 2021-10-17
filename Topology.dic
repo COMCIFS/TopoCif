@@ -857,7 +857,8 @@ save_topol_link.type
     two sites. If no bond exists, use an undelimited period character.
     If the bond type is unknown, use ? or leave out the data item. The
     number of electron pairs participating in the bond can be indicated
-    using _topol_link.order.
+    using _topol_link.order. The value 'sb' or 'gl' should be used for
+    any case where the connection is not a bond between two atoms.
 ;
     _name.category_id             topol_link
     _name.object_id               type
@@ -1997,6 +1998,5 @@ save_
      Removed _topol_net.occurrence_total                  (B. Hanson)
      Removed TOPOL_OCCURRENCE                             (B. Hanson)
      Removed TOPOL_TILING_FACES and TOPOL_TILING_TILE     (B. Hanson)
-     Added _topol_link.type 'gl' (generic link)           (B. Hanson)
      Added _topol_link.type 'gl' (generic link)           (B. Hanson)
 ;
