@@ -210,16 +210,25 @@ _space_group_symop.operation_xyz
 192 1/2-z,1/2+y,-x
 loop_
 _atom_site.label
+_atom_site.type_symbol
+_atom_site.symmetry_multiplicity
 _atom_site.fract_x
 _atom_site.fract_y
 _atom_site.fract_z
-H1  0.30590 0.19410 0.04520
-C1  0.25000 0.25000 0.11050
-C2  0.28310 0.21690 0.02630
-C3  0.25000 0.25000 0.05380
-O1  .25000 0.25000 0.25000
-O2  0.28180 0.21820 0.13390
-Zn1 0.29350 0.20650 0.20650
+_atom_site.occupancy
+H1  .  96 0.30590 0.19410 0.04520 1.0000
+C1  .  48 0.25000 0.25000 0.11050 1.0000
+C2  .  96 0.28310 0.21690 0.02630 1.0000
+C3  .  48 0.25000 0.25000 0.05380 1.0000
+O1  .  8 0.25000 0.25000 0.25000 1.0000
+O2  .  96 0.28180 0.21820 0.13390 1.0000
+Zn1 Zn2+ 32 0.29350 0.20650 0.20650 1.0000
+
+loop_
+_atom_type.symbol
+_atom_type.oxidation_number
+_atom_type.radius_bond
+Zn2+ 2 0.95
 
 loop_
 _topol_net.id

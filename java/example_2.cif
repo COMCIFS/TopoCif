@@ -43,13 +43,15 @@ _space_group_symop.operation_xyz
 24 -z,y,-x
 loop_
 _atom_site.label
+_atom_site.symmetry_multiplicity
 _atom_site.fract_x
 _atom_site.fract_y
 _atom_site.fract_z
-Li1 0.00000 0.00000 0.00000
-C1  0.31850 0.31850 0.31850
-O1  0.19920 0.19920 0.19920
-Co1 0.50000 0.50000 0.50000
+_atom_site.occupancy
+Li1 1 0.00000 0.00000 0.00000 1.0000
+C1  4 0.31850 0.31850 0.31850 1.0000
+O1  4 0.19920 0.19920 0.19920 1.0000
+Co1 1 0.50000 0.50000 0.50000 1.0000
 
 loop_
 _topol_net.id
