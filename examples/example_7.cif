@@ -242,7 +242,8 @@ _topol_link.type
 loop_
 _topol_atom.node_id
 _topol_atom.atom_label
-1 Si1
+_topol_atom.element_symbol
+1 Si1 Si
 
 loop_
 _topol_tiling.id
