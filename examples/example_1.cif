@@ -219,7 +219,8 @@ _topol_net.overall_topology_RCSR dia
 
 loop_
 _topol_node.id 
-1
+_topol_node.net_id
+1 1
 
 loop_
 _topol_link.id
