@@ -63,16 +63,18 @@ C1  0.00000 0.00000 0.25000
 O1  0.25930 0.00000 0.25000
 Ca1 0.00000 0.00000 0.00000
 
+_topol_net.id 1
 _topol_net.overall_topology_RCSR pcu-b
 
 loop_
 _topol_node.id
+_topol_node.net_id
 _topol_node.label
 _topol_node.fract_x
 _topol_node.fract_y
 _topol_node.fract_z
-1 ZA1 0.00000 0.00000 0.25000 # CO3
-2 ZB1 . . .                   # Ca
+1 1 ZA1 0.00000 0.00000 0.25000 # CO3
+2 1 ZB1 . . .                   # Ca
 
 loop_
 _topol_link.id

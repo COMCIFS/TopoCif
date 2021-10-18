@@ -75,13 +75,15 @@ O1  0.25000 0.25000 0.25000
 Cu1 0.00000 0.00000 0.00000
 
 loop_
+_topol_net.id
 _topol_net.z_number
 _topol_net.overall_topology_RCSR
-2 'dia'
+1 2 'dia'
 
 loop_
-_topol_node.id 
-1  # O1
+_topol_node.id
+_topol_node.net_id
+1 1 # O1
 
 loop_
 _topol_link.id

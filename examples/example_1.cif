@@ -215,6 +215,7 @@ _atom_site.fract_y
 _atom_site.fract_z
 C1 0.12500 0.12500 0.12500
 
+_topol_net.id 1
 _topol_net.overall_topology_RCSR dia
 
 loop_
