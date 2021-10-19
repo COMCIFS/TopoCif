@@ -1228,9 +1228,9 @@ save_topol_net.total_point_symbol
       _description_example.case
       _description_example.detail
          '{6^6^}'
-         'Point symbol for diamond'
+             'Point symbol for diamond'
          '{4.6^2^}_2{4^2^.6^10^.8^3^}'
-         '3,6-coordinated underlying net of TiO2'
+             '3,6-coordinated underlying net of TiO2'
 
 save_
 
@@ -1563,13 +1563,13 @@ save_topol_node.point_symbol
       _description_example.case
       _description_example.detail
          6^6^
-         'Point symbol for a diamond vertex'
+             'Point symbol for a diamond vertex'
          4^2^.6^3^.8
-         'Point symbol for a feldspar 4-coordinated vertex'
+             'Point symbol for a feldspar 4-coordinated vertex'
          7^5^.9
-         'Point symbol for the vertex of 4-c qzd net'
+             'Point symbol for the vertex of 4-c qzd net'
          4^4^.6^6^
-         'Point symbol for the vertex of 5-c sqp net'
+             'Point symbol for the vertex of 5-c sqp net'
 
 save_
 
@@ -1862,7 +1862,6 @@ save_topol_tiling.vertices
     _units.code                   none
 
 save_
-
 
     loop_
       _dictionary_audit.version
