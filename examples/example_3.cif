@@ -11,7 +11,7 @@ _cell.angle_beta                    90
 _cell.angle_gamma                   120
 _cell.volume                        367.7795
 _cell.formula_units_Z               6
-_space_group.name_H-M_alt      'R -3 c'
+_space_group.name_H-M_ref      'R -3 c'
 _space_group.name_Hall         '-R 3 2"c'
 _space_group.IT_number         167
 loop_

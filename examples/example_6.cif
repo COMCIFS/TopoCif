@@ -10,7 +10,7 @@ _cell.angle_beta                    90
 _cell.angle_gamma                   90
 _cell.volume                        415.654
 _cell.formula_units_Z               8
-_space_group.name_H-M_alt      'P b c a'
+_space_group.name_H-M_ref      'P b c a'
 _space_group.name_Hall         '-P 2ac 2ab'
 _space_group.IT_number         61
 loop_
