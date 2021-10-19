@@ -14,6 +14,7 @@ _cell.formula_units_Z               6
 _space_group.name_H-M_ref      'R -3 c'
 _space_group.name_Hall         '-R 3 2"c'
 _space_group.IT_number         167
+
 loop_
 _space_group_symop.id
 _space_group_symop.operation_xyz
@@ -68,13 +69,9 @@ _topol_net.overall_topology_RCSR pcu-b
 
 loop_
 _topol_node.id
-_topol_node.net_id
 _topol_node.label
-_topol_node.fract_x
-_topol_node.fract_y
-_topol_node.fract_z
-1 1 ZA1 0.00000 0.00000 0.25000 # CO3
-2 1 ZB1 . . .                   # Ca
+1 ZA1 # CO3
+2 ZB1 # Ca
 
 loop_
 _topol_link.id
@@ -92,8 +89,8 @@ _topol_atom.node_id
 _topol_atom.atom_label
 _topol_atom.element_symbol
 _topol_atom.symop_id
-1 1 C1 C 1
-2 1 O1 O 2
+1 1 C1 C 1 
+2 1 O1 O 2 
 3 1 O1 O 2
 4 1 O1 O 3
 5 2 Ca1 Ca 1

@@ -52,9 +52,9 @@ _topol_link.translation_2_z
 _topol_link.type
 _topol_link.order
 1 1 4 0.8988 1 0 0  0 v  1 # H1-N1
-2 1 5 2.1228 2 0 0 -1 hb 0 # H1-N2
+2 1 5 2.1228 2 0 0 -1 hb ? # H1-N2
 3 2 4 0.8826 1 0 0  0 v  1 # H2-N1
-4 2 5 2.2152 4 0 0  0 hb 0 # H2-N2
+4 2 5 2.2152 4 0 0  0 hb ? # H2-N2
 5 3 5 1.1520 1 0 0  0 v  3 # C1-N2
 6 3 4 1.3148 1 0 0  0 v  1 # C1-N1
 
