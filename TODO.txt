@@ -1,0 +1,8 @@
+create pre-release branch
+place final draft in dictonary/
+update topoCIF_saves.txt and move that to dictionary/
+remove dictionary/draft
+remove dictionary/ref
+clean dictionary/figures, keeping only the final one (Schemes4.*) as Scheme_1.*
+update README.md
+
