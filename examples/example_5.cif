@@ -209,6 +209,7 @@ _space_group_symop.operation_xyz
 191 1/2-z,y,1/2-x
 192 1/2-z,1/2+y,-x
 loop_
+
 _atom_site.label
 _atom_site.fract_x
 _atom_site.fract_y

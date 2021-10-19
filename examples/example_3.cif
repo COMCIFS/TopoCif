@@ -1,7 +1,7 @@
 #\#CIF_2.0
 data_example_3
 _database.code_ICSD       16710
-_chemical.name_systematic 'calcium carbonate' # Calcite  
+_chemical.name_systematic 'calcium carbonate' # Calcite
 _chemical_formula.sum     'C1 Ca1 O3'
 _cell.length_a                      4.989
 _cell.length_b                      4.989
@@ -63,7 +63,7 @@ C1  0.00000 0.00000 0.25000
 O1  0.25930 0.00000 0.25000
 Ca1 0.00000 0.00000 0.00000
 
-_topol_net.id 1
+_topol_net.id                    1
 _topol_net.overall_topology_RCSR pcu-b
 
 loop_
@@ -92,8 +92,8 @@ _topol_atom.node_id
 _topol_atom.atom_label
 _topol_atom.element_symbol
 _topol_atom.symop_id
-1 1 C1 C 1 
-2 1 O1 O 2 
+1 1 C1 C 1
+2 1 O1 O 2
 3 1 O1 O 2
 4 1 O1 O 3
 5 2 Ca1 Ca 1

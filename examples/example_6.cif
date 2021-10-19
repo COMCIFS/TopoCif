@@ -2,7 +2,6 @@ data_example_6
 _database.code_CSD        CYANAM01
 _chemical.name_systematic cyanamide
 _chemical_formula.sum     'C1 H2 N2'
-
 _cell.length_a                      6.856
 _cell.length_b                      6.628
 _cell.length_c                      9.147
@@ -14,7 +13,6 @@ _cell.formula_units_Z               8
 _space_group.name_H-M_alt      'P b c a'
 _space_group.name_Hall         '-P 2ac 2ab'
 _space_group.IT_number         61
-
 loop_
 _space_group_symop.id
 _space_group_symop.operation_xyz
@@ -46,7 +44,7 @@ loop_
 _topol_link.id
 _topol_link.node_id_1
 _topol_link.node_id_2
-_topol_link.distance	
+_topol_link.distance
 _topol_link.symop_id_2
 _topol_link.translation_2_x
 _topol_link.translation_2_y
@@ -70,5 +68,5 @@ _topol_atom.element_symbol
 3 C1 3 C
 4 N1 4 N
 5 N2 5 N
-#End of data_example_6
 
+#End of data_example_6

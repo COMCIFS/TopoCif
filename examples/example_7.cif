@@ -207,12 +207,10 @@ _space_group_symop.operation_xyz
 191 3/4-z,y,3/4-x
 192 3/4-z,1/2+y,1/4-x
 
-loop_
-_atom_site.label
-_atom_site.fract_x
-_atom_site.fract_y
-_atom_site.fract_z
-Si1 0.94690 0.12510 0.03640
+_atom_site.label   Si1
+_atom_site.fract_x 0.94690
+_atom_site.fract_y 0.12510
+_atom_site.fract_z 0.03640
 
 _topol_net.id                   1
 _topol_net.overall_topology_iza FAU
@@ -244,11 +242,8 @@ _topol_tiling.net_id     1
 _topol_tiling.signature  '2[4^6.6^2]+[4^6.6^8]+[4^18.6^4.12^4]'
 _topol_tiling.vertices   1
 _topol_tiling.edges      4
-_topol_tiling.faces      5 
+_topol_tiling.faces      5
 _topol_tiling.tiles      3
 _topol_tiling.d_size     24
 
-
-
 #End of data_example_7
-

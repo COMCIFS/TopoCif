@@ -41,6 +41,7 @@ _space_group_symop.operation_xyz
 22 -z,-y,x
 23 x,-z,-y
 24 -z,y,-x
+
 loop_
 _atom_site.label
 _atom_site.fract_x

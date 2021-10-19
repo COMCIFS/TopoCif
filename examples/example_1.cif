@@ -213,10 +213,10 @@ _atom_site.fract_x  0.12500
 _atom_site.fract_y  0.12500
 _atom_site.fract_z  0.12500
 
-_topol_net.id 1
+_topol_net.id                    1
 _topol_net.overall_topology_RCSR dia
 
-_topol_node.id 1
+_topol_node.id     1
 _topol_node.net_id 1
 
 _topol_link.id                   1
@@ -227,11 +227,10 @@ _topol_link.translation_1        [0 0 0]
 _topol_link.symop_id_2           13
 _topol_link.translation_2        [0 0 0]
 _topol_link.distance             1.5446
-_topol_link.Voronoi_solid_angle  22.04 
+_topol_link.Voronoi_solid_angle  22.04
 _topol_link.type                 v
 _topol_link.order                1
 _topol_link.multiplicity         16
-
 
 _topol_atom.id              1
 _topol_atom.node_id         1
@@ -239,4 +238,3 @@ _topol_atom.atom_label      C1
 _topol_atom.element_symbol  C
 
 #End of data_example_1
-
