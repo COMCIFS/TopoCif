@@ -1227,8 +1227,10 @@ save_topol_net.total_point_symbol
     loop_
       _description_example.case
       _description_example.detail
-         '{6^6}'                       'Point symbol for diamond'
-         '{4.6^2}_2{4^2.6^10.8^3}'     '3,6-coordinated underlying net of TiO2'
+         '{6^6^}'
+         'Point symbol for diamond'
+         '{4.6^2^}_2{4^2^.6^10^.8^3^}'
+         '3,6-coordinated underlying net of TiO2'
 
 save_
 
@@ -1560,10 +1562,14 @@ save_topol_node.point_symbol
     loop_
       _description_example.case
       _description_example.detail
-         6^6                 'Point symbol for a diamond vertex'
-         4^2.6^3.8           'Point symbol for a feldspar 4-coordinated vertex'
-         7^5.9               'Point symbol for the vertex of 4-c qzd net'
-         4^4.6^6             'Point symbol for the vertex of 5-c sqp net'
+         6^6^
+         'Point symbol for a diamond vertex'
+         4^2^.6^3^.8
+         'Point symbol for a feldspar 4-coordinated vertex'
+         7^5^.9
+         'Point symbol for the vertex of 4-c qzd net'
+         4^4^.6^6^
+         'Point symbol for the vertex of 5-c sqp net'
 
 save_
 
@@ -1601,7 +1607,7 @@ save_topol_node.vertex_symbol
     that contain no shortcuts, that is, are not the sum of  two
     smaller circuits. There may be circuits that cannot be rings. If
     there are no rings meeting at a particular angle of the node, the
-    symbol '*' is used instead of the A^a symbol. It is sorted so
+    symbol '*' is used instead of the A^a^ symbol. It is sorted so
     shortest rings come first. For 4-coordinated nodes only, the
     angles are grouped in opposite pairs; ab,cd and ac,bd and ad,bc
     (written in lexicographic order smallest numbers first). In the
@@ -1799,7 +1805,7 @@ save_topol_tiling.signature
     _description.text
 ;
     The tiling signature, written in the form
-    n[A^a.B^b...]+m[C^c.D^d...]+...,
+    n[A^a^.B^b^...]+m[C^c^.D^d^...]+...,
     where square brackets envelop tile symbols, n,m,... are stoichiometric
     coefficients, A, B, C, D, ... are sizes of tile faces, and a,b,c,d, ...
     are numbers of the faces of a given size in the tile.
@@ -1814,8 +1820,10 @@ save_topol_tiling.signature
     loop_
       _description_example.case
       _description_example.detail
-         '[6^4]'                               'Natural tiling for diamond'
-         '3[4^6]+[4^6.6^8]+[4^12.6^8.8^6]'     'Natural tiling for zeolite LTA'
+       '[6^4^]'
+       'Natural tiling for diamond'
+       '3[4^6^]+[4^6^.6^8^]+[4^12^.6^8^.8^6^]'
+       'Natural tiling for zeolite LTA'
 
 save_
 
