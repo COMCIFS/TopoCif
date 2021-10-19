@@ -217,11 +217,11 @@ _atom_site.fract_z
 _atom_site.occupancy
 C1 8 0.12500 0.12500 0.12500 1.0000
 
-_topol_net.overall_topology_RCSR dia
 
-loop_
-_topol_node.id 
-1
+_topol_net_id 1
+_topol_net_overall_topology_RCSR dia
+
+_topol_node_id 1
 
 loop_
 _topol_link.id

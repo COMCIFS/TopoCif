@@ -74,24 +74,18 @@ _atom_site.fract_z
 O1  0.25000 0.25000 0.25000
 Cu1 0.00000 0.00000 0.00000
 
-loop_
-_topol_net.id
-_topol_net.z_number
-_topol_net.overall_topology_RCSR
-1 2 'dia'
+_topol_net.id 1
+_topol_net.z_number 2
+_topol_net.overall_topology_RCSR 'dia'
 
-loop_
-_topol_node.id
-_topol_node.net_id
-1 1 # O1
+_topol_node.id 1
+_topol_node.net_id 1
 
-loop_
-_topol_link.id
-_topol_link.node_id_1
-_topol_link.node_id_2
-_topol_link.symop_id_2
-_topol_link.type
-1 1 1 13 gl # Cu
+_topol_link.id 1
+_topol_link.node_id_1 1
+_topol_link.node_id_2 1
+_topol_link.symop_id_2 13
+_topol_link.type gl
 
 loop_
 _topol_atom.id
