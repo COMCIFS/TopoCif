@@ -1607,7 +1607,7 @@ save_topol_node.vertex_symbol
     that contain no shortcuts, that is, are not the sum of  two
     smaller circuits. There may be circuits that cannot be rings. If
     there are no rings meeting at a particular angle of the node, the
-    symbol '*' is used instead of the A^a^ symbol. It is sorted so
+    symbol '*' is used instead of the 'A^a' symbol. It is sorted so
     shortest rings come first. For 4-coordinated nodes only, the
     angles are grouped in opposite pairs; ab,cd and ac,bd and ad,bc
     (written in lexicographic order smallest numbers first). In the
