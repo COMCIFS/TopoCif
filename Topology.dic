@@ -1562,8 +1562,7 @@ save_topol_node.point_symbol
     loop_
       _description_example.case
       _description_example.detail
-         6^6^
-             'Point symbol for a diamond vertex'
+         6^6^               'Point symbol for a diamond vertex'
          4^2^.6^3^.8
              'Point symbol for a feldspar 4-coordinated vertex'
          7^5^.9
@@ -1820,10 +1819,9 @@ save_topol_tiling.signature
     loop_
       _description_example.case
       _description_example.detail
-       '[6^4^]'
-       'Natural tiling for diamond'
-       '3[4^6^]+[4^6^.6^8^]+[4^12^.6^8^.8^6^]'
-       'Natural tiling for zeolite LTA'
+         '[6^4^]'           'Natural tiling for diamond'
+         '3[4^6^]+[4^6^.6^8^]+[4^12^.6^8^.8^6^]'
+             'Natural tiling for zeolite LTA'
 
 save_
 
