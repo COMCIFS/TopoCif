@@ -10,7 +10,7 @@ data_TOPOLOGY_CIF
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.5
-    _dictionary.date              2021-10-17
+    _dictionary.date              2021-10-21
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/TopoCif/master/Topology.dic
     _dictionary.ddl_conformance   4.1.0
@@ -250,7 +250,7 @@ save_
 save_topol_atom.symop_id
 
     _definition.id                '_topol_atom.symop_id'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-21
     _description.text
 ;
     The identifier of the symmetry operation that is to be
@@ -268,13 +268,14 @@ save_topol_atom.symop_id
     _type.source                  Derived
     _type.container               Single
     _type.contents                Code
+    _enumeration.default          1
 
 save_
 
 save_topol_atom.translation
 
     _definition.id                '_topol_atom.translation'
-    _definition.update            2021-10-08
+    _definition.update            2021-10-21
     _description.text
 ;
     The lattice translation vector that must be added to the
@@ -299,6 +300,7 @@ save_topol_atom.translation
     _type.container               Matrix
     _type.dimension               '[3]'
     _type.contents                Integer
+    _enumeration.default          [0  0  0]
     _units.code                   none
 
 save_
@@ -306,7 +308,7 @@ save_
 save_topol_atom.translation_x
 
     _definition.id                '_topol_atom.translation_x'
-    _definition.update            2021-10-08
+    _definition.update            2021-10-21
     _description.text
 ;
      The x component of the vector of lattice translations that is added
@@ -320,6 +322,7 @@ save_topol_atom.translation_x
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _enumeration.default          0
     _units.code                   none
 
 save_
@@ -327,7 +330,7 @@ save_
 save_topol_atom.translation_y
 
     _definition.id                '_topol_atom.translation_y'
-    _definition.update            2021-10-08
+    _definition.update            2021-10-21
     _description.text
 ;
     The y component of the vector of lattice translations that is added
@@ -341,6 +344,7 @@ save_topol_atom.translation_y
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _enumeration.default          0
     _units.code                   none
 
 save_
@@ -348,7 +352,7 @@ save_
 save_topol_atom.translation_z
 
     _definition.id                '_topol_atom.translation_z'
-    _definition.update            2021-10-08
+    _definition.update            2021-10-21
     _description.text
 ;
     The z component of the vector of lattice translations that is added
@@ -362,6 +366,7 @@ save_topol_atom.translation_z
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _enumeration.default          0
     _units.code                   none
 
 save_
@@ -616,7 +621,7 @@ save_
 save_topol_link.symop_id_1
 
     _definition.id                '_topol_link.symop_id_1'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-21
     _description.text
 ;
     The identifier of the symmetry operation that is to be
@@ -634,13 +639,14 @@ save_topol_link.symop_id_1
     _type.source                  Derived
     _type.container               Single
     _type.contents                Code
+    _enumeration.default          1
 
 save_
 
 save_topol_link.symop_id_2
 
     _definition.id                '_topol_link.symop_id_2'
-    _definition.update            2021-09-13
+    _definition.update            2021-10-21
     _description.text
 ;
     The identifier of the symmetry operation that is to be
@@ -658,13 +664,14 @@ save_topol_link.symop_id_2
     _type.source                  Derived
     _type.container               Single
     _type.contents                Code
+    _enumeration.default          1
 
 save_
 
 save_topol_link.translation_1
 
     _definition.id                '_topol_link.translation_1'
-    _definition.update            2021-10-08
+    _definition.update            2021-10-21
     _description.text
 ;
     The lattice translation vector that must be added to the
@@ -687,6 +694,7 @@ save_topol_link.translation_1
     _type.container               Matrix
     _type.dimension               '[3]'
     _type.contents                Integer
+    _enumeration.default          [0  0  0]
     _units.code                   none
 
 save_
@@ -694,7 +702,7 @@ save_
 save_topol_link.translation_1_x
 
     _definition.id                '_topol_link.translation_1_x'
-    _definition.update            2021-10-08
+    _definition.update            2021-10-21
     _description.text
 ;
      The x component of the vector of lattice translations that is added
@@ -708,6 +716,7 @@ save_topol_link.translation_1_x
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _enumeration.default          0
     _units.code                   none
 
 save_
@@ -715,7 +724,7 @@ save_
 save_topol_link.translation_1_y
 
     _definition.id                '_topol_link.translation_1_y'
-    _definition.update            2021-10-08
+    _definition.update            2021-10-21
     _description.text
 ;
      The y component of the vector of lattice translations that is added
@@ -729,6 +738,7 @@ save_topol_link.translation_1_y
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _enumeration.default          0
     _units.code                   none
 
 save_
@@ -736,7 +746,7 @@ save_
 save_topol_link.translation_1_z
 
     _definition.id                '_topol_link.translation_1_z'
-    _definition.update            2021-10-08
+    _definition.update            2021-10-21
     _description.text
 ;
      The z component of the vector of lattice translations that is added
@@ -750,6 +760,7 @@ save_topol_link.translation_1_z
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _enumeration.default          0
     _units.code                   none
 
 save_
@@ -757,7 +768,7 @@ save_
 save_topol_link.translation_2
 
     _definition.id                '_topol_link.translation_2'
-    _definition.update            2021-10-08
+    _definition.update            2021-10-21
     _description.text
 ;
     The lattice translation vector that must be added to the
@@ -780,6 +791,7 @@ save_topol_link.translation_2
     _type.container               Matrix
     _type.dimension               '[3]'
     _type.contents                Integer
+    _enumeration.default          [0  0  0]
     _units.code                   none
 
 save_
@@ -787,7 +799,7 @@ save_
 save_topol_link.translation_2_x
 
     _definition.id                '_topol_link.translation_2_x'
-    _definition.update            2021-10-08
+    _definition.update            2021-10-21
     _description.text
 ;
      The x component of the vector of lattice translations that is added
@@ -801,6 +813,7 @@ save_topol_link.translation_2_x
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _enumeration.default          0
     _units.code                   none
 
 save_
@@ -808,7 +821,7 @@ save_
 save_topol_link.translation_2_y
 
     _definition.id                '_topol_link.translation_2_y'
-    _definition.update            2021-10-08
+    _definition.update            2021-10-21
     _description.text
 ;
      The y component of the vector of lattice translations that is added
@@ -822,6 +835,7 @@ save_topol_link.translation_2_y
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _enumeration.default          0
     _units.code                   none
 
 save_
@@ -829,7 +843,7 @@ save_
 save_topol_link.translation_2_z
 
     _definition.id                '_topol_link.translation_2_z'
-    _definition.update            2021-10-08
+    _definition.update            2021-10-21
     _description.text
 ;
      The z component of the vector of lattice translations that is added
@@ -843,6 +857,7 @@ save_topol_link.translation_2_z
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _enumeration.default          0
     _units.code                   none
 
 save_
@@ -2000,12 +2015,15 @@ save_
        TODO: adjust _category_key.name to allow for optional id in all
        TOPOL_* categories with _topol_*.id, as in CHEMICAL_CONN_BOND
 ;
-         0.9.5                    2021-10-17
+         0.9.5                    2021-10-21
 ;
        Removed _topol_net.occurrence_total                  (B. Hanson)
        Removed TOPOL_OCCURRENCE                             (B. Hanson)
        Removed TOPOL_TILING_FACES and TOPOL_TILING_TILE     (B. Hanson)
        Added _topol_link.type 'gl' (generic link)           (B. Hanson)
+
+       Added machine-readable default values to the definitions
+       of multiple data items. (A. Vaitkus)
 
        NOTE: _topol_net.total_point_symbol
        should display { } correctly in {4.6^2}2{4^2.6^10.8^3}
