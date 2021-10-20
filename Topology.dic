@@ -1242,10 +1242,8 @@ save_topol_net.total_point_symbol
     loop_
       _description_example.case
       _description_example.detail
-         '{6^6}'
-             'Point symbol for diamond'
-         '{4.6^2}2{4^2.6^10.8^3}'
-             '3,6-coordinated underlying net of TiO2'
+         '{6^6}'                       'Point symbol for diamond'
+         '{4.6^2}2{4^2.6^10.8^3}'      '3,6-coordinated underlying net of TiO2'
 
 save_
 
@@ -1351,13 +1349,14 @@ save_topol_node.extended_point_symbol
     _definition.update            2021-10-20
     _description.text
 ;
-    The extended point symbol of a N-coordinated node lists all shortest circuits
-    for each of the N(N-1)/2 angles (pairs of edges) incident to the node.
-    It is written as A(a).B(b)... where A, B, ... designate sizes of
+    The extended point symbol of a N-coordinated node lists all shortest
+    circuits for each of the N(N-1)/2 angles (pairs of edges) incident to
+    the node. It is written as A(a).B(b)... where A, B, ... designate sizes of
     circuits, which meet at angles A, B, ..., and a, b, ... designate numbers
     of these circuits. It is sorted so shortest circuits come first. For
-    a 4-coordinated node connected to nodes w,x,y,z, the angles are ordered in opposite
-    pairs; wx,yz; wy,xz; wz,xy (written in lexicographic order smallest numbers first).
+    a 4-coordinated node connected to nodes w,x,y,z, the angles are ordered
+    in opposite pairs; wx,yz; wy,xz; wz,xy (written in lexicographic order
+    smallest numbers first).
 ;
     _name.category_id             topol_node
     _name.object_id               extended_point_symbol
@@ -1577,14 +1576,10 @@ save_topol_node.point_symbol
     loop_
       _description_example.case
       _description_example.detail
-         6^6
-             'Point symbol for a diamond vertex'
-         4^2.6^3.8
-             'Point symbol for a feldspar 4-coordinated vertex'
-         7^5.9
-             'Point symbol for the vertex of 4-c qzd net'
-         4^4.6^6
-             'Point symbol for the vertex of 5-c sqp net'
+         6^6                 'Point symbol for a diamond vertex'
+         4^2.6^3.8           'Point symbol for a feldspar 4-coordinated vertex'
+         7^5.9               'Point symbol for the vertex of 4-c qzd net'
+         4^4.6^6             'Point symbol for the vertex of 5-c sqp net'
 
 save_
 
@@ -1835,10 +1830,8 @@ save_topol_tiling.signature
     loop_
       _description_example.case
       _description_example.detail
-         '[6^4]'
-             'Natural tiling for diamond'
-         '3[4^6]+[4^6.6^8]+[4^12.6^8.8^6]'
-             'Natural tiling for zeolite LTA'
+         '[6^4]'                               'Natural tiling for diamond'
+         '3[4^6]+[4^6.6^8]+[4^12.6^8.8^6]'     'Natural tiling for zeolite LTA'
 
 save_
 
