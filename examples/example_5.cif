@@ -262,7 +262,7 @@ _topol_link.type
 7   6  7  .   1.9114 v  # O2-Zn1
 8   8  8  26 12.8345 gl # (C6O13Zn4)-(C6H4)-(C6O13Zn4)
 9   9 11  5   5.5309 gl # (C8H4O4)-Zn1
-10 10 11  .   1.9340 gl # O1-Zn1
+10 10 11  .   1.9340 v  # O1-Zn1
 
 loop_
 _topol_atom.id

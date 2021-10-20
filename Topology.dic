@@ -1227,9 +1227,9 @@ save_topol_net.total_point_symbol
     loop_
       _description_example.case
       _description_example.detail
-         '{6^6^}'
+         '{6^6}'
              'Point symbol for diamond'
-         '{4.6^2^}_2{4^2^.6^10^.8^3^}'
+         '{4.6^2}2{4^2.6^10.8^3}'
              '3,6-coordinated underlying net of TiO2'
 
 save_
@@ -1333,16 +1333,16 @@ save_
 save_topol_node.extended_point_symbol
 
     _definition.id                '_topol_node.extended_point_symbol'
-    _definition.update            2018-02-06
+    _definition.update            2021-10-20
     _description.text
 ;
-    The extended point symbol of the node lists all shortest circuits
-    for each angle for each non-equivalent atom. A(b).B(c)... there
-    are b A-rings and c B-rings for all the N(N-1) circuits per node.
-    It is sorted so shortest rings come first. For 4-coordinated
-    nodes only, the  angles are grouped in opposite pairs; ab,cd and
-    ac,bd and ad,bc (written in lexicographic order smallest numbers
-    first).
+    The extended point symbol of a N-coordinated node lists all shortest circuits
+    for each of the N(N-1)/2 angles (pairs of edges) incident to the node.
+    It is written as A(a).B(b)... where A, B, ... designate sizes of
+    circuits, which meet at angles A, B, ..., and a, b, ... designate numbers
+    of these circuits. It is sorted so shortest circuits come first. For
+    a 4-coordinated node connected to nodes w,x,y,z, the angles are ordered in opposite
+    pairs; wx,yz; wy,xz; wz,xy (written in lexicographic order smallest numbers first).
 ;
     _name.category_id             topol_node
     _name.object_id               extended_point_symbol
@@ -1550,7 +1550,7 @@ save_topol_node.point_symbol
     The (short) point symbol of the node. This lists the number and size of
     the shortest closed chains of connected nodes (circuits) starting from
     any non-equivalent node in the net. For an N-coordinated node there are
-    N(N-1) circuits.
+    N(N-1)/2 circuits.
 ;
     _name.category_id             topol_node
     _name.object_id               point_symbol
@@ -1562,13 +1562,13 @@ save_topol_node.point_symbol
     loop_
       _description_example.case
       _description_example.detail
-         6^6^
+         6^6
              'Point symbol for a diamond vertex'
-         4^2^.6^3^.8
+         4^2.6^3.8
              'Point symbol for a feldspar 4-coordinated vertex'
-         7^5^.9
+         7^5.9
              'Point symbol for the vertex of 4-c qzd net'
-         4^4^.6^6^
+         4^4.6^6
              'Point symbol for the vertex of 5-c sqp net'
 
 save_
@@ -1603,7 +1603,7 @@ save_topol_node.vertex_symbol
     _description.text
 ;
     The vertex symbol of a node provides similar information to the
-    extended point symbol, but only for rings, which are circuits
+    _topol_node.extended_point_symbol, but only for rings, which are circuits
     that contain no shortcuts, that is, are not the sum of  two
     smaller circuits. There may be circuits that cannot be rings. If
     there are no rings meeting at a particular angle of the node, the
@@ -1805,7 +1805,7 @@ save_topol_tiling.signature
     _description.text
 ;
     The tiling signature, written in the form
-    n[A^a^.B^b^...]+m[C^c^.D^d^...]+...,
+    n[A^a.B^b...]+m[C^c.D^d...]+...,
     where square brackets envelop tile symbols, n,m,... are stoichiometric
     coefficients, A, B, C, D, ... are sizes of tile faces, and a,b,c,d, ...
     are numbers of the faces of a given size in the tile.
@@ -1820,9 +1820,9 @@ save_topol_tiling.signature
     loop_
       _description_example.case
       _description_example.detail
-         '[6^4^]'
+         '[6^4]'
              'Natural tiling for diamond'
-         '3[4^6^]+[4^6^.6^8^]+[4^12^.6^8^.8^6^]'
+         '3[4^6]+[4^6.6^8]+[4^12.6^8.8^6]'
              'Natural tiling for zeolite LTA'
 
 save_
@@ -2006,4 +2006,9 @@ save_
        Removed TOPOL_OCCURRENCE                             (B. Hanson)
        Removed TOPOL_TILING_FACES and TOPOL_TILING_TILE     (B. Hanson)
        Added _topol_link.type 'gl' (generic link)           (B. Hanson)
+
+       NOTE: _topol_net.total_point_symbol
+       should display { } correctly in {4.6^2}2{4^2.6^10.8^3}
+
+       NOTE: all ^ should be that mark in the dictionary examples.
 ;
