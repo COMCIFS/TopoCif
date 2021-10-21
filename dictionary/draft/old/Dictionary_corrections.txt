@@ -1,6 +1,0 @@
-Page 1 bottom left  pcu-b should be  in bold not italic
-and also for all the RCSR names in page 4  qzd , sqp  (3 times)
-
-Page 2: Change _topol.repres_occurrence_total to _topol_repres_occurrence.total and move it to TOPOL_REPRES_OCCURRENCE category
-Page 3: Replace TOPOL_BOND with TOPOL_LINK
-Page 5: Remove "The signature is written in a  lexicographic order, smallest numbers first: 5[6^4^]+[6^3^] = 56463 better than [6^3^]+5[6^4^] = 63564."
