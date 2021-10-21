@@ -4,13 +4,18 @@ in this dictionary are not official until approved by COMCIFS and should not be 
 into distributed software before approval.
 
 ## Current Status
-2021.10.20  
+2021.10.21
 
-Topology.dic in the main folder is the latest version, 0.9.x, currently in final stages of development.
+Current dictionary version is 0.9.5.
 
-examples/ holds seven examples presented in Topology.dic and the chapter (see examples/README.txt)
+The repository has been cleaned of old working versions.
+Draft folders have been removed.
+Files have been renamed using semantic naming standards.
 
-dictionary/draft holds the latest draft chapter and discussion.
+Top-level master has TopoCif_chapter.docx and Topology.dic and
+are the latest versions. 
 
-
+chapter/    older versions of the Word document chapter
+dictionary/ older versions of the CIF dictionary
+examples/   seven examples appearing in the dictionary (0.9.5)
 
