@@ -1,4 +1,4 @@
-create pre-release branch
+*create pre-release branch
 place final draft in dictonary/
 update topoCIF_saves.txt and move that to dictionary/
 remove dictionary/draft
