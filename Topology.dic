@@ -9,8 +9,8 @@ data_TOPOLOGY_CIF
 
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
-    _dictionary.version           0.9.5
-    _dictionary.date              2021-10-21
+    _dictionary.version           0.9.6
+    _dictionary.date              2021-11-16
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/TopoCif/master/Topology.dic
     _dictionary.ddl_conformance   4.1.0
@@ -142,7 +142,7 @@ save_
 save_topol_atom.atom_label
 
     _definition.id                '_topol_atom.atom_label'
-    _definition.update            2021-08-29
+    _definition.update            2021-11-16
     _description.text
 ;
     A pointer to an atom that is associated with a link or a node
@@ -155,7 +155,7 @@ save_topol_atom.atom_label
     _type.purpose                 Link
     _type.source                  Related
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Word
 
 save_
 
@@ -250,7 +250,7 @@ save_
 save_topol_atom.symop_id
 
     _definition.id                '_topol_atom.symop_id'
-    _definition.update            2021-10-21
+    _definition.update            2021-11-16
     _description.text
 ;
     The identifier of the symmetry operation that is to be
@@ -267,8 +267,10 @@ save_topol_atom.symop_id
     _type.purpose                 Link
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:192
     _enumeration.default          1
+    _units.code                   none
 
 save_
 
@@ -621,7 +623,7 @@ save_
 save_topol_link.symop_id_1
 
     _definition.id                '_topol_link.symop_id_1'
-    _definition.update            2021-10-21
+    _definition.update            2021-11-16
     _description.text
 ;
     The identifier of the symmetry operation that is to be
@@ -638,15 +640,17 @@ save_topol_link.symop_id_1
     _type.purpose                 Link
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:192
     _enumeration.default          1
+    _units.code                   none
 
 save_
 
 save_topol_link.symop_id_2
 
     _definition.id                '_topol_link.symop_id_2'
-    _definition.update            2021-10-21
+    _definition.update            2021-11-16
     _description.text
 ;
     The identifier of the symmetry operation that is to be
@@ -663,8 +667,10 @@ save_topol_link.symop_id_2
     _type.purpose                 Link
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Code
+    _type.contents                Integer
+    _enumeration.range            1:192
     _enumeration.default          1
+    _units.code                   none
 
 save_
 
@@ -2022,4 +2028,11 @@ save_
        should display { } correctly in {4.6^2}2{4^2.6^10.8^3}
 
        NOTE: all ^ should be that mark in the dictionary examples.
+;
+         0.9.6                    2021-11-16
+;
+       Updated the _topol_atom.atom_label, _topol_atom.symop_id,
+       _topol_link.symop_id_1 and _topol_link.symop_id_2 data items
+       to be compatible with the data items that they are linked to.
+       (A. Vaitkus)
 ;
