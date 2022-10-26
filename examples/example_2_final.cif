@@ -1,0 +1,104 @@
+#\#CIF_2.0
+data_example_2
+_database.code_CSD        FUBYUW
+_chemical.name_systematic 'lithium tetracarbonyl-cobalt'
+_chemical_formula.sum     'C4 Co1 Li1 O4'
+_cell.length_a                      5.542
+_cell.length_b                      5.542
+_cell.length_c                      5.542
+_cell.angle_alpha                   90
+_cell.angle_beta                    90
+_cell.angle_gamma                   90
+_cell.volume                        170.2157
+_cell.formula_units_Z               1
+_space_group.name_H-M_ref      'P -4 3 m'
+_space_group.name_Hall         'P -4 2 3'
+_space_group.IT_number         215
+loop_
+_space_group_symop.id
+_space_group_symop.operation_xyz
+1 x,y,z
+2 -x,-y,z
+3 x,-y,-z
+4 -x,y,-z
+5 z,x,y
+6 y,z,x
+7 -z,-x,y
+8 -y,z,-x
+9 z,-x,-y
+10 -y,-z,x
+11 -z,x,-y
+12 y,-z,-x
+13 y,x,z
+14 -y,-x,z
+15 -y,x,-z
+16 y,-x,-z
+17 x,z,y
+18 z,y,x
+19 -x,-z,y
+20 z,-y,-x
+21 -x,z,-y
+22 -z,-y,x
+23 x,-z,-y
+24 -z,y,-x
+
+
+loop_
+  _atom_site.label
+  _atom_site.fract_x
+  _atom_site.fract_y
+  _atom_site.fract_z
+    Li1 0.00000 0.00000 0.00000
+    C1  0.31850 0.31850 0.31850
+    O1  0.19920 0.19920 0.19920
+    Co1 0.50000 0.50000 0.50000
+
+loop_
+  _topol_net.id
+  _topol_net.label
+  _topol_net.z_number
+  _topol_net.special_details
+  _topol_net.overall_topology_TOPOS
+    1 Net_1 2 'Atomic network' 'Unknown'
+    2 Net_2 2 'Underlying net with carbonyl ligands as nodes' '2,4T3'
+
+loop_
+  _topol_node.id
+  _topol_node.label
+  _topol_node.net_id
+  _topol_node.fract_x
+  _topol_node.fract_y
+  _topol_node.fract_z
+    1 Li1 1  .       .       .      # Li
+    2 C1  1  .       .       .      # C
+    3 O1  1  .       .       .      # O
+    4 Co1 1  .       .       .      # Co
+    5 ZA1 2  .       .       .      # Li
+    6 ZB1 2 0.25036 0.25036 0.25036 # (CO)
+    7 ZC1 2  .       .       .      # Co
+
+loop_
+  _topol_link.id
+  _topol_link.node_id_1
+  _topol_link.node_id_2
+  _topol_link.distance
+  _topol_link.type
+    1 1 3 1.9121 v  # Li1-O1
+    2 2 3 1.1452 v  # C1-O1
+    3 2 4 1.7422 v  # C1-Co1
+    4 5 6 2.4032 gl # Li1-(CO)
+    5 6 7 2.3963 gl # (CO)-Co
+
+loop_
+  _topol_atom.id
+  _topol_atom.node_id
+  _topol_atom.atom_label
+  _topol_atom.element_symbol
+    1 1 Li1 Li
+    2 2 C1  C
+    3 3 O1  O
+    4 4 Co1 Co
+    5 5 Li1 Li
+    6 6 C1  C
+    7 6 O1  O
+    8 7 Co1 Co

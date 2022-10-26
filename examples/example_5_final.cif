@@ -1,0 +1,322 @@
+#\#CIF_2.0
+data_example_5
+_database.code_CSD                  SAHYIK
+_chemical_formula.sum               'C24 H12 O13 Zn4'
+_cell.length_a                      25.669
+_cell.length_b                      25.669
+_cell.length_c                      25.669
+_cell.angle_alpha                   90
+_cell.angle_beta                    90
+_cell.angle_gamma                   90
+_cell.volume                        16913.24
+_cell.formula_units_Z               8
+_space_group.name_H-M_ref      'F m -3 m'
+_space_group.name_Hall         '-F 4 2 3'
+_space_group.IT_number         225
+loop_
+_space_group_symop.id
+_space_group_symop.operation_xyz
+1 x,y,z
+2 -x,-y,z
+3 x,-y,-z
+4 -x,y,-z
+5 z,x,y
+6 y,z,x
+7 -z,-x,y
+8 -y,z,-x
+9 z,-x,-y
+10 -y,-z,x
+11 -z,x,-y
+12 y,-z,-x
+13 -y,-x,-z
+14 y,x,-z
+15 y,-x,z
+16 -y,x,z
+17 -x,-z,-y
+18 -z,-y,-x
+19 x,z,-y
+20 -z,y,x
+21 x,-z,y
+22 z,y,-x
+23 -x,z,y
+24 z,-y,x
+25 -x,-y,-z
+26 x,y,-z
+27 -x,y,z
+28 x,-y,z
+29 -z,-x,-y
+30 -y,-z,-x
+31 z,x,-y
+32 y,-z,x
+33 -z,x,y
+34 y,z,-x
+35 z,-x,y
+36 -y,z,x
+37 y,x,z
+38 -y,-x,z
+39 -y,x,-z
+40 y,-x,-z
+41 x,z,y
+42 z,y,x
+43 -x,-z,y
+44 z,-y,-x
+45 -x,z,-y
+46 -z,-y,x
+47 x,-z,-y
+48 -z,y,-x
+49 x,1/2+y,1/2+z
+50 1/2+x,y,1/2+z
+51 1/2+x,1/2+y,z
+52 -x,1/2-y,1/2+z
+53 1/2-x,-y,1/2+z
+54 1/2-x,1/2-y,z
+55 x,1/2-y,1/2-z
+56 1/2+x,-y,1/2-z
+57 1/2+x,1/2-y,-z
+58 -x,1/2+y,1/2-z
+59 1/2-x,y,1/2-z
+60 1/2-x,1/2+y,-z
+61 z,1/2+x,1/2+y
+62 1/2+z,x,1/2+y
+63 1/2+z,1/2+x,y
+64 y,1/2+z,1/2+x
+65 1/2+y,z,1/2+x
+66 1/2+y,1/2+z,x
+67 -z,1/2-x,1/2+y
+68 1/2-z,-x,1/2+y
+69 1/2-z,1/2-x,y
+70 -y,1/2+z,1/2-x
+71 1/2-y,z,1/2-x
+72 1/2-y,1/2+z,-x
+73 z,1/2-x,1/2-y
+74 1/2+z,-x,1/2-y
+75 1/2+z,1/2-x,-y
+76 -y,1/2-z,1/2+x
+77 1/2-y,-z,1/2+x
+78 1/2-y,1/2-z,x
+79 -z,1/2+x,1/2-y
+80 1/2-z,x,1/2-y
+81 1/2-z,1/2+x,-y
+82 y,1/2-z,1/2-x
+83 1/2+y,-z,1/2-x
+84 1/2+y,1/2-z,-x
+85 -y,1/2-x,1/2-z
+86 1/2-y,-x,1/2-z
+87 1/2-y,1/2-x,-z
+88 y,1/2+x,1/2-z
+89 1/2+y,x,1/2-z
+90 1/2+y,1/2+x,-z
+91 y,1/2-x,1/2+z
+92 1/2+y,-x,1/2+z
+93 1/2+y,1/2-x,z
+94 -y,1/2+x,1/2+z
+95 1/2-y,x,1/2+z
+96 1/2-y,1/2+x,z
+97 -x,1/2-z,1/2-y
+98 1/2-x,-z,1/2-y
+99 1/2-x,1/2-z,-y
+100 -z,1/2-y,1/2-x
+101 1/2-z,-y,1/2-x
+102 1/2-z,1/2-y,-x
+103 x,1/2+z,1/2-y
+104 1/2+x,z,1/2-y
+105 1/2+x,1/2+z,-y
+106 -z,1/2+y,1/2+x
+107 1/2-z,y,1/2+x
+108 1/2-z,1/2+y,x
+109 x,1/2-z,1/2+y
+110 1/2+x,-z,1/2+y
+111 1/2+x,1/2-z,y
+112 z,1/2+y,1/2-x
+113 1/2+z,y,1/2-x
+114 1/2+z,1/2+y,-x
+115 -x,1/2+z,1/2+y
+116 1/2-x,z,1/2+y
+117 1/2-x,1/2+z,y
+118 z,1/2-y,1/2+x
+119 1/2+z,-y,1/2+x
+120 1/2+z,1/2-y,x
+121 -x,1/2-y,1/2-z
+122 1/2-x,-y,1/2-z
+123 1/2-x,1/2-y,-z
+124 x,1/2+y,1/2-z
+125 1/2+x,y,1/2-z
+126 1/2+x,1/2+y,-z
+127 -x,1/2+y,1/2+z
+128 1/2-x,y,1/2+z
+129 1/2-x,1/2+y,z
+130 x,1/2-y,1/2+z
+131 1/2+x,-y,1/2+z
+132 1/2+x,1/2-y,z
+133 -z,1/2-x,1/2-y
+134 1/2-z,-x,1/2-y
+135 1/2-z,1/2-x,-y
+136 -y,1/2-z,1/2-x
+137 1/2-y,-z,1/2-x
+138 1/2-y,1/2-z,-x
+139 z,1/2+x,1/2-y
+140 1/2+z,x,1/2-y
+141 1/2+z,1/2+x,-y
+142 y,1/2-z,1/2+x
+143 1/2+y,-z,1/2+x
+144 1/2+y,1/2-z,x
+145 -z,1/2+x,1/2+y
+146 1/2-z,x,1/2+y
+147 1/2-z,1/2+x,y
+148 y,1/2+z,1/2-x
+149 1/2+y,z,1/2-x
+150 1/2+y,1/2+z,-x
+151 z,1/2-x,1/2+y
+152 1/2+z,-x,1/2+y
+153 1/2+z,1/2-x,y
+154 -y,1/2+z,1/2+x
+155 1/2-y,z,1/2+x
+156 1/2-y,1/2+z,x
+157 y,1/2+x,1/2+z
+158 1/2+y,x,1/2+z
+159 1/2+y,1/2+x,z
+160 -y,1/2-x,1/2+z
+161 1/2-y,-x,1/2+z
+162 1/2-y,1/2-x,z
+163 -y,1/2+x,1/2-z
+164 1/2-y,x,1/2-z
+165 1/2-y,1/2+x,-z
+166 y,1/2-x,1/2-z
+167 1/2+y,-x,1/2-z
+168 1/2+y,1/2-x,-z
+169 x,1/2+z,1/2+y
+170 1/2+x,z,1/2+y
+171 1/2+x,1/2+z,y
+172 z,1/2+y,1/2+x
+173 1/2+z,y,1/2+x
+174 1/2+z,1/2+y,x
+175 -x,1/2-z,1/2+y
+176 1/2-x,-z,1/2+y
+177 1/2-x,1/2-z,y
+178 z,1/2-y,1/2-x
+179 1/2+z,-y,1/2-x
+180 1/2+z,1/2-y,-x
+181 -x,1/2+z,1/2-y
+182 1/2-x,z,1/2-y
+183 1/2-x,1/2+z,-y
+184 -z,1/2-y,1/2+x
+185 1/2-z,-y,1/2+x
+186 1/2-z,1/2-y,x
+187 x,1/2-z,1/2-y
+188 1/2+x,-z,1/2-y
+189 1/2+x,1/2-z,-y
+190 -z,1/2+y,1/2-x
+191 1/2-z,y,1/2-x
+192 1/2-z,1/2+y,-x
+
+
+loop_
+  _atom_site.label
+  _atom_site.fract_x
+  _atom_site.fract_y
+  _atom_site.fract_z
+    H1  0.30590 0.19410 0.04520
+    C1  0.25000 0.25000 0.11050
+    C2  0.28310 0.21690 0.02630
+    C3  0.25000 0.25000 0.05380
+    O1  .25000 0.25000 0.25000
+    O2  0.28180 0.21820 0.13390
+    Zn1 0.29350 0.20650 0.20650
+
+loop_
+  _topol_net.id
+  _topol_net.label
+  _topol_net.special_details
+  _topol_net.overall_topology_TOPOS
+    1 Net_1 'Atomic network' 'Unknown'
+    2 Net_2 'Underlying net with zinc tetranuclear complex groups as nodes and benzene rings as links (cluster representation)' 'pcu'
+    3 Net_3 'Underlying net with zinc, oxygen and benzenedicarboxylato ligands as 4-coordinate nodes (standard representation)' 'fff'
+
+loop_
+  _topol_node.id
+  _topol_node.net_id
+    1  1  # H1
+    2  1  # C1
+    3  1  # C2
+    4  1  # C3
+    5  1  # O1
+    6  1  # O2
+    7  1  # Zn1
+    8  2  # C6O13Zn4
+    9  3  # C8H4O4
+    10 3  # O1
+    11 3  # Zn1
+
+loop_
+  _topol_link.id
+  _topol_link.node_id_1
+  _topol_link.node_id_2
+  _topol_link.symop_id_2
+  _topol_link.distance
+  _topol_link.type
+    1   1  3  .   0.9594 v  # H1-C2
+    2   2  6  37  1.3013 v  # C1-O2
+    3   2  4  .   1.4554 ar # C1-C3
+    4   3  3  26  1.3502 ar # C2-C2
+    5   3  4  .   1.3936 ar # C2-C3
+    6   5  7  .   1.9340 v  # O1-Zn1
+    7   6  7  .   1.9114 v  # O2-Zn1
+    8   8  8  26 12.8345 gl # (C6O13Zn4)-(C6H4)-(C6O13Zn4)
+    9   9 11  5   5.5309 gl # (C8H4O4)-Zn1
+    10 10 11  .   1.9341 v  # O1-Zn1
+
+loop_
+  _topol_atom.id
+  _topol_atom.atom_label
+  _topol_atom.node_id
+  _topol_atom.link_id
+  _topol_atom.symop_id
+  _topol_atom.element_symbol
+    1   H1   1   .   1 H
+    2   C1   2   .   1 C
+    3   C2   3   .   1 C
+    4   C3   4   .   1 C
+    5   O1   5   .   1 O
+    6   O2   6   .   1 O
+    7   Zn1  7   .   1 Zn
+    10  C1   8   .   1 C
+    11  C1   8   .  55 C
+    12  O2   8   .  55 O
+    13  O2   8   .  80 O
+    14  O2   8   .   6 O
+    15  O2   8   .  59 O
+    16  O2   8   .  42 O
+    17  O2   8   .  78 O
+    18  C1   8   .  78 C
+    19  C1   8   .   5 C
+    20  Zn1  8   .   6 Zn
+    21  Zn1  8   .  55 Zn
+    22  C1   8   .  69 C
+    23  C1   8   .   6 C
+    24  O2   8   .  41 O
+    25  O2   8   .  69 O
+    26  O1   8   .   1 O
+    27  O2   8   .   5 O
+    28  O2   8   .  82 O
+    29  Zn1  8   .   5 Zn
+    30  Zn1  8   .   1 Zn
+    31  O2   8   .   1 O
+    32  O2   8   .  37 O
+    33  O2   9   .  14 O
+    34  O2   9   .  26 O
+    35  O2   9   .   1 O
+    36  O2   9   .  37 O
+    37  C1   9   .  14 C
+    38  C3   9   8  14 C
+    39  C2   9   8  14 C
+    40  H1   9   8  14 H
+    41  C2   9   8  37 C
+    42  H1   9   8  37 H
+    43  C2   9   8  26 C
+    44  H1   9   8  26 H
+    45  C2   9   8   1 C
+    46  H1   9   8   1 H
+    47  C3   9   8   1 C
+    48  C1   9   .   1 C
+    49  O1  10   .   1 O
+    50  Zn1 11   .   1 Zn

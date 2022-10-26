@@ -1,0 +1,105 @@
+#\#CIF_2.0
+data_example_4
+_database.code_ICSD          63281
+_chemical.name_systematic    'copper(I) oxide'
+_chemical_formula.sum        'Cu2 O1'
+_cell.length_a                      4.267
+_cell.length_b                      4.267
+_cell.length_c                      4.267
+_cell.angle_alpha                   90
+_cell.angle_beta                    90
+_cell.angle_gamma                   90
+_cell.volume                        77.69051
+_cell.formula_units_Z               2
+_space_group.name_H-M_ref      'P n -3 m'
+_space_group.name_Hall         '-P 4bc 2bc 3'
+_space_group.IT_number         224
+loop_
+_space_group_symop.id
+_space_group_symop.operation_xyz
+1 x,y,z
+2 1/2-x,1/2-y,z
+3 x,1/2-y,1/2-z
+4 1/2-x,y,1/2-z
+5 z,x,y
+6 y,z,x
+7 1/2-z,1/2-x,y
+8 1/2-y,z,1/2-x
+9 z,1/2-x,1/2-y
+10 1/2-y,1/2-z,x
+11 1/2-z,x,1/2-y
+12 y,1/2-z,1/2-x
+13 -y,-x,-z
+14 1/2+y,1/2+x,-z
+15 1/2+y,-x,1/2+z
+16 -y,1/2+x,1/2+z
+17 -x,-z,-y
+18 -z,-y,-x
+19 1/2+x,1/2+z,-y
+20 -z,1/2+y,1/2+x
+21 1/2+x,-z,1/2+y
+22 1/2+z,1/2+y,-x
+23 -x,1/2+z,1/2+y
+24 1/2+z,-y,1/2+x
+25 -x,-y,-z
+26 1/2+x,1/2+y,-z
+27 -x,1/2+y,1/2+z
+28 1/2+x,-y,1/2+z
+29 -z,-x,-y
+30 -y,-z,-x
+31 1/2+z,1/2+x,-y
+32 1/2+y,-z,1/2+x
+33 -z,1/2+x,1/2+y
+34 1/2+y,1/2+z,-x
+35 1/2+z,-x,1/2+y
+36 -y,1/2+z,1/2+x
+37 y,x,z
+38 1/2-y,1/2-x,z
+39 1/2-y,x,1/2-z
+40 y,1/2-x,1/2-z
+41 x,z,y
+42 z,y,x
+43 1/2-x,1/2-z,y
+44 z,1/2-y,1/2-x
+45 1/2-x,z,1/2-y
+46 1/2-z,1/2-y,x
+47 x,1/2-z,1/2-y
+48 1/2-z,y,1/2-x
+
+loop_
+  _atom_site.label
+  _atom_site.fract_x
+  _atom_site.fract_y
+  _atom_site.fract_z
+    O1  0.25000 0.25000 0.25000
+    Cu1 0.00000 0.00000 0.00000
+
+loop_
+  _topol_net.id
+  _topol_net.z_number
+  _topol_net.overall_topology_RCSR
+    1 2 'dia'
+
+loop_
+  _topol_node.id
+  _topol_node.net_id
+    1 1
+
+loop_
+  _topol_link.id
+  _topol_link.node_id_1
+  _topol_link.node_id_2
+  _topol_link.symop_id_2
+  _topol_link.type
+    1 1 1 13 gl
+
+loop_
+  _topol_atom.id
+  _topol_atom.node_id
+  _topol_atom.link_id
+  _topol_atom.atom_label
+  _topol_atom.element_symbol
+    1 1 . O1  O
+    2 . 1 Cu1 Cu
+
+#End of data_example_4
