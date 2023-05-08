@@ -1,8 +1,5 @@
 #\#CIF_2.0
 data_example_1
-
-#\#CIF_2.0
-data_example_1
 _chemical_formula.sum               C1
 _cell.length_a                      3.567
 _cell.length_b                      3.567
