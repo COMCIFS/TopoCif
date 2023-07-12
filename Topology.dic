@@ -10,7 +10,7 @@ data_TOPOLOGY_CIF
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.6
-    _dictionary.date              2021-11-16
+    _dictionary.date              2023-07-11
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/TopoCif/master/Topology.dic
     _dictionary.ddl_conformance   4.1.0
@@ -449,7 +449,7 @@ save_
 save_topol_link.distance_su
 
     _definition.id                '_topol_link.distance_su'
-    _definition.update            2021-10-08
+    _definition.update            2023-07-11
     _description.text
 ;
     Standard uncertainty of _topol_link.distance.
@@ -458,7 +458,7 @@ save_topol_link.distance_su
     _name.object_id               distance_su
     _name.linked_item_id          '_topol_link.distance'
     _type.purpose                 SU
-    _type.source                  Derived
+    _type.source                  Related
     _type.container               Single
     _type.contents                Real
     _units.code                   angstroms
@@ -927,7 +927,7 @@ save_
 save_topol_link.voronoi_solid_angle_su
 
     _definition.id                '_topol_link.Voronoi_solid_angle_su'
-    _definition.update            2021-10-08
+    _definition.update            2023-07-11
     _description.text
 ;
     Standard uncertainty of _topol_link.Voronoi_solid_angle.
@@ -936,7 +936,7 @@ save_topol_link.voronoi_solid_angle_su
     _name.object_id               Voronoi_solid_angle_su
     _name.linked_item_id          '_topol_link.Voronoi_solid_angle'
     _type.purpose                 SU
-    _type.source                  Derived
+    _type.source                  Related
     _type.container               Single
     _type.contents                Real
     _units.code                   none
@@ -1409,7 +1409,7 @@ save_
 save_topol_node.fract_x_su
 
     _definition.id                '_topol_node.fract_x_su'
-    _definition.update            2021-10-08
+    _definition.update            2023-07-11
     _description.text
 ;
     Standard uncertainty of _topol_node.fract_x.
@@ -1418,7 +1418,7 @@ save_topol_node.fract_x_su
     _name.object_id               fract_x_su
     _name.linked_item_id          '_topol_node.fract_x'
     _type.purpose                 SU
-    _type.source                  Assigned
+    _type.source                  Related
     _type.container               Single
     _type.contents                Real
     _units.code                   none
@@ -1449,7 +1449,7 @@ save_
 save_topol_node.fract_y_su
 
     _definition.id                '_topol_node.fract_y_su'
-    _definition.update            2021-10-08
+    _definition.update            2023-07-11
     _description.text
 ;
     Standard uncertainty of _topol_node.fract_y.
@@ -1458,7 +1458,7 @@ save_topol_node.fract_y_su
     _name.object_id               fract_y_su
     _name.linked_item_id          '_topol_node.fract_y'
     _type.purpose                 SU
-    _type.source                  Assigned
+    _type.source                  Related
     _type.container               Single
     _type.contents                Real
     _units.code                   none
@@ -1489,7 +1489,7 @@ save_
 save_topol_node.fract_z_su
 
     _definition.id                '_topol_node.fract_z_su'
-    _definition.update            2021-10-08
+    _definition.update            2023-07-11
     _description.text
 ;
     Standard uncertainty of _topol_node.fract_z.
@@ -1498,7 +1498,7 @@ save_topol_node.fract_z_su
     _name.object_id               fract_z_su
     _name.linked_item_id          '_topol_node.fract_z'
     _type.purpose                 SU
-    _type.source                  Assigned
+    _type.source                  Related
     _type.container               Single
     _type.contents                Real
     _units.code                   none
@@ -2029,10 +2029,13 @@ save_
 
        NOTE: all ^ should be that mark in the dictionary examples.
 ;
-         0.9.6                    2021-11-16
+         0.9.6                    2023-07-11
 ;
        Updated the _topol_atom.atom_label, _topol_atom.symop_id,
        _topol_link.symop_id_1 and _topol_link.symop_id_2 data items
        to be compatible with the data items that they are linked to.
+       (A. Vaitkus)
+
+       Changed the _type.source attribute of all SU data items to 'Related'.
        (A. Vaitkus)
 ;
