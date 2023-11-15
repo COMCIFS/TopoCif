@@ -10,7 +10,7 @@ data_TOPOLOGY_CIF
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.6
-    _dictionary.date              2023-07-11
+    _dictionary.date              2023-11-13
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/TopoCif/master/Topology.dic
     _dictionary.ddl_conformance   4.1.0
@@ -1306,7 +1306,7 @@ save_
 save_topol_node.coordination_sequence
 
     _definition.id                '_topol_node.coordination_sequence'
-    _definition.update            2021-10-08
+    _definition.update            2023-11-13
     _description.text
 ;
     The coordination sequence is a sequence of numbers counting the
@@ -1322,6 +1322,7 @@ save_topol_node.coordination_sequence
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               List
+    _type.dimension               '[]'
     _type.contents                Integer
     _units.code                   none
     _description_example.case     [4  12  24  42  64  92  124  162  204  252]
@@ -2029,7 +2030,7 @@ save_
 
        NOTE: all ^ should be that mark in the dictionary examples.
 ;
-         0.9.6                    2023-07-11
+         0.9.6                    2023-11-13
 ;
        Updated the _topol_atom.atom_label, _topol_atom.symop_id,
        _topol_link.symop_id_1 and _topol_link.symop_id_2 data items
