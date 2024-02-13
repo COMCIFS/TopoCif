@@ -10,7 +10,7 @@ data_TOPOLOGY_CIF
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.6
-    _dictionary.date              2023-11-13
+    _dictionary.date              2024-02-13
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/TopoCif/master/Topology.dic
     _dictionary.ddl_conformance   4.1.0
@@ -18,8 +18,7 @@ data_TOPOLOGY_CIF
     _description.text
 ;
     The Topology CIF dictionary provides data items for describing crystal
-    structure topology. This is a DRAFT version and data items in this
-    dictionary should not be used until final approval by COMCIFS.
+    structure topology.
 ;
 
 save_TOPOLOGY
@@ -2030,7 +2029,7 @@ save_
 
        NOTE: all ^ should be that mark in the dictionary examples.
 ;
-         0.9.6                    2023-11-13
+         0.9.6                    2024-02-13
 ;
        Updated the _topol_atom.atom_label, _topol_atom.symop_id,
        _topol_link.symop_id_1 and _topol_link.symop_id_2 data items
