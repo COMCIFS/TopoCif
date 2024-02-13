@@ -28,7 +28,7 @@ This protocol is not necessary for changes to the layout of the dictionary that 
 
 ## Repository layout
 
-Top-level files `TopoCif_chapter.docx` and `Topology.dic` are the latest draft versions. 
+Top-level files [TopoCif_chapter.docx](TopoCif_chapter.docx) and [Topology.dic](Topology.dic) are the latest draft versions of the chapter and the dictionary respectively.
 
 Directory content:
 * `chapter/`    old versions of the Word document chapter.
