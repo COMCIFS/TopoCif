@@ -1,6 +1,6 @@
 # Topology Dictionary
 
-Definitions of CIF data names for topology description.
+The topology CIF dictionary provides data names for describing some topological characteristics of different lattices and their relation to crystal structures.
 
 ## Warning
 
