@@ -1,3 +1,5 @@
+[![CIFSyntaxandStyleCheck](https://github.com/COMCIFS/TopoCif/actions/workflows/main.yml/badge.svg)](https://github.com/COMCIFS/TopoCif/actions)
+
 # Topology Dictionary
 
 The topology CIF dictionary provides data names for describing some topological characteristics of different lattices and their relation to crystal structures.
