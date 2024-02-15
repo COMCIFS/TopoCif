@@ -21,8 +21,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         - name: checkout
-          uses: actions/checkout@v2
-          
+          uses: actions/checkout@v4
+
       # Check syntax of all CIF files
         - name: check_syntax
           uses: COMCIFS/cif_syntax_check_action@master
@@ -32,7 +32,7 @@ jobs:
     needs: syntax
     steps:
         - name: checkout
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
 
         - name: check_ddlm
           uses: COMCIFS/dictionary_check_action@main
@@ -42,8 +42,8 @@ jobs:
     needs: ddlm
     steps:
         - name: checkout
-          uses: actions/checkout@v2
-          
+          uses: actions/checkout@v4
+
         - name: check_layout
           uses: jamesrhester/cif_dic_layout_check_action@main
           id: layout_check
