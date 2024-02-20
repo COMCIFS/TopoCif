@@ -9,8 +9,8 @@ data_TOPOLOGY_CIF
 
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
-    _dictionary.version           0.9.6
-    _dictionary.date              2024-02-13
+    _dictionary.version           0.9.7
+    _dictionary.date              2024-02-20
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/TopoCif/master/Topology.dic
     _dictionary.ddl_conformance   4.1.0
@@ -2038,4 +2038,18 @@ save_
 
        Changed the _type.source attribute of all SU data items to 'Related'.
        (A. Vaitkus)
+;
+         0.9.7                    2024-02-20
+;
+       Removed _topol_link.net_id and _topol_net.overall_topology in line
+       with proof corrections of draft chapters 3.9 and 4.9 by Blatov et al.
+       (B. McMahon)
+
+       Replaced example placeholders in TOPOL category by _import.get of
+       associated topo_examples.cif file.
+       (B. McMahon)
+
+       Made various small style and punctuation changes to prepare for
+       publication in International Tables Volume G.
+       (B. McMahon)
 ;
