@@ -54,51 +54,8 @@ save_TOPOL
     _name.category_id             TOPOLOGY
     _name.object_id               TOPOL
 
-    loop_
-      _description_example.case
-      _description_example.detail
-;
-       [ex 1]
-;
-;
-         Example 1
-;
-;
-       [ex 2]
-;
-;
-         Example 2
-;
-;
-       [ex 3]
-;
-;
-         Example 3
-;
-;
-       [ex 4]
-;
-;
-         Example 4
-;
-;
-       [ex 5]
-;
-;
-         Example 5
-;
-;
-       [ex 6]
-;
-;
-         Example 6
-;
-;
-       [ex 7]
-;
-;
-         Example 7
-;
+    _import.get
+        [{'file':topo_examples.cif  'save':topol_examples}]
 
 save_
 
@@ -169,7 +126,7 @@ save_topol_atom.element_symbol
     a single element symbol found on the official IUPAC Periodic Table.
     For example: 'C', 'H', or 'Co', without isotope or charge.
     Data items in the ATOM_SITE category that do not correspond to elements
-    of the periodic table should be represented here as '.'.
+    of the Periodic Table should be represented here as '.'.
 ;
     _name.category_id             topol_atom
     _name.object_id               element_symbol
@@ -288,9 +245,9 @@ save_topol_atom.translation
     and the original position is (0.2,0.7,1.0) in fractional coordinates,
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
     _topol_atom.translation_x,
-    _topol_atom.translation_y, and
+    _topol_atom.translation_y and
     _topol_atom.translation_z data items may be used to
-    describe separate components of the vector for CIF1 compatibility.
+    describe separate components of the vector for CIF 1 compatibility.
     If this item is omitted or
     assigned to '.' it is assumed to be equal to [0,0,0].
 ;
@@ -398,7 +355,7 @@ save_TOPOL_LINK
     _description.text
 ;
     The TOPOL_LINK category describes the crystal structure
-    connectivity and encodes the weighted colored
+    connectivity and encodes the weighted coloured
     symmetry-labeled quotient graph, from which the whole
     periodic net describing the overall topology of the crystal
     structure can be restored. The definition of
@@ -408,8 +365,7 @@ save_TOPOL_LINK
     connections described in TOPOL_LINK may correspond to any
     vectors in the structure, not just bonds or contacts. The two end-point
     references are to nodes listed in TOPOL_NODE using
-    _topol_link.node_id_1 and _topol_link.node_id_2.
-    In the case of multiple nets, _topol_link.net_id is required. Other
+    _topol_link.node_id_1 and _topol_link.node_id_2. Other
     items in this category are optional. If the link itself represents
     atoms (as in the case of a molecular linker), the atoms comprising the
     link must be referenced by _topol_atom.link_id.
@@ -512,26 +468,6 @@ save_topol_link.multiplicity
     _name.object_id               multiplicity
     _type.purpose                 Number
     _type.source                  Derived
-    _type.container               Single
-    _type.contents                Integer
-    _enumeration.range            1:
-    _units.code                   none
-
-save_
-
-save_topol_link.net_id
-
-    _definition.id                '_topol_link.net_id'
-    _definition.update            2021-10-08
-    _description.text
-;
-    The identifier of the net, to which this node belongs.
-;
-    _name.category_id             topol_link
-    _name.object_id               net_id
-    _name.linked_item_id          '_topol_net.id'
-    _type.purpose                 Link
-    _type.source                  Related
     _type.container               Single
     _type.contents                Integer
     _enumeration.range            1:
@@ -688,7 +624,7 @@ save_topol_link.translation_1
     and the original position is (0.2,0.7,1.0) in fractional coordinates,
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
     _topol_link.translation_1_x,
-    _topol_link.translation_1_y, and
+    _topol_link.translation_1_y and
     _topol_link.translation_1_z data items may be used to
     describe separate components of the vector.
 ;
@@ -785,7 +721,7 @@ save_topol_link.translation_2
     and the original position is (0.2,0.7,1.0) in fractional coordinates,
     then the resultant position is (-0.3,0.2,1.0). Alternatively,
     _topol_link.translation_2_x,
-    _topol_link.translation_2_y, and
+    _topol_link.translation_2_y and
     _topol_link.translation_2_z data items may be used to
     describe separate components of the vector.
 ;
@@ -954,6 +890,7 @@ save_TOPOL_NET
 
     Reference: Delgado-Friedrichs, O., Foster, M. D., O'Keeffe, M.,
           Proserpio, D. M., Treacy, M. M. J. & Yaghi, O. M. (2005).
+	  What do we know about three-periodic nets?
           J. Solid State Chem. 178, 2533-2554,
           DOI:10.1016/j.jssc.2005.06.037.
 ;
@@ -977,7 +914,8 @@ save_topol_net.genus
     repeat unit and the edges are all the edges of the repeat unit.
 
     Reference: Delgado-Friedrichs, O. & O'Keeffe, M.
-    (2005). J. Solid State Chem. 178, 2480-2485,
+    (2005). Crystal nets as graphs: Terminology and definitions.
+    J. Solid State Chem. 178, 2480-2485,
     DOI:10.1016/j.jssc.2005.06.011.
 ;
     _name.category_id             topol_net
@@ -1027,24 +965,6 @@ save_topol_net.label
 
 save_
 
-save_topol_net.overall_topology
-
-    _definition.id                '_topol_net.overall_topology'
-    _definition.update            2018-01-30
-    _description.text
-;
-    The overall topology symbol in an arbitrary form.
-;
-    _name.category_id             topol_net
-    _name.object_id               overall_topology
-    _type.purpose                 Describe
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Text
-    _description_example.case     'face-centered cubic topology'
-
-save_
-
 save_topol_net.overall_topology_epinet
 
     _definition.id                '_topol_net.overall_topology_EPINET'
@@ -1070,7 +990,7 @@ save_topol_net.overall_topology_iza
     _definition.update            2018-01-30
     _description.text
 ;
-    The three-letters symbol for a Zeolite Framework Types that has
+    The three-letter symbol for a Zeolite Framework Types that has
     been approved by the Structure Commission of the International
     Zeolite Association (IZA-SC).
 
@@ -1097,7 +1017,9 @@ save_topol_net.overall_topology_rcsr
     by O'Keeffe et al. (2008).
 
     Reference: O'Keeffe, M., Peskov, M. A., Ramsden, S. J. & Yaghi, O. M.
-    (2008). Acc. Chem. Res. 41, 1782-1789, DOI:10.1021/ar800124u.
+    (2008). The Reticular Chemistry Structure Resource (RCSR) Database of,
+    and Symbols for, Crystal Nets. Acc. Chem. Res. 41, 1782-1789,
+    DOI:10.1021/ar800124u.
 ;
     _name.category_id             topol_net
     _name.object_id               overall_topology_RCSR
@@ -1118,8 +1040,9 @@ save_topol_net.overall_topology_sp
     The overall topology symbol according to the nomenclature of
     Fischer for sphere packings described by Koch et al. (2006).
 
-    Reference: Koch, E., Fischer, W. & Sowa, H. (2006). Acta Cryst.
-    A62, 152-167, DOI:10.1107/S010876730600362X.
+    Reference: Koch, E., Fischer, W. & Sowa, H. (2006). Interpenetration
+    of homogeneous sphere packings and of two-periodic layers of spheres.
+    Acta Cryst. A62, 152-167, DOI:10.1107/S010876730600362X.
 ;
     _name.category_id             topol_net
     _name.object_id               overall_topology_SP
@@ -1142,12 +1065,13 @@ save_topol_net.overall_topology_topos
     (coordination numbers) of all independent nodes; D is one of the letters
     C (chain), L (layer) or T (three-periodic) designating the dimensionality
     of the net; and n enumerates non-isomorphic nets with a given ND sequence.
-    For finite (molecular) graphs the symbols NMK-n are used, where k is the
+    For finite (molecular) graphs the symbols NMk-n are used, where k is the
     number of vertices (atoms) in the graph.
 
     Reference: Aman, F., Asiri, A. M., Siddiqui, W. A., Arshad, M. N.,
-    Ashraf, A., Zakharov, N. S. & Blatov, V. A. (2014). Cryst. Eng. Comm,
-    16, 1963-1970, DOI:10.1039/C3CE42218F.
+    Ashraf, A., Zakharov, N. S. & Blatov, V. A. (2014). Multilevel
+    topological description of molecular packings in 1,2-benzothiazines.
+    Cryst. Eng. Comm, 16, 1963-1970, DOI:10.1039/C3CE42218F.
 ;
     _name.category_id             topol_net
     _name.object_id               overall_topology_TOPOS
@@ -1281,11 +1205,9 @@ save_TOPOL_NODE
     _description.text
 ;
     The TOPOL_NODE category, along with TOPOL_ATOM, describes the topological
-    properties, position, and chemical composition
-    of the nodes of the underlying net. The TOPOL_NODE category is optional.
-    It is only required for polyatomic nodes or in cases where the
-    label given to the node is different from _atom_site.label. Data items
-    _topol_node.fract_x, _topol_node.fract_y, and _topol_node.fract_z must be
+    properties, position and chemical composition
+    of the nodes of the underlying net. Data items
+    _topol_node.fract_x, _topol_node.fract_y and _topol_node.fract_z must be
     present only if the node's position cannot be derived from
     other data items in TOPOL_NODE or TOPOL_ATOM.
     Fractional coordinates can be given in other
@@ -1294,6 +1216,8 @@ save_TOPOL_NODE
     In the case of multiple nets, _topol_node.net_id is also required.
 
     Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
+    Vertex-, face-, point-, Schl\"afli-, and Delaney-symbols in nets,
+    polyhedra and tilings: recommended terminology.
     Cryst. Eng. Comm. 12, 44-48, DOI:10.1039/B910671E.
 ;
     _name.category_id             TOPOLOGY
@@ -1335,7 +1259,7 @@ save_topol_node.coordination_sequence_plain
     _definition.update            2021-07-28
     _description.text
 ;
-    A CIF1-compatible alternative representation of the coordination sequence
+    A CIF 1 compatible alternative representation of the coordination sequence
     as plain text, as a quoted string of white-space-separated numbers.
 ;
     _name.category_id             topol_node
@@ -1355,7 +1279,7 @@ save_topol_node.extended_point_symbol
     _definition.update            2021-10-20
     _description.text
 ;
-    The extended point symbol of a N-coordinated node lists all shortest
+    The extended point symbol of an N-coordinated node lists all shortest
     circuits for each of the N(N-1)/2 angles (pairs of edges) incident to
     the node. It is written as A(a).B(b)... where A, B, ... designate sizes of
     circuits, which meet at angles A, B, ..., and a, b, ... designate numbers
@@ -1375,13 +1299,13 @@ save_topol_node.extended_point_symbol
       _description_example.case
       _description_example.detail
          6(2).6(2).6(2).6(2).6(2).6(2)
-             'ES for a vertex in the diamond structure'
+             'extended symbol for a vertex in the diamond structure'
          4.6(2).4.8(3).6(2).6(2)
-             'ES for one vertex of feldspar net'
+             'extended symbol for one vertex of feldspar net'
          7(2).9(2).7(3).7(3).7(3).7(3)
-             'ES for the vertex of qzd net'
+             'extended symbol for the vertex of qzd net'
          4.4.4.4.6(3).6(3).6(5).6(5).6(5).6(5)
-             'ES for the vertex of 5-c sqp net'
+             'extended symbol for the vertex of 5-c sqp net'
 
 save_
 
@@ -1639,10 +1563,13 @@ save_topol_node.vertex_symbol
     loop_
       _description_example.case
       _description_example.detail
-         6(2).6(2).6(2).6(2).6(2).6(2)      'Vertex symbol for diamond'
-         4.6(2).4.8.6.6(2)                  'VS for one vertex of feldspar net'
-         7(2).*.7(3).7(3).7(3).7(3)         'VS for the vertex of qzd net'
-         4.4.4.4.6.6.6(5).6(5).6(5).6(5)    'VS for the vertex of 5-c sqp net'
+         6(2).6(2).6(2).6(2).6(2).6(2)      'vertex symbol for diamond'
+         4.6(2).4.8.6.6(2)
+             'vertex symbol for one vertex of feldspar net'
+         7(2).*.7(3).7(3).7(3).7(3)
+             'vertex symbol for the vertex of qzd net'
+         4.4.4.4.6.6.6(5).6(5).6(5).6(5)
+             'vertex symbol for the vertex of 5-c sqp net'
 
 save_
 
@@ -1662,8 +1589,7 @@ save_topol_node.wyckoff_symbol
     _type.container               Single
     _type.contents                Text
 
-    _import.get
-        [{'file':templ_enum.cif  'save':Wyckoff_letter}]
+    _import.get   [{'file':templ_enum.cif 'save':Wyckoff_letter}]
 
 save_
 
@@ -1677,7 +1603,7 @@ save_TOPOL_TILING
 ;
     The TOPOL_TILING category describes the natural tiling
     corresponding to the underlying net.  A tiling is a
-    partition of crystal space using generalised polyhedra, and a
+    partition of crystal space using generalized polyhedra, and a
     natural tiling is one for which tiles are the smallest possible
     that conserve the full symmetry of the net and for which the
     faces are all locally strong rings. This means that there is no
@@ -1688,7 +1614,8 @@ save_TOPOL_TILING
     the number of faces of a given size in the tile.
 
     Reference: Blatov, V. A., Delgado-Friedrichs, O., O'Keeffe M. &
-    Proserpio D. M. (2007). Acta Cryst. A63, 418-425,
+    Proserpio D. M. (2007). Three-periodic nets and tilings: natural
+    tilings for nets. Acta Cryst. A63, 418-425,
     DOI:10.1107/S0108767307038287.
 ;
     _name.category_id             TOPOLOGY
@@ -1704,10 +1631,12 @@ save_topol_tiling.d_size
     _description.text
 ;
     The number of distinct (not symmetry-related) chambers in the
-    tiling as expressed by the Delaney Dress symbol or just D-symbol,
+    tiling as expressed by the Delaney-Dress symbol or just D-symbol,
     as a measure of the complexity of the tiling (D-size).
 
     Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
+    Vertex-, face-, point-, Schl\"afli-, and Delaney-symbols in nets,
+    polyhedra and tilings: recommended terminology.
     Cryst. Eng. Comm. 12, 44-48, DOI:10.1039/B910671E.
 ;
     _name.category_id             topol_tiling
