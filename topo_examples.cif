@@ -1,3 +1,7 @@
+#\#CIF_2.0
+
+data_TOPOLOGY_EXAMPLES
+
 save_topol_examples
 
 loop_

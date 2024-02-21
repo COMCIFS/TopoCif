@@ -890,7 +890,7 @@ save_TOPOL_NET
 
     Reference: Delgado-Friedrichs, O., Foster, M. D., O'Keeffe, M.,
           Proserpio, D. M., Treacy, M. M. J. & Yaghi, O. M. (2005).
-	  What do we know about three-periodic nets?
+          What do we know about three-periodic nets?
           J. Solid State Chem. 178, 2533-2554,
           DOI:10.1016/j.jssc.2005.06.037.
 ;
@@ -1563,7 +1563,8 @@ save_topol_node.vertex_symbol
     loop_
       _description_example.case
       _description_example.detail
-         6(2).6(2).6(2).6(2).6(2).6(2)      'vertex symbol for diamond'
+         6(2).6(2).6(2).6(2).6(2).6(2)
+             'vertex symbol for diamond'
          4.6(2).4.8.6.6(2)
              'vertex symbol for one vertex of feldspar net'
          7(2).*.7(3).7(3).7(3).7(3)
@@ -1589,7 +1590,8 @@ save_topol_node.wyckoff_symbol
     _type.container               Single
     _type.contents                Text
 
-    _import.get   [{'file':templ_enum.cif 'save':Wyckoff_letter}]
+    _import.get
+        [{'file':templ_enum.cif  'save':Wyckoff_letter}]
 
 save_
 
