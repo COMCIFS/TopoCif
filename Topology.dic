@@ -1966,12 +1966,12 @@ save_
        _topol_link.symop_id_1 and _topol_link.symop_id_2 data items
        to be compatible with the data items that they are linked to.
        (A. Vaitkus)
-
-       Changed the _type.source attribute of all SU data items to 'Related'.
-       (A. Vaitkus)
 ;
          0.9.7                    2024-02-20
 ;
+       Changed the _type.source attribute of all SU data items to 'Related'.
+       (A. Vaitkus)
+
        Removed _topol_link.net_id and _topol_net.overall_topology in line
        with proof corrections of draft chapters 3.9 and 4.9 by Blatov et al.
        (B. McMahon)
