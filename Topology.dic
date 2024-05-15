@@ -10,7 +10,7 @@ data_TOPOLOGY_CIF
     _dictionary.title             TOPOLOGY_CIF
     _dictionary.class             Instance
     _dictionary.version           0.9.6
-    _dictionary.date              2024-05-14
+    _dictionary.date              2024-05-15
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/TopoCif/master/Topology.dic
     _dictionary.ddl_conformance   4.1.0
@@ -26,7 +26,7 @@ save_TOPOLOGY
     _definition.id                TOPOLOGY
     _definition.scope             Category
     _definition.class             Head
-    _definition.update            2024-05-14
+    _definition.update            2024-05-15
     _description.text
 ;
     This category is the parent of all categories in the dictionary.
@@ -35,7 +35,7 @@ save_TOPOLOGY
     _name.object_id               TOPOLOGY
 
     _import.get
-        [{'file':cif_core.dic  'mode':Full  'save':HEAD}]
+        [{'file':cif_core.dic  'mode':Full  'save':CIF_CORE_HEAD}]
 
 save_
 
@@ -2030,7 +2030,7 @@ save_
 
        NOTE: all ^ should be that mark in the dictionary examples.
 ;
-         0.9.6                    2024-05-14
+         0.9.6                    2024-05-15
 ;
        Updated the _topol_atom.atom_label, _topol_atom.symop_id,
        _topol_link.symop_id_1 and _topol_link.symop_id_2 data items
