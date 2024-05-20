@@ -5,34 +5,36 @@
 #                                                                              #
 ################################################################################
 
-data_TOPOLOGY_CIF
+data_CIF_TOPO
 
-    _dictionary.title             TOPOLOGY_CIF
+    _dictionary.title             CIF_TOPO
     _dictionary.class             Instance
     _dictionary.version           0.9.6
-    _dictionary.date              2024-05-15
+    _dictionary.date              2024-05-20
     _dictionary.uri
-        https://raw.githubusercontent.com/COMCIFS/TopoCif/master/Topology.dic
+        https://raw.githubusercontent.com/COMCIFS/TopoCif/main/Topology.dic
     _dictionary.ddl_conformance   4.1.0
     _dictionary.namespace         CifCore
     _description.text
 ;
-    The Topology CIF dictionary provides data items for describing crystal
+    The CIF_TOPO dictionary provides data items for describing crystal
     structure topology.
 ;
 
-save_TOPOLOGY
+save_CIF_TOPO_HEAD
 
-    _definition.id                TOPOLOGY
+    _definition.id                CIF_TOPO_HEAD
     _definition.scope             Category
     _definition.class             Head
-    _definition.update            2024-05-15
+    _definition.update            2024-05-20
     _description.text
 ;
-    This category is the parent of all categories in the dictionary.
+    The CIF_TOPO_HEAD category is the top-level category for all categories
+    in the CIF_TOPO dictionary. Head categories from other dictionaries are
+    reparented to this category.
 ;
-    _name.category_id             TOPOLOGY_CIF
-    _name.object_id               TOPOLOGY
+    _name.category_id             CIF_TOPO
+    _name.object_id               CIF_TOPO_HEAD
 
     _import.get
         [{'file':cif_core.dic  'mode':Full  'save':CIF_CORE_HEAD}]
@@ -44,7 +46,7 @@ save_TOPOL
     _definition.id                TOPOL
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2021-09-27
+    _definition.update            2024-05-20
     _description.text
 ;
     The TOPOL category covers data on connectivity
@@ -52,7 +54,7 @@ save_TOPOL
     related structural properties as calculated from
     the ATOM, CELL and SPACE_GROUP data.
 ;
-    _name.category_id             TOPOLOGY
+    _name.category_id             CIF_TOPO_HEAD
     _name.object_id               TOPOL
 
     loop_
@@ -126,14 +128,14 @@ save_TOPOL_ATOM
     _definition.id                TOPOL_ATOM
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2021-08-29
+    _definition.update            2024-05-20
     _description.text
 ;
     The TOPOL_ATOM category provides information on the atoms of the initial
     structure that compose links or nodes of a net. The _topol_atom.atom_label
     value must match a value for _atom_site.label.
 ;
-    _name.category_id             TOPOLOGY
+    _name.category_id             CIF_TOPO_HEAD
     _name.object_id               TOPOL_ATOM
     _category_key.name            '_topol_atom.id'
 
@@ -378,14 +380,14 @@ save_TOPOL_ENTANGL
     _definition.id                TOPOL_ENTANGL
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2018-01-30
+    _definition.update            2024-05-20
     _description.text
 ;
     The TOPOL_ENTANGL category describes entanglements in the
     underlying net.  This category is a placeholder for future development
     of descriptions of entanglement.
 ;
-    _name.category_id             TOPOLOGY
+    _name.category_id             CIF_TOPO_HEAD
     _name.object_id               TOPOL_ENTANGL
 
 save_
@@ -395,7 +397,7 @@ save_TOPOL_LINK
     _definition.id                TOPOL_LINK
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2021-10-11
+    _definition.update            2024-05-20
     _description.text
 ;
     The TOPOL_LINK category describes the crystal structure
@@ -421,7 +423,7 @@ save_TOPOL_LINK
     analysis of crystal structures. Acta Cryst. A62, 356-364,
     DOI:10.1107/S0108767306025591.
 ;
-    _name.category_id             TOPOLOGY
+    _name.category_id             CIF_TOPO_HEAD
     _name.object_id               TOPOL_LINK
     _category_key.name            '_topol_link.id'
 
@@ -948,7 +950,7 @@ save_TOPOL_NET
     _definition.id                TOPOL_NET
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2021-09-15
+    _definition.update            2024-05-20
     _description.text
 ;
     The TOPOL_NET category describes an atomic network or underlying net.
@@ -958,7 +960,7 @@ save_TOPOL_NET
           J. Solid State Chem. 178, 2533-2554,
           DOI:10.1016/j.jssc.2005.06.037.
 ;
-    _name.category_id             TOPOLOGY
+    _name.category_id             CIF_TOPO_HEAD
     _name.object_id               TOPOL_NET
     _category_key.name            '_topol_net.id'
 
@@ -1278,7 +1280,7 @@ save_TOPOL_NODE
     _definition.id                TOPOL_NODE
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2021-09-15
+    _definition.update            2024-05-20
     _description.text
 ;
     The TOPOL_NODE category, along with TOPOL_ATOM, describes the topological
@@ -1297,7 +1299,7 @@ save_TOPOL_NODE
     Reference: Blatov, V. A., O'Keeffe, M. & Proserpio, D. M. (2010).
     Cryst. Eng. Comm. 12, 44-48, DOI:10.1039/B910671E.
 ;
-    _name.category_id             TOPOLOGY
+    _name.category_id             CIF_TOPO_HEAD
     _name.object_id               TOPOL_NODE
     _category_key.name            '_topol_node.id'
 
@@ -1673,7 +1675,7 @@ save_TOPOL_TILING
     _definition.id                TOPOL_TILING
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2021-10-13
+    _definition.update            2024-05-20
     _description.text
 ;
     The TOPOL_TILING category describes the natural tiling
@@ -1692,7 +1694,7 @@ save_TOPOL_TILING
     Proserpio D. M. (2007). Acta Cryst. A63, 418-425,
     DOI:10.1107/S0108767307038287.
 ;
-    _name.category_id             TOPOLOGY
+    _name.category_id             CIF_TOPO_HEAD
     _name.object_id               TOPOL_TILING
     _category_key.name            '_topol_tiling.id'
 
@@ -2030,17 +2032,26 @@ save_
 
        NOTE: all ^ should be that mark in the dictionary examples.
 ;
-         0.9.6                    2024-05-15
+         0.9.6                    2024-02-13
 ;
        Updated the _topol_atom.atom_label, _topol_atom.symop_id,
        _topol_link.symop_id_1 and _topol_link.symop_id_2 data items
        to be compatible with the data items that they are linked to.
        (A. Vaitkus)
+;
+         0.9.7                    2024-05-20
+;
+       # Please update the date above and describe the change below until
+       # ready for the next release.
 
        Changed the _type.source attribute of all SU data items to 'Related'.
        (A. Vaitkus)
 
        Updated the CIF_CORE dictionary import statement with the new Head
        category name.
+       (A. Vaitkus)
+
+       Renamed the dictionary from 'TOPOLOGY_CIF' to 'CIF_TOPO'.
+       Renamed the head category from 'TOPOLOGY' to 'CIF_TOPO_HEAD'.
        (A. Vaitkus)
 ;
