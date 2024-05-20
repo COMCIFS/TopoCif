@@ -9,7 +9,7 @@ data_CIF_TOPO
 
     _dictionary.title             CIF_TOPO
     _dictionary.class             Instance
-    _dictionary.version           0.9.6
+    _dictionary.version           0.9.7
     _dictionary.date              2024-05-20
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/TopoCif/main/Topology.dic
