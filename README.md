@@ -11,7 +11,7 @@ The latest approved topology dictionary is available from the [IUCr CIF website]
 
 ## Contributing
 
-Contributions are very welcome, both from powder diffraction experts and people with technical CIF knowledge.
+Contributions are very welcome, both from topology experts and people with technical CIF knowledge.
 Ways of contributing include:
 
 1. Raising an issue, including suggesting a new data name (see "Issues" tab above).
