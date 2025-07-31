@@ -10,9 +10,9 @@ data_CIF_TOPO
     _dictionary.title             CIF_TOPO
     _dictionary.class             Instance
     _dictionary.version           0.9.7
-    _dictionary.date              2024-05-20
+    _dictionary.date              2025-07-31
     _dictionary.uri
-        https://raw.githubusercontent.com/COMCIFS/TopoCif/main/Topology.dic
+        https://raw.githubusercontent.com/COMCIFS/TopoCif/main/cif_topo.dic
     _dictionary.ddl_conformance   4.1.0
     _dictionary.namespace         CifCore
     _description.text
@@ -1970,7 +1970,7 @@ save_
        to be compatible with the data items that they are linked to.
        (A. Vaitkus)
 ;
-         0.9.7                    2024-05-20
+         0.9.7                    2025-07-31
 ;
        # Please update the date above and describe the change below until
        # ready for the next release.
@@ -1995,5 +1995,8 @@ save_
 
        Renamed the dictionary from 'TOPOLOGY_CIF' to 'CIF_TOPO'.
        Renamed the head category from 'TOPOLOGY' to 'CIF_TOPO_HEAD'.
+       (A. Vaitkus)
+
+       Renamed dictionary file from "Topology.dic" to "cif_topo.dic".
        (A. Vaitkus)
 ;

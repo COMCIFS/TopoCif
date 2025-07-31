@@ -6,7 +6,7 @@ The topology CIF dictionary provides data names for describing some topological 
 
 ## Warning
 
-[This dictionary](Topology.dic) is the latest **draft** version. Definitions are subject to change and software should be careful not to hard-code information.
+[This dictionary](cif_topo.dic) is the latest **draft** version. Definitions are subject to change and software should be careful not to hard-code information.
 The latest approved topology dictionary is available from the [IUCr CIF website](https://www.iucr.org/resources/cif/dictionaries).
 
 ## Contributing
@@ -30,7 +30,7 @@ This protocol is not necessary for changes to the layout of the dictionary that 
 
 ## Repository layout
 
-Top-level files [TopoCif_chapter.docx](TopoCif_chapter.docx) and [Topology.dic](Topology.dic) are the latest draft versions of the chapter and the dictionary respectively.
+Top-level files [TopoCif_chapter.docx](TopoCif_chapter.docx) and [cif_topo.dic](cif_topo.dic) are the latest draft versions of the chapter and the dictionary respectively.
 
 Directory content:
 * `chapter/`    old versions of the Word document chapter.
