@@ -1,0 +1,540 @@
+#\#CIF_2.0
+
+data_TOPOLOGY_EXAMPLES
+
+save_topol_examples
+
+loop_
+ _description_example.case
+ _description_example.detail
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+; 
+loop_
+  _space_group_symop.id
+  _space_group_symop.operation_xyz
+    1 x,y,z
+    2 1/4-x,1/4-y,z
+    # - - - - data truncated for brevity - - - -
+    13 -y,-x,-z
+    # - - - - data truncated for brevity - - - -
+    192 3/4-z,1/2+y,1/4-x
+
+loop_
+  _atom_site.label
+  _atom_site.fract_x
+  _atom_site.fract_y
+  _atom_site.fract_z
+    C1 0.12500 0.12500 0.12500
+
+loop_
+  _topol_net.id
+  _topol_net.overall_topology_RCSR
+    1 dia
+
+loop_
+  _topol_node.id
+  _topol_node.net_id
+    1 1
+
+loop_
+  _topol_link.id
+  _topol_link.node_id_1
+  _topol_link.node_id_2
+  _topol_link.symop_id_1
+  _topol_link.translation_1
+  _topol_link.symop_id_2
+  _topol_link.translation_2
+  _topol_link.distance
+  _topol_link.Voronoi_solid_angle
+  _topol_link.type
+  _topol_link.order
+  _topol_link.multiplicity
+    1 1 1 1 [0 0 0] 13 [0 0 0] 1.5446 22.04 v 1 16
+
+loop_
+  _topol_atom.id
+  _topol_atom.node_id
+  _topol_atom.atom_label
+  _topol_atom.element_symbol
+    1 1 C1 C
+; 
+
+; 
+Example 1 - Connectivity of the diamond crystal structure.
+   All atoms coincide with the nodes and all bonds coincide
+   with the edges, so the atomic network coincides with the
+   underlying net.
+;
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+;
+loop_
+  _space_group_symop.id
+  _space_group_symop.operation_xyz
+    1 x,y,z
+    2 -x,-y,z
+    3 x,-y,-z
+    # - - - - data truncated for brevity - - - -
+    24 -z,y,-x
+
+loop_
+  _atom_site.label
+  _atom_site.fract_x
+  _atom_site.fract_y
+  _atom_site.fract_z
+    Li1 0.00000 0.00000 0.00000
+    C1  0.31850 0.31850 0.31850
+    O1  0.19920 0.19920 0.19920
+    Co1 0.50000 0.50000 0.50000
+
+loop_
+  _topol_net.id
+  _topol_net.label
+  _topol_net.z_number
+  _topol_net.special_details
+  _topol_net.overall_topology_TOPOS
+    1 Net_1 2 'Atomic network' 'Unknown'
+    2 Net_2 2 'Underlying net with carbonyl ligands as nodes' '2,4T3'
+
+loop_
+  _topol_node.id
+  _topol_node.label
+  _topol_node.net_id
+  _topol_node.fract_x
+  _topol_node.fract_y
+  _topol_node.fract_z
+    1 Li1 1  .       .       .      # Li
+    2 C1  1  .       .       .      # C
+    3 O1  1  .       .       .      # O
+    4 Co1 1  .       .       .      # Co
+    5 ZA1 2  .       .       .      # Li
+    6 ZB1 2 0.25036 0.25036 0.25036 # (CO)
+    7 ZC1 2  .       .       .      # Co
+
+loop_
+  _topol_link.id
+  _topol_link.node_id_1
+  _topol_link.node_id_2
+  _topol_link.distance
+  _topol_link.type
+    1 1 3 1.9121 v  # Li1-O1
+    2 2 3 1.1452 v  # C1-O1
+    3 2 4 1.7422 v  # C1-Co1
+    4 5 6 2.4032 gl # Li1-(CO)
+    5 6 7 2.3963 gl # (CO)-Co
+
+loop_
+  _topol_atom.id
+  _topol_atom.node_id
+  _topol_atom.atom_label
+  _topol_atom.element_symbol
+    1 1 Li1 Li
+    2 2 C1  C
+    3 3 O1  O
+    4 4 Co1 Co
+    5 5 Li1 Li
+    6 6 C1  C
+    7 6 O1  O
+    8 7 Co1 Co
+; 
+
+; Example 2 - Connectivity of atomic and underlying nets for an
+  interpenetrating array of two LiCo(CO)4 networks. The atomic net
+  consists of Li, C, O, and Co atoms, while the underlying net is built
+  from three kinds of nodes: Li and Co atoms and carbonyl (CO) ligand;
+  the nodes are labeled as ZA1, ZC1, and ZB1, respectively. Two
+  possible variants are shown: the coordinates of ZA1 are specified by
+  a reference to the Li1 atom, while the coordinates of ZC1 are specified
+  explicitly. Both atomic and underlying nets are described in the
+  TOPOL_NET section.
+;
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+;
+loop_
+  _space_group_symop.id
+  _space_group_symop.operation_xyz
+    1 x,y,z
+    2 -y,x-y,z
+    3 -x+y,-x,z
+    # - - - - data truncated for brevity - - - -
+    20 1/3+x-y,2/3-y,1/6-z
+    # - - - - data truncated for brevity - - - -
+    36 1/3-y,2/3-x,1/6+z
+
+loop_
+  _atom_site.label
+  _atom_site.fract_x
+  _atom_site.fract_y
+  _atom_site.fract_z
+    C1  0.00000 0.00000 0.25000
+    O1  0.25930 0.00000 0.25000
+    Ca1 0.00000 0.00000 0.00000
+
+loop_
+  _topol_net.id
+  _topol_net.overall_topology_RCSR
+    1 pcu-b
+
+loop_
+  _topol_node.id
+  _topol_node.label
+    1 ZA1 # CO3
+    2 ZB1 # Ca
+
+loop_
+  _topol_link.id
+  _topol_link.node_id_1
+  _topol_link.node_id_2
+  _topol_link.symop_id_2
+  _topol_link.translation_2
+  _topol_link.distance
+  _topol_link.type
+    1 1 2 20 [-1 -1 0] 3.2122 gl # (CO3)-Ca
+
+loop_
+  _topol_atom.id
+  _topol_atom.node_id
+  _topol_atom.atom_label
+  _topol_atom.element_symbol
+  _topol_atom.symop_id
+    1 1 C1 C 1 
+    2 1 O1 O 1 
+    3 1 O1 O 2
+    4 1 O1 O 3
+    5 2 Ca1 Ca 1
+; 
+
+;  Example 3 - Connectivity of an underlying net of the calcite
+   (CaCO3) crystal structure. The nodes of the underlying
+   net correspond to Ca atoms and carbonate (CO3) groups.
+; 
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+; 
+loop_
+  _space_group_symop.id
+  _space_group_symop.operation_xyz
+    1 x,y,z
+    2 1/2-x,1/2-y,z
+    # - - - - data truncated for brevity - - - -
+    13 -y,-x,-z
+    # - - - - data truncated for brevity - - - -
+    48 1/2-z,y,1/2-x
+
+loop_
+  _atom_site.label
+  _atom_site.fract_x
+  _atom_site.fract_y
+  _atom_site.fract_z
+    O1  0.25000 0.25000 0.25000
+    Cu1 0.00000 0.00000 0.00000
+
+loop_
+  _topol_net.id
+  _topol_net.z_number
+  _topol_net.overall_topology_RCSR
+    1 2 'dia'
+
+loop_
+  _topol_node.id
+  _topol_node.net_id
+    1 1
+
+loop_
+  _topol_link.id
+  _topol_link.node_id_1
+  _topol_link.node_id_2
+  _topol_link.symop_id_2
+  _topol_link.type
+    1 1 1 13 gl
+
+loop_
+  _topol_atom.id
+  _topol_atom.node_id
+  _topol_atom.link_id
+  _topol_atom.atom_label
+  _topol_atom.element_symbol
+    1 1 . O1  O
+    2 . 1 Cu1 Cu
+;
+
+; Example 4 - Connectivity of an underlying net of the cuprite (Cu2O)
+  crystal structure. Oxygen atoms coincide with the nodes,
+  while copper atoms represent the edges. There are two
+  interpenetrating networks of the diamond topology.
+;
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+;
+loop_
+  _space_group_symop.id
+  _space_group_symop.operation_xyz
+    1 x,y,z
+    # - - - - data truncated for brevity - - - -
+    5 z,x,y
+    # - - - - data truncated for brevity - - - -
+    26 x,y,-z
+    # - - - - data truncated for brevity - - - -
+    37 y,x,z
+    # - - - - data truncated for brevity - - - -
+    192 1/2-z,1/2+y,-x
+
+loop_
+  _atom_site.label
+  _atom_site.fract_x
+  _atom_site.fract_y
+  _atom_site.fract_z
+    H1  0.30590 0.19410 0.04520
+    C1  0.25000 0.25000 0.11050
+    C2  0.28310 0.21690 0.02630
+    C3  0.25000 0.25000 0.05380
+    O1  .25000 0.25000 0.25000
+    O2  0.28180 0.21820 0.13390
+    Zn1 0.29350 0.20650 0.20650
+
+loop_
+  _topol_net.id
+  _topol_net.label
+  _topol_net.special_details
+  _topol_net.overall_topology_TOPOS
+    1 Net_1 'Atomic network' 'Unknown'
+    2 Net_2 'Underlying net with zinc tetranuclear complex groups as nodes and benzene rings as links (cluster representation)' 'pcu'
+    3 Net_3 'Underlying net with zinc, oxygen and benzenedicarboxylato ligands as 4-coordinate nodes (standard representation)' 'fff'
+
+loop_
+  _topol_node.id
+  _topol_node.net_id
+    1  1  # H1
+    2  1  # C1
+    3  1  # C2
+    4  1  # C3
+    5  1  # O1
+    6  1  # O2
+    7  1  # Zn1
+    8  2  # C6O13Zn4
+    9  3  # C8H4O4
+    10 3  # O1
+    11 3  # Zn1
+
+loop_
+  _topol_link.id
+  _topol_link.node_id_1
+  _topol_link.node_id_2
+  _topol_link.symop_id_2
+  _topol_link.distance
+  _topol_link.type
+    1   1  3  .   0.9594 v  # H1-C2
+    2   2  6  37  1.3013 v  # C1-O2
+    3   2  4  .   1.4554 ar # C1-C3
+    4   3  3  26  1.3502 ar # C2-C2
+    5   3  4  .   1.3936 ar # C2-C3
+    6   5  7  .   1.9340 v  # O1-Zn1
+    7   6  7  .   1.9114 v  # O2-Zn1
+    8   8  8  26 12.8345 gl # (C6O13Zn4)-(C6H4)-(C6O13Zn4)
+    9   9 11  5   5.5309 gl # (C8H4O4)-Zn1
+    10 10 11  .   1.9341 v  # O1-Zn1
+
+loop_
+  _topol_atom.id
+  _topol_atom.atom_label
+  _topol_atom.node_id
+  _topol_atom.link_id
+  _topol_atom.symop_id
+  _topol_atom.element_symbol
+    1   H1   1   .   1 H
+    2   C1   2   .   1 C
+    3   C2   3   .   1 C
+    4   C3   4   .   1 C
+    5   O1   5   .   1 O
+    6   O2   6   .   1 O
+    7   Zn1  7   .   1 Zn
+    10  C1   8   .   1 C
+    11  C1   8   .  55 C
+    12  O2   8   .  55 O
+    13  O2   8   .  80 O
+    14  O2   8   .   6 O
+    15  O2   8   .  59 O
+    16  O2   8   .  42 O
+    17  O2   8   .  78 O
+    18  C1   8   .  78 C
+    19  C1   8   .   5 C
+    20  Zn1  8   .   6 Zn
+    21  Zn1  8   .  55 Zn
+    22  C1   8   .  69 C
+    23  C1   8   .   6 C
+    24  O2   8   .  41 O
+    25  O2   8   .  69 O
+    26  O1   8   .   1 O
+    27  O2   8   .   5 O
+    28  O2   8   .  82 O
+    29  Zn1  8   .   5 Zn
+    30  Zn1  8   .   1 Zn
+    31  O2   8   .   1 O
+    32  O2   8   .  37 O
+    33  O2   9   .  14 O
+    34  O2   9   .  26 O
+    35  O2   9   .   1 O
+    36  O2   9   .  37 O
+    37  C1   9   .  14 C
+    38  C3   9   8  14 C
+    39  C2   9   8  14 C
+    40  H1   9   8  14 H
+    41  C2   9   8  37 C
+    42  H1   9   8  37 H
+    43  C2   9   8  26 C
+    44  H1   9   8  26 H
+    45  C2   9   8   1 C
+    46  H1   9   8   1 H
+    47  C3   9   8   1 C
+    48  C1   9   .   1 C
+    49  O1  10   .   1 O
+    50  Zn1 11   .   1 Zn
+; 
+#
+; Example 5 - MOF-5 (multiple nets; two polyatomic nodes and a molecular
+     linker).
+; 
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+; 
+loop_
+  _space_group_symop.id
+  _space_group_symop.operation_xyz
+    1 x,y,z
+    2 1/2-x,-y,1/2+z
+    3 1/2+x,1/2-y,-z
+    4 -x,1/2+y,1/2-z
+    5 -x,-y,-z
+    6 1/2+x,y,1/2-z
+    7 1/2-x,1/2+y,z
+    8 x,1/2-y,1/2+z
+
+loop_
+  _atom_site.label
+  _atom_site.fract_x
+  _atom_site.fract_y
+  _atom_site.fract_z
+    H1 0.19700 0.11100 0.02200
+    H2 0.05900 0.26600 0.08700
+    C1 0.14120 0.08370 0.23120
+    N1 0.14590 0.16990 0.10179
+    N2 0.14010 0.01250 0.34609
+
+loop_
+  _topol_node.id
+    1 2 3 4 5
+
+loop_
+  _topol_link.id
+  _topol_link.node_id_1
+  _topol_link.node_id_2
+  _topol_link.distance
+  _topol_link.symop_id_2
+  _topol_link.translation_2_x
+  _topol_link.translation_2_y
+  _topol_link.translation_2_z
+  _topol_link.type
+  _topol_link.order
+    1 1 4 0.8988 1 0 0  0 v  1 # H1-N1
+    2 1 5 2.1228 2 0 0 -1 hb ? # H1-N2
+    3 2 4 0.8826 1 0 0  0 v  1 # H2-N1
+    4 2 5 2.2152 4 0 0  0 hb ? # H2-N2
+    5 3 5 1.1520 1 0 0  0 v  3 # C1-N2
+    6 3 4 1.3148 1 0 0  0 v  1 # C1-N1
+
+loop_
+  _topol_atom.id
+  _topol_atom.atom_label
+  _topol_atom.node_id
+  _topol_atom.element_symbol
+    1 H1 1 H
+    2 H2 2 H
+    3 C1 3 C
+    4 N1 4 N
+    5 N2 5 N
+; 
+
+; Example 6 - Cyanamide (simple atomic network example with hydrogen bonding).
+; 
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+;
+loop_
+  _space_group_symop.id
+  _space_group_symop.operation_xyz
+    1 x,y,z
+    2 1/4-x,1/4-y,z
+    # - - - - data truncated for brevity - - - -
+    13 -y,-x,-z
+    # - - - - data truncated for brevity - - - -
+    41 x,z,y
+    42 z,y,x
+    # - - - - data truncated for brevity - - - -
+    47 x,1/4-z,1/4-y
+    # - - - - data truncated for brevity - - - -
+    192 3/4-z,1/2+y,1/4-x
+
+loop_
+  _atom_site.label
+  _atom_site.fract_x
+  _atom_site.fract_y
+  _atom_site.fract_z
+    Si1 0.94690 0.12510 0.03640
+
+loop_
+  _topol_net.id
+  _topol_net.overall_topology_IZA
+    1 FAU
+
+loop_
+  _topol_node.id
+  _topol_node.net_id
+  _topol_node.label
+    1 1 Si
+
+loop_
+  _topol_link.id
+  _topol_link.node_id_1
+  _topol_link.node_id_2
+  _topol_link.distance
+  _topol_link.symop_id_2
+  _topol_link.translation_2
+  _topol_link.type
+    1 1 1 3.0470 47 [0 0 0] gl
+    2 1 1 3.0473 13 [1 1 0] gl
+    3 1 1 3.0539 41 [0 0 0] gl
+    4 1 1 3.0814 42 [1 0 -1] gl
+
+loop_
+  _topol_atom.id
+  _topol_atom.node_id
+  _topol_atom.atom_label
+  _topol_atom.element_symbol
+    1 1 Si1 Si
+
+loop_
+  _topol_tiling.id
+  _topol_tiling.net_id
+  _topol_tiling.signature
+  _topol_tiling.vertices
+  _topol_tiling.edges
+  _topol_tiling.faces
+  _topol_tiling.tiles
+  _topol_tiling.d_size
+    1 1 '2[4^6.6^2]+[4^6.6^8]+[4^18.6^4.12^4]' 1 4 5 3 24
+;
+
+; Example 7 - FAU zeolite tiling example.
+;
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+save_
+
+
